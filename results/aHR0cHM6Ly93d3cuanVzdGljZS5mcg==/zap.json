@@ -1,6 +1,6 @@
 {
 	"@version": "2.11.0",
-	"@generated": "Sat, 27 Nov 2021 09:01:32",
+	"@generated": "Sat, 27 Nov 2021 09:30:10",
 	"site":[ 
 		{
 			"@name": "https://www.justice.fr",
@@ -75,7 +75,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.justice.fr/themes/juges-famille",
+							"uri": "https://www.justice.fr/themes/obligations-vie-familiale",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -307,6 +307,13 @@
 					"desc": "<p>The identified library bootstrap, version 4.1.3 is vulnerable.</p>",
 					"instances":[ 
 						{
+							"uri": "https://www.justice.fr/sites/default/files/js/js_66R16G5KdESD1GUiDEHTB2dQXwlVEuw7u4b87_pCF2U.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "* Bootstrap v4.1.3"
+						},
+						{
 							"uri": "https://www.justice.fr/sites/default/files/js/js_CzlH8hnbWm_pUvTwkl4e8TB-Y0QtiBPb0lE9nh7dURQ.js",
 							"method": "GET",
 							"param": "",
@@ -314,13 +321,13 @@
 							"evidence": "* Bootstrap v4.1.3"
 						}
 					],
-					"count": "1",
+					"count": "2",
 					"solution": "<p>Please upgrade to the latest version of bootstrap.</p>",
 					"otherinfo": "<p>CVE-2019-8331</p><p></p>",
 					"reference": "<p>https://github.com/twbs/bootstrap/issues/28236</p><p></p>",
 					"cweid": "829",
 					"wascid": "-1",
-					"sourceid": "1121"
+					"sourceid": "1603"
 				},
 				{
 					"pluginid": "10202",
@@ -816,7 +823,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.justice.fr/themes/juges-famille",
+							"uri": "https://www.justice.fr/themes/obligations-vie-familiale",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1085,14 +1092,14 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "GcGxm+v9e2hdlGuqPNGyGudYxqjHhJ/Zmueo+dBTu2xLJHPQhJH13YxAunYXSUoEmppNRZvULUWQ"
+							"evidence": "FGWBkisTRMMW1aSqPNGyGudYxqjHhHm1A9oFjYrIAhv+zVws4qzKqG1R58AtfmKRdIYzJME84pvS6g=="
 						},
 						{
 							"uri": "https://www.justice.fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "Jj7YojwkjPkUWn6qPNGyGudYxqjHhOu9zH142fgrK2KjEFp1fuyaADZFamVO6BwuNJ0pym2mg68M"
+							"evidence": "L7WTe2ZYizEbykyqPNGyGudYxqjHhACsPKDeZIt9FYgkh6BkMcYfxZKMWW+YUOEUBJgeqNY5DH2W"
 						},
 						{
 							"uri": "https://www.justice.fr/",
@@ -1134,7 +1141,7 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "k+D2zHvkqqa5+RqqPNGyGudYxqjHhA5Md6Z9vYV1GfrnaMdmbOTE1cFSI6G5+1ZuVwcuDFLtQcKo"
+							"evidence": "UIXoIP2Cj519DQGqPNGyGudYxqjHhDfo//iqrZAS/NCvokSwEE0AMCM3wZmmLqUO8LcbQgIe4C92"
 						},
 						{
 							"uri": "https://www.justice.fr/themes/divorce",
@@ -1144,7 +1151,7 @@
 							"evidence": "/sites/default/files/css/css_TY7QtDWFxbJDXDyILpAKWh4hMb61aR2Pfy2M-RuBbas"
 						},
 						{
-							"uri": "https://www.justice.fr/themes/juges-famille",
+							"uri": "https://www.justice.fr/themes/obligations-vie-familiale",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1167,11 +1174,11 @@
 					],
 					"count": "12",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
-					"otherinfo": "<p>\\x0019\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD{h]\uFFFDk\uFFFD<\u0472\\x001a\uFFFDX\u01A8\u01C4\uFFFD\u065A\uFFFD\uFFFD\uFFFDS\uFFFDlK$s\u0404\uFFFD\uFFFD\u074C@\uFFFDv\\x0017IJ\\x0004\uFFFD\uFFFDME\uFFFD\uFFFD-E\uFFFD</p>",
+					"otherinfo": "<p>\\x0014e\uFFFD\uFFFD+\\x0013D\uFFFD\\x0016\u0564\uFFFD<\u0472\\x001a\uFFFDX\u01A8\u01C4y\uFFFD\\x0003\uFFFD\\x0005\uFFFD\uFFFD\uFFFD\\x0002\\x001b\uFFFD\uFFFD\\,\uFFFD\u02A8mQ\uFFFD\uFFFD-~b\uFFFDt\uFFFD3$\uFFFD<\uFFFD\uFFFD\uFFFD</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "19"
+					"sourceid": "94"
 				},
 				{
 					"pluginid": "10027",
@@ -1226,6 +1233,34 @@
 							"evidence": "db"
 						},
 						{
+							"uri": "https://www.justice.fr/sites/default/files/js/js_66R16G5KdESD1GUiDEHTB2dQXwlVEuw7u4b87_pCF2U.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "from"
+						},
+						{
+							"uri": "https://www.justice.fr/sites/default/files/js/js_66R16G5KdESD1GUiDEHTB2dQXwlVEuw7u4b87_pCF2U.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "query"
+						},
+						{
+							"uri": "https://www.justice.fr/sites/default/files/js/js_66R16G5KdESD1GUiDEHTB2dQXwlVEuw7u4b87_pCF2U.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "select"
+						},
+						{
+							"uri": "https://www.justice.fr/sites/default/files/js/js_66R16G5KdESD1GUiDEHTB2dQXwlVEuw7u4b87_pCF2U.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user"
+						},
+						{
 							"uri": "https://www.justice.fr/sites/default/files/js/js_CzlH8hnbWm_pUvTwkl4e8TB-Y0QtiBPb0lE9nh7dURQ.js",
 							"method": "GET",
 							"param": "",
@@ -1254,7 +1289,7 @@
 							"evidence": "user"
 						}
 					],
-					"count": "10",
+					"count": "14",
 					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
 					"otherinfo": "<p>The following pattern was used: \\bADMIN\\b and was detected in the element starting with: \"function goToAnchor(e,t,n,i){void 0!==e&&(void 0===t&&(t=0),void 0===n&&(n=400),void 0===i&&(i=\"swing\"),0!=jQuery(\"body\").find(\"\", see evidence field for the suspicious comment/snippet.</p>",
 					"reference": "",
@@ -1383,6 +1418,13 @@
 							"evidence": "HIT"
 						},
 						{
+							"uri": "https://www.justice.fr/*?CSRT",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT"
+						},
+						{
 							"uri": "https://www.justice.fr/accueil",
 							"method": "GET",
 							"param": "",
@@ -1390,14 +1432,21 @@
 							"evidence": "HIT"
 						},
 						{
-							"uri": "https://www.justice.fr/fiche/autorite-parentale",
+							"uri": "https://www.justice.fr/conditions-utilisation",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "HIT"
 						},
 						{
-							"uri": "https://www.justice.fr/node-page/11266",
+							"uri": "https://www.justice.fr/contact/formulaire",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT"
+						},
+						{
+							"uri": "https://www.justice.fr/mon-espace-contact",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1411,28 +1460,14 @@
 							"evidence": "HIT"
 						},
 						{
+							"uri": "https://www.justice.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT"
+						},
+						{
 							"uri": "https://www.justice.fr/themes/divorce",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "HIT"
-						},
-						{
-							"uri": "https://www.justice.fr/themes/juges-famille",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "HIT"
-						},
-						{
-							"uri": "https://www.justice.fr/themes/obligations-vie-familiale",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "HIT"
-						},
-						{
-							"uri": "https://www.justice.fr/themes/pension-alimentaire",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1486,13 +1521,6 @@
 							"evidence": "max-age=86400"
 						},
 						{
-							"uri": "https://www.justice.fr/accueil",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "max-age=604800"
-						},
-						{
 							"uri": "https://www.justice.fr/conditions-utilisation",
 							"method": "GET",
 							"param": "",
@@ -1528,7 +1556,7 @@
 							"evidence": "max-age=604800"
 						}
 					],
-					"count": "9",
+					"count": "8",
 					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p>",
 					"otherinfo": "",
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
@@ -1547,6 +1575,13 @@
 					"desc": "<p>The response contents are storable by caching components such as proxy servers, but will not be retrieved directly from the cache, without validating the request upstream, in response to similar requests from other users. </p>",
 					"instances":[ 
 						{
+							"uri": "https://www.justice.fr/printpdf",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=0"
+						},
+						{
 							"uri": "https://www.justice.fr/robots.txt",
 							"method": "GET",
 							"param": "",
@@ -1561,13 +1596,13 @@
 							"evidence": "must-revalidate"
 						}
 					],
-					"count": "2",
+					"count": "3",
 					"solution": "",
 					"otherinfo": "",
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "6"
+					"sourceid": "693"
 				}
 			]
 		}
