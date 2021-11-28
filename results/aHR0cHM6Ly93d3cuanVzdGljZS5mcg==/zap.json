@@ -1,6 +1,6 @@
 {
 	"@version": "2.11.0",
-	"@generated": "Sat, 27 Nov 2021 09:30:10",
+	"@generated": "Sun, 28 Nov 2021 00:43:38",
 	"site":[ 
 		{
 			"@name": "https://www.justice.fr",
@@ -75,7 +75,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.justice.fr/themes/obligations-vie-familiale",
+							"uri": "https://www.justice.fr/themes/juges-famille",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -327,7 +327,7 @@
 					"reference": "<p>https://github.com/twbs/bootstrap/issues/28236</p><p></p>",
 					"cweid": "829",
 					"wascid": "-1",
-					"sourceid": "1603"
+					"sourceid": "1182"
 				},
 				{
 					"pluginid": "10202",
@@ -658,7 +658,7 @@
 					"reference": "<p>https://angular.io/guide/security</p>",
 					"cweid": "749",
 					"wascid": "-1",
-					"sourceid": "1119"
+					"sourceid": "1118"
 				},
 				{
 					"pluginid": "10015",
@@ -823,7 +823,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.justice.fr/themes/obligations-vie-familiale",
+							"uri": "https://www.justice.fr/themes/juges-famille",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -932,7 +932,7 @@
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html</p>",
 					"cweid": "311",
 					"wascid": "4",
-					"sourceid": "769"
+					"sourceid": "779"
 				},
 				{
 					"pluginid": "10096",
@@ -993,6 +993,13 @@
 						},
 						{
 							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/bootstrap4/ie8-9/bootstrap-ie8.min.css",
+							"method": "GET",
+							"param": "X-Content-Type-Options",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/bootstrap4/ie8-9/bootstrap-ie8.min.js",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -1060,13 +1067,6 @@
 							"param": "X-Content-Type-Options",
 							"attack": "",
 							"evidence": ""
-						},
-						{
-							"uri": "https://www.justice.fr/sites/default/files/js/js_CzlH8hnbWm_pUvTwkl4e8TB-Y0QtiBPb0lE9nh7dURQ.js",
-							"method": "GET",
-							"param": "X-Content-Type-Options",
-							"attack": "",
-							"evidence": ""
 						}
 					],
 					"count": "12",
@@ -1092,14 +1092,14 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "FGWBkisTRMMW1aSqPNGyGudYxqjHhHm1A9oFjYrIAhv+zVws4qzKqG1R58AtfmKRdIYzJME84pvS6g=="
+							"evidence": "YWVV1e9u6x/PjHWqPNGyGudYxqjHhDGRzUMxBff6GiOV2CKqx8cQLZ6D3LVYaSr64Bj4MhzULp+1"
 						},
 						{
 							"uri": "https://www.justice.fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "L7WTe2ZYizEbykyqPNGyGudYxqjHhACsPKDeZIt9FYgkh6BkMcYfxZKMWW+YUOEUBJgeqNY5DH2W"
+							"evidence": "kmbDqfHbnSQMqYqqPNGyGudYxqjHhAOHqVWqRh+nbQyVflW97GTjx7gUm5W0HewscdwZ5oGh7Fpbig=="
 						},
 						{
 							"uri": "https://www.justice.fr/",
@@ -1141,7 +1141,7 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "UIXoIP2Cj519DQGqPNGyGudYxqjHhDfo//iqrZAS/NCvokSwEE0AMCM3wZmmLqUO8LcbQgIe4C92"
+							"evidence": "YTqY3NwYaCodwN6qPNGyGudYxqjHhBZ2/2Y7t8R2fukYKgfH7kJFBJevmzl1AgxXXHuLevmOM908Hg=="
 						},
 						{
 							"uri": "https://www.justice.fr/themes/divorce",
@@ -1151,7 +1151,7 @@
 							"evidence": "/sites/default/files/css/css_TY7QtDWFxbJDXDyILpAKWh4hMb61aR2Pfy2M-RuBbas"
 						},
 						{
-							"uri": "https://www.justice.fr/themes/obligations-vie-familiale",
+							"uri": "https://www.justice.fr/themes/juges-famille",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1174,11 +1174,11 @@
 					],
 					"count": "12",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
-					"otherinfo": "<p>\\x0014e\uFFFD\uFFFD+\\x0013D\uFFFD\\x0016\u0564\uFFFD<\u0472\\x001a\uFFFDX\u01A8\u01C4y\uFFFD\\x0003\uFFFD\\x0005\uFFFD\uFFFD\uFFFD\\x0002\\x001b\uFFFD\uFFFD\\,\uFFFD\u02A8mQ\uFFFD\uFFFD-~b\uFFFDt\uFFFD3$\uFFFD<\uFFFD\uFFFD\uFFFD</p>",
+					"otherinfo": "<p>aeU\uFFFD\uFFFDn\uFFFD\\x001f\u03CCu\uFFFD<\u0472\\x001a\uFFFDX\u01A8\u01C41\uFFFD\uFFFDC1\\x0005\uFFFD\uFFFD\\x001a#\uFFFD\uFFFD\"\uFFFD\uFFFD\uFFFD\\x0010-\uFFFD\uFFFD\u0735Xi*\uFFFD\uFFFD\\x0018\uFFFD2\\x001c\uFFFD.\uFFFD\uFFFD</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "94"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10027",
@@ -1295,7 +1295,7 @@
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "1119"
+					"sourceid": "1118"
 				},
 				{
 					"pluginid": "10109",
@@ -1446,13 +1446,6 @@
 							"evidence": "HIT"
 						},
 						{
-							"uri": "https://www.justice.fr/mon-espace-contact",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "HIT"
-						},
-						{
 							"uri": "https://www.justice.fr/recherche",
 							"method": "GET",
 							"param": "",
@@ -1468,6 +1461,13 @@
 						},
 						{
 							"uri": "https://www.justice.fr/themes/divorce",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT"
+						},
+						{
+							"uri": "https://www.justice.fr/themes/pension-alimentaire",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1507,18 +1507,18 @@
 							"evidence": "max-age=86400"
 						},
 						{
-							"uri": "https://www.justice.fr/",
+							"uri": "https://www.justice.fr/*?CSRT",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "max-age=86400"
 						},
 						{
-							"uri": "https://www.justice.fr/*?CSRT",
+							"uri": "https://www.justice.fr/accueil",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "max-age=86400"
+							"evidence": "max-age=604800"
 						},
 						{
 							"uri": "https://www.justice.fr/conditions-utilisation",
