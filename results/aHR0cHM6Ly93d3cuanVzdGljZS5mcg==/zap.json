@@ -1,6 +1,6 @@
 {
-	"@version": "2.11.0",
-	"@generated": "Sun, 5 Dec 2021 00:44:12",
+	"@version": "2.11.1",
+	"@generated": "Sun, 19 Dec 2021 00:45:30",
 	"site":[ 
 		{
 			"@name": "https://www.justice.fr",
@@ -75,7 +75,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.justice.fr/themes/juges-famille",
+							"uri": "https://www.justice.fr/themes/obligations-vie-familiale",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -150,13 +150,6 @@
 							"evidence": "<script src=\"https://cdn.jsdelivr.net/g/html5shiv@3.7.3\"></script>"
 						},
 						{
-							"uri": "https://www.justice.fr/node-page/11266",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<script src=\"https://cdn.jsdelivr.net/g/html5shiv@3.7.3\"></script>"
-						},
-						{
 							"uri": "https://www.justice.fr/recherche",
 							"method": "GET",
 							"param": "",
@@ -172,6 +165,13 @@
 						},
 						{
 							"uri": "https://www.justice.fr/themes/juges-famille",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"https://cdn.jsdelivr.net/g/html5shiv@3.7.3\"></script>"
+						},
+						{
+							"uri": "https://www.justice.fr/themes/obligations-vie-familiale",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -211,7 +211,7 @@
 					"desc": "<p>The identified library bootstrap, version 4.1.3 is vulnerable.</p>",
 					"instances":[ 
 						{
-							"uri": "https://www.justice.fr/sites/default/files/js/js_CzlH8hnbWm_pUvTwkl4e8TB-Y0QtiBPb0lE9nh7dURQ.js",
+							"uri": "https://www.justice.fr/sites/default/files/js/js_VvgIxewHvSJfpMAM5HzbPzb7cyHNdkiuZUap5i_CiNo.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -224,7 +224,7 @@
 					"reference": "<p>https://github.com/twbs/bootstrap/issues/28236</p><p></p>",
 					"cweid": "829",
 					"wascid": "-1",
-					"sourceid": "1121"
+					"sourceid": "1128"
 				},
 				{
 					"pluginid": "10202",
@@ -272,13 +272,6 @@
 							"evidence": "<form action=\"/recherche/all/\" method=\"post\" id=\"portalis-search-form\" accept-charset=\"UTF-8\">"
 						},
 						{
-							"uri": "https://www.justice.fr/node-page/11266",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<form action=\"/recherche/all/\" method=\"post\" id=\"portalis-search-form\" accept-charset=\"UTF-8\">"
-						},
-						{
 							"uri": "https://www.justice.fr/recherche",
 							"method": "GET",
 							"param": "",
@@ -294,6 +287,13 @@
 						},
 						{
 							"uri": "https://www.justice.fr/themes/juges-famille",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form action=\"/recherche/all/\" method=\"post\" id=\"portalis-search-form\" accept-charset=\"UTF-8\">"
+						},
+						{
+							"uri": "https://www.justice.fr/themes/obligations-vie-familiale",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -335,19 +335,82 @@
 						{
 							"uri": "https://www.justice.fr",
 							"method": "GET",
-							"param": "TS011e9fba",
+							"param": "TS0190034b",
 							"attack": "",
-							"evidence": "Set-Cookie: TS011e9fba"
+							"evidence": "Set-Cookie: TS0190034b"
+						},
+						{
+							"uri": "https://www.justice.fr/",
+							"method": "GET",
+							"param": "TS0190034b",
+							"attack": "",
+							"evidence": "Set-Cookie: TS0190034b"
+						},
+						{
+							"uri": "https://www.justice.fr/*?CSRT",
+							"method": "GET",
+							"param": "TS0190034b",
+							"attack": "",
+							"evidence": "Set-Cookie: TS0190034b"
+						},
+						{
+							"uri": "https://www.justice.fr/accueil",
+							"method": "GET",
+							"param": "TS0190034b",
+							"attack": "",
+							"evidence": "Set-Cookie: TS0190034b"
+						},
+						{
+							"uri": "https://www.justice.fr/conditions-utilisation",
+							"method": "GET",
+							"param": "TS0190034b",
+							"attack": "",
+							"evidence": "Set-Cookie: TS0190034b"
+						},
+						{
+							"uri": "https://www.justice.fr/contact/formulaire",
+							"method": "GET",
+							"param": "TS0190034b",
+							"attack": "",
+							"evidence": "Set-Cookie: TS0190034b"
+						},
+						{
+							"uri": "https://www.justice.fr/printpdf/",
+							"method": "GET",
+							"param": "TS0190034b",
+							"attack": "",
+							"evidence": "Set-Cookie: TS0190034b"
+						},
+						{
+							"uri": "https://www.justice.fr/recherche",
+							"method": "GET",
+							"param": "TS0190034b",
+							"attack": "",
+							"evidence": "Set-Cookie: TS0190034b"
+						},
+						{
+							"uri": "https://www.justice.fr/recherche/",
+							"method": "GET",
+							"param": "TS0190034b",
+							"attack": "",
+							"evidence": "Set-Cookie: TS0190034b"
 						},
 						{
 							"uri": "https://www.justice.fr/robots.txt",
 							"method": "GET",
-							"param": "TS011e9fba",
+							"param": "TS0190034b",
 							"attack": "",
-							"evidence": "Set-Cookie: TS011e9fba"
+							"evidence": "Set-Cookie: TS0190034b"
+						},
+						{
+							"uri": "https://www.justice.fr/sitemap.xml",
+							"method": "GET",
+							"param": "TS0190034b",
+							"attack": "",
+							"evidence": "Set-Cookie: TS0190034b"
 						}
 					],
-					"count": "2",
+					"count": "11",
 					"solution": "<p>Ensure that the HttpOnly flag is set for all cookies.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://owasp.org/www-community/HttpOnly</p>",
@@ -368,19 +431,82 @@
 						{
 							"uri": "https://www.justice.fr",
 							"method": "GET",
-							"param": "TS011e9fba",
+							"param": "TS0190034b",
 							"attack": "",
-							"evidence": "Set-Cookie: TS011e9fba"
+							"evidence": "Set-Cookie: TS0190034b"
+						},
+						{
+							"uri": "https://www.justice.fr/",
+							"method": "GET",
+							"param": "TS0190034b",
+							"attack": "",
+							"evidence": "Set-Cookie: TS0190034b"
+						},
+						{
+							"uri": "https://www.justice.fr/*?CSRT",
+							"method": "GET",
+							"param": "TS0190034b",
+							"attack": "",
+							"evidence": "Set-Cookie: TS0190034b"
+						},
+						{
+							"uri": "https://www.justice.fr/accueil",
+							"method": "GET",
+							"param": "TS0190034b",
+							"attack": "",
+							"evidence": "Set-Cookie: TS0190034b"
+						},
+						{
+							"uri": "https://www.justice.fr/conditions-utilisation",
+							"method": "GET",
+							"param": "TS0190034b",
+							"attack": "",
+							"evidence": "Set-Cookie: TS0190034b"
+						},
+						{
+							"uri": "https://www.justice.fr/contact/formulaire",
+							"method": "GET",
+							"param": "TS0190034b",
+							"attack": "",
+							"evidence": "Set-Cookie: TS0190034b"
+						},
+						{
+							"uri": "https://www.justice.fr/printpdf/",
+							"method": "GET",
+							"param": "TS0190034b",
+							"attack": "",
+							"evidence": "Set-Cookie: TS0190034b"
+						},
+						{
+							"uri": "https://www.justice.fr/recherche",
+							"method": "GET",
+							"param": "TS0190034b",
+							"attack": "",
+							"evidence": "Set-Cookie: TS0190034b"
+						},
+						{
+							"uri": "https://www.justice.fr/recherche/",
+							"method": "GET",
+							"param": "TS0190034b",
+							"attack": "",
+							"evidence": "Set-Cookie: TS0190034b"
 						},
 						{
 							"uri": "https://www.justice.fr/robots.txt",
 							"method": "GET",
-							"param": "TS011e9fba",
+							"param": "TS0190034b",
 							"attack": "",
-							"evidence": "Set-Cookie: TS011e9fba"
+							"evidence": "Set-Cookie: TS0190034b"
+						},
+						{
+							"uri": "https://www.justice.fr/sitemap.xml",
+							"method": "GET",
+							"param": "TS0190034b",
+							"attack": "",
+							"evidence": "Set-Cookie: TS0190034b"
 						}
 					],
-					"count": "2",
+					"count": "11",
 					"solution": "<p>Whenever a cookie contains sensitive information or is a session token, then it should always be passed using an encrypted channel. Ensure that the secure flag is set for cookies containing such sensitive information.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html</p>",
@@ -408,9 +534,44 @@
 						{
 							"uri": "https://www.justice.fr",
 							"method": "GET",
-							"param": "TS011e9fba",
+							"param": "TS0190034b",
 							"attack": "",
-							"evidence": "Set-Cookie: TS011e9fba"
+							"evidence": "Set-Cookie: TS0190034b"
+						},
+						{
+							"uri": "https://www.justice.fr/*?CSRT",
+							"method": "GET",
+							"param": "TS0190034b",
+							"attack": "",
+							"evidence": "Set-Cookie: TS0190034b"
+						},
+						{
+							"uri": "https://www.justice.fr/contact/formulaire",
+							"method": "GET",
+							"param": "TS0190034b",
+							"attack": "",
+							"evidence": "Set-Cookie: TS0190034b"
+						},
+						{
+							"uri": "https://www.justice.fr/printpdf/",
+							"method": "GET",
+							"param": "TS0190034b",
+							"attack": "",
+							"evidence": "Set-Cookie: TS0190034b"
+						},
+						{
+							"uri": "https://www.justice.fr/recherche",
+							"method": "GET",
+							"param": "TS0190034b",
+							"attack": "",
+							"evidence": "Set-Cookie: TS0190034b"
+						},
+						{
+							"uri": "https://www.justice.fr/recherche/",
+							"method": "GET",
+							"param": "TS0190034b",
+							"attack": "",
+							"evidence": "Set-Cookie: TS0190034b"
 						},
 						{
 							"uri": "https://www.justice.fr/robots.txt",
@@ -422,12 +583,19 @@
 						{
 							"uri": "https://www.justice.fr/robots.txt",
 							"method": "GET",
-							"param": "TS011e9fba",
+							"param": "TS0190034b",
 							"attack": "",
-							"evidence": "Set-Cookie: TS011e9fba"
+							"evidence": "Set-Cookie: TS0190034b"
+						},
+						{
+							"uri": "https://www.justice.fr/sitemap.xml",
+							"method": "GET",
+							"param": "TS0190034b",
+							"attack": "",
+							"evidence": "Set-Cookie: TS0190034b"
 						}
 					],
-					"count": "4",
+					"count": "10",
 					"solution": "<p>Ensure that the SameSite attribute is set to either 'lax' or ideally 'strict' for all cookies.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site</p>",
@@ -481,13 +649,6 @@
 							"evidence": "<script src=\"https://cdn.jsdelivr.net/g/html5shiv@3.7.3\"></script>"
 						},
 						{
-							"uri": "https://www.justice.fr/node-page/11266",
-							"method": "GET",
-							"param": "https://cdn.jsdelivr.net/g/html5shiv@3.7.3",
-							"attack": "",
-							"evidence": "<script src=\"https://cdn.jsdelivr.net/g/html5shiv@3.7.3\"></script>"
-						},
-						{
 							"uri": "https://www.justice.fr/recherche",
 							"method": "GET",
 							"param": "https://cdn.jsdelivr.net/g/html5shiv@3.7.3",
@@ -503,6 +664,13 @@
 						},
 						{
 							"uri": "https://www.justice.fr/themes/juges-famille",
+							"method": "GET",
+							"param": "https://cdn.jsdelivr.net/g/html5shiv@3.7.3",
+							"attack": "",
+							"evidence": "<script src=\"https://cdn.jsdelivr.net/g/html5shiv@3.7.3\"></script>"
+						},
+						{
+							"uri": "https://www.justice.fr/themes/obligations-vie-familiale",
 							"method": "GET",
 							"param": "https://cdn.jsdelivr.net/g/html5shiv@3.7.3",
 							"attack": "",
@@ -542,7 +710,7 @@
 					"desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
 					"instances":[ 
 						{
-							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r2z56i",
+							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r459z7",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -555,7 +723,7 @@
 					"reference": "<p>https://angular.io/guide/security</p>",
 					"cweid": "749",
 					"wascid": "-1",
-					"sourceid": "1119"
+					"sourceid": "1126"
 				},
 				{
 					"pluginid": "10015",
@@ -583,13 +751,6 @@
 						},
 						{
 							"uri": "https://www.justice.fr/conditions-utilisation",
-							"method": "GET",
-							"param": "Cache-Control",
-							"attack": "",
-							"evidence": "public, max-age=86400"
-						},
-						{
-							"uri": "https://www.justice.fr/node-page/11266",
 							"method": "GET",
 							"param": "Cache-Control",
 							"attack": "",
@@ -625,6 +786,13 @@
 						},
 						{
 							"uri": "https://www.justice.fr/themes/juges-famille",
+							"method": "GET",
+							"param": "Cache-Control",
+							"attack": "",
+							"evidence": "public, max-age=86400"
+						},
+						{
+							"uri": "https://www.justice.fr/themes/obligations-vie-familiale",
 							"method": "GET",
 							"param": "Cache-Control",
 							"attack": "",
@@ -720,7 +888,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.justice.fr/themes/juges-famille",
+							"uri": "https://www.justice.fr/themes/obligations-vie-familiale",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -829,7 +997,7 @@
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html</p>",
 					"cweid": "311",
 					"wascid": "4",
-					"sourceid": "760"
+					"sourceid": "799"
 				},
 				{
 					"pluginid": "10096",
@@ -924,14 +1092,14 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r2z56i",
+							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r459z7",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/dist/style.min.css?r2z56i",
+							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/dist/style.min.css?r459z7",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -959,7 +1127,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.justice.fr/sites/default/files/js/js_CzlH8hnbWm_pUvTwkl4e8TB-Y0QtiBPb0lE9nh7dURQ.js",
+							"uri": "https://www.justice.fr/sites/default/files/js/js_VvgIxewHvSJfpMAM5HzbPzb7cyHNdkiuZUap5i_CiNo.js",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -989,14 +1157,14 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "IqgpwxynVI0WBKaqPNGyGudYxqjHhJgElmiILqlvReZFvST1BmC+l7jYU8LVSVixYCsaMCDm6cUFTQ=="
+							"evidence": "4CnGds1glF7fowGqPNGyGudYxqjHhKay2xYxaBn2ALAxLJg7cscDlwV5UANe8tIXoKU/KsDXNYkv"
 						},
 						{
 							"uri": "https://www.justice.fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "PfwHrM+MaRiyQMGqPNGyGudYxqjHhLj75xytbD31ktA49qqux5YFNSNwLBAv1CBt/TzJicCzJyl/"
+							"evidence": "56dRZfCu/s4QnVeqPNGyGudYxqjHhBDy/cPoIkVRZsQq1FskvvQCTs0BZXyq7zCSZV67OFlk/0rt"
 						},
 						{
 							"uri": "https://www.justice.fr/",
@@ -1038,7 +1206,7 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "5fKu3/73IGhL2QaqPNGyGudYxqjHhBtymOck6yFtv9vtmmkKExQH93vMMexnVEvMi2aBSFDNJLLUbw=="
+							"evidence": "ltRWC8ROgBFfUcKqPNGyGudYxqjHhF7pOa1pKVtBHEsbHiOPIc5Ztru/eglLGfzqwC5y0LhOLTYi"
 						},
 						{
 							"uri": "https://www.justice.fr/themes/divorce",
@@ -1048,7 +1216,7 @@
 							"evidence": "/sites/default/files/css/css_TY7QtDWFxbJDXDyILpAKWh4hMb61aR2Pfy2M-RuBbas"
 						},
 						{
-							"uri": "https://www.justice.fr/themes/juges-famille",
+							"uri": "https://www.justice.fr/themes/obligations-vie-familiale",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1071,7 +1239,7 @@
 					],
 					"count": "12",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
-					"otherinfo": "<p>\"\uFFFD)\uFFFD\\x001c\uFFFDT\uFFFD\\x0016\\x0004\uFFFD\uFFFD<\u0472\\x001a\uFFFDX\u01A8\u01C4\uFFFD\\x0004\uFFFDh\uFFFD.\uFFFDoE\uFFFDE\uFFFD$\uFFFD\\x0006`\uFFFD\uFFFD\uFFFD\uFFFDS\uFFFD\uFFFDIX\uFFFD`+\\x001a0 \uFFFD\uFFFD\uFFFD\\x0005M</p>",
+					"otherinfo": "<p>\uFFFD)\uFFFDv\uFFFD`\uFFFD^\u07E3\\x0001\uFFFD<\u0472\\x001a\uFFFDX\u01A8\u01C4\uFFFD\uFFFD\uFFFD\\x00161h\\x0019\uFFFD\\x0000\uFFFD1,\uFFFD;r\uFFFD\\x0003\uFFFD\\x0005yP\\x0003^\uFFFD\uFFFD\\x0017\uFFFD\uFFFD?*\uFFFD\uFFFD5\uFFFD/</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
@@ -1088,35 +1256,35 @@
 					"desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
 					"instances":[ 
 						{
-							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r2z56i",
+							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r459z7",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "admin"
 						},
 						{
-							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r2z56i",
+							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r459z7",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "db"
 						},
 						{
-							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r2z56i",
+							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r459z7",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "from"
 						},
 						{
-							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r2z56i",
+							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r459z7",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "select"
 						},
 						{
-							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r2z56i",
+							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r459z7",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1130,28 +1298,28 @@
 							"evidence": "db"
 						},
 						{
-							"uri": "https://www.justice.fr/sites/default/files/js/js_CzlH8hnbWm_pUvTwkl4e8TB-Y0QtiBPb0lE9nh7dURQ.js",
+							"uri": "https://www.justice.fr/sites/default/files/js/js_VvgIxewHvSJfpMAM5HzbPzb7cyHNdkiuZUap5i_CiNo.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "from"
 						},
 						{
-							"uri": "https://www.justice.fr/sites/default/files/js/js_CzlH8hnbWm_pUvTwkl4e8TB-Y0QtiBPb0lE9nh7dURQ.js",
+							"uri": "https://www.justice.fr/sites/default/files/js/js_VvgIxewHvSJfpMAM5HzbPzb7cyHNdkiuZUap5i_CiNo.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "query"
 						},
 						{
-							"uri": "https://www.justice.fr/sites/default/files/js/js_CzlH8hnbWm_pUvTwkl4e8TB-Y0QtiBPb0lE9nh7dURQ.js",
+							"uri": "https://www.justice.fr/sites/default/files/js/js_VvgIxewHvSJfpMAM5HzbPzb7cyHNdkiuZUap5i_CiNo.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "select"
 						},
 						{
-							"uri": "https://www.justice.fr/sites/default/files/js/js_CzlH8hnbWm_pUvTwkl4e8TB-Y0QtiBPb0lE9nh7dURQ.js",
+							"uri": "https://www.justice.fr/sites/default/files/js/js_VvgIxewHvSJfpMAM5HzbPzb7cyHNdkiuZUap5i_CiNo.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1164,7 +1332,7 @@
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "1119"
+					"sourceid": "1126"
 				},
 				{
 					"pluginid": "10109",
@@ -1212,13 +1380,6 @@
 							"evidence": "<a id=\"alerte-enl_banniere\" class=\"alerte-enl_hidden\"title = \"Cliquez ici pour plus d'informations\" ></a>"
 						},
 						{
-							"uri": "https://www.justice.fr/node-page/11266",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<a id=\"alerte-enl_banniere\" class=\"alerte-enl_hidden\"title = \"Cliquez ici pour plus d'informations\" ></a>"
-						},
-						{
 							"uri": "https://www.justice.fr/recherche",
 							"method": "GET",
 							"param": "",
@@ -1237,6 +1398,13 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
+							"evidence": "<a class=\"close-btn\" href=\"#\"  style=\"display:none;\">Fermer&nbsp;&nbsp;<span class=\"icon icon-croix-pleine\"></span></a>"
+						},
+						{
+							"uri": "https://www.justice.fr/themes/obligations-vie-familiale",
+							"method": "GET",
+							"param": "",
+							"attack": "",
 							"evidence": "<a id=\"alerte-enl_banniere\" class=\"alerte-enl_hidden\"title = \"Cliquez ici pour plus d'informations\" ></a>"
 						},
 						{
@@ -1244,7 +1412,7 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<a id=\"alerte-enl_banniere\" class=\"alerte-enl_hidden\"title = \"Cliquez ici pour plus d'informations\" ></a>"
+							"evidence": "<a class=\"close-btn\" href=\"#\"  style=\"display:none;\">Fermer&nbsp;&nbsp;<span class=\"icon icon-croix-pleine\"></span></a>"
 						},
 						{
 							"uri": "https://www.justice.fr/themes/succession",
@@ -1287,7 +1455,21 @@
 							"evidence": "HIT"
 						},
 						{
-							"uri": "https://www.justice.fr/fiche/autorite-parentale",
+							"uri": "https://www.justice.fr/node-page/11212",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT"
+						},
+						{
+							"uri": "https://www.justice.fr/node-page/11213",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT"
+						},
+						{
+							"uri": "https://www.justice.fr/node-page/11250",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1302,13 +1484,6 @@
 						},
 						{
 							"uri": "https://www.justice.fr/recherche",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "HIT"
-						},
-						{
-							"uri": "https://www.justice.fr/robots.txt",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1337,13 +1512,6 @@
 						},
 						{
 							"uri": "https://www.justice.fr/themes/pension-alimentaire",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "HIT"
-						},
-						{
-							"uri": "https://www.justice.fr/themes/succession",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1390,6 +1558,13 @@
 							"evidence": "max-age=86400"
 						},
 						{
+							"uri": "https://www.justice.fr/accueil",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=604800"
+						},
+						{
 							"uri": "https://www.justice.fr/conditions-utilisation",
 							"method": "GET",
 							"param": "",
@@ -1425,7 +1600,7 @@
 							"evidence": "max-age=604800"
 						}
 					],
-					"count": "8",
+					"count": "9",
 					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p>",
 					"otherinfo": "",
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
@@ -1444,13 +1619,6 @@
 					"desc": "<p>The response contents are storable by caching components such as proxy servers, but will not be retrieved directly from the cache, without validating the request upstream, in response to similar requests from other users. </p>",
 					"instances":[ 
 						{
-							"uri": "https://www.justice.fr/printpdf",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "max-age=0"
-						},
-						{
 							"uri": "https://www.justice.fr/robots.txt",
 							"method": "GET",
 							"param": "",
@@ -1465,13 +1633,13 @@
 							"evidence": "must-revalidate"
 						}
 					],
-					"count": "3",
+					"count": "2",
 					"solution": "",
 					"otherinfo": "",
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "694"
+					"sourceid": "6"
 				}
 			]
 		}
