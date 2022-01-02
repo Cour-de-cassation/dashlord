@@ -213,7 +213,7 @@
               "ip"           : "search.judilibre.io/51.159.85.176",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "supported"
+              "finding"      : "not supported"
           }
 ,         {
               "id"           : "TLS_timestamp",
@@ -352,8 +352,8 @@
               "id"           : "cert_expirationStatus",
               "ip"           : "search.judilibre.io/51.159.85.176",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "32 >= 30 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 30 days (25)"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -366,7 +366,7 @@
               "id"           : "cert_notAfter",
               "ip"           : "search.judilibre.io/51.159.85.176",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2022-01-27 02:08"
           }
 ,         {
@@ -508,6 +508,13 @@
               "port"         : "443",
               "severity"     : "INFO",
               "finding"      : "0 seconds from localtime"
+          }
+,         {
+              "id"           : "HTTP_headerTime",
+              "ip"           : "search.judilibre.io/51.159.85.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1641084080"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -1098,6 +1105,6 @@
               "ip"           : "search.judilibre.io/51.159.85.176",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "140"
+              "finding"      : "88"
           }
 ]
