@@ -360,7 +360,7 @@
               "ip"           : "www.justice.fr/185.24.184.180",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "74 >= 60 days"
+              "finding"      : "67 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -559,6 +559,13 @@
               "finding"      : "-2 seconds from localtime"
           }
 ,         {
+              "id"           : "HTTP_headerTime",
+              "ip"           : "www.justice.fr/185.24.184.180",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1641084571"
+          }
+,         {
               "id"           : "HSTS_time",
               "ip"           : "www.justice.fr/185.24.184.180",
               "port"         : "443",
@@ -620,6 +627,13 @@
               "port"         : "443",
               "severity"     : "INFO",
               "finding"      : "1/2 at '/' marked as HttpOnly"
+          }
+,         {
+              "id"           : "cookie_bigip_f5",
+              "ip"           : "www.justice.fr/185.24.184.180",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "encrypted F5 cookie named MJ"
           }
 ,         {
               "id"           : "X-Frame-Options",
@@ -1184,6 +1198,6 @@
               "ip"           : "www.justice.fr/185.24.184.180",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "162"
+              "finding"      : "173"
           }
 ]
