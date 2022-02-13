@@ -359,8 +359,8 @@
               "id"           : "cert_expirationStatus",
               "ip"           : "www.justice.fr/185.24.184.180",
               "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (32)"
+              "severity"     : "HIGH",
+              "finding"      : "expires < 30 days (25)"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -373,7 +373,7 @@
               "id"           : "cert_notAfter",
               "ip"           : "www.justice.fr/185.24.184.180",
               "port"         : "443",
-              "severity"     : "MEDIUM",
+              "severity"     : "HIGH",
               "finding"      : "2022-03-10 22:59"
           }
 ,         {
@@ -556,14 +556,14 @@
               "ip"           : "www.justice.fr/185.24.184.180",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "+1 (± 1.5) seconds from localtime"
+              "finding"      : "-3 seconds from localtime"
           }
 ,         {
               "id"           : "HTTP_headerTime",
               "ip"           : "www.justice.fr/185.24.184.180",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1644108823"
+              "finding"      : "1644713486"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -627,13 +627,6 @@
               "port"         : "443",
               "severity"     : "INFO",
               "finding"      : "1/2 at '/' marked as HttpOnly"
-          }
-,         {
-              "id"           : "cookie_bigip_f5",
-              "ip"           : "www.justice.fr/185.24.184.180",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "encrypted F5 cookie named MJ"
           }
 ,         {
               "id"           : "X-Frame-Options",
@@ -1198,6 +1191,6 @@
               "ip"           : "www.justice.fr/185.24.184.180",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "230"
+              "finding"      : "204"
           }
 ]
