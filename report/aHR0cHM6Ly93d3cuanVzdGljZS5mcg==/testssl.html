@@ -21,11 +21,11 @@
 ###########################################################</span>
 
  Using &quot;OpenSSL 1.0.2-chacha (1.0.2k-dev)&quot; [~183 ciphers]
- on fv-az196-318:/home/testssl/bin/openssl.Linux.x86_64
+ on fv-az190-764:/home/testssl/bin/openssl.Linux.x86_64
  (built: &quot;Jan 18 17:12:17 2019&quot;, platform: &quot;linux-x86_64&quot;)
 
 
-<span style="color:white;background-color:black;"> Start 2022-03-06 00:51:22        --&gt;&gt; 185.24.184.180:443 (www.justice.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2022-03-13 00:50:04        --&gt;&gt; 185.24.184.180:443 (www.justice.fr) &lt;&lt;--</span>
 
  rDNS (185.24.184.180):  --
  Service detected:       HTTP
@@ -101,16 +101,16 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Server key size              </span>RSA 2048 bits (exponent is 65537)
 <span style="font-weight:bold;"> Server key usage             </span>Digital Signature, Key Encipherment
 <span style="font-weight:bold;"> Server extended key usage    </span>TLS Web Server Authentication
-<span style="font-weight:bold;"> Serial                       </span>6DC78513B2D43C9F111FA2615EA02F35 (OK: length 16)
-<span style="font-weight:bold;"> Fingerprints                 </span>SHA1 EFE66E9F37B07D2DBB0E062459444FD59A0D6ADC
-                              SHA256 876A3FBF32F71CC23F92AB7D283F11414F114D910A6FC1520F61350300E47AEF
+<span style="font-weight:bold;"> Serial                       </span>65319FD54A81D459F67A0A61E2AA4914 (OK: length 16)
+<span style="font-weight:bold;"> Fingerprints                 </span>SHA1 571B0D9B04AC3D860A61B13B96FCCBB62242FBC3
+                              SHA256 80232BDF1AA7DA5A26E0F1AE939F0BCA6D7AD15383BA3A28ECE3EBBCFDEAAFC0
 <span style="font-weight:bold;"> Common Name (CN)             </span><i>www.justice.fr </i>
-<span style="font-weight:bold;"> subjectAltName (SAN)         </span><i>www.justice.fr </i>
+<span style="font-weight:bold;"> subjectAltName (SAN)         </span><i>justice.fr www.justice.fr </i>
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (same w/o SNI)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#e52207;font-weight:bold;">NOT ok</span><span style="color:#e52207;font-weight:bold;">:</span><span style="color:#e52207;"> Java </span>(self signed CA in chain)
 <span style="color:#008817;">OK: Mozilla Microsoft Linux Apple </span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#e52207;">expires &lt; 30 days (4)</span> (2021-03-10 23:00 --&gt; 2022-03-10 22:59)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">362 &gt;= 60 days</span> (2022-03-10 23:00 --&gt; 2023-03-10 22:59)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.certigna.fr/servicesca.crl
                               http://crl.dhimyotis.com/servicesca.crl
@@ -136,7 +136,6 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Server banner                </span>(no &quot;Server&quot; line in header, interesting!)
 <span style="font-weight:bold;"> Application banner           </span>--
 <span style="font-weight:bold;"> Cookie(s)                    </span>2 issued: <span style="color:#008817;">1/2</span> secure, <span style="color:#008817;">1/2</span> HttpOnly
-                              Encrypted F5 cookie named <i>MJ</i> detected
 <span style="font-weight:bold;"> Security headers             </span><span style="color:#008817;">X-Frame-Options</span>: SAMEORIGIN
                               <span style="color:#008817;">X-Content-Type-Options</span>: nosniff
                               Cache-Control: public, max-age=86400
@@ -160,7 +159,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> FREAK</span> (CVE-2015-0204)                     <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
 <span style="font-weight:bold;"> DROWN</span> (CVE-2016-0800, CVE-2016-0703)      <span style="color:#008817;font-weight:bold;">not vulnerable on this host and port (OK)</span>
                                            make sure you don&apos;t use this certificate elsewhere with SSLv2 enabled services
-                                           <a href="https://censys.io/ipv4?q=876A3FBF32F71CC23F92AB7D283F11414F114D910A6FC1520F61350300E47AEF" style="color:black;text-decoration:none;">https://censys.io/ipv4?q=876A3FBF32F71CC23F92AB7D283F11414F114D910A6FC1520F61350300E47AEF</a> could help you to find out
+                                           <a href="https://censys.io/ipv4?q=80232BDF1AA7DA5A26E0F1AE939F0BCA6D7AD15383BA3A28ECE3EBBCFDEAAFC0" style="color:black;text-decoration:none;">https://censys.io/ipv4?q=80232BDF1AA7DA5A26E0F1AE939F0BCA6D7AD15383BA3A28ECE3EBBCFDEAAFC0</a> could help you to find out
 <span style="font-weight:bold;"> LOGJAM</span> (CVE-2015-4000), experimental      <span style="color:#008817;">not vulnerable (OK):</span> no DH EXPORT ciphers
                                            But: <i>Unknown DH group</i> (<span style="color:#c05600;">1024 bits</span>)
 <span style="font-weight:bold;"> BEAST</span> (CVE-2011-3389)                     TLS1: <span style="color:#a86437;">ECDHE-RSA-AES128-SHA
@@ -232,7 +231,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Grade cap reasons            </span>Grade capped to B. TLS 1.1 offered
                               Grade capped to B. TLS 1.0 offered
 
-<span style="color:white;background-color:black;"> Done 2022-03-06 00:54:40 [ 199s] --&gt;&gt; 185.24.184.180:443 (www.justice.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2022-03-13 00:53:29 [ 212s] --&gt;&gt; 185.24.184.180:443 (www.justice.fr) &lt;&lt;--</span>
 
 
 </pre>
