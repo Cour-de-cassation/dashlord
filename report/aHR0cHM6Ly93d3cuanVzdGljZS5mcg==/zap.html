@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 13 Mar 2022 00:48:36
+		Generated on Sun, 20 Mar 2022 00:51:01
 	</h3>
 
 	
@@ -152,7 +152,7 @@ td {
 					<div>Medium</div>
 				</td>
 				<td align="center">
-					<div>4</div>
+					<div>5</div>
 				</td>
 			</tr>
 			<tr>
@@ -204,6 +204,11 @@ td {
 				<td align="center">11</td>
 			</tr>
 			<tr>
+				<td><a href="#10042">HTTPS to HTTP Insecure Transition in Form Post</a></td>
+				<td align="center" class="risk-2">Medium</td>
+				<td align="center">1</td>
+			</tr>
+			<tr>
 				<td><a href="#90003">Sub Resource Integrity Attribute Missing</a></td>
 				<td align="center" class="risk-2">Medium</td>
 				<td align="center">11</td>
@@ -246,7 +251,7 @@ td {
 			<tr>
 				<td><a href="#10040">Secure Pages Include Mixed Content</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">9</td>
+				<td align="center">10</td>
 			</tr>
 			<tr>
 				<td><a href="#10096">Timestamp Disclosure - Unix</a></td>
@@ -286,12 +291,12 @@ td {
 			<tr>
 				<td><a href="#10049">Storable and Cacheable Content</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">9</td>
+				<td align="center">8</td>
 			</tr>
 			<tr>
 				<td><a href="#10049">Storable but Non-Cacheable Content</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">2</td>
+				<td align="center">3</td>
 			</tr>
 		</table>
 		<div class="spacer-lg"></div>
@@ -957,7 +962,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/themes/obligations-vie-familiale">https://www.justice.fr/themes/obligations-vie-familiale</a></td>
+						<td width="80%"><a href="https://www.justice.fr/themes/pension-alimentaire">https://www.justice.fr/themes/pension-alimentaire</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -983,7 +988,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/themes/pension-alimentaire">https://www.justice.fr/themes/pension-alimentaire</a></td>
+						<td width="80%"><a href="https://www.justice.fr/themes/succession">https://www.justice.fr/themes/succession</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1055,6 +1060,82 @@ td {
 					<td width="20%">Plugin Id</td>
 					<td width="80%"><a
 						href="https://www.zaproxy.org/docs/alerts/10038/">10038</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-2"><a
+						id="10042"></a>
+						<div>Medium</div></th>
+					<th class="risk-2">HTTPS to HTTP Insecure Transition in Form Post</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>This check identifies secure HTTPS pages that host insecure HTTP forms. The issue is that a secure page is transitioning to an insecure page when data is uploaded through a form. The user may think they&#39;re submitting data to a secure page when in fact they are not.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr/actu/bav">https://www.justice.fr/actu/bav</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">http://www.annuaires.justice.gouv.fr/annuaires-12162/annuaire-des-associations-daide-aux-victimes-21769.html</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">1</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Ensure sensitive data is only sent over secured HTTPS channels.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%"></td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/319.html">319</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">15</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10042/">10042</a></td>
 				</tr>
 			</table>
 			<div class="spacer"></div>
@@ -1576,32 +1657,6 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/accueil">https://www.justice.fr/accueil</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">TS0190034b</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">Set-Cookie: TS0190034b</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.justice.fr/conditions-utilisation">https://www.justice.fr/conditions-utilisation</a></td>
 					</tr>
 					<tr>
@@ -1629,6 +1684,32 @@ td {
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.justice.fr/contact/formulaire">https://www.justice.fr/contact/formulaire</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">TS0190034b</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Set-Cookie: TS0190034b</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr/printpdf">https://www.justice.fr/printpdf</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1915,32 +1996,6 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/accueil">https://www.justice.fr/accueil</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">TS0190034b</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">Set-Cookie: TS0190034b</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.justice.fr/conditions-utilisation">https://www.justice.fr/conditions-utilisation</a></td>
 					</tr>
 					<tr>
@@ -1968,6 +2023,32 @@ td {
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.justice.fr/contact/formulaire">https://www.justice.fr/contact/formulaire</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">TS0190034b</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Set-Cookie: TS0190034b</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr/printpdf">https://www.justice.fr/printpdf</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2825,7 +2906,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r5win7">https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r5win7</a></td>
+						<td width="80%"><a href="https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r8s2xs">https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r8s2xs</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3138,7 +3219,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/themes/obligations-vie-familiale">https://www.justice.fr/themes/obligations-vie-familiale</a></td>
+						<td width="80%"><a href="https://www.justice.fr/themes/pension-alimentaire">https://www.justice.fr/themes/pension-alimentaire</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3164,7 +3245,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/themes/pension-alimentaire">https://www.justice.fr/themes/pension-alimentaire</a></td>
+						<td width="80%"><a href="https://www.justice.fr/themes/succession">https://www.justice.fr/themes/succession</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3251,6 +3332,32 @@ td {
 				<TR vAlign="top">
 					<TD colspan="2"></TD>
 				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr/actu/bav">https://www.justice.fr/actu/bav</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">http://www.annuaires.justice.gouv.fr/annuaires-12162/annuaire-des-associations-daide-aux-victimes-21769.html</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -3488,7 +3595,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">9</td>
+					<td width="80%">10</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -3835,7 +3942,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r5win7">https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r5win7</a></td>
+						<td width="80%"><a href="https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r8s2xs">https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r8s2xs</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3861,7 +3968,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/sites/all/themes/portalis_theme/dist/style.min.css?r5win7">https://www.justice.fr/sites/all/themes/portalis_theme/dist/style.min.css?r5win7</a></td>
+						<td width="80%"><a href="https://www.justice.fr/sites/all/themes/portalis_theme/dist/style.min.css?r8s2xs">https://www.justice.fr/sites/all/themes/portalis_theme/dist/style.min.css?r8s2xs</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4070,7 +4177,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">HqGqk+2+2wJPTpppS3O5eZ8UNOvXuvcTpDuig/xI6rAETay/7sr2jpWGnVA8mVWapD1aLDyqwM+k</td>
+						<td width="80%">Eyc7XJoCmyCkahZpS3O5eZ8UNOvXukXDJbVBn/XB3Mj/GRaf/61TCVTzXNH1ot/epk+gegwbcDI4Tg==</td>
 					</tr>
 				
 					<tr>
@@ -4096,7 +4203,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">g29OKMb/q9poRlRpS3O5eZ8UNOvXuiEnSTkIDyw2LT3sqzhIimGFmO3WCkcy1+TPDw8tU6k7JOC0</td>
+						<td width="80%">MCnoWnpwxFZVyFZpS3O5eZ8UNOvXuim3WqjverExBsJPkvDWCbvA3qkxU7Pm5E/PcPRoxBdw91O4Sg==</td>
 					</tr>
 				
 					<tr>
@@ -4252,7 +4359,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">D7ZESPVIuujOw5efdtgV8qZzc0gtAixEn9Tk77CL/E2vxCpCe0hufhqaGTWS8bJNrC67+565Mzrr</td>
+						<td width="80%">e4Z9jXFDL4mFIoWfdtgV8qZzc0gtArxLCj/e/xNj/hUYLPfP+ReKEyfes7nNOhx/NWeRF6uIWxMT</td>
 					</tr>
 				
 					<tr>
@@ -4310,7 +4417,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/themes/obligations-vie-familiale">https://www.justice.fr/themes/obligations-vie-familiale</a></td>
+						<td width="80%"><a href="https://www.justice.fr/themes/pension-alimentaire">https://www.justice.fr/themes/pension-alimentaire</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4336,7 +4443,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/themes/pension-alimentaire">https://www.justice.fr/themes/pension-alimentaire</a></td>
+						<td width="80%"><a href="https://www.justice.fr/themes/succession">https://www.justice.fr/themes/succession</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4415,7 +4522,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r5win7">https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r5win7</a></td>
+						<td width="80%"><a href="https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r8s2xs">https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r8s2xs</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4441,7 +4548,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r5win7">https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r5win7</a></td>
+						<td width="80%"><a href="https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r8s2xs">https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r8s2xs</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4467,7 +4574,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r5win7">https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r5win7</a></td>
+						<td width="80%"><a href="https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r8s2xs">https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r8s2xs</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4493,7 +4600,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r5win7">https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r5win7</a></td>
+						<td width="80%"><a href="https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r8s2xs">https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r8s2xs</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4519,7 +4626,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r5win7">https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r5win7</a></td>
+						<td width="80%"><a href="https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r8s2xs">https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?r8s2xs</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5480,6 +5587,32 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr/node-page/11250">https://www.justice.fr/node-page/11250</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">HIT</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.justice.fr/node-page/11266">https://www.justice.fr/node-page/11266</a></td>
 					</tr>
 					<tr>
@@ -5507,32 +5640,6 @@ td {
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.justice.fr/recherche">https://www.justice.fr/recherche</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">HIT</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/robots.txt">https://www.justice.fr/robots.txt</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5836,32 +5943,6 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/accueil">https://www.justice.fr/accueil</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">max-age=604800</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.justice.fr/conditions-utilisation">https://www.justice.fr/conditions-utilisation</a></td>
 					</tr>
 					<tr>
@@ -5991,7 +6072,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">9</td>
+					<td width="80%">8</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -6063,6 +6144,32 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr/printpdf">https://www.justice.fr/printpdf</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=0</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.justice.fr/robots.txt">https://www.justice.fr/robots.txt</a></td>
 					</tr>
 					<tr>
@@ -6114,7 +6221,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">2</td>
+					<td width="80%">3</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
