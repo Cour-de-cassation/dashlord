@@ -21,13 +21,13 @@
 ###########################################################</span>
 
  Using &quot;OpenSSL 1.0.2-chacha (1.0.2k-dev)&quot; [~183 ciphers]
- on fv-az196-207:/home/testssl/bin/openssl.Linux.x86_64
+ on fv-az453-705:/home/testssl/bin/openssl.Linux.x86_64
  (built: &quot;Jan 18 17:12:17 2019&quot;, platform: &quot;linux-x86_64&quot;)
 
 
 <span style="font-weight:bold;">Testing all IPv4 addresses (port 443): </span>185.199.111.153 185.199.110.153 185.199.109.153 185.199.108.153
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2022-03-27 00:53:00        --&gt;&gt; 185.199.111.153:443 (stats.judilibre.io) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2022-04-03 00:54:04        --&gt;&gt; 185.199.111.153:443 (stats.judilibre.io) &lt;&lt;--</span>
 
  Further IP addresses:   185.199.110.153 185.199.109.153 185.199.108.153
                          2606:50c0:8003::153 2606:50c0:8002::153
@@ -60,11 +60,6 @@
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing server&apos;s cipher preferences </span>
 
-<span style="font-weight:bold;"> Has server cipher order?     </span><span style="color:#008817;">yes (OK)</span> -- only for &lt; TLS 1.3
-<span style="font-weight:bold;"> Negotiated protocol          </span><span style="color:#008817;font-weight:bold;">TLSv1.3</span>
-<span style="font-weight:bold;"> Negotiated cipher            </span><span style="color:#008817;font-weight:bold;">TLS_AES_256_GCM_SHA384</span>, <span style="color:#008817;">253 bit ECDH (X25519)</span>
-<span style="font-weight:bold;"> Cipher per protocol</span>
-
 Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Cipher Suite Name (IANA/RFC)
 -----------------------------------------------------------------------------------------------------------------------------
 <u>SSLv2</u>
@@ -80,6 +75,9 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="color:#cd00cd;">Local problem: /home/testssl/bin/openssl.Linux.x86_64 doesn&apos;t support &quot;s_client -tls1_3&quot;</span>
 <span style="color:#cd00cd;">Local problem: Your /home/testssl/bin/openssl.Linux.x86_64 does not support -tls1_3</span>
 
+<span style="font-weight:bold;"> Has server cipher order?     </span><span style="color:#008817;">yes (OK)</span> -- only for &lt; TLS 1.3
+<span style="font-weight:bold;"> Negotiated protocol          </span><span style="color:#008817;font-weight:bold;">TLSv1.3</span>
+<span style="font-weight:bold;"> Negotiated cipher            </span><span style="color:#008817;font-weight:bold;">TLS_AES_256_GCM_SHA384</span>, <span style="color:#008817;">253 bit ECDH (X25519)</span>
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing robust forward secrecy (FS)</span><u> -- omitting Null Authentication/Encryption, 3DES, RC4 </u>
 
@@ -118,7 +116,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">52 &gt;= 30 days</span> (2022-02-17 08:23 --&gt; 2022-05-18 08:23)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">45 &gt;= 30 days</span> (2022-02-17 08:23 --&gt; 2022-05-18 08:23)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>--
 <span style="font-weight:bold;"> OCSP URI                     </span>http://r3.o.lencr.org
@@ -136,15 +134,15 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="text-decoration:underline;font-weight:bold;"> Testing HTTP header response @ &quot;/&quot; </span>
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  200 OK
-<span style="font-weight:bold;"> HTTP clock skew              </span>+163 sec from localtime
-<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          163
+<span style="font-weight:bold;"> HTTP clock skew              </span>+207 sec from localtime
+<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          207
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#008817;">365 days</span>=31556952 s<span style="color:#168092;">, just this domain</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
 <span style="font-weight:bold;"> Server banner                </span>GitHub.com
 <span style="font-weight:bold;"> Application banner           </span>--
 <span style="font-weight:bold;"> Cookie(s)                    </span>(none issued at &quot;/&quot;)
 <span style="font-weight:bold;"> Security headers             </span>Access-Control-Allow-Origin: *
-                              X-Served-By: cache-iad-kiad7000073-IAD
+                              X-Served-By: cache-sjc10061-SJC
                               Cache-Control: max-age=600
 <span style="font-weight:bold;"> Reverse Proxy banner         </span><span style="color:#8a7237;font-weight:bold;">Via</span>: <span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">1</span> varnish
                               <span style="color:#8a7237;font-weight:bold;">X-Cache</span>: HIT
@@ -228,10 +226,10 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>81
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2022-03-27 00:54:29 [  91s] --&gt;&gt; 185.199.111.153:443 (stats.judilibre.io) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2022-04-03 00:55:31 [  89s] --&gt;&gt; 185.199.111.153:443 (stats.judilibre.io) &lt;&lt;--</span>
 
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2022-03-27 00:54:29        --&gt;&gt; 185.199.110.153:443 (stats.judilibre.io) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2022-04-03 00:55:31        --&gt;&gt; 185.199.110.153:443 (stats.judilibre.io) &lt;&lt;--</span>
 
  Further IP addresses:   185.199.111.153 185.199.109.153 185.199.108.153
                          2606:50c0:8003::153 2606:50c0:8002::153
@@ -264,11 +262,6 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing server&apos;s cipher preferences </span>
 
-<span style="font-weight:bold;"> Has server cipher order?     </span><span style="color:#008817;">yes (OK)</span> -- only for &lt; TLS 1.3
-<span style="font-weight:bold;"> Negotiated protocol          </span><span style="color:#008817;font-weight:bold;">TLSv1.3</span>
-<span style="font-weight:bold;"> Negotiated cipher            </span><span style="color:#008817;font-weight:bold;">TLS_AES_256_GCM_SHA384</span>, <span style="color:#008817;">253 bit ECDH (X25519)</span>
-<span style="font-weight:bold;"> Cipher per protocol</span>
-
 Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Cipher Suite Name (IANA/RFC)
 -----------------------------------------------------------------------------------------------------------------------------
 <u>SSLv2</u>
@@ -284,6 +277,9 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="color:#cd00cd;">Local problem: /home/testssl/bin/openssl.Linux.x86_64 doesn&apos;t support &quot;s_client -tls1_3&quot;</span>
 <span style="color:#cd00cd;">Local problem: Your /home/testssl/bin/openssl.Linux.x86_64 does not support -tls1_3</span>
 
+<span style="font-weight:bold;"> Has server cipher order?     </span><span style="color:#008817;">yes (OK)</span> -- only for &lt; TLS 1.3
+<span style="font-weight:bold;"> Negotiated protocol          </span><span style="color:#008817;font-weight:bold;">TLSv1.3</span>
+<span style="font-weight:bold;"> Negotiated cipher            </span><span style="color:#008817;font-weight:bold;">TLS_AES_256_GCM_SHA384</span>, <span style="color:#008817;">253 bit ECDH (X25519)</span>
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing robust forward secrecy (FS)</span><u> -- omitting Null Authentication/Encryption, 3DES, RC4 </u>
 
@@ -322,7 +318,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">52 &gt;= 30 days</span> (2022-02-17 08:23 --&gt; 2022-05-18 08:23)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">45 &gt;= 30 days</span> (2022-02-17 08:23 --&gt; 2022-05-18 08:23)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>--
 <span style="font-weight:bold;"> OCSP URI                     </span>http://r3.o.lencr.org
@@ -340,15 +336,15 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="text-decoration:underline;font-weight:bold;"> Testing HTTP header response @ &quot;/&quot; </span>
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  200 OK
-<span style="font-weight:bold;"> HTTP clock skew              </span>+251 sec from localtime
-<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          251
+<span style="font-weight:bold;"> HTTP clock skew              </span>+290 sec from localtime
+<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          290
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#008817;">365 days</span>=31556952 s<span style="color:#168092;">, just this domain</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
 <span style="font-weight:bold;"> Server banner                </span>GitHub.com
 <span style="font-weight:bold;"> Application banner           </span>--
 <span style="font-weight:bold;"> Cookie(s)                    </span>(none issued at &quot;/&quot;)
 <span style="font-weight:bold;"> Security headers             </span>Access-Control-Allow-Origin: *
-                              X-Served-By: cache-iad-kiad7000035-IAD
+                              X-Served-By: cache-sjc10035-SJC
                               Cache-Control: max-age=600
 <span style="font-weight:bold;"> Reverse Proxy banner         </span><span style="color:#8a7237;font-weight:bold;">Via</span>: <span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">1</span> varnish
                               <span style="color:#8a7237;font-weight:bold;">X-Cache</span>: HIT
@@ -432,10 +428,10 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>81
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2022-03-27 00:55:56 [ 178s] --&gt;&gt; 185.199.110.153:443 (stats.judilibre.io) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2022-04-03 00:56:56 [ 174s] --&gt;&gt; 185.199.110.153:443 (stats.judilibre.io) &lt;&lt;--</span>
 
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2022-03-27 00:55:56        --&gt;&gt; 185.199.109.153:443 (stats.judilibre.io) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2022-04-03 00:56:56        --&gt;&gt; 185.199.109.153:443 (stats.judilibre.io) &lt;&lt;--</span>
 
  Further IP addresses:   185.199.111.153 185.199.110.153 185.199.108.153
                          2606:50c0:8003::153 2606:50c0:8002::153
@@ -468,11 +464,6 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing server&apos;s cipher preferences </span>
 
-<span style="font-weight:bold;"> Has server cipher order?     </span><span style="color:#008817;">yes (OK)</span> -- only for &lt; TLS 1.3
-<span style="font-weight:bold;"> Negotiated protocol          </span><span style="color:#008817;font-weight:bold;">TLSv1.3</span>
-<span style="font-weight:bold;"> Negotiated cipher            </span><span style="color:#008817;font-weight:bold;">TLS_AES_256_GCM_SHA384</span>, <span style="color:#008817;">253 bit ECDH (X25519)</span>
-<span style="font-weight:bold;"> Cipher per protocol</span>
-
 Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Cipher Suite Name (IANA/RFC)
 -----------------------------------------------------------------------------------------------------------------------------
 <u>SSLv2</u>
@@ -488,6 +479,9 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="color:#cd00cd;">Local problem: /home/testssl/bin/openssl.Linux.x86_64 doesn&apos;t support &quot;s_client -tls1_3&quot;</span>
 <span style="color:#cd00cd;">Local problem: Your /home/testssl/bin/openssl.Linux.x86_64 does not support -tls1_3</span>
 
+<span style="font-weight:bold;"> Has server cipher order?     </span><span style="color:#008817;">yes (OK)</span> -- only for &lt; TLS 1.3
+<span style="font-weight:bold;"> Negotiated protocol          </span><span style="color:#008817;font-weight:bold;">TLSv1.3</span>
+<span style="font-weight:bold;"> Negotiated cipher            </span><span style="color:#008817;font-weight:bold;">TLS_AES_256_GCM_SHA384</span>, <span style="color:#008817;">253 bit ECDH (X25519)</span>
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing robust forward secrecy (FS)</span><u> -- omitting Null Authentication/Encryption, 3DES, RC4 </u>
 
@@ -526,7 +520,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">52 &gt;= 30 days</span> (2022-02-17 08:23 --&gt; 2022-05-18 08:23)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">45 &gt;= 30 days</span> (2022-02-17 08:23 --&gt; 2022-05-18 08:23)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>--
 <span style="font-weight:bold;"> OCSP URI                     </span>http://r3.o.lencr.org
@@ -544,15 +538,15 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="text-decoration:underline;font-weight:bold;"> Testing HTTP header response @ &quot;/&quot; </span>
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  200 OK
-<span style="font-weight:bold;"> HTTP clock skew              </span>+338 sec from localtime
-<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          338
+<span style="font-weight:bold;"> HTTP clock skew              </span>+376 sec from localtime
+<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          376
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#008817;">365 days</span>=31556952 s<span style="color:#168092;">, just this domain</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
 <span style="font-weight:bold;"> Server banner                </span>GitHub.com
 <span style="font-weight:bold;"> Application banner           </span>--
 <span style="font-weight:bold;"> Cookie(s)                    </span>(none issued at &quot;/&quot;)
 <span style="font-weight:bold;"> Security headers             </span>Access-Control-Allow-Origin: *
-                              X-Served-By: cache-iad-kiad7000144-IAD
+                              X-Served-By: cache-sjc10036-SJC
                               Cache-Control: max-age=600
 <span style="font-weight:bold;"> Reverse Proxy banner         </span><span style="color:#8a7237;font-weight:bold;">Via</span>: <span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">1</span> varnish
                               <span style="color:#8a7237;font-weight:bold;">X-Cache</span>: HIT
@@ -636,10 +630,10 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>81
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2022-03-27 00:57:25 [ 267s] --&gt;&gt; 185.199.109.153:443 (stats.judilibre.io) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2022-04-03 00:58:22 [ 260s] --&gt;&gt; 185.199.109.153:443 (stats.judilibre.io) &lt;&lt;--</span>
 
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2022-03-27 00:57:25        --&gt;&gt; 185.199.108.153:443 (stats.judilibre.io) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2022-04-03 00:58:23        --&gt;&gt; 185.199.108.153:443 (stats.judilibre.io) &lt;&lt;--</span>
 
  Further IP addresses:   185.199.111.153 185.199.110.153 185.199.109.153
                          2606:50c0:8003::153 2606:50c0:8002::153
@@ -672,11 +666,6 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing server&apos;s cipher preferences </span>
 
-<span style="font-weight:bold;"> Has server cipher order?     </span><span style="color:#008817;">yes (OK)</span> -- only for &lt; TLS 1.3
-<span style="font-weight:bold;"> Negotiated protocol          </span><span style="color:#008817;font-weight:bold;">TLSv1.3</span>
-<span style="font-weight:bold;"> Negotiated cipher            </span><span style="color:#008817;font-weight:bold;">TLS_AES_256_GCM_SHA384</span>, <span style="color:#008817;">253 bit ECDH (X25519)</span>
-<span style="font-weight:bold;"> Cipher per protocol</span>
-
 Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Cipher Suite Name (IANA/RFC)
 -----------------------------------------------------------------------------------------------------------------------------
 <u>SSLv2</u>
@@ -692,6 +681,9 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="color:#cd00cd;">Local problem: /home/testssl/bin/openssl.Linux.x86_64 doesn&apos;t support &quot;s_client -tls1_3&quot;</span>
 <span style="color:#cd00cd;">Local problem: Your /home/testssl/bin/openssl.Linux.x86_64 does not support -tls1_3</span>
 
+<span style="font-weight:bold;"> Has server cipher order?     </span><span style="color:#008817;">yes (OK)</span> -- only for &lt; TLS 1.3
+<span style="font-weight:bold;"> Negotiated protocol          </span><span style="color:#008817;font-weight:bold;">TLSv1.3</span>
+<span style="font-weight:bold;"> Negotiated cipher            </span><span style="color:#008817;font-weight:bold;">TLS_AES_256_GCM_SHA384</span>, <span style="color:#008817;">253 bit ECDH (X25519)</span>
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing robust forward secrecy (FS)</span><u> -- omitting Null Authentication/Encryption, 3DES, RC4 </u>
 
@@ -730,7 +722,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">52 &gt;= 30 days</span> (2022-02-17 08:23 --&gt; 2022-05-18 08:23)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">45 &gt;= 30 days</span> (2022-02-17 08:23 --&gt; 2022-05-18 08:23)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>--
 <span style="font-weight:bold;"> OCSP URI                     </span>http://r3.o.lencr.org
@@ -748,19 +740,19 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="text-decoration:underline;font-weight:bold;"> Testing HTTP header response @ &quot;/&quot; </span>
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  200 OK
-<span style="font-weight:bold;"> HTTP clock skew              </span>+427 sec from localtime
-<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          427
+<span style="font-weight:bold;"> HTTP clock skew              </span>+463 sec from localtime
+<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          463
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#008817;">365 days</span>=31556952 s<span style="color:#168092;">, just this domain</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
 <span style="font-weight:bold;"> Server banner                </span>GitHub.com
 <span style="font-weight:bold;"> Application banner           </span>--
 <span style="font-weight:bold;"> Cookie(s)                    </span>(none issued at &quot;/&quot;)
 <span style="font-weight:bold;"> Security headers             </span>Access-Control-Allow-Origin: *
-                              X-Served-By: cache-iad-kiad7000083-IAD
+                              X-Served-By: cache-sjc10069-SJC
                               Cache-Control: max-age=600
 <span style="font-weight:bold;"> Reverse Proxy banner         </span><span style="color:#8a7237;font-weight:bold;">Via</span>: <span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">1</span> varnish
                               <span style="color:#8a7237;font-weight:bold;">X-Cache</span>: HIT
-                              <span style="color:#8a7237;font-weight:bold;">X-Cache</span>-Hits: <span style="color:#8a7237;">2</span>
+                              <span style="color:#8a7237;font-weight:bold;">X-Cache</span>-Hits: <span style="color:#8a7237;">1</span>
 
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing vulnerabilities </span>
@@ -840,7 +832,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>81
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2022-03-27 00:58:54 [ 356s] --&gt;&gt; 185.199.108.153:443 (stats.judilibre.io) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2022-04-03 00:59:49 [ 347s] --&gt;&gt; 185.199.108.153:443 (stats.judilibre.io) &lt;&lt;--</span>
 
 -----------------------------------------------------
 <span style="font-weight:bold;">Done testing now all IP addresses (on port 443): </span>185.199.111.153 185.199.110.153 185.199.109.153 185.199.108.153
