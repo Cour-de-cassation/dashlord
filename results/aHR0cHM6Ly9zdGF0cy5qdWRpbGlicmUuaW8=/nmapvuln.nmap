@@ -1,8 +1,8 @@
-# Nmap 7.91 scan initiated Sun May  8 01:02:42 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln stats.judilibre.io
-Nmap scan report for stats.judilibre.io (185.199.111.153)
-Host is up (0.0014s latency).
-Other addresses for stats.judilibre.io (not scanned): 185.199.110.153 185.199.109.153 185.199.108.153 2606:50c0:8003::153 2606:50c0:8001::153 2606:50c0:8002::153 2606:50c0:8000::153
-rDNS record for 185.199.111.153: cdn-185-199-111-153.github.com
+# Nmap 7.91 scan initiated Sun May 15 01:17:23 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln stats.judilibre.io
+Nmap scan report for stats.judilibre.io (185.199.108.153)
+Host is up (0.0018s latency).
+Other addresses for stats.judilibre.io (not scanned): 185.199.111.153 185.199.110.153 185.199.109.153 2606:50c0:8002::153 2606:50c0:8003::153 2606:50c0:8001::153 2606:50c0:8000::153
+rDNS record for 185.199.108.153: cdn-185-199-108-153.github.com
 Not shown: 998 filtered ports
 PORT    STATE SERVICE    VERSION
 80/tcp  open  http-proxy Varnish
@@ -17,24 +17,24 @@ PORT    STATE SERVICE    VERSION
 |     Content-Type: text/html; charset=utf-8
 |     ETag: "6272da93-239b"
 |     Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'
-|     X-GitHub-Request-Id: F57A:4415:6C92:F200:627716C3
+|     X-GitHub-Request-Id: 54BC:66FE:32C3D2:836169:628054B4
 |     Accept-Ranges: bytes
-|     Date: Sun, 08 May 2022 01:02:59 GMT
+|     Date: Sun, 15 May 2022 01:17:40 GMT
 |     Via: 1.1 varnish
 |     Age: 0
-|     X-Served-By: cache-sjc10066-SJC
+|     X-Served-By: cache-iad-kiad7000020-IAD
 |     X-Cache: MISS
 |     X-Cache-Hits: 0
-|     X-Timer: S1651971780.788729,VS0,VE87
+|     X-Timer: S1652577461.763154,VS0,VE12
 |     Vary: Accept-Encoding
-|     X-Fastly-Request-ID: 27104cdd7940594c68ad4de6bb004129904c6714
+|     X-Fastly-Request-ID: 97a4481019b6d4d41472d2939b66eb3ee72b82e7
 |     <!DOCTYPE html>
 |     <html>
 |     <head>
 |     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 |     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'">
 |     <title>Site not found &middot; GitHub Pages</title>
-|     <style type="te
+|     <sty
 |   GetRequest: 
 |     HTTP/1.1 404 Not Found
 |     Connection: close
@@ -43,24 +43,23 @@ PORT    STATE SERVICE    VERSION
 |     Content-Type: text/html; charset=utf-8
 |     ETag: "6272da93-239b"
 |     Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'
-|     X-GitHub-Request-Id: 431E:2110:278B55:33C368:627716C3
+|     X-GitHub-Request-Id: C350:556B:4BEAFD:A15240:6280473D
 |     Accept-Ranges: bytes
-|     Date: Sun, 08 May 2022 01:02:59 GMT
+|     Date: Sun, 15 May 2022 01:17:40 GMT
 |     Via: 1.1 varnish
-|     Age: 0
-|     X-Served-By: cache-sjc10052-SJC
-|     X-Cache: MISS
-|     X-Cache-Hits: 0
-|     X-Timer: S1651971780.675308,VS0,VE85
+|     Age: 3447
+|     X-Served-By: cache-iad-kiad7000096-IAD
+|     X-Cache: HIT
+|     X-Cache-Hits: 1
+|     X-Timer: S1652577461.727217,VS0,VE1
 |     Vary: Accept-Encoding
-|     X-Fastly-Request-ID: ee5c6c38814745f5329341e29d837fd5fdf79cc8
+|     X-Fastly-Request-ID: 25e7c830a9f5161cb1f57824b9f528b93cde7399
 |     <!DOCTYPE html>
 |     <html>
 |     <head>
 |     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 |     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'">
 |     <title>Site not found &middot; GitHub Pages</title>
-|     <style type
 |   HTTPOptions: 
 |     HTTP/1.1 405 Method Not Allowed
 |     Connection: close
@@ -68,13 +67,13 @@ PORT    STATE SERVICE    VERSION
 |     Server: Varnish
 |     Retry-After: 0
 |     Accept-Ranges: bytes
-|     Date: Sun, 08 May 2022 01:02:59 GMT
+|     Date: Sun, 15 May 2022 01:17:40 GMT
 |     Via: 1.1 varnish
-|     X-Served-By: cache-sjc10043-SJC
+|     X-Served-By: cache-iad-kiad7000069-IAD
 |     X-Cache: MISS
 |     X-Cache-Hits: 0
-|     X-Timer: S1651971780.778212,VS0,VE0
-|     X-Fastly-Request-ID: 583e73f20f7551b3bace9421d72f761522b01b69
+|     X-Timer: S1652577461.750869,VS0,VE0
+|     X-Fastly-Request-ID: fa5956e9bd9071211cebc6d7eb45c6db3ee39972
 |     <html>
 |     <head><title>405 Not Allowed</title></head>
 |     <body bgcolor="white">
@@ -85,50 +84,50 @@ PORT    STATE SERVICE    VERSION
 |   GitHub.com
 |_  Varnish
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port443-TCP:V=7.91%T=SSL%I=7%D=5/8%Time=627716C3%P=x86_64-alpine-linux-
-SF:musl%r(GetRequest,25E5,"HTTP/1\.1\x20404\x20Not\x20Found\r\nConnection:
-SF:\x20close\r\nContent-Length:\x209115\r\nServer:\x20GitHub\.com\r\nConte
-SF:nt-Type:\x20text/html;\x20charset=utf-8\r\nETag:\x20\"6272da93-239b\"\r
-SF:\nContent-Security-Policy:\x20default-src\x20'none';\x20style-src\x20'u
-SF:nsafe-inline';\x20img-src\x20data:;\x20connect-src\x20'self'\r\nX-GitHu
-SF:b-Request-Id:\x20431E:2110:278B55:33C368:627716C3\r\nAccept-Ranges:\x20
-SF:bytes\r\nDate:\x20Sun,\x2008\x20May\x202022\x2001:02:59\x20GMT\r\nVia:\
-SF:x201\.1\x20varnish\r\nAge:\x200\r\nX-Served-By:\x20cache-sjc10052-SJC\r
-SF:\nX-Cache:\x20MISS\r\nX-Cache-Hits:\x200\r\nX-Timer:\x20S1651971780\.67
-SF:5308,VS0,VE85\r\nVary:\x20Accept-Encoding\r\nX-Fastly-Request-ID:\x20ee
-SF:5c6c38814745f5329341e29d837fd5fdf79cc8\r\n\r\n<!DOCTYPE\x20html>\n<html
-SF:>\n\x20\x20<head>\n\x20\x20\x20\x20<meta\x20http-equiv=\"Content-type\"
-SF:\x20content=\"text/html;\x20charset=utf-8\">\n\x20\x20\x20\x20<meta\x20
-SF:http-equiv=\"Content-Security-Policy\"\x20content=\"default-src\x20'non
-SF:e';\x20style-src\x20'unsafe-inline';\x20img-src\x20data:;\x20connect-sr
-SF:c\x20'self'\">\n\x20\x20\x20\x20<title>Site\x20not\x20found\x20&middot;
-SF:\x20GitHub\x20Pages</title>\n\x20\x20\x20\x20<style\x20type")%r(HTTPOpt
-SF:ions,1E1,"HTTP/1\.1\x20405\x20Method\x20Not\x20Allowed\r\nConnection:\x
-SF:20close\r\nContent-Length:\x20131\r\nServer:\x20Varnish\r\nRetry-After:
-SF:\x200\r\nAccept-Ranges:\x20bytes\r\nDate:\x20Sun,\x2008\x20May\x202022\
-SF:x2001:02:59\x20GMT\r\nVia:\x201\.1\x20varnish\r\nX-Served-By:\x20cache-
-SF:sjc10043-SJC\r\nX-Cache:\x20MISS\r\nX-Cache-Hits:\x200\r\nX-Timer:\x20S
-SF:1651971780\.778212,VS0,VE0\r\nX-Fastly-Request-ID:\x20583e73f20f7551b3b
-SF:ace9421d72f761522b01b69\r\n\r\n<html>\n<head><title>405\x20Not\x20Allow
-SF:ed</title></head>\n<body\x20bgcolor=\"white\">\n<center><h1>405\x20Not\
-SF:x20Allowed</h1></center>\n</body>\n</html>")%r(FourOhFourRequest,25E1,"
-SF:HTTP/1\.1\x20404\x20Not\x20Found\r\nConnection:\x20close\r\nContent-Len
-SF:gth:\x209115\r\nServer:\x20GitHub\.com\r\nContent-Type:\x20text/html;\x
-SF:20charset=utf-8\r\nETag:\x20\"6272da93-239b\"\r\nContent-Security-Polic
-SF:y:\x20default-src\x20'none';\x20style-src\x20'unsafe-inline';\x20img-sr
-SF:c\x20data:;\x20connect-src\x20'self'\r\nX-GitHub-Request-Id:\x20F57A:44
-SF:15:6C92:F200:627716C3\r\nAccept-Ranges:\x20bytes\r\nDate:\x20Sun,\x2008
-SF:\x20May\x202022\x2001:02:59\x20GMT\r\nVia:\x201\.1\x20varnish\r\nAge:\x
-SF:200\r\nX-Served-By:\x20cache-sjc10066-SJC\r\nX-Cache:\x20MISS\r\nX-Cach
-SF:e-Hits:\x200\r\nX-Timer:\x20S1651971780\.788729,VS0,VE87\r\nVary:\x20Ac
-SF:cept-Encoding\r\nX-Fastly-Request-ID:\x2027104cdd7940594c68ad4de6bb0041
-SF:29904c6714\r\n\r\n<!DOCTYPE\x20html>\n<html>\n\x20\x20<head>\n\x20\x20\
-SF:x20\x20<meta\x20http-equiv=\"Content-type\"\x20content=\"text/html;\x20
-SF:charset=utf-8\">\n\x20\x20\x20\x20<meta\x20http-equiv=\"Content-Securit
-SF:y-Policy\"\x20content=\"default-src\x20'none';\x20style-src\x20'unsafe-
-SF:inline';\x20img-src\x20data:;\x20connect-src\x20'self'\">\n\x20\x20\x20
-SF:\x20<title>Site\x20not\x20found\x20&middot;\x20GitHub\x20Pages</title>\
-SF:n\x20\x20\x20\x20<style\x20type=\"te");
+SF-Port443-TCP:V=7.91%T=SSL%I=7%D=5/15%Time=628054B4%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,25ED,"HTTP/1\.1\x20404\x20Not\x20Found\r\nConnection
+SF::\x20close\r\nContent-Length:\x209115\r\nServer:\x20GitHub\.com\r\nCont
+SF:ent-Type:\x20text/html;\x20charset=utf-8\r\nETag:\x20\"6272da93-239b\"\
+SF:r\nContent-Security-Policy:\x20default-src\x20'none';\x20style-src\x20'
+SF:unsafe-inline';\x20img-src\x20data:;\x20connect-src\x20'self'\r\nX-GitH
+SF:ub-Request-Id:\x20C350:556B:4BEAFD:A15240:6280473D\r\nAccept-Ranges:\x2
+SF:0bytes\r\nDate:\x20Sun,\x2015\x20May\x202022\x2001:17:40\x20GMT\r\nVia:
+SF:\x201\.1\x20varnish\r\nAge:\x203447\r\nX-Served-By:\x20cache-iad-kiad70
+SF:00096-IAD\r\nX-Cache:\x20HIT\r\nX-Cache-Hits:\x201\r\nX-Timer:\x20S1652
+SF:577461\.727217,VS0,VE1\r\nVary:\x20Accept-Encoding\r\nX-Fastly-Request-
+SF:ID:\x2025e7c830a9f5161cb1f57824b9f528b93cde7399\r\n\r\n<!DOCTYPE\x20htm
+SF:l>\n<html>\n\x20\x20<head>\n\x20\x20\x20\x20<meta\x20http-equiv=\"Conte
+SF:nt-type\"\x20content=\"text/html;\x20charset=utf-8\">\n\x20\x20\x20\x20
+SF:<meta\x20http-equiv=\"Content-Security-Policy\"\x20content=\"default-sr
+SF:c\x20'none';\x20style-src\x20'unsafe-inline';\x20img-src\x20data:;\x20c
+SF:onnect-src\x20'self'\">\n\x20\x20\x20\x20<title>Site\x20not\x20found\x2
+SF:0&middot;\x20GitHub\x20Pages</title>\n\x20\x20\x20\x20<st")%r(HTTPOptio
+SF:ns,1E8,"HTTP/1\.1\x20405\x20Method\x20Not\x20Allowed\r\nConnection:\x20
+SF:close\r\nContent-Length:\x20131\r\nServer:\x20Varnish\r\nRetry-After:\x
+SF:200\r\nAccept-Ranges:\x20bytes\r\nDate:\x20Sun,\x2015\x20May\x202022\x2
+SF:001:17:40\x20GMT\r\nVia:\x201\.1\x20varnish\r\nX-Served-By:\x20cache-ia
+SF:d-kiad7000069-IAD\r\nX-Cache:\x20MISS\r\nX-Cache-Hits:\x200\r\nX-Timer:
+SF:\x20S1652577461\.750869,VS0,VE0\r\nX-Fastly-Request-ID:\x20fa5956e9bd90
+SF:71211cebc6d7eb45c6db3ee39972\r\n\r\n<html>\n<head><title>405\x20Not\x20
+SF:Allowed</title></head>\n<body\x20bgcolor=\"white\">\n<center><h1>405\x2
+SF:0Not\x20Allowed</h1></center>\n</body>\n</html>")%r(FourOhFourRequest,2
+SF:5EC,"HTTP/1\.1\x20404\x20Not\x20Found\r\nConnection:\x20close\r\nConten
+SF:t-Length:\x209115\r\nServer:\x20GitHub\.com\r\nContent-Type:\x20text/ht
+SF:ml;\x20charset=utf-8\r\nETag:\x20\"6272da93-239b\"\r\nContent-Security-
+SF:Policy:\x20default-src\x20'none';\x20style-src\x20'unsafe-inline';\x20i
+SF:mg-src\x20data:;\x20connect-src\x20'self'\r\nX-GitHub-Request-Id:\x2054
+SF:BC:66FE:32C3D2:836169:628054B4\r\nAccept-Ranges:\x20bytes\r\nDate:\x20S
+SF:un,\x2015\x20May\x202022\x2001:17:40\x20GMT\r\nVia:\x201\.1\x20varnish\
+SF:r\nAge:\x200\r\nX-Served-By:\x20cache-iad-kiad7000020-IAD\r\nX-Cache:\x
+SF:20MISS\r\nX-Cache-Hits:\x200\r\nX-Timer:\x20S1652577461\.763154,VS0,VE1
+SF:2\r\nVary:\x20Accept-Encoding\r\nX-Fastly-Request-ID:\x2097a4481019b6d4
+SF:d41472d2939b66eb3ee72b82e7\r\n\r\n<!DOCTYPE\x20html>\n<html>\n\x20\x20<
+SF:head>\n\x20\x20\x20\x20<meta\x20http-equiv=\"Content-type\"\x20content=
+SF:\"text/html;\x20charset=utf-8\">\n\x20\x20\x20\x20<meta\x20http-equiv=\
+SF:"Content-Security-Policy\"\x20content=\"default-src\x20'none';\x20style
+SF:-src\x20'unsafe-inline';\x20img-src\x20data:;\x20connect-src\x20'self'\
+SF:">\n\x20\x20\x20\x20<title>Site\x20not\x20found\x20&middot;\x20GitHub\x
+SF:20Pages</title>\n\x20\x20\x20\x20<sty");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun May  8 01:03:01 2022 -- 1 IP address (1 host up) scanned in 19.18 seconds
+# Nmap done at Sun May 15 01:17:42 2022 -- 1 IP address (1 host up) scanned in 18.86 seconds
