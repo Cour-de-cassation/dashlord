@@ -360,7 +360,7 @@
               "ip"           : "www.justice.fr/185.24.184.180",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "306 >= 60 days"
+              "finding"      : "299 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -556,14 +556,14 @@
               "ip"           : "www.justice.fr/185.24.184.180",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "+1 (± 1.5) seconds from localtime"
+              "finding"      : "-3 seconds from localtime"
           }
 ,         {
               "id"           : "HTTP_headerTime",
               "ip"           : "www.justice.fr/185.24.184.180",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1651971895"
+              "finding"      : "1652577502"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -627,6 +627,13 @@
               "port"         : "443",
               "severity"     : "INFO",
               "finding"      : "1/2 at '/' marked as HttpOnly"
+          }
+,         {
+              "id"           : "cookie_bigip_f5",
+              "ip"           : "www.justice.fr/185.24.184.180",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "encrypted F5 cookie named MJ"
           }
 ,         {
               "id"           : "X-Frame-Options",
@@ -785,7 +792,7 @@
               "severity"     : "INFO",
               "cve"          : "CVE-2016-0800 CVE-2016-0703",
               "cwe"          : "CWE-310",
-              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://censys.io/ipv4?q=80232BDF1AA7DA5A26E0F1AE939F0BCA6D7AD15383BA3A28ECE3EBBCFDEAAFC0"
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=80232BDF1AA7DA5A26E0F1AE939F0BCA6D7AD15383BA3A28ECE3EBBCFDEAAFC0"
           }
 ,         {
               "id"           : "LOGJAM",
@@ -1191,6 +1198,6 @@
               "ip"           : "www.justice.fr/185.24.184.180",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "226"
+              "finding"      : "213"
           }
 ]
