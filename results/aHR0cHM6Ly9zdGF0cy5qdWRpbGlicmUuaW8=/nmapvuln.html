@@ -37,7 +37,7 @@
             content: "\e080"; /* glyphicon-chevron-right */
           }
         </style>
-<title>Scan Report Nmap 7.91</title>
+<title>Scan Report Nmap 7.92</title>
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top"><div class="container-fluid">
@@ -51,10 +51,10 @@
 </ul></div>
 </div></nav><div class="container">
 <div class="jumbotron">
-<h1>Scan Report<br><small>Nmap 7.91</small>
+<h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln stats.judilibre.io</pre>
-<p class="lead">Sun May 29 01:07:21 2022 – Sun May 29 01:07:40 2022<br>1 hosts scanned.
+<p class="lead">Sun Jun  5 01:07:39 2022 – Sun Jun  5 01:07:58 2022<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -133,7 +133,11 @@
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  GitHub.com
+  Varnish</pre>
+<h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   FourOhFourRequest: 
     HTTP/1.1 404 Not Found
@@ -143,24 +147,24 @@
     Content-Type: text/html; charset=utf-8
     ETag: "6272da93-239b"
     Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'
-    X-GitHub-Request-Id: 6150:0712:335F3:4E98D9:6292C75B
+    X-GitHub-Request-Id: 26AA:0B9B:2E3FDF:4C5049:629C01EC
     Accept-Ranges: bytes
-    Date: Sun, 29 May 2022 01:07:39 GMT
+    Date: Sun, 05 Jun 2022 01:07:56 GMT
     Via: 1.1 varnish
     Age: 0
-    X-Served-By: cache-iad-kiad7000154-IAD
+    X-Served-By: cache-iad-kiad7000179-IAD
     X-Cache: MISS
     X-Cache-Hits: 0
-    X-Timer: S1653786459.123959,VS0,VE4
+    X-Timer: S1654391277.604359,VS0,VE4
     Vary: Accept-Encoding
-    X-Fastly-Request-ID: 19e9746ce1dd1b7088514ba12705df201fb03023
+    X-Fastly-Request-ID: acc3f6266f3d4088499ae50430e33df7f204ed3b
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
     &lt;head&gt;
     &lt;meta http-equiv="Content-type" content="text/html; charset=utf-8"&gt;
     &lt;meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'"&gt;
     &lt;title&gt;Site not found &amp;middot; GitHub Pages&lt;/title&gt;
-    &lt;style
+    &lt;styl
   GetRequest: 
     HTTP/1.1 404 Not Found
     Connection: close
@@ -169,23 +173,24 @@
     Content-Type: text/html; charset=utf-8
     ETag: "6272da93-239b"
     Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'
-    X-GitHub-Request-Id: 4624:25AB:2775A7:6418A9:6292BF70
+    X-GitHub-Request-Id: E968:0B9B:2E2384:4C255A:629C00FD
     Accept-Ranges: bytes
-    Date: Sun, 29 May 2022 01:07:39 GMT
+    Date: Sun, 05 Jun 2022 01:07:56 GMT
     Via: 1.1 varnish
-    Age: 2026
-    X-Served-By: cache-iad-kiad7000093-IAD
+    Age: 239
+    X-Served-By: cache-iad-kiad7000129-IAD
     X-Cache: HIT
     X-Cache-Hits: 1
-    X-Timer: S1653786459.084746,VS0,VE6
+    X-Timer: S1654391277.540202,VS0,VE1
     Vary: Accept-Encoding
-    X-Fastly-Request-ID: 5626fba86b9f069954cf7307c93dc8ff33fe0cf0
+    X-Fastly-Request-ID: ebc7f6a1bc6361eec310e3ec770b739957af25ac
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
     &lt;head&gt;
     &lt;meta http-equiv="Content-type" content="text/html; charset=utf-8"&gt;
     &lt;meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'"&gt;
     &lt;title&gt;Site not found &amp;middot; GitHub Pages&lt;/title&gt;
+    &lt;sty
   HTTPOptions: 
     HTTP/1.1 405 Method Not Allowed
     Connection: close
@@ -193,23 +198,19 @@
     Server: Varnish
     Retry-After: 0
     Accept-Ranges: bytes
-    Date: Sun, 29 May 2022 01:07:39 GMT
+    Date: Sun, 05 Jun 2022 01:07:56 GMT
     Via: 1.1 varnish
-    X-Served-By: cache-iad-kiad7000035-IAD
+    X-Served-By: cache-iad-kiad7000156-IAD
     X-Cache: MISS
     X-Cache-Hits: 0
-    X-Timer: S1653786459.111725,VS0,VE0
-    X-Fastly-Request-ID: f028886403131a32ad85f4e2cbbbe575ba0a54ee
+    X-Timer: S1654391277.576627,VS0,VE0
+    X-Fastly-Request-ID: 755b36e1334173b4cb413aea5dfacfdf0b042c98
     &lt;html&gt;
     &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
     &lt;body bgcolor="white"&gt;
     &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
     &lt;/body&gt;
     &lt;/html&gt;</pre>
-<h5>http-server-header</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  GitHub.com
-  Varnish</pre>
 </td></tr>
 </tbody>
 </table></div>
