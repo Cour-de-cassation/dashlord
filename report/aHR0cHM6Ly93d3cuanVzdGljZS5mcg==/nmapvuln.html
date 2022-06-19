@@ -53,8 +53,8 @@
 <div class="jumbotron">
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln stats.judilibre.io</pre>
-<p class="lead">Sun Jun 19 01:06:13 2022 – Sun Jun 19 01:06:33 2022<br>1 hosts scanned.
+<pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.justice.fr</pre>
+<p class="lead">Sun Jun 19 01:10:06 2022 – Sun Jun 19 01:24:57 2022<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -76,8 +76,8 @@
 </tr></thead>
 <tbody><tr>
 <td><span class="label label-success">up</span></td>
-<td>185.199.111.153</td>
-<td>stats.judilibre.io</td>
+<td>185.24.184.180</td>
+<td>www.justice.fr</td>
 <td>2</td>
 <td>0</td>
 </tr></tbody>
@@ -91,13 +91,10 @@
             });
           </script><h2 id="onlinehosts" class="target">Online Hosts</h2>
 <div class="panel panel-default">
-<div class="panel-heading clickable" data-toggle="collapse" data-target="#185-199-111-153"><h3 class="panel-title">185.199.111.153 - stats.judilibre.io</h3></div>
-<div class="panel-body collapse in" id="185-199-111-153">
+<div class="panel-heading clickable" data-toggle="collapse" data-target="#185-24-184-180"><h3 class="panel-title">185.24.184.180 - www.justice.fr</h3></div>
+<div class="panel-body collapse in" id="185-24-184-180">
 <h4>Hostnames</h4>
-<ul>
-<li>stats.judilibre.io (user)</li>
-<li>cdn-185-199-111-153.github.com (PTR)</li>
-</ul>
+<ul><li>www.justice.fr (user)</li></ul>
 <h4>Ports</h4>
 <div class="table-responsive"><table class="table table-bordered">
 <thead><tr>
@@ -114,102 +111,22 @@
 <td title="Port">80</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">http-proxy</td>
-<td title="Product">Varnish</td>
+<td title="Service">tcpwrapped</td>
+<td title="Product"></td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
-<tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:varnish-cache:varnish">cpe:/a:varnish-cache:varnish</a><h5>http-server-header</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">GitHub.com</pre>
-</td></tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
 <tr class="success">
 <td title="Port">443</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">https</td>
-<td title="Product">GitHub.com</td>
+<td title="Service">tcpwrapped</td>
+<td title="Product"></td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
-<tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  GitHub.com
-  Varnish</pre>
-<h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  FourOhFourRequest: 
-    HTTP/1.1 404 Not Found
-    Connection: close
-    Content-Length: 9115
-    Server: GitHub.com
-    Content-Type: text/html; charset=utf-8
-    ETag: "62a125ea-239b"
-    Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'
-    X-GitHub-Request-Id: 83A6:17BB:3B85DA:8424B3:62AE6EE9
-    Accept-Ranges: bytes
-    Date: Sun, 19 Jun 2022 01:06:31 GMT
-    Via: 1.1 varnish
-    Age: 1966
-    X-Served-By: cache-iad-kiad7000069-IAD
-    X-Cache: HIT
-    X-Cache-Hits: 1
-    X-Timer: S1655600791.145274,VS0,VE1
-    Vary: Accept-Encoding
-    X-Fastly-Request-ID: 875b1958153b55a48eff67f5dca9d0330399b195
-    &lt;!DOCTYPE html&gt;
-    &lt;html&gt;
-    &lt;head&gt;
-    &lt;meta http-equiv="Content-type" content="text/html; charset=utf-8"&gt;
-    &lt;meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'"&gt;
-    &lt;title&gt;Site not found &amp;middot; GitHub Pages&lt;/title&gt;
-  GetRequest: 
-    HTTP/1.1 404 Not Found
-    Connection: close
-    Content-Length: 9115
-    Server: GitHub.com
-    Content-Type: text/html; charset=utf-8
-    ETag: "62a125ea-239b"
-    Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'
-    X-GitHub-Request-Id: EB66:40FD:2F4D41:67BA32:62AE6A01
-    Accept-Ranges: bytes
-    Date: Sun, 19 Jun 2022 01:06:31 GMT
-    Via: 1.1 varnish
-    Age: 3221
-    X-Served-By: cache-iad-kiad7000057-IAD
-    X-Cache: HIT
-    X-Cache-Hits: 1
-    X-Timer: S1655600791.078581,VS0,VE1
-    Vary: Accept-Encoding
-    X-Fastly-Request-ID: 90da6ca64b372fbd1311f528d5ae7f96da923b59
-    &lt;!DOCTYPE html&gt;
-    &lt;html&gt;
-    &lt;head&gt;
-    &lt;meta http-equiv="Content-type" content="text/html; charset=utf-8"&gt;
-    &lt;meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'"&gt;
-    &lt;title&gt;Site not found &amp;middot; GitHub Pages&lt;/title&gt;
-  HTTPOptions: 
-    HTTP/1.1 405 Method Not Allowed
-    Connection: close
-    Content-Length: 131
-    Server: Varnish
-    Retry-After: 0
-    Accept-Ranges: bytes
-    Date: Sun, 19 Jun 2022 01:06:31 GMT
-    Via: 1.1 varnish
-    X-Served-By: cache-iad-kiad7000020-IAD
-    X-Cache: MISS
-    X-Cache-Hits: 0
-    X-Timer: S1655600791.116155,VS0,VE0
-    X-Fastly-Request-ID: 9cafa09899c2d46969194f144313a856e7450179
-    &lt;html&gt;
-    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
-    &lt;body bgcolor="white"&gt;
-    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;</pre>
-</td></tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
 </tbody>
 </table></div>
 </div>
@@ -228,21 +145,21 @@
 </tr></thead>
 <tbody>
 <tr>
-<td>185.199.111.153 - stats.judilibre.io</td>
+<td>185.24.184.180 - www.justice.fr</td>
 <td>80</td>
 <td>tcp</td>
-<td>http-proxy</td>
-<td>Varnish</td>
+<td>tcpwrapped</td>
 <td></td>
-<td>cpe:/a:varnish-cache:varnish</td>
+<td></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
-<td>185.199.111.153 - stats.judilibre.io</td>
+<td>185.24.184.180 - www.justice.fr</td>
 <td>443</td>
 <td>tcp</td>
-<td>https</td>
-<td>GitHub.com</td>
+<td>tcpwrapped</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
