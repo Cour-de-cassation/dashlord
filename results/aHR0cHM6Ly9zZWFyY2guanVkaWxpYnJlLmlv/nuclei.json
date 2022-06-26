@@ -19,9 +19,9 @@
     "host": "https://search.judilibre.io",
     "matched-at": "https://search.judilibre.io",
     "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 19 Jun 2022 01:04:05 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
+    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 26 Jun 2022 01:08:32 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
     "ip": "51.159.85.176",
-    "timestamp": "2022-06-19T01:04:06.166188471Z",
+    "timestamp": "2022-06-26T01:08:32.84806275Z",
     "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
     "matcher-status": true,
     "matched-line": null
@@ -48,7 +48,46 @@
       "search.judilibre.io"
     ],
     "ip": "51.159.85.176",
-    "timestamp": "2022-06-19T01:04:10.640381876Z",
+    "timestamp": "2022-06-26T01:08:40.741716291Z",
+    "matcher-status": true,
+    "matched-line": null
+  },
+  {
+    "template": "technologies/waf-detect.yaml",
+    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/technologies/waf-detect.yaml",
+    "template-id": "waf-detect",
+    "info": {
+      "name": "WAF Detection",
+      "author": [
+        "dwisiswant0",
+        "lu4nx"
+      ],
+      "tags": [
+        "waf",
+        "tech",
+        "misc"
+      ],
+      "description": "A web application firewall was detected.",
+      "reference": [
+        "https://github.com/ekultek/whatwaf"
+      ],
+      "severity": "info",
+      "classification": {
+        "cve-id": null,
+        "cwe-id": [
+          "cwe-200"
+        ]
+      }
+    },
+    "matcher-name": "securesphere",
+    "type": "http",
+    "host": "https://search.judilibre.io",
+    "matched-at": "https://search.judilibre.io/",
+    "request": "POST / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nContent-Length: 27\r\nContent-Type: application/x-www-form-urlencoded\r\nAccept-Encoding: gzip\r\n\r\n_=<script>alert(1)</script>",
+    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 140\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 26 Jun 2022 01:08:48 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot POST /</pre>\n</body>\n</html>\n",
+    "ip": "51.159.85.176",
+    "timestamp": "2022-06-26T01:08:48.091113951Z",
+    "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: search.judilibre.io' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io/'",
     "matcher-status": true,
     "matched-line": null
   }
