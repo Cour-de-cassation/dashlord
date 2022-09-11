@@ -19,10 +19,482 @@
     "host": "https://search.judilibre.io",
     "matched-at": "https://search.judilibre.io",
     "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 04 Sep 2022 01:11:19 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
+    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 11 Sep 2022 01:18:24 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
     "ip": "51.159.85.176",
-    "timestamp": "2022-09-04T01:11:19.660272777Z",
+    "timestamp": "2022-09-11T01:18:24.708775974Z",
     "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+    "matcher-status": true,
+    "matched-line": null
+  },
+  {
+    "template": "ssl/ssl-dns-names.yaml",
+    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/ssl/ssl-dns-names.yaml",
+    "template-id": "ssl-dns-names",
+    "info": {
+      "name": "SSL DNS Names",
+      "author": [
+        "pdteam"
+      ],
+      "tags": [
+        "ssl"
+      ],
+      "reference": null,
+      "severity": "info"
+    },
+    "type": "ssl",
+    "host": "https://search.judilibre.io",
+    "matched-at": "https://search.judilibre.io",
+    "extracted-results": [
+      "search.judilibre.io"
+    ],
+    "ip": "51.159.85.176",
+    "timestamp": "2022-09-11T01:18:29.740931228Z",
+    "matcher-status": true,
+    "matched-line": null
+  },
+  {
+    "template": "misconfiguration/http-missing-security-headers.yaml",
+    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+    "template-id": "http-missing-security-headers",
+    "info": {
+      "name": "HTTP Missing Security Headers",
+      "author": [
+        "socketz",
+        "geeknik",
+        "g4l1t0",
+        "convisoappsec",
+        "kurohost",
+        "dawid-czarnecki",
+        "forgedhallpass"
+      ],
+      "tags": [
+        "misconfig",
+        "generic"
+      ],
+      "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+      "reference": null,
+      "severity": "info"
+    },
+    "matcher-name": "permission-policy",
+    "type": "http",
+    "host": "https://search.judilibre.io",
+    "matched-at": "https://search.judilibre.io",
+    "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 11 Sep 2022 01:18:32 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
+    "ip": "51.159.85.176",
+    "timestamp": "2022-09-11T01:18:32.244749494Z",
+    "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+    "matcher-status": true,
+    "matched-line": null
+  },
+  {
+    "template": "misconfiguration/http-missing-security-headers.yaml",
+    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+    "template-id": "http-missing-security-headers",
+    "info": {
+      "name": "HTTP Missing Security Headers",
+      "author": [
+        "socketz",
+        "geeknik",
+        "g4l1t0",
+        "convisoappsec",
+        "kurohost",
+        "dawid-czarnecki",
+        "forgedhallpass"
+      ],
+      "tags": [
+        "misconfig",
+        "generic"
+      ],
+      "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+      "reference": null,
+      "severity": "info"
+    },
+    "matcher-name": "x-permitted-cross-domain-policies",
+    "type": "http",
+    "host": "https://search.judilibre.io",
+    "matched-at": "https://search.judilibre.io",
+    "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 11 Sep 2022 01:18:32 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
+    "ip": "51.159.85.176",
+    "timestamp": "2022-09-11T01:18:32.244831096Z",
+    "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+    "matcher-status": true,
+    "matched-line": null
+  },
+  {
+    "template": "misconfiguration/http-missing-security-headers.yaml",
+    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+    "template-id": "http-missing-security-headers",
+    "info": {
+      "name": "HTTP Missing Security Headers",
+      "author": [
+        "socketz",
+        "geeknik",
+        "g4l1t0",
+        "convisoappsec",
+        "kurohost",
+        "dawid-czarnecki",
+        "forgedhallpass"
+      ],
+      "tags": [
+        "misconfig",
+        "generic"
+      ],
+      "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+      "reference": null,
+      "severity": "info"
+    },
+    "matcher-name": "cross-origin-opener-policy",
+    "type": "http",
+    "host": "https://search.judilibre.io",
+    "matched-at": "https://search.judilibre.io",
+    "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 11 Sep 2022 01:18:32 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
+    "ip": "51.159.85.176",
+    "timestamp": "2022-09-11T01:18:32.244866496Z",
+    "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+    "matcher-status": true,
+    "matched-line": null
+  },
+  {
+    "template": "misconfiguration/http-missing-security-headers.yaml",
+    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+    "template-id": "http-missing-security-headers",
+    "info": {
+      "name": "HTTP Missing Security Headers",
+      "author": [
+        "socketz",
+        "geeknik",
+        "g4l1t0",
+        "convisoappsec",
+        "kurohost",
+        "dawid-czarnecki",
+        "forgedhallpass"
+      ],
+      "tags": [
+        "misconfig",
+        "generic"
+      ],
+      "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+      "reference": null,
+      "severity": "info"
+    },
+    "matcher-name": "access-control-allow-credentials",
+    "type": "http",
+    "host": "https://search.judilibre.io",
+    "matched-at": "https://search.judilibre.io",
+    "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 11 Sep 2022 01:18:32 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
+    "ip": "51.159.85.176",
+    "timestamp": "2022-09-11T01:18:32.247533548Z",
+    "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+    "matcher-status": true,
+    "matched-line": null
+  },
+  {
+    "template": "misconfiguration/http-missing-security-headers.yaml",
+    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+    "template-id": "http-missing-security-headers",
+    "info": {
+      "name": "HTTP Missing Security Headers",
+      "author": [
+        "socketz",
+        "geeknik",
+        "g4l1t0",
+        "convisoappsec",
+        "kurohost",
+        "dawid-czarnecki",
+        "forgedhallpass"
+      ],
+      "tags": [
+        "misconfig",
+        "generic"
+      ],
+      "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+      "reference": null,
+      "severity": "info"
+    },
+    "matcher-name": "access-control-expose-headers",
+    "type": "http",
+    "host": "https://search.judilibre.io",
+    "matched-at": "https://search.judilibre.io",
+    "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 11 Sep 2022 01:18:32 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
+    "ip": "51.159.85.176",
+    "timestamp": "2022-09-11T01:18:32.250115798Z",
+    "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+    "matcher-status": true,
+    "matched-line": null
+  },
+  {
+    "template": "misconfiguration/http-missing-security-headers.yaml",
+    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+    "template-id": "http-missing-security-headers",
+    "info": {
+      "name": "HTTP Missing Security Headers",
+      "author": [
+        "socketz",
+        "geeknik",
+        "g4l1t0",
+        "convisoappsec",
+        "kurohost",
+        "dawid-czarnecki",
+        "forgedhallpass"
+      ],
+      "tags": [
+        "misconfig",
+        "generic"
+      ],
+      "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+      "reference": null,
+      "severity": "info"
+    },
+    "matcher-name": "access-control-max-age",
+    "type": "http",
+    "host": "https://search.judilibre.io",
+    "matched-at": "https://search.judilibre.io",
+    "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 11 Sep 2022 01:18:32 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
+    "ip": "51.159.85.176",
+    "timestamp": "2022-09-11T01:18:32.250331403Z",
+    "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+    "matcher-status": true,
+    "matched-line": null
+  },
+  {
+    "template": "misconfiguration/http-missing-security-headers.yaml",
+    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+    "template-id": "http-missing-security-headers",
+    "info": {
+      "name": "HTTP Missing Security Headers",
+      "author": [
+        "socketz",
+        "geeknik",
+        "g4l1t0",
+        "convisoappsec",
+        "kurohost",
+        "dawid-czarnecki",
+        "forgedhallpass"
+      ],
+      "tags": [
+        "misconfig",
+        "generic"
+      ],
+      "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+      "reference": null,
+      "severity": "info"
+    },
+    "matcher-name": "referrer-policy",
+    "type": "http",
+    "host": "https://search.judilibre.io",
+    "matched-at": "https://search.judilibre.io",
+    "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 11 Sep 2022 01:18:32 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
+    "ip": "51.159.85.176",
+    "timestamp": "2022-09-11T01:18:32.250371703Z",
+    "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+    "matcher-status": true,
+    "matched-line": null
+  },
+  {
+    "template": "misconfiguration/http-missing-security-headers.yaml",
+    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+    "template-id": "http-missing-security-headers",
+    "info": {
+      "name": "HTTP Missing Security Headers",
+      "author": [
+        "socketz",
+        "geeknik",
+        "g4l1t0",
+        "convisoappsec",
+        "kurohost",
+        "dawid-czarnecki",
+        "forgedhallpass"
+      ],
+      "tags": [
+        "misconfig",
+        "generic"
+      ],
+      "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+      "reference": null,
+      "severity": "info"
+    },
+    "matcher-name": "clear-site-data",
+    "type": "http",
+    "host": "https://search.judilibre.io",
+    "matched-at": "https://search.judilibre.io",
+    "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 11 Sep 2022 01:18:32 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
+    "ip": "51.159.85.176",
+    "timestamp": "2022-09-11T01:18:32.250389704Z",
+    "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+    "matcher-status": true,
+    "matched-line": null
+  },
+  {
+    "template": "misconfiguration/http-missing-security-headers.yaml",
+    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+    "template-id": "http-missing-security-headers",
+    "info": {
+      "name": "HTTP Missing Security Headers",
+      "author": [
+        "socketz",
+        "geeknik",
+        "g4l1t0",
+        "convisoappsec",
+        "kurohost",
+        "dawid-czarnecki",
+        "forgedhallpass"
+      ],
+      "tags": [
+        "misconfig",
+        "generic"
+      ],
+      "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+      "reference": null,
+      "severity": "info"
+    },
+    "matcher-name": "cross-origin-embedder-policy",
+    "type": "http",
+    "host": "https://search.judilibre.io",
+    "matched-at": "https://search.judilibre.io",
+    "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 11 Sep 2022 01:18:32 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
+    "ip": "51.159.85.176",
+    "timestamp": "2022-09-11T01:18:32.250544507Z",
+    "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+    "matcher-status": true,
+    "matched-line": null
+  },
+  {
+    "template": "misconfiguration/http-missing-security-headers.yaml",
+    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+    "template-id": "http-missing-security-headers",
+    "info": {
+      "name": "HTTP Missing Security Headers",
+      "author": [
+        "socketz",
+        "geeknik",
+        "g4l1t0",
+        "convisoappsec",
+        "kurohost",
+        "dawid-czarnecki",
+        "forgedhallpass"
+      ],
+      "tags": [
+        "misconfig",
+        "generic"
+      ],
+      "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+      "reference": null,
+      "severity": "info"
+    },
+    "matcher-name": "cross-origin-resource-policy",
+    "type": "http",
+    "host": "https://search.judilibre.io",
+    "matched-at": "https://search.judilibre.io",
+    "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 11 Sep 2022 01:18:32 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
+    "ip": "51.159.85.176",
+    "timestamp": "2022-09-11T01:18:32.250584508Z",
+    "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+    "matcher-status": true,
+    "matched-line": null
+  },
+  {
+    "template": "misconfiguration/http-missing-security-headers.yaml",
+    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+    "template-id": "http-missing-security-headers",
+    "info": {
+      "name": "HTTP Missing Security Headers",
+      "author": [
+        "socketz",
+        "geeknik",
+        "g4l1t0",
+        "convisoappsec",
+        "kurohost",
+        "dawid-czarnecki",
+        "forgedhallpass"
+      ],
+      "tags": [
+        "misconfig",
+        "generic"
+      ],
+      "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+      "reference": null,
+      "severity": "info"
+    },
+    "matcher-name": "access-control-allow-methods",
+    "type": "http",
+    "host": "https://search.judilibre.io",
+    "matched-at": "https://search.judilibre.io",
+    "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 11 Sep 2022 01:18:32 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
+    "ip": "51.159.85.176",
+    "timestamp": "2022-09-11T01:18:32.250625408Z",
+    "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+    "matcher-status": true,
+    "matched-line": null
+  },
+  {
+    "template": "misconfiguration/http-missing-security-headers.yaml",
+    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+    "template-id": "http-missing-security-headers",
+    "info": {
+      "name": "HTTP Missing Security Headers",
+      "author": [
+        "socketz",
+        "geeknik",
+        "g4l1t0",
+        "convisoappsec",
+        "kurohost",
+        "dawid-czarnecki",
+        "forgedhallpass"
+      ],
+      "tags": [
+        "misconfig",
+        "generic"
+      ],
+      "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+      "reference": null,
+      "severity": "info"
+    },
+    "matcher-name": "access-control-allow-headers",
+    "type": "http",
+    "host": "https://search.judilibre.io",
+    "matched-at": "https://search.judilibre.io",
+    "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 11 Sep 2022 01:18:32 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
+    "ip": "51.159.85.176",
+    "timestamp": "2022-09-11T01:18:32.250659609Z",
+    "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+    "matcher-status": true,
+    "matched-line": null
+  },
+  {
+    "template": "ssl/tls-version.yaml",
+    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/ssl/tls-version.yaml",
+    "template-id": "tls-version",
+    "info": {
+      "name": "TLS Version",
+      "author": [
+        "pdteam"
+      ],
+      "tags": [
+        "ssl"
+      ],
+      "reference": null,
+      "severity": "info"
+    },
+    "type": "ssl",
+    "host": "https://search.judilibre.io",
+    "matched-at": "https://search.judilibre.io",
+    "extracted-results": [
+      "TLS13"
+    ],
+    "ip": "51.159.85.176",
+    "timestamp": "2022-09-11T01:19:11.423609947Z",
     "matcher-status": true,
     "matched-line": null
   },
@@ -58,482 +530,10 @@
     "host": "https://search.judilibre.io",
     "matched-at": "https://search.judilibre.io/",
     "request": "POST / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nContent-Length: 27\r\nContent-Type: application/x-www-form-urlencoded\r\nAccept-Encoding: gzip\r\n\r\n_=<script>alert(1)</script>",
-    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 140\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 04 Sep 2022 01:13:39 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot POST /</pre>\n</body>\n</html>\n",
+    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 140\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 11 Sep 2022 01:23:11 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot POST /</pre>\n</body>\n</html>\n",
     "ip": "51.159.85.176",
-    "timestamp": "2022-09-04T01:13:39.650912034Z",
+    "timestamp": "2022-09-11T01:23:11.48370337Z",
     "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: search.judilibre.io' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io/'",
-    "matcher-status": true,
-    "matched-line": null
-  },
-  {
-    "template": "misconfiguration/http-missing-security-headers.yaml",
-    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-    "template-id": "http-missing-security-headers",
-    "info": {
-      "name": "HTTP Missing Security Headers",
-      "author": [
-        "socketz",
-        "geeknik",
-        "g4l1t0",
-        "convisoappsec",
-        "kurohost",
-        "dawid-czarnecki",
-        "forgedhallpass"
-      ],
-      "tags": [
-        "misconfig",
-        "generic"
-      ],
-      "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-      "reference": null,
-      "severity": "info"
-    },
-    "matcher-name": "permission-policy",
-    "type": "http",
-    "host": "https://search.judilibre.io",
-    "matched-at": "https://search.judilibre.io",
-    "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 04 Sep 2022 01:15:10 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
-    "ip": "51.159.85.176",
-    "timestamp": "2022-09-04T01:15:10.552454133Z",
-    "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
-    "matcher-status": true,
-    "matched-line": null
-  },
-  {
-    "template": "misconfiguration/http-missing-security-headers.yaml",
-    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-    "template-id": "http-missing-security-headers",
-    "info": {
-      "name": "HTTP Missing Security Headers",
-      "author": [
-        "socketz",
-        "geeknik",
-        "g4l1t0",
-        "convisoappsec",
-        "kurohost",
-        "dawid-czarnecki",
-        "forgedhallpass"
-      ],
-      "tags": [
-        "misconfig",
-        "generic"
-      ],
-      "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-      "reference": null,
-      "severity": "info"
-    },
-    "matcher-name": "clear-site-data",
-    "type": "http",
-    "host": "https://search.judilibre.io",
-    "matched-at": "https://search.judilibre.io",
-    "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 04 Sep 2022 01:15:10 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
-    "ip": "51.159.85.176",
-    "timestamp": "2022-09-04T01:15:10.552543835Z",
-    "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
-    "matcher-status": true,
-    "matched-line": null
-  },
-  {
-    "template": "misconfiguration/http-missing-security-headers.yaml",
-    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-    "template-id": "http-missing-security-headers",
-    "info": {
-      "name": "HTTP Missing Security Headers",
-      "author": [
-        "socketz",
-        "geeknik",
-        "g4l1t0",
-        "convisoappsec",
-        "kurohost",
-        "dawid-czarnecki",
-        "forgedhallpass"
-      ],
-      "tags": [
-        "misconfig",
-        "generic"
-      ],
-      "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-      "reference": null,
-      "severity": "info"
-    },
-    "matcher-name": "cross-origin-opener-policy",
-    "type": "http",
-    "host": "https://search.judilibre.io",
-    "matched-at": "https://search.judilibre.io",
-    "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 04 Sep 2022 01:15:10 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
-    "ip": "51.159.85.176",
-    "timestamp": "2022-09-04T01:15:10.552563736Z",
-    "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
-    "matcher-status": true,
-    "matched-line": null
-  },
-  {
-    "template": "misconfiguration/http-missing-security-headers.yaml",
-    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-    "template-id": "http-missing-security-headers",
-    "info": {
-      "name": "HTTP Missing Security Headers",
-      "author": [
-        "socketz",
-        "geeknik",
-        "g4l1t0",
-        "convisoappsec",
-        "kurohost",
-        "dawid-czarnecki",
-        "forgedhallpass"
-      ],
-      "tags": [
-        "misconfig",
-        "generic"
-      ],
-      "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-      "reference": null,
-      "severity": "info"
-    },
-    "matcher-name": "cross-origin-resource-policy",
-    "type": "http",
-    "host": "https://search.judilibre.io",
-    "matched-at": "https://search.judilibre.io",
-    "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 04 Sep 2022 01:15:10 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
-    "ip": "51.159.85.176",
-    "timestamp": "2022-09-04T01:15:10.552584936Z",
-    "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
-    "matcher-status": true,
-    "matched-line": null
-  },
-  {
-    "template": "misconfiguration/http-missing-security-headers.yaml",
-    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-    "template-id": "http-missing-security-headers",
-    "info": {
-      "name": "HTTP Missing Security Headers",
-      "author": [
-        "socketz",
-        "geeknik",
-        "g4l1t0",
-        "convisoappsec",
-        "kurohost",
-        "dawid-czarnecki",
-        "forgedhallpass"
-      ],
-      "tags": [
-        "misconfig",
-        "generic"
-      ],
-      "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-      "reference": null,
-      "severity": "info"
-    },
-    "matcher-name": "access-control-expose-headers",
-    "type": "http",
-    "host": "https://search.judilibre.io",
-    "matched-at": "https://search.judilibre.io",
-    "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 04 Sep 2022 01:15:10 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
-    "ip": "51.159.85.176",
-    "timestamp": "2022-09-04T01:15:10.552604737Z",
-    "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
-    "matcher-status": true,
-    "matched-line": null
-  },
-  {
-    "template": "misconfiguration/http-missing-security-headers.yaml",
-    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-    "template-id": "http-missing-security-headers",
-    "info": {
-      "name": "HTTP Missing Security Headers",
-      "author": [
-        "socketz",
-        "geeknik",
-        "g4l1t0",
-        "convisoappsec",
-        "kurohost",
-        "dawid-czarnecki",
-        "forgedhallpass"
-      ],
-      "tags": [
-        "misconfig",
-        "generic"
-      ],
-      "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-      "reference": null,
-      "severity": "info"
-    },
-    "matcher-name": "access-control-max-age",
-    "type": "http",
-    "host": "https://search.judilibre.io",
-    "matched-at": "https://search.judilibre.io",
-    "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 04 Sep 2022 01:15:10 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
-    "ip": "51.159.85.176",
-    "timestamp": "2022-09-04T01:15:10.552623537Z",
-    "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
-    "matcher-status": true,
-    "matched-line": null
-  },
-  {
-    "template": "misconfiguration/http-missing-security-headers.yaml",
-    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-    "template-id": "http-missing-security-headers",
-    "info": {
-      "name": "HTTP Missing Security Headers",
-      "author": [
-        "socketz",
-        "geeknik",
-        "g4l1t0",
-        "convisoappsec",
-        "kurohost",
-        "dawid-czarnecki",
-        "forgedhallpass"
-      ],
-      "tags": [
-        "misconfig",
-        "generic"
-      ],
-      "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-      "reference": null,
-      "severity": "info"
-    },
-    "matcher-name": "x-permitted-cross-domain-policies",
-    "type": "http",
-    "host": "https://search.judilibre.io",
-    "matched-at": "https://search.judilibre.io",
-    "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 04 Sep 2022 01:15:10 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
-    "ip": "51.159.85.176",
-    "timestamp": "2022-09-04T01:15:10.552639838Z",
-    "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
-    "matcher-status": true,
-    "matched-line": null
-  },
-  {
-    "template": "misconfiguration/http-missing-security-headers.yaml",
-    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-    "template-id": "http-missing-security-headers",
-    "info": {
-      "name": "HTTP Missing Security Headers",
-      "author": [
-        "socketz",
-        "geeknik",
-        "g4l1t0",
-        "convisoappsec",
-        "kurohost",
-        "dawid-czarnecki",
-        "forgedhallpass"
-      ],
-      "tags": [
-        "misconfig",
-        "generic"
-      ],
-      "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-      "reference": null,
-      "severity": "info"
-    },
-    "matcher-name": "referrer-policy",
-    "type": "http",
-    "host": "https://search.judilibre.io",
-    "matched-at": "https://search.judilibre.io",
-    "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 04 Sep 2022 01:15:10 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
-    "ip": "51.159.85.176",
-    "timestamp": "2022-09-04T01:15:10.552657938Z",
-    "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
-    "matcher-status": true,
-    "matched-line": null
-  },
-  {
-    "template": "misconfiguration/http-missing-security-headers.yaml",
-    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-    "template-id": "http-missing-security-headers",
-    "info": {
-      "name": "HTTP Missing Security Headers",
-      "author": [
-        "socketz",
-        "geeknik",
-        "g4l1t0",
-        "convisoappsec",
-        "kurohost",
-        "dawid-czarnecki",
-        "forgedhallpass"
-      ],
-      "tags": [
-        "misconfig",
-        "generic"
-      ],
-      "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-      "reference": null,
-      "severity": "info"
-    },
-    "matcher-name": "cross-origin-embedder-policy",
-    "type": "http",
-    "host": "https://search.judilibre.io",
-    "matched-at": "https://search.judilibre.io",
-    "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 04 Sep 2022 01:15:10 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
-    "ip": "51.159.85.176",
-    "timestamp": "2022-09-04T01:15:10.552676139Z",
-    "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
-    "matcher-status": true,
-    "matched-line": null
-  },
-  {
-    "template": "misconfiguration/http-missing-security-headers.yaml",
-    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-    "template-id": "http-missing-security-headers",
-    "info": {
-      "name": "HTTP Missing Security Headers",
-      "author": [
-        "socketz",
-        "geeknik",
-        "g4l1t0",
-        "convisoappsec",
-        "kurohost",
-        "dawid-czarnecki",
-        "forgedhallpass"
-      ],
-      "tags": [
-        "misconfig",
-        "generic"
-      ],
-      "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-      "reference": null,
-      "severity": "info"
-    },
-    "matcher-name": "access-control-allow-credentials",
-    "type": "http",
-    "host": "https://search.judilibre.io",
-    "matched-at": "https://search.judilibre.io",
-    "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 04 Sep 2022 01:15:10 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
-    "ip": "51.159.85.176",
-    "timestamp": "2022-09-04T01:15:10.552696039Z",
-    "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
-    "matcher-status": true,
-    "matched-line": null
-  },
-  {
-    "template": "misconfiguration/http-missing-security-headers.yaml",
-    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-    "template-id": "http-missing-security-headers",
-    "info": {
-      "name": "HTTP Missing Security Headers",
-      "author": [
-        "socketz",
-        "geeknik",
-        "g4l1t0",
-        "convisoappsec",
-        "kurohost",
-        "dawid-czarnecki",
-        "forgedhallpass"
-      ],
-      "tags": [
-        "misconfig",
-        "generic"
-      ],
-      "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-      "reference": null,
-      "severity": "info"
-    },
-    "matcher-name": "access-control-allow-methods",
-    "type": "http",
-    "host": "https://search.judilibre.io",
-    "matched-at": "https://search.judilibre.io",
-    "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 04 Sep 2022 01:15:10 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
-    "ip": "51.159.85.176",
-    "timestamp": "2022-09-04T01:15:10.55274314Z",
-    "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
-    "matcher-status": true,
-    "matched-line": null
-  },
-  {
-    "template": "misconfiguration/http-missing-security-headers.yaml",
-    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-    "template-id": "http-missing-security-headers",
-    "info": {
-      "name": "HTTP Missing Security Headers",
-      "author": [
-        "socketz",
-        "geeknik",
-        "g4l1t0",
-        "convisoappsec",
-        "kurohost",
-        "dawid-czarnecki",
-        "forgedhallpass"
-      ],
-      "tags": [
-        "misconfig",
-        "generic"
-      ],
-      "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-      "reference": null,
-      "severity": "info"
-    },
-    "matcher-name": "access-control-allow-headers",
-    "type": "http",
-    "host": "https://search.judilibre.io",
-    "matched-at": "https://search.judilibre.io",
-    "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-    "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 04 Sep 2022 01:15:10 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: Express\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
-    "ip": "51.159.85.176",
-    "timestamp": "2022-09-04T01:15:10.552765041Z",
-    "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
-    "matcher-status": true,
-    "matched-line": null
-  },
-  {
-    "template": "ssl/tls-version.yaml",
-    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/ssl/tls-version.yaml",
-    "template-id": "tls-version",
-    "info": {
-      "name": "TLS Version",
-      "author": [
-        "pdteam"
-      ],
-      "tags": [
-        "ssl"
-      ],
-      "reference": null,
-      "severity": "info"
-    },
-    "type": "ssl",
-    "host": "https://search.judilibre.io",
-    "matched-at": "https://search.judilibre.io",
-    "extracted-results": [
-      "TLS13"
-    ],
-    "ip": "51.159.85.176",
-    "timestamp": "2022-09-04T01:15:55.873298452Z",
-    "matcher-status": true,
-    "matched-line": null
-  },
-  {
-    "template": "ssl/ssl-dns-names.yaml",
-    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/ssl/ssl-dns-names.yaml",
-    "template-id": "ssl-dns-names",
-    "info": {
-      "name": "SSL DNS Names",
-      "author": [
-        "pdteam"
-      ],
-      "tags": [
-        "ssl"
-      ],
-      "reference": null,
-      "severity": "info"
-    },
-    "type": "ssl",
-    "host": "https://search.judilibre.io",
-    "matched-at": "https://search.judilibre.io",
-    "extracted-results": [
-      "search.judilibre.io"
-    ],
-    "ip": "51.159.85.176",
-    "timestamp": "2022-09-04T01:16:07.105977186Z",
     "matcher-status": true,
     "matched-line": null
   }
