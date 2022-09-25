@@ -8,7 +8,7 @@
     "http": {
       "url": "https://search.judilibre.io",
       "algorithm_version": 2,
-      "end_time": "Sun, 18 Sep 2022 01:15:36 GMT",
+      "end_time": "Sun, 25 Sep 2022 01:11:45 GMT",
       "grade": "B",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -18,15 +18,15 @@
         "Access-Control-Allow-Methods": "GET, POST, PUT, OPTIONS",
         "Access-Control-Allow-Origin": "www.courdecassation.fr",
         "Access-Control-Expose-Headers": "Content-Length,Content-Range",
-        "Age": "371",
+        "Age": "370",
         "Allow": "GET, POST, PUT, HEAD",
         "Cache-Control": "max-age=600, public",
         "Connection": "keep-alive",
         "Content-Encoding": "gzip",
-        "Content-Length": "65042",
+        "Content-Length": "65509",
         "Content-Type": "text/html; charset=UTF-8",
         "Content-language": "fr",
-        "Date": "Sun, 18 Sep 2022 01:15:29 GMT",
+        "Date": "Sun, 25 Sep 2022 01:11:40 GMT",
         "Expires": "Sun, 19 Nov 1978 05:00:00 GMT",
         "Link": "<https://www.courdecassation.fr/>; rel=\"canonical\", <https://www.courdecassation.fr/>; rel=\"shortlink\"",
         "Permissions-Policy": "interest-cohort=()",
@@ -36,17 +36,17 @@
         "Upgrade-Insecure-Requests": "1",
         "Vary": "Accept-Encoding",
         "X-Cache": "HIT",
-        "X-Cache-Hits": "109",
+        "X-Cache-Hits": "39",
         "X-Content-Type-Options": "nosniff",
         "X-Drupal-Dynamic-Cache": "UNCACHEABLE",
         "X-Frame-Options": "SAMEORIGIN",
         "X-UA-Compatible": "IE=edge",
-        "X-Varnish": "88226983 88581764",
+        "X-Varnish": "100464753 83380779",
         "X-XSS-Protection": "1;mode=block"
       },
-      "scan_id": 29476538,
+      "scan_id": 29639024,
       "score": 75,
-      "start_time": "Sun, 18 Sep 2022 01:15:24 GMT",
+      "start_time": "Sun, 25 Sep 2022 01:11:35 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 1,
@@ -594,7 +594,7 @@
         "ip": "search.judilibre.io/51.159.85.176",
         "port": "443",
         "severity": "OK",
-        "finding": "79 >= 30 days"
+        "finding": "72 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -755,7 +755,7 @@
         "ip": "search.judilibre.io/51.159.85.176",
         "port": "443",
         "severity": "INFO",
-        "finding": "1663463829"
+        "finding": "1664068404"
       },
       {
         "id": "HSTS_time",
@@ -1339,7 +1339,7 @@
         "ip": "search.judilibre.io/51.159.85.176",
         "port": "443",
         "severity": "INFO",
-        "finding": "128"
+        "finding": "135"
       }
     ],
     "thirdparties": {
@@ -1350,7 +1350,7 @@
         "content-length": "139",
         "content-security-policy": "default-src 'none'",
         "content-type": "text/html; charset=utf-8",
-        "date": "Sun, 18 Sep 2022 01:16:03 GMT",
+        "date": "Sun, 25 Sep 2022 01:12:15 GMT",
         "strict-transport-security": "max-age=15724800; includeSubDomains",
         "x-content-type-options": "nosniff",
         "x-frame-options": "deny",
@@ -1541,45 +1541,482 @@
         "host": "https://search.judilibre.io",
         "matched-at": "https://search.judilibre.io",
         "ip": "51.159.85.176",
-        "timestamp": "2022-09-18T01:20:26.482289384Z",
+        "timestamp": "2022-09-25T01:16:30.557634471Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
         "matcher-status": true,
         "matched-line": null
       },
       {
-        "template": "technologies/waf-detect.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/technologies/waf-detect.yaml",
-        "template-id": "waf-detect",
+        "template": "ssl/ssl-dns-names.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/ssl/ssl-dns-names.yaml",
+        "template-id": "ssl-dns-names",
         "info": {
-          "name": "WAF Detection",
+          "name": "SSL DNS Names",
           "author": [
-            "dwisiswant0",
-            "lu4nx"
+            "pdteam"
           ],
           "tags": [
-            "waf",
-            "tech",
-            "misc"
+            "ssl"
           ],
-          "description": "A web application firewall was detected.",
-          "reference": [
-            "https://github.com/ekultek/whatwaf"
-          ],
-          "severity": "info",
-          "classification": {
-            "cve-id": null,
-            "cwe-id": [
-              "cwe-200"
-            ]
-          }
+          "reference": null,
+          "severity": "info"
         },
-        "matcher-name": "securesphere",
+        "type": "ssl",
+        "host": "https://search.judilibre.io",
+        "matched-at": "https://search.judilibre.io",
+        "extracted-results": [
+          "search.judilibre.io"
+        ],
+        "ip": "51.159.85.176",
+        "timestamp": "2022-09-25T01:16:34.838990803Z",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "cross-origin-resource-policy",
         "type": "http",
         "host": "https://search.judilibre.io",
-        "matched-at": "https://search.judilibre.io/",
+        "matched-at": "https://search.judilibre.io",
         "ip": "51.159.85.176",
-        "timestamp": "2022-09-18T01:20:39.040850287Z",
-        "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: search.judilibre.io' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io/'",
+        "timestamp": "2022-09-25T01:16:36.516447558Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "access-control-allow-credentials",
+        "type": "http",
+        "host": "https://search.judilibre.io",
+        "matched-at": "https://search.judilibre.io",
+        "ip": "51.159.85.176",
+        "timestamp": "2022-09-25T01:16:36.517115567Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "access-control-expose-headers",
+        "type": "http",
+        "host": "https://search.judilibre.io",
+        "matched-at": "https://search.judilibre.io",
+        "ip": "51.159.85.176",
+        "timestamp": "2022-09-25T01:16:36.517168567Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "access-control-allow-headers",
+        "type": "http",
+        "host": "https://search.judilibre.io",
+        "matched-at": "https://search.judilibre.io",
+        "ip": "51.159.85.176",
+        "timestamp": "2022-09-25T01:16:36.517186267Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "permission-policy",
+        "type": "http",
+        "host": "https://search.judilibre.io",
+        "matched-at": "https://search.judilibre.io",
+        "ip": "51.159.85.176",
+        "timestamp": "2022-09-25T01:16:36.517207668Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "x-permitted-cross-domain-policies",
+        "type": "http",
+        "host": "https://search.judilibre.io",
+        "matched-at": "https://search.judilibre.io",
+        "ip": "51.159.85.176",
+        "timestamp": "2022-09-25T01:16:36.517227868Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "referrer-policy",
+        "type": "http",
+        "host": "https://search.judilibre.io",
+        "matched-at": "https://search.judilibre.io",
+        "ip": "51.159.85.176",
+        "timestamp": "2022-09-25T01:16:36.517248268Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "cross-origin-opener-policy",
+        "type": "http",
+        "host": "https://search.judilibre.io",
+        "matched-at": "https://search.judilibre.io",
+        "ip": "51.159.85.176",
+        "timestamp": "2022-09-25T01:16:36.517262868Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "clear-site-data",
+        "type": "http",
+        "host": "https://search.judilibre.io",
+        "matched-at": "https://search.judilibre.io",
+        "ip": "51.159.85.176",
+        "timestamp": "2022-09-25T01:16:36.517281969Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "cross-origin-embedder-policy",
+        "type": "http",
+        "host": "https://search.judilibre.io",
+        "matched-at": "https://search.judilibre.io",
+        "ip": "51.159.85.176",
+        "timestamp": "2022-09-25T01:16:36.517298169Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "access-control-max-age",
+        "type": "http",
+        "host": "https://search.judilibre.io",
+        "matched-at": "https://search.judilibre.io",
+        "ip": "51.159.85.176",
+        "timestamp": "2022-09-25T01:16:36.517317169Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "access-control-allow-methods",
+        "type": "http",
+        "host": "https://search.judilibre.io",
+        "matched-at": "https://search.judilibre.io",
+        "ip": "51.159.85.176",
+        "timestamp": "2022-09-25T01:16:36.517331869Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "ssl/tls-version.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/ssl/tls-version.yaml",
+        "template-id": "tls-version",
+        "info": {
+          "name": "TLS Version",
+          "author": [
+            "pdteam"
+          ],
+          "tags": [
+            "ssl"
+          ],
+          "reference": null,
+          "severity": "info"
+        },
+        "type": "ssl",
+        "host": "https://search.judilibre.io",
+        "matched-at": "https://search.judilibre.io",
+        "extracted-results": [
+          "TLS13"
+        ],
+        "ip": "51.159.85.176",
+        "timestamp": "2022-09-25T01:18:50.397194902Z",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "ssl/detect-ssl-issuer.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/ssl/detect-ssl-issuer.yaml",
+        "template-id": "detect-ssl-issuer",
+        "info": {
+          "name": "Detect SSL Certificate Issuer",
+          "author": [
+            "lingtren"
+          ],
+          "tags": [
+            "ssl"
+          ],
+          "reference": null,
+          "severity": "info"
+        },
+        "type": "ssl",
+        "host": "https://search.judilibre.io",
+        "matched-at": "https://search.judilibre.io",
+        "extracted-results": [
+          "Let's Encrypt"
+        ],
+        "ip": "51.159.85.176",
+        "timestamp": "2022-09-25T01:21:15.284522296Z",
         "matcher-status": true,
         "matched-line": null
       }
@@ -1617,7 +2054,7 @@
     "http": {
       "url": "https://stats.judilibre.io",
       "algorithm_version": 2,
-      "end_time": "Sun, 18 Sep 2022 01:15:28 GMT",
+      "end_time": "Sun, 25 Sep 2022 01:11:53 GMT",
       "grade": "C-",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -1630,7 +2067,7 @@
         "Content-Encoding": "gzip",
         "Content-Length": "627",
         "Content-Type": "text/html; charset=utf-8",
-        "Date": "Sun, 18 Sep 2022 01:15:27 GMT",
+        "Date": "Sun, 25 Sep 2022 01:11:52 GMT",
         "ETag": "W/\"62895f74-4aa\"",
         "Last-Modified": "Sat, 21 May 2022 21:53:56 GMT",
         "Server": "GitHub.com",
@@ -1639,16 +2076,17 @@
         "Via": "1.1 varnish",
         "X-Cache": "MISS",
         "X-Cache-Hits": "0",
-        "X-Fastly-Request-ID": "c418099b0617d72b1700a0303d1f9f21348d20d5",
-        "X-GitHub-Request-Id": "0812:17CA:C0FFF:E0D7F:6326712F",
-        "X-Served-By": "cache-pao17446-PAO",
-        "X-Timer": "S1663463728.881761,VS0,VE89",
-        "expires": "Sun, 18 Sep 2022 01:25:27 GMT",
+        "X-Fastly-Request-ID": "79c9ccb065ace65c7b51a87bee593a66aa15b6ad",
+        "X-GitHub-Request-Id": "0812:7A5B:DCFBC:FC94E:632FAAD8",
+        "X-Served-By": "cache-pao17435-PAO",
+        "X-Timer": "S1664068313.538435,VS0,VE88",
+        "expires": "Sun, 25 Sep 2022 01:21:52 GMT",
+        "x-origin-cache": "HIT",
         "x-proxy-cache": "MISS"
       },
-      "scan_id": 29476539,
+      "scan_id": 29639032,
       "score": 45,
-      "start_time": "Sun, 18 Sep 2022 01:15:26 GMT",
+      "start_time": "Sun, 25 Sep 2022 01:11:50 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 4,
@@ -1668,12 +2106,12 @@
                 "'self'"
               ],
               "font-src": [
-                "'self'",
-                "data:"
+                "data:",
+                "'self'"
               ],
               "img-src": [
-                "'self'",
-                "data:"
+                "data:",
+                "'self'"
               ],
               "object-src": [
                 "'none'"
@@ -1862,8 +2300,8 @@
       "open_ports": [
         {
           "service": {
-            "name": "http-proxy",
-            "product": "Varnish",
+            "name": "http",
+            "product": "T-Home Telekom Media Receiver httpd",
             "id": "80",
             "vulnerabilities": []
           }
@@ -2236,7 +2674,7 @@
         "ip": "stats.judilibre.io/185.199.111.153",
         "port": "443",
         "severity": "OK",
-        "finding": "57 >= 30 days"
+        "finding": "50 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -2439,21 +2877,21 @@
         "ip": "stats.judilibre.io/185.199.111.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "+172 seconds from localtime"
+        "finding": "+184 seconds from localtime"
       },
       {
         "id": "HTTP_headerTime",
         "ip": "stats.judilibre.io/185.199.111.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "1663463795"
+        "finding": "1664068387"
       },
       {
         "id": "HTTP_headerAge",
         "ip": "stats.judilibre.io/185.199.111.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "172 seconds"
+        "finding": "184 seconds"
       },
       {
         "id": "HSTS_time",
@@ -2516,7 +2954,7 @@
         "ip": "stats.judilibre.io/185.199.111.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "cache-iad-kiad7000104-IAD"
+        "finding": "cache-sjc10040-SJC"
       },
       {
         "id": "Cache-Control",
@@ -2531,7 +2969,7 @@
         "port": "443",
         "severity": "INFO",
         "cwe": "CWE-200",
-        "finding": "Via: 1.1 varnishX-Cache: HITX-Cache-Hits: 1"
+        "finding": "Via: 1.1 varnishX-Cache: HITX-Cache-Hits: 2"
       },
       {
         "id": "heartbleed",
@@ -3379,7 +3817,7 @@
         "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
-        "finding": "57 >= 30 days"
+        "finding": "50 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -3582,21 +4020,21 @@
         "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "+246 seconds from localtime"
+        "finding": "+268 seconds from localtime"
       },
       {
         "id": "HTTP_headerTime",
         "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "1663463869"
+        "finding": "1664068471"
       },
       {
         "id": "HTTP_headerAge",
         "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "246 seconds"
+        "finding": "268 seconds"
       },
       {
         "id": "HSTS_time",
@@ -3659,7 +4097,7 @@
         "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "cache-iad-kiad7000171-IAD"
+        "finding": "cache-sjc10044-SJC"
       },
       {
         "id": "Cache-Control",
@@ -3674,7 +4112,7 @@
         "port": "443",
         "severity": "INFO",
         "cwe": "CWE-200",
-        "finding": "Via: 1.1 varnishX-Cache: HITX-Cache-Hits: 1"
+        "finding": "Via: 1.1 varnishX-Cache: HITX-Cache-Hits: 2"
       },
       {
         "id": "heartbleed",
@@ -4382,7 +4820,7 @@
         "ip": "stats.judilibre.io/185.199.109.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "supported"
+        "finding": "not supported"
       },
       {
         "id": "TLS_timestamp",
@@ -4522,7 +4960,7 @@
         "ip": "stats.judilibre.io/185.199.109.153",
         "port": "443",
         "severity": "OK",
-        "finding": "57 >= 30 days"
+        "finding": "50 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -4725,21 +5163,21 @@
         "ip": "stats.judilibre.io/185.199.109.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "+322 seconds from localtime"
+        "finding": "+357 seconds from localtime"
       },
       {
         "id": "HTTP_headerTime",
         "ip": "stats.judilibre.io/185.199.109.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "1663463945"
+        "finding": "1664068560"
       },
       {
         "id": "HTTP_headerAge",
         "ip": "stats.judilibre.io/185.199.109.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "322 seconds"
+        "finding": "357 seconds"
       },
       {
         "id": "HSTS_time",
@@ -4802,7 +5240,7 @@
         "ip": "stats.judilibre.io/185.199.109.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "cache-iad-kiad7000079-IAD"
+        "finding": "cache-sjc10055-SJC"
       },
       {
         "id": "Cache-Control",
@@ -4817,7 +5255,7 @@
         "port": "443",
         "severity": "INFO",
         "cwe": "CWE-200",
-        "finding": "Via: 1.1 varnishX-Cache: HITX-Cache-Hits: 1"
+        "finding": "Via: 1.1 varnishX-Cache: HITX-Cache-Hits: 2"
       },
       {
         "id": "heartbleed",
@@ -5665,7 +6103,7 @@
         "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
-        "finding": "57 >= 30 days"
+        "finding": "50 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -5868,21 +6306,21 @@
         "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "+400 seconds from localtime"
+        "finding": "+446 seconds from localtime"
       },
       {
         "id": "HTTP_headerTime",
         "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "1663464023"
+        "finding": "1664068649"
       },
       {
         "id": "HTTP_headerAge",
         "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "400 seconds"
+        "finding": "446 seconds"
       },
       {
         "id": "HSTS_time",
@@ -5945,7 +6383,7 @@
         "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "cache-iad-kiad7000138-IAD"
+        "finding": "cache-sjc10056-SJC"
       },
       {
         "id": "Cache-Control",
@@ -6459,7 +6897,7 @@
         "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "305"
+        "finding": "354"
       }
     ],
     "thirdparties": {
@@ -6537,14 +6975,14 @@
       "headers": {
         "accept-ranges": "bytes",
         "access-control-allow-origin": "*",
-        "age": "51",
+        "age": "47",
         "cache-control": "max-age=600",
         "content-encoding": "gzip",
         "content-length": "627",
         "content-type": "text/html; charset=utf-8",
-        "date": "Sun, 18 Sep 2022 01:16:04 GMT",
+        "date": "Sun, 25 Sep 2022 01:12:29 GMT",
         "etag": "W/\"62895f74-4aa\"",
-        "expires": "Sun, 18 Sep 2022 01:23:45 GMT",
+        "expires": "Sun, 25 Sep 2022 01:20:05 GMT",
         "last-modified": "Sat, 21 May 2022 21:53:56 GMT",
         "server": "GitHub.com",
         "strict-transport-security": "max-age=31556952",
@@ -6552,11 +6990,12 @@
         "via": "1.1 varnish",
         "x-cache": "HIT",
         "x-cache-hits": "1",
-        "x-fastly-request-id": "154e78ff83a08b2f685ca40ac89e81d6a5f94020",
-        "x-github-request-id": "D058:09D4:CFC649:1180305:632670C9",
+        "x-fastly-request-id": "e516668f0b18f9c928af691e2439c68b42f1e347",
+        "x-github-request-id": "40EA:6A3D:DDBC9A:FC182E:632FAA6D",
+        "x-origin-cache": "HIT",
         "x-proxy-cache": "MISS",
-        "x-served-by": "cache-iad-kiad7000134-IAD",
-        "x-timer": "S1663463765.506313,VS0,VE1"
+        "x-served-by": "cache-sjc10045-SJC",
+        "x-timer": "S1664068349.370701,VS0,VE2"
       },
       "endpoints": [
         {
@@ -6726,7 +7165,7 @@
         },
         {
           "hostname": "api.github.com",
-          "ip": "140.82.112.5",
+          "ip": "192.30.255.117",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -6927,7 +7366,7 @@
     },
     "zap": {
       "@version": "2.11.1",
-      "@generated": "Sun, 18 Sep 2022 01:15:04",
+      "@generated": "Sun, 25 Sep 2022 01:11:32",
       "site": [
         {
           "@name": "https://stats.judilibre.io",
@@ -7012,243 +7451,12 @@
           "reference": null,
           "severity": "info"
         },
-        "matcher-name": "permission-policy",
+        "matcher-name": "cross-origin-resource-policy",
         "type": "http",
         "host": "https://stats.judilibre.io",
         "matched-at": "https://stats.judilibre.io",
         "ip": "185.199.108.153",
-        "timestamp": "2022-09-18T01:22:48.495099745Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "cross-origin-embedder-policy",
-        "type": "http",
-        "host": "https://stats.judilibre.io",
-        "matched-at": "https://stats.judilibre.io",
-        "ip": "185.199.108.153",
-        "timestamp": "2022-09-18T01:22:48.495442145Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "access-control-expose-headers",
-        "type": "http",
-        "host": "https://stats.judilibre.io",
-        "matched-at": "https://stats.judilibre.io",
-        "ip": "185.199.108.153",
-        "timestamp": "2022-09-18T01:22:48.495475845Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "access-control-max-age",
-        "type": "http",
-        "host": "https://stats.judilibre.io",
-        "matched-at": "https://stats.judilibre.io",
-        "ip": "185.199.108.153",
-        "timestamp": "2022-09-18T01:22:48.495496745Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "access-control-allow-methods",
-        "type": "http",
-        "host": "https://stats.judilibre.io",
-        "matched-at": "https://stats.judilibre.io",
-        "ip": "185.199.108.153",
-        "timestamp": "2022-09-18T01:22:48.495518145Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "content-security-policy",
-        "type": "http",
-        "host": "https://stats.judilibre.io",
-        "matched-at": "https://stats.judilibre.io",
-        "ip": "185.199.108.153",
-        "timestamp": "2022-09-18T01:22:48.495537544Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "referrer-policy",
-        "type": "http",
-        "host": "https://stats.judilibre.io",
-        "matched-at": "https://stats.judilibre.io",
-        "ip": "185.199.108.153",
-        "timestamp": "2022-09-18T01:22:48.495559944Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "cross-origin-opener-policy",
-        "type": "http",
-        "host": "https://stats.judilibre.io",
-        "matched-at": "https://stats.judilibre.io",
-        "ip": "185.199.108.153",
-        "timestamp": "2022-09-18T01:22:48.495576944Z",
+        "timestamp": "2022-09-25T01:20:15.676812051Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
         "matcher-status": true,
         "matched-line": null
@@ -7281,7 +7489,7 @@
         "host": "https://stats.judilibre.io",
         "matched-at": "https://stats.judilibre.io",
         "ip": "185.199.108.153",
-        "timestamp": "2022-09-18T01:22:48.495598444Z",
+        "timestamp": "2022-09-25T01:20:15.677226573Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
         "matcher-status": true,
         "matched-line": null
@@ -7309,12 +7517,12 @@
           "reference": null,
           "severity": "info"
         },
-        "matcher-name": "access-control-allow-headers",
+        "matcher-name": "content-security-policy",
         "type": "http",
         "host": "https://stats.judilibre.io",
         "matched-at": "https://stats.judilibre.io",
         "ip": "185.199.108.153",
-        "timestamp": "2022-09-18T01:22:48.495620644Z",
+        "timestamp": "2022-09-25T01:20:15.677275276Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
         "matcher-status": true,
         "matched-line": null
@@ -7347,106 +7555,7 @@
         "host": "https://stats.judilibre.io",
         "matched-at": "https://stats.judilibre.io",
         "ip": "185.199.108.153",
-        "timestamp": "2022-09-18T01:22:48.495641844Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "x-permitted-cross-domain-policies",
-        "type": "http",
-        "host": "https://stats.judilibre.io",
-        "matched-at": "https://stats.judilibre.io",
-        "ip": "185.199.108.153",
-        "timestamp": "2022-09-18T01:22:48.495662444Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "clear-site-data",
-        "type": "http",
-        "host": "https://stats.judilibre.io",
-        "matched-at": "https://stats.judilibre.io",
-        "ip": "185.199.108.153",
-        "timestamp": "2022-09-18T01:22:48.495682944Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "cross-origin-resource-policy",
-        "type": "http",
-        "host": "https://stats.judilibre.io",
-        "matched-at": "https://stats.judilibre.io",
-        "ip": "185.199.108.153",
-        "timestamp": "2022-09-18T01:22:48.495702544Z",
+        "timestamp": "2022-09-25T01:20:15.677303677Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
         "matcher-status": true,
         "matched-line": null
@@ -7479,189 +7588,338 @@
         "host": "https://stats.judilibre.io",
         "matched-at": "https://stats.judilibre.io",
         "ip": "185.199.108.153",
-        "timestamp": "2022-09-18T01:22:48.495720344Z",
+        "timestamp": "2022-09-25T01:20:15.677496587Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
         "matcher-status": true,
         "matched-line": null
       },
       {
-        "template": "technologies/waf-detect.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/technologies/waf-detect.yaml",
-        "template-id": "waf-detect",
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
         "info": {
-          "name": "WAF Detection",
+          "name": "HTTP Missing Security Headers",
           "author": [
-            "dwisiswant0",
-            "lu4nx"
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
           ],
           "tags": [
-            "waf",
-            "tech",
-            "misc"
+            "misconfig",
+            "generic"
           ],
-          "description": "A web application firewall was detected.",
-          "reference": [
-            "https://github.com/ekultek/whatwaf"
-          ],
-          "severity": "info",
-          "classification": {
-            "cve-id": null,
-            "cwe-id": [
-              "cwe-200"
-            ]
-          }
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
         },
-        "matcher-name": "varnish",
+        "matcher-name": "x-permitted-cross-domain-policies",
         "type": "http",
         "host": "https://stats.judilibre.io",
-        "matched-at": "https://stats.judilibre.io/",
+        "matched-at": "https://stats.judilibre.io",
         "ip": "185.199.108.153",
-        "timestamp": "2022-09-18T01:22:51.748099685Z",
-        "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: stats.judilibre.io' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io/'",
+        "timestamp": "2022-09-25T01:20:15.677526689Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
         "matcher-status": true,
         "matched-line": null
       },
       {
-        "template": "ssl/tls-version.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/ssl/tls-version.yaml",
-        "template-id": "tls-version",
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
         "info": {
-          "name": "TLS Version",
+          "name": "HTTP Missing Security Headers",
           "author": [
-            "pdteam"
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
           ],
           "tags": [
-            "ssl"
+            "misconfig",
+            "generic"
           ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
           "reference": null,
           "severity": "info"
         },
-        "type": "ssl",
-        "host": "https://stats.judilibre.io",
-        "matched-at": "https://stats.judilibre.io",
-        "extracted-results": [
-          "TLS13"
-        ],
-        "ip": "185.199.108.153",
-        "timestamp": "2022-09-18T01:22:52.822597207Z",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "miscellaneous/robots-txt-endpoint.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/miscellaneous/robots-txt-endpoint.yaml",
-        "template-id": "robots-txt-endpoint",
-        "info": {
-          "name": "robots.txt endpoint prober",
-          "author": [
-            "caspergn",
-            "pdteam"
-          ],
-          "tags": null,
-          "reference": null,
-          "severity": "info"
-        },
+        "matcher-name": "cross-origin-embedder-policy",
         "type": "http",
         "host": "https://stats.judilibre.io",
-        "matched-at": "https://stats.judilibre.io/robots.txt",
-        "ip": "185.199.108.153",
-        "timestamp": "2022-09-18T01:23:05.835592849Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io/robots.txt'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "dns/cname-service.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/dns/cname-service.yaml",
-        "template-id": "cname-service",
-        "info": {
-          "name": "CNAME Service Detection",
-          "author": [
-            "pdteam"
-          ],
-          "tags": [
-            "dns",
-            "service"
-          ],
-          "description": "A CNAME service was detected.",
-          "reference": [
-            "https://ns1.com/resources/cname"
-          ],
-          "severity": "info",
-          "classification": {
-            "cve-id": null,
-            "cwe-id": [
-              "cwe-200"
-            ]
-          }
-        },
-        "matcher-name": "github",
-        "type": "dns",
-        "host": "https://stats.judilibre.io",
         "matched-at": "https://stats.judilibre.io",
-        "timestamp": "2022-09-18T01:23:12.080094942Z",
+        "ip": "185.199.108.153",
+        "timestamp": "2022-09-25T01:20:15.67755139Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
         "matcher-status": true,
         "matched-line": null
       },
       {
-        "template": "ssl/ssl-dns-names.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/ssl/ssl-dns-names.yaml",
-        "template-id": "ssl-dns-names",
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
         "info": {
-          "name": "SSL DNS Names",
+          "name": "HTTP Missing Security Headers",
           "author": [
-            "pdteam"
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
           ],
           "tags": [
-            "ssl"
+            "misconfig",
+            "generic"
           ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
           "reference": null,
           "severity": "info"
         },
-        "type": "ssl",
+        "matcher-name": "cross-origin-opener-policy",
+        "type": "http",
         "host": "https://stats.judilibre.io",
         "matched-at": "https://stats.judilibre.io",
-        "extracted-results": [
-          "stats.judilibre.io"
-        ],
         "ip": "185.199.108.153",
-        "timestamp": "2022-09-18T01:23:15.170334242Z",
+        "timestamp": "2022-09-25T01:20:15.677574291Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
         "matcher-status": true,
         "matched-line": null
       },
       {
-        "template": "dns/caa-fingerprint.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/dns/caa-fingerprint.yaml",
-        "template-id": "caa-fingerprint",
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
         "info": {
-          "name": "CAA Record",
+          "name": "HTTP Missing Security Headers",
           "author": [
-            "pdteam"
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
           ],
           "tags": [
-            "dns",
-            "caa"
+            "misconfig",
+            "generic"
           ],
-          "description": "A CAA record was discovered. A CAA record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain.",
-          "reference": [
-            "https://support.dnsimple.com/articles/caa-record/#whats-a-caa-record"
-          ],
-          "severity": "info",
-          "classification": {
-            "cve-id": null,
-            "cwe-id": [
-              "cwe-200"
-            ]
-          }
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
         },
-        "type": "dns",
+        "matcher-name": "access-control-expose-headers",
+        "type": "http",
         "host": "https://stats.judilibre.io",
         "matched-at": "https://stats.judilibre.io",
-        "extracted-results": [
-          "digicert.com",
-          "letsencrypt.org"
-        ],
-        "timestamp": "2022-09-18T01:23:28.372525963Z",
+        "ip": "185.199.108.153",
+        "timestamp": "2022-09-25T01:20:15.677597892Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "referrer-policy",
+        "type": "http",
+        "host": "https://stats.judilibre.io",
+        "matched-at": "https://stats.judilibre.io",
+        "ip": "185.199.108.153",
+        "timestamp": "2022-09-25T01:20:15.677623994Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "clear-site-data",
+        "type": "http",
+        "host": "https://stats.judilibre.io",
+        "matched-at": "https://stats.judilibre.io",
+        "ip": "185.199.108.153",
+        "timestamp": "2022-09-25T01:20:15.677649495Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "access-control-allow-headers",
+        "type": "http",
+        "host": "https://stats.judilibre.io",
+        "matched-at": "https://stats.judilibre.io",
+        "ip": "185.199.108.153",
+        "timestamp": "2022-09-25T01:20:15.677674896Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "permission-policy",
+        "type": "http",
+        "host": "https://stats.judilibre.io",
+        "matched-at": "https://stats.judilibre.io",
+        "ip": "185.199.108.153",
+        "timestamp": "2022-09-25T01:20:15.677698598Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "access-control-max-age",
+        "type": "http",
+        "host": "https://stats.judilibre.io",
+        "matched-at": "https://stats.judilibre.io",
+        "ip": "185.199.108.153",
+        "timestamp": "2022-09-25T01:20:15.677725999Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "access-control-allow-methods",
+        "type": "http",
+        "host": "https://stats.judilibre.io",
+        "matched-at": "https://stats.judilibre.io",
+        "ip": "185.199.108.153",
+        "timestamp": "2022-09-25T01:20:15.6777508Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
         "matcher-status": true,
         "matched-line": null
       },
@@ -7697,7 +7955,214 @@
         "extracted-results": [
           "cour-de-cassation.github.io."
         ],
-        "timestamp": "2022-09-18T01:23:52.735652238Z",
+        "timestamp": "2022-09-25T01:20:21.838058813Z",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "dns/caa-fingerprint.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/dns/caa-fingerprint.yaml",
+        "template-id": "caa-fingerprint",
+        "info": {
+          "name": "CAA Record",
+          "author": [
+            "pdteam"
+          ],
+          "tags": [
+            "dns",
+            "caa"
+          ],
+          "description": "A CAA record was discovered. A CAA record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain.",
+          "reference": [
+            "https://support.dnsimple.com/articles/caa-record/#whats-a-caa-record"
+          ],
+          "severity": "info",
+          "classification": {
+            "cve-id": null,
+            "cwe-id": [
+              "cwe-200"
+            ]
+          }
+        },
+        "type": "dns",
+        "host": "https://stats.judilibre.io",
+        "matched-at": "https://stats.judilibre.io",
+        "extracted-results": [
+          "digicert.com",
+          "letsencrypt.org"
+        ],
+        "timestamp": "2022-09-25T01:20:22.480040604Z",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "ssl/ssl-dns-names.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/ssl/ssl-dns-names.yaml",
+        "template-id": "ssl-dns-names",
+        "info": {
+          "name": "SSL DNS Names",
+          "author": [
+            "pdteam"
+          ],
+          "tags": [
+            "ssl"
+          ],
+          "reference": null,
+          "severity": "info"
+        },
+        "type": "ssl",
+        "host": "https://stats.judilibre.io",
+        "matched-at": "https://stats.judilibre.io",
+        "extracted-results": [
+          "stats.judilibre.io"
+        ],
+        "ip": "185.199.108.153",
+        "timestamp": "2022-09-25T01:20:29.360824472Z",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "dns/cname-service.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/dns/cname-service.yaml",
+        "template-id": "cname-service",
+        "info": {
+          "name": "CNAME Service Detection",
+          "author": [
+            "pdteam"
+          ],
+          "tags": [
+            "dns",
+            "service"
+          ],
+          "description": "A CNAME service was detected.",
+          "reference": [
+            "https://ns1.com/resources/cname"
+          ],
+          "severity": "info",
+          "classification": {
+            "cve-id": null,
+            "cwe-id": [
+              "cwe-200"
+            ]
+          }
+        },
+        "matcher-name": "github",
+        "type": "dns",
+        "host": "https://stats.judilibre.io",
+        "matched-at": "https://stats.judilibre.io",
+        "timestamp": "2022-09-25T01:20:30.07957895Z",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "technologies/waf-detect.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/technologies/waf-detect.yaml",
+        "template-id": "waf-detect",
+        "info": {
+          "name": "WAF Detection",
+          "author": [
+            "dwisiswant0",
+            "lu4nx"
+          ],
+          "tags": [
+            "waf",
+            "tech",
+            "misc"
+          ],
+          "description": "A web application firewall was detected.",
+          "reference": [
+            "https://github.com/ekultek/whatwaf"
+          ],
+          "severity": "info",
+          "classification": {
+            "cve-id": null,
+            "cwe-id": [
+              "cwe-200"
+            ]
+          }
+        },
+        "matcher-name": "varnish",
+        "type": "http",
+        "host": "https://stats.judilibre.io",
+        "matched-at": "https://stats.judilibre.io/",
+        "ip": "185.199.108.153",
+        "timestamp": "2022-09-25T01:20:39.170274185Z",
+        "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: stats.judilibre.io' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io/'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "ssl/detect-ssl-issuer.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/ssl/detect-ssl-issuer.yaml",
+        "template-id": "detect-ssl-issuer",
+        "info": {
+          "name": "Detect SSL Certificate Issuer",
+          "author": [
+            "lingtren"
+          ],
+          "tags": [
+            "ssl"
+          ],
+          "reference": null,
+          "severity": "info"
+        },
+        "type": "ssl",
+        "host": "https://stats.judilibre.io",
+        "matched-at": "https://stats.judilibre.io",
+        "extracted-results": [
+          "Let's Encrypt"
+        ],
+        "ip": "185.199.108.153",
+        "timestamp": "2022-09-25T01:21:00.621466725Z",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "miscellaneous/robots-txt-endpoint.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/miscellaneous/robots-txt-endpoint.yaml",
+        "template-id": "robots-txt-endpoint",
+        "info": {
+          "name": "robots.txt endpoint prober",
+          "author": [
+            "caspergn",
+            "pdteam"
+          ],
+          "tags": null,
+          "reference": null,
+          "severity": "info"
+        },
+        "type": "http",
+        "host": "https://stats.judilibre.io",
+        "matched-at": "https://stats.judilibre.io/robots.txt",
+        "ip": "185.199.108.153",
+        "timestamp": "2022-09-25T01:21:00.704725929Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io/robots.txt'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "ssl/tls-version.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/ssl/tls-version.yaml",
+        "template-id": "tls-version",
+        "info": {
+          "name": "TLS Version",
+          "author": [
+            "pdteam"
+          ],
+          "tags": [
+            "ssl"
+          ],
+          "reference": null,
+          "severity": "info"
+        },
+        "type": "ssl",
+        "host": "https://stats.judilibre.io",
+        "matched-at": "https://stats.judilibre.io",
+        "extracted-results": [
+          "TLS13"
+        ],
+        "ip": "185.199.108.153",
+        "timestamp": "2022-09-25T01:21:02.426820731Z",
         "matcher-status": true,
         "matched-line": null
       }
@@ -7706,7 +8171,7 @@
       {
         "requestedUrl": "https://stats.judilibre.io/",
         "finalUrl": "https://stats.judilibre.io/",
-        "fetchTime": "2022-09-18T01:15:12.626Z",
+        "fetchTime": "2022-09-25T01:11:41.212Z",
         "runWarnings": [],
         "categories": {
           "performance": {
@@ -7731,7 +8196,7 @@
             "description": "These checks ensure that your page is optimized for search engine results ranking. There are additional factors Lighthouse does not check that may affect your search ranking. [Learn more](https://support.google.com/webmasters/answer/35769).",
             "manualDescription": "Run these additional validators on your site to check additional SEO best practices.",
             "id": "seo",
-            "score": 0.85
+            "score": 0.77
           },
           "pwa": {
             "title": "Progressive Web App",
@@ -7748,49 +8213,49 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 6544,
+            "numericValue": 5685,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 1295,
-                  "firstMeaningfulPaint": 1343,
-                  "largestContentfulPaint": 3877,
-                  "firstCPUIdle": 6417,
-                  "interactive": 6544,
-                  "speedIndex": 3628,
-                  "estimatedInputLatency": 926,
-                  "totalBlockingTime": 3115,
-                  "maxPotentialFID": 1641,
-                  "cumulativeLayoutShift": 0.23388508605957029,
-                  "cumulativeLayoutShiftAllFrames": 0.00006835937499999999,
+                  "firstContentfulPaint": 1384,
+                  "firstMeaningfulPaint": 1441,
+                  "largestContentfulPaint": 2040,
+                  "firstCPUIdle": 5542,
+                  "interactive": 5685,
+                  "speedIndex": 3360,
+                  "estimatedInputLatency": 440,
+                  "totalBlockingTime": 2341,
+                  "maxPotentialFID": 1034,
+                  "cumulativeLayoutShift": 0.23769002744886614,
+                  "cumulativeLayoutShiftAllFrames": 0,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 208621740,
+                  "observedTimeOriginTs": 309040509,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 208621740,
-                  "observedFirstPaint": 188,
-                  "observedFirstPaintTs": 208809746,
-                  "observedFirstContentfulPaint": 188,
-                  "observedFirstContentfulPaintTs": 208809746,
-                  "observedFirstMeaningfulPaint": 188,
-                  "observedFirstMeaningfulPaintTs": 208809746,
-                  "observedLargestContentfulPaint": 1026,
-                  "observedLargestContentfulPaintTs": 209648191,
-                  "observedTraceEnd": 7665,
-                  "observedTraceEndTs": 216286533,
-                  "observedLoad": 119,
-                  "observedLoadTs": 208740806,
-                  "observedDomContentLoaded": 75,
-                  "observedDomContentLoadedTs": 208696956,
-                  "observedCumulativeLayoutShift": 0.23388508605957029,
-                  "observedCumulativeLayoutShiftAllFrames": 0.00006835937499999999,
-                  "observedFirstVisualChange": 186,
-                  "observedFirstVisualChangeTs": 208807740,
-                  "observedLastVisualChange": 6636,
-                  "observedLastVisualChangeTs": 215257740,
-                  "observedSpeedIndex": 565,
-                  "observedSpeedIndexTs": 209186299
+                  "observedNavigationStartTs": 309040509,
+                  "observedFirstPaint": 452,
+                  "observedFirstPaintTs": 309492582,
+                  "observedFirstContentfulPaint": 452,
+                  "observedFirstContentfulPaintTs": 309492582,
+                  "observedFirstMeaningfulPaint": 452,
+                  "observedFirstMeaningfulPaintTs": 309492582,
+                  "observedLargestContentfulPaint": 452,
+                  "observedLargestContentfulPaintTs": 309492582,
+                  "observedTraceEnd": 3409,
+                  "observedTraceEndTs": 312449517,
+                  "observedLoad": 371,
+                  "observedLoadTs": 309411167,
+                  "observedDomContentLoaded": 239,
+                  "observedDomContentLoadedTs": 309279960,
+                  "observedCumulativeLayoutShift": 0.23769002744886614,
+                  "observedCumulativeLayoutShiftAllFrames": 0,
+                  "observedFirstVisualChange": 463,
+                  "observedFirstVisualChangeTs": 309503509,
+                  "observedLastVisualChange": 2947,
+                  "observedLastVisualChangeTs": 311987509,
+                  "observedSpeedIndex": 726,
+                  "observedSpeedIndexTs": 309766109
                 },
                 {
                   "lcpInvalidated": false
@@ -7812,19 +8277,19 @@
                   "numScripts": 6,
                   "numStylesheets": 2,
                   "numFonts": 4,
-                  "numTasks": 969,
+                  "numTasks": 683,
                   "numTasksOver10ms": 22,
-                  "numTasksOver25ms": 17,
-                  "numTasksOver50ms": 10,
-                  "numTasksOver100ms": 2,
+                  "numTasksOver25ms": 15,
+                  "numTasksOver50ms": 12,
+                  "numTasksOver100ms": 1,
                   "numTasksOver500ms": 0,
-                  "rtt": 5.564,
-                  "throughput": 68779952.05937868,
-                  "maxRtt": 84.12199999999999,
-                  "maxServerLatency": 216.41199999999998,
-                  "totalByteWeight": 394539,
-                  "totalTaskTime": 1537.777000000009,
-                  "mainDocumentTransferSize": 1019
+                  "rtt": 1.2009999999999987,
+                  "throughput": 35255052.22592643,
+                  "maxRtt": 149.15499999999997,
+                  "maxServerLatency": 499.5880000000001,
+                  "totalByteWeight": 394482,
+                  "totalTaskTime": 1433.758999999997,
+                  "mainDocumentTransferSize": 1033
                 }
               ]
             }
@@ -7859,8 +8324,8 @@
       "lighthouse_accessibilityGrade": "A",
       "lighthouse_best-practices": 0.93,
       "lighthouse_best-practicesGrade": "A",
-      "lighthouse_seo": 0.85,
-      "lighthouse_seoGrade": "A",
+      "lighthouse_seo": 0.77,
+      "lighthouse_seoGrade": "B",
       "lighthouse_pwa": 0.42,
       "lighthouse_pwaGrade": "D"
     }
@@ -7871,7 +8336,7 @@
     "http": {
       "url": "https://www.justice.fr",
       "algorithm_version": 2,
-      "end_time": "Sun, 18 Sep 2022 01:19:31 GMT",
+      "end_time": "Sun, 25 Sep 2022 01:13:26 GMT",
       "grade": "C+",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -7881,14 +8346,14 @@
         "Connection": "Keep-Alive",
         "Content-Encoding": "gzip",
         "Content-Language": "fr",
-        "Content-Length": "55932",
+        "Content-Length": "55937",
         "Content-Type": "text/html; charset=utf-8",
-        "Date": "Sun, 18 Sep 2022 01:19:26 GMT",
-        "Etag": "\"1663385533-1\"",
+        "Date": "Sun, 25 Sep 2022 01:13:21 GMT",
+        "Etag": "\"1663990614-1\"",
         "Expires": "Sun, 19 Nov 1978 05:00:00 GMT",
         "Keep-Alive": "timeout=5, max=100",
-        "Last-Modified": "Sat, 17 Sep 2022 03:32:13 GMT",
-        "Set-Cookie": "MJ=!CuIaJv2hTwcah9hPosrF9iA8u1WnsiZVUIESJKyYLMOVxv2piNUylJ1AzKQKem6BE/0td6x6D01x4Q==; path=/; Httponly; Secure, TS0190034b=0117efb8b0d216bb0be52401a7c11027b19d20814ba2b174e4e308dd30a36e13ff1b9afae694fb8d23cd9eadad79935e30ef64ec23c894c13ba793040ce0a7306a36d1090e; Path=/; Domain=.www.justice.fr",
+        "Last-Modified": "Sat, 24 Sep 2022 03:36:54 GMT",
+        "Set-Cookie": "MJ=!L9/WgI+B0pVNdUNPosrF9iA8u1WnsmNDQPHeZgt7C4v9PmepuZhEp70CUK5f1nKl4BbyBD/07ajHWg==; path=/; Httponly; Secure, TS0190034b=0117efb8b0fd937ff9232b3479cbf5dab9e95ce0b5b467a5e5b03df118a3837d9113016da5d161fcbd355d78cb154c7a2085b23a6ae31785d2c3a88bdd2d824d7e06f42087; Path=/; Domain=.www.justice.fr",
         "Strict-Transport-Security": "max-age=16070400; includeSubDomains",
         "Vary": "Accept-Encoding,User-Agent",
         "X-Cache": "HIT",
@@ -7896,9 +8361,9 @@
         "X-Frame-Options": "SAMEORIGIN",
         "X-UA-Device": "DESKTOP"
       },
-      "scan_id": 29476552,
+      "scan_id": 29639053,
       "score": 60,
-      "start_time": "Sun, 18 Sep 2022 01:16:38 GMT",
+      "start_time": "Sun, 25 Sep 2022 01:13:17 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 3,
@@ -8085,28 +8550,7 @@
       }
     },
     "updownio": null,
-    "nmap": {
-      "host": "www.justice.fr",
-      "protocol": "tcp",
-      "closed_ports": "998",
-      "open_ports": [
-        {
-          "service": {
-            "name": "tcpwrapped",
-            "id": "80",
-            "vulnerabilities": []
-          }
-        },
-        {
-          "service": {
-            "name": "tcpwrapped",
-            "id": "443",
-            "vulnerabilities": []
-          }
-        }
-      ],
-      "grade": "A"
-    },
+    "nmap": null,
     "dependabot": null,
     "codescan": null,
     "testssl": [
@@ -8471,7 +8915,7 @@
         "ip": "www.justice.fr/185.24.184.180",
         "port": "443",
         "severity": "OK",
-        "finding": "173 >= 60 days"
+        "finding": "166 >= 60 days"
       },
       {
         "id": "cert_notBefore",
@@ -8667,14 +9111,14 @@
         "ip": "www.justice.fr/185.24.184.180",
         "port": "443",
         "severity": "INFO",
-        "finding": "-3 seconds from localtime"
+        "finding": "0 (± 1.5) seconds from localtime"
       },
       {
         "id": "HTTP_headerTime",
         "ip": "www.justice.fr/185.24.184.180",
         "port": "443",
         "severity": "INFO",
-        "finding": "1663464074"
+        "finding": "1664068522"
       },
       {
         "id": "HSTS_time",
@@ -9302,14 +9746,14 @@
         "ip": "www.justice.fr/185.24.184.180",
         "port": "443",
         "severity": "INFO",
-        "finding": "213"
+        "finding": "230"
       }
     ],
     "thirdparties": {
       "trackers": [
         {
           "type": "xiti",
-          "url": "https://logs1406.xiti.com/hit.xiti?s=562733&p=accueil&vrn=1&gl=1&an=&ac=&cmd=&newcus=&roimt=&test=&lng=en-US&idp=0119595036503&jv=0&re=800x600&vtag=4.6.4&hl=1x19x59&r=800x600x24x24&rn=1663463999135&ref=",
+          "url": "https://logs1406.xiti.com/hit.xiti?s=562733&p=accueil&vrn=1&gl=1&an=&ac=&cmd=&newcus=&roimt=&test=&lng=en-US&idp=0113598808874&jv=0&re=800x600&vtag=4.6.4&hl=1x13x59&r=800x600x24x24&rn=1664068439138&ref=",
           "details": {
             "id": "xiti",
             "message": "Use hosted Matomo instance"
@@ -9317,7 +9761,7 @@
         },
         {
           "type": "xiti",
-          "url": "https://logs1406.xiti.com/hit.xiti?s=562733&p=accueil&vrn=1&gl=1&an=&ac=&cmd=&newcus=&roimt=&test=&lng=en-US&idp=0119595036503&jv=0&re=800x600&vtag=4.6.4&hl=1x19x59&r=800x600x24x24&rn=1663463999135&ref=&Rdt=On",
+          "url": "https://logs1406.xiti.com/hit.xiti?s=562733&p=accueil&vrn=1&gl=1&an=&ac=&cmd=&newcus=&roimt=&test=&lng=en-US&idp=0113598808874&jv=0&re=800x600&vtag=4.6.4&hl=1x13x59&r=800x600x24x24&rn=1664068439138&ref=&Rdt=On",
           "details": {
             "id": "xiti",
             "message": "Use hosted Matomo instance"
@@ -9325,7 +9769,7 @@
         },
         {
           "type": "xiti",
-          "url": "https://logs1187.xiti.com/hit.xiti?s=588328&ts=1663463999435&vtag=5.7.0&ptag=js&r=800x600x24x24&re=800x600&hl=1x19x59&lng=en-US&idp=0119599699993&p=&s2=&vrn=1&ref=",
+          "url": "https://logs1187.xiti.com/hit.xiti?s=588328&ts=1664068439389&vtag=5.7.0&ptag=js&r=800x600x24x24&re=800x600&hl=1x13x59&lng=en-US&idp=0113593722175&p=&s2=&vrn=1&ref=",
           "details": {
             "id": "xiti",
             "message": "Use hosted Matomo instance"
@@ -9349,7 +9793,7 @@
         },
         {
           "name": "TS0190034b",
-          "value": "0117efb8b0795c6a91c77746cdefe0cfa768becba05bfa89fe69e1bd25fe5787e07c965ff63e527e8dde4795947934628c842b4f1fe7ab682462d230b892927442db8af3e3",
+          "value": "0117efb8b08ac0e51ac9d7de1e4a7495f9614d070e2d27388a54363262f7361bbc91fe48d701f757c37762a97fd97ab0c43d25947615141adc68490bb0107d26682d6c1753",
           "domain": ".www.justice.fr",
           "path": "/",
           "expires": -1,
@@ -9366,7 +9810,7 @@
           "value": "%7B%22name%22%3A%22atidvisitor%22%2C%22val%22%3A%7B%22vrn%22%3A%22-588328-%22%7D%2C%22options%22%3A%7B%22path%22%3A%22%2F%22%2C%22session%22%3A15724800%2C%22end%22%3A15724800%7D%7D",
           "domain": "www.justice.fr",
           "path": "/",
-          "expires": 1679188799.433658,
+          "expires": 1679793239.387703,
           "size": 191,
           "httpOnly": false,
           "secure": false,
@@ -9377,7 +9821,7 @@
         },
         {
           "name": "MJ",
-          "value": "!GVeFpYQypk+BgF1PosrF9iA8u1WnskNf3Af98NdMur9UK7Ecjszy4hoGWgkU7cZNjX58qXGlZLh3sA==",
+          "value": "!XFVMqyhQ+JkdFnlPosrF9iA8u1WnsonN6TFY+PX2fbcMkFQTIpCtrbSfYezWBO+kqWzoomJHbYbfVw==",
           "domain": "www.justice.fr",
           "path": "/",
           "expires": -1,
@@ -9396,14 +9840,14 @@
         "connection": "Keep-Alive",
         "content-encoding": "gzip",
         "content-language": "fr",
-        "content-length": "55932",
+        "content-length": "55937",
         "content-type": "text/html; charset=utf-8",
-        "date": "Sun, 18 Sep 2022 01:19:57 GMT",
-        "etag": "\"1663385533-1\"",
+        "date": "Sun, 25 Sep 2022 01:13:57 GMT",
+        "etag": "\"1663990614-1\"",
         "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
         "keep-alive": "timeout=5, max=100",
-        "last-modified": "Sat, 17 Sep 2022 03:32:13 GMT",
-        "set-cookie": "MJ=!GVeFpYQypk+BgF1PosrF9iA8u1WnskNf3Af98NdMur9UK7Ecjszy4hoGWgkU7cZNjX58qXGlZLh3sA==; path=/; Httponly; Secure\nTS0190034b=0117efb8b0795c6a91c77746cdefe0cfa768becba05bfa89fe69e1bd25fe5787e07c965ff63e527e8dde4795947934628c842b4f1fe7ab682462d230b892927442db8af3e3; Path=/; Domain=.www.justice.fr",
+        "last-modified": "Sat, 24 Sep 2022 03:36:54 GMT",
+        "set-cookie": "MJ=!XFVMqyhQ+JkdFnlPosrF9iA8u1WnsonN6TFY+PX2fbcMkFQTIpCtrbSfYezWBO+kqWzoomJHbYbfVw==; path=/; Httponly; Secure\nTS0190034b=0117efb8b08ac0e51ac9d7de1e4a7495f9614d070e2d27388a54363262f7361bbc91fe48d701f757c37762a97fd97ab0c43d25947615141adc68490bb0107d26682d6c1753; Path=/; Domain=.www.justice.fr",
         "strict-transport-security": "max-age=16070400; includeSubDomains",
         "vary": "Accept-Encoding,User-Agent",
         "x-cache": "HIT",
@@ -9470,7 +9914,7 @@
         },
         {
           "hostname": "logs1406.xiti.com",
-          "ip": "18.238.172.60",
+          "ip": "18.155.184.60",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -9524,7 +9968,7 @@
         },
         {
           "hostname": "logs1187.xiti.com",
-          "ip": "13.226.179.148",
+          "ip": "99.84.205.91",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -9740,7 +10184,7 @@
     },
     "zap": {
       "@version": "2.11.1",
-      "@generated": "Sun, 18 Sep 2022 01:16:17",
+      "@generated": "Sun, 25 Sep 2022 01:12:52",
       "site": [
         {
           "@name": "https://www.justice.fr",
@@ -9841,7 +10285,7 @@
       {
         "requestedUrl": "https://www.justice.fr/",
         "finalUrl": "https://www.justice.fr/",
-        "fetchTime": "2022-09-18T01:16:25.678Z",
+        "fetchTime": "2022-09-25T01:13:01.103Z",
         "runWarnings": [],
         "categories": {
           "performance": {
@@ -9883,49 +10327,49 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 5510,
+            "numericValue": 7737,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 1924,
-                  "firstMeaningfulPaint": 1924,
-                  "largestContentfulPaint": 5507,
-                  "firstCPUIdle": 4600,
-                  "interactive": 5510,
-                  "speedIndex": 5963,
+                  "firstContentfulPaint": 3243,
+                  "firstMeaningfulPaint": 3243,
+                  "largestContentfulPaint": 6344,
+                  "firstCPUIdle": 6612,
+                  "interactive": 7737,
+                  "speedIndex": 7069,
                   "estimatedInputLatency": 13,
-                  "totalBlockingTime": 69,
-                  "maxPotentialFID": 115,
-                  "cumulativeLayoutShift": 0.4746066177156237,
-                  "cumulativeLayoutShiftAllFrames": 0.4523862466812134,
+                  "totalBlockingTime": 173,
+                  "maxPotentialFID": 160,
+                  "cumulativeLayoutShift": 0.4567202281951904,
+                  "cumulativeLayoutShiftAllFrames": 0.4432660484313965,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 286670172,
+                  "observedTimeOriginTs": 243236662,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 286670172,
-                  "observedFirstPaint": 1597,
-                  "observedFirstPaintTs": 288267585,
-                  "observedFirstContentfulPaint": 1597,
-                  "observedFirstContentfulPaintTs": 288267585,
-                  "observedFirstMeaningfulPaint": 2013,
-                  "observedFirstMeaningfulPaintTs": 288683079,
-                  "observedLargestContentfulPaint": 2776,
-                  "observedLargestContentfulPaintTs": 289446133,
-                  "observedTraceEnd": 4389,
-                  "observedTraceEndTs": 291059228,
-                  "observedLoad": 3332,
-                  "observedLoadTs": 290002339,
-                  "observedDomContentLoaded": 2760,
-                  "observedDomContentLoadedTs": 289430504,
-                  "observedCumulativeLayoutShift": 0.4746066177156237,
-                  "observedCumulativeLayoutShiftAllFrames": 0.4523862466812134,
-                  "observedFirstVisualChange": 1601,
-                  "observedFirstVisualChangeTs": 288271172,
-                  "observedLastVisualChange": 2851,
-                  "observedLastVisualChangeTs": 289521172,
-                  "observedSpeedIndex": 2432,
-                  "observedSpeedIndexTs": 289102102
+                  "observedNavigationStartTs": 243236662,
+                  "observedFirstPaint": 2267,
+                  "observedFirstPaintTs": 245503463,
+                  "observedFirstContentfulPaint": 2267,
+                  "observedFirstContentfulPaintTs": 245503463,
+                  "observedFirstMeaningfulPaint": 2280,
+                  "observedFirstMeaningfulPaintTs": 245516603,
+                  "observedLargestContentfulPaint": 3430,
+                  "observedLargestContentfulPaintTs": 246666242,
+                  "observedTraceEnd": 5419,
+                  "observedTraceEndTs": 248655443,
+                  "observedLoad": 4358,
+                  "observedLoadTs": 247594587,
+                  "observedDomContentLoaded": 3406,
+                  "observedDomContentLoadedTs": 246642551,
+                  "observedCumulativeLayoutShift": 0.4567202281951904,
+                  "observedCumulativeLayoutShiftAllFrames": 0.4432660484313965,
+                  "observedFirstVisualChange": 2270,
+                  "observedFirstVisualChangeTs": 245506662,
+                  "observedLastVisualChange": 3503,
+                  "observedLastVisualChangeTs": 246739662,
+                  "observedSpeedIndex": 3157,
+                  "observedSpeedIndexTs": 246393477
                 },
                 {
                   "lcpInvalidated": false
@@ -9943,23 +10387,23 @@
               "type": "debugdata",
               "items": [
                 {
-                  "numRequests": 31,
+                  "numRequests": 32,
                   "numScripts": 4,
                   "numStylesheets": 2,
                   "numFonts": 4,
-                  "numTasks": 701,
-                  "numTasksOver10ms": 4,
+                  "numTasks": 734,
+                  "numTasksOver10ms": 9,
                   "numTasksOver25ms": 3,
-                  "numTasksOver50ms": 1,
+                  "numTasksOver50ms": 2,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 7.842999999999996,
-                  "throughput": 4264034.667642335,
-                  "maxRtt": 8.507,
-                  "maxServerLatency": 134.06,
-                  "totalByteWeight": 1000260,
-                  "totalTaskTime": 380.5269999999996,
-                  "mainDocumentTransferSize": 56836
+                  "rtt": 1.7190000000000012,
+                  "throughput": 2964927.6333939563,
+                  "maxRtt": 177.75799999999998,
+                  "maxServerLatency": 61.440999999999995,
+                  "totalByteWeight": 1001016,
+                  "totalTaskTime": 555.531999999999,
+                  "mainDocumentTransferSize": 56838
                 }
               ]
             }
@@ -9978,9 +10422,6 @@
     "summary": {
       "404": "A+",
       "httpGrade": "C+",
-      "nmapGrade": "A",
-      "nmapOpenPortsCount": 2,
-      "nmapOpenPortsGrade": "A",
       "testsslExpireSoon": false,
       "testsslExpireDate": "2023-03-10T22:59:00.000Z",
       "testsslGrade": "B",
