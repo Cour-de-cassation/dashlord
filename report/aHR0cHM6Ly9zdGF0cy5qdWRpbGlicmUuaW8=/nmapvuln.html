@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln stats.judilibre.io</pre>
-<p class="lead">Sun Sep 25 01:18:38 2022 – Sun Sep 25 01:18:58 2022<br>1 hosts scanned.
+<p class="lead">Sun Oct  2 01:30:52 2022 – Sun Oct  2 01:31:11 2022<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -115,19 +115,6 @@
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
 <td title="Service">http</td>
-<td title="Product">T-Home Telekom Media Receiver httpd</td>
-<td title="Version"></td>
-<td title="Extra Info"></td>
-</tr>
-<tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">GitHub.com</pre>
-</td></tr>
-<tr class="success">
-<td title="Port">443</td>
-<td title="Protocol">tcp</td>
-<td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">https</td>
 <td title="Product">GitHub.com</td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
@@ -139,32 +126,6 @@
   Varnish</pre>
 <h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  FourOhFourRequest: 
-    HTTP/1.1 404 Not Found
-    Connection: close
-    Content-Length: 9115
-    Server: GitHub.com
-    Content-Type: text/html; charset=utf-8
-    ETag: "6317e2ab-239b"
-    Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'
-    X-GitHub-Request-Id: 080A:272C:109DD14:12C2BFA:632FAC80
-    Accept-Ranges: bytes
-    Date: Sun, 25 Sep 2022 01:18:56 GMT
-    Via: 1.1 varnish
-    Age: 0
-    X-Served-By: cache-sjc10066-SJC
-    X-Cache: MISS
-    X-Cache-Hits: 0
-    X-Timer: S1664068736.208991,VS0,VE88
-    Vary: Accept-Encoding
-    X-Fastly-Request-ID: b6adef3a5c135ac8569642276fcf76b0deacc301
-    &lt;!DOCTYPE html&gt;
-    &lt;html&gt;
-    &lt;head&gt;
-    &lt;meta http-equiv="Content-type" content="text/html; charset=utf-8"&gt;
-    &lt;meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'"&gt;
-    &lt;title&gt;Site not found &amp;middot; GitHub Pages&lt;/title&gt;
-    &lt;style ty
   GetRequest: 
     HTTP/1.1 404 Not Found
     Connection: close
@@ -173,17 +134,17 @@
     Content-Type: text/html; charset=utf-8
     ETag: "6317e2ab-239b"
     Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'
-    X-GitHub-Request-Id: B266:7E19:C11F80:DBA976:632FAC80
+    X-GitHub-Request-Id: 082F:8FBA:5926C7:63485F:6338E9D7
     Accept-Ranges: bytes
-    Date: Sun, 25 Sep 2022 01:18:56 GMT
+    Date: Sun, 02 Oct 2022 01:31:03 GMT
     Via: 1.1 varnish
     Age: 0
-    X-Served-By: cache-sjc10045-SJC
+    X-Served-By: cache-sjc10054-SJC
     X-Cache: MISS
     X-Cache-Hits: 0
-    X-Timer: S1664068736.078075,VS0,VE90
+    X-Timer: S1664674264.916663,VS0,VE81
     Vary: Accept-Encoding
-    X-Fastly-Request-ID: a10ec203752b6da67222e7a12bee52eea39d94d5
+    X-Fastly-Request-ID: 8d7763b177b3477aa17d398813c2e24e813d744c
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
     &lt;head&gt;
@@ -198,19 +159,115 @@
     Server: Varnish
     Retry-After: 0
     Accept-Ranges: bytes
-    Date: Sun, 25 Sep 2022 01:18:56 GMT
+    Date: Sun, 02 Oct 2022 01:31:04 GMT
     Via: 1.1 varnish
-    X-Served-By: cache-sjc10033-SJC
+    X-Served-By: cache-sjc10073-SJC
     X-Cache: MISS
     X-Cache-Hits: 0
-    X-Timer: S1664068736.196610,VS0,VE1
-    X-Fastly-Request-ID: 3d88ef3f3554f3d67b12fbec263da1c37f72408f
+    X-Timer: S1664674264.022207,VS0,VE1
+    X-Fastly-Request-ID: 7a78a61d53a71fd9d19228ad49e286afe88f71a3
+    &lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body bgcolor="white"&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+  RTSPRequest: 
+    HTTP/1.1 400 Bad Request
+    Connection: close
+    Content-Length: 11
+    content-type: text/plain; charset=utf-8
+    x-served-by: cache-sjc10052
+    Request</pre>
+</td></tr>
+<tr class="success">
+<td title="Port">443</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">https</td>
+<td title="Product">GitHub.com</td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  FourOhFourRequest: 
+    HTTP/1.1 404 Not Found
+    Connection: close
+    Content-Length: 9115
+    Server: GitHub.com
+    Content-Type: text/html; charset=utf-8
+    ETag: "6317e2ab-239b"
+    Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'
+    X-GitHub-Request-Id: 0822:3DA4:538293:5D869B:6338E435
+    Accept-Ranges: bytes
+    Date: Sun, 02 Oct 2022 01:31:09 GMT
+    Via: 1.1 varnish
+    Age: 1448
+    X-Served-By: cache-sjc10066-SJC
+    X-Cache: HIT
+    X-Cache-Hits: 1
+    X-Timer: S1664674270.983079,VS0,VE1
+    Vary: Accept-Encoding
+    X-Fastly-Request-ID: 343ddd31d60c419c64e6f6fc86743c761d7a0e6e
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;meta http-equiv="Content-type" content="text/html; charset=utf-8"&gt;
+    &lt;meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'"&gt;
+    &lt;title&gt;Site not found &amp;middot; GitHub Pages&lt;/title&gt;
+    &lt;style typ
+  GetRequest: 
+    HTTP/1.1 404 Not Found
+    Connection: close
+    Content-Length: 9115
+    Server: GitHub.com
+    Content-Type: text/html; charset=utf-8
+    x-origin-cache: HIT
+    ETag: "6317e2ab-239b"
+    Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'
+    X-GitHub-Request-Id: 0827:92E7:F521D:114547:6338E435
+    Accept-Ranges: bytes
+    Date: Sun, 02 Oct 2022 01:31:09 GMT
+    Via: 1.1 varnish
+    Age: 1448
+    X-Served-By: cache-sjc10044-SJC
+    X-Cache: HIT
+    X-Cache-Hits: 1
+    X-Timer: S1664674270.945085,VS0,VE1
+    Vary: Accept-Encoding
+    X-Fastly-Request-ID: e41ea559d241076871edd7b599b271e296971595
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;meta http-equiv="Content-type" content="text/html; charset=utf-8"&gt;
+    &lt;meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'"&gt;
+    &lt;title&gt;Site not found &amp;middot; GitHub Pages&lt;/t
+  HTTPOptions: 
+    HTTP/1.1 405 Method Not Allowed
+    Connection: close
+    Content-Length: 131
+    Server: Varnish
+    Retry-After: 0
+    Accept-Ranges: bytes
+    Date: Sun, 02 Oct 2022 01:31:09 GMT
+    Via: 1.1 varnish
+    X-Served-By: cache-sjc10037-SJC
+    X-Cache: MISS
+    X-Cache-Hits: 0
+    X-Timer: S1664674270.968064,VS0,VE1
+    X-Fastly-Request-ID: 7ca54f00f2d3596b39f90092efb6f558e3c5bb61
     &lt;html&gt;
     &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
     &lt;body bgcolor="white"&gt;
     &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
     &lt;/body&gt;
     &lt;/html&gt;</pre>
+<h5>http-server-header</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  GitHub.com
+  Varnish</pre>
 </td></tr>
 </tbody>
 </table></div>
@@ -234,7 +291,7 @@
 <td>80</td>
 <td>tcp</td>
 <td>http</td>
-<td>T-Home Telekom Media Receiver httpd</td>
+<td>GitHub.com</td>
 <td></td>
 <td></td>
 <td></td>
