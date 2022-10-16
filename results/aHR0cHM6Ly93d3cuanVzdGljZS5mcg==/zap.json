@@ -1,6 +1,6 @@
 {
 	"@version": "2.11.1",
-	"@generated": "Sun, 9 Oct 2022 04:07:21",
+	"@generated": "Sun, 16 Oct 2022 04:44:00",
 	"site":[ 
 		{
 			"@name": "https://www.justice.fr",
@@ -224,7 +224,7 @@
 					"reference": "",
 					"cweid": "319",
 					"wascid": "15",
-					"sourceid": "1181"
+					"sourceid": "1185"
 				},
 				{
 					"pluginid": "90003",
@@ -380,13 +380,6 @@
 							"evidence": "Set-Cookie: TS011eb1c5"
 						},
 						{
-							"uri": "https://www.justice.fr/accueil",
-							"method": "GET",
-							"param": "TS011eb1c5",
-							"attack": "",
-							"evidence": "Set-Cookie: TS011eb1c5"
-						},
-						{
 							"uri": "https://www.justice.fr/conditions-utilisation",
 							"method": "GET",
 							"param": "TS011eb1c5",
@@ -395,6 +388,13 @@
 						},
 						{
 							"uri": "https://www.justice.fr/contact/formulaire",
+							"method": "GET",
+							"param": "TS011eb1c5",
+							"attack": "",
+							"evidence": "Set-Cookie: TS011eb1c5"
+						},
+						{
+							"uri": "https://www.justice.fr/printpdf",
 							"method": "GET",
 							"param": "TS011eb1c5",
 							"attack": "",
@@ -476,13 +476,6 @@
 							"evidence": "Set-Cookie: TS011eb1c5"
 						},
 						{
-							"uri": "https://www.justice.fr/accueil",
-							"method": "GET",
-							"param": "TS011eb1c5",
-							"attack": "",
-							"evidence": "Set-Cookie: TS011eb1c5"
-						},
-						{
 							"uri": "https://www.justice.fr/conditions-utilisation",
 							"method": "GET",
 							"param": "TS011eb1c5",
@@ -491,6 +484,13 @@
 						},
 						{
 							"uri": "https://www.justice.fr/contact/formulaire",
+							"method": "GET",
+							"param": "TS011eb1c5",
+							"attack": "",
+							"evidence": "Set-Cookie: TS011eb1c5"
+						},
+						{
+							"uri": "https://www.justice.fr/printpdf",
 							"method": "GET",
 							"param": "TS011eb1c5",
 							"attack": "",
@@ -749,7 +749,7 @@
 					"reference": "<p>https://angular.io/guide/security</p>",
 					"cweid": "749",
 					"wascid": "-1",
-					"sourceid": "1121"
+					"sourceid": "1122"
 				},
 				{
 					"pluginid": "10063",
@@ -927,7 +927,7 @@
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html</p>",
 					"cweid": "311",
 					"wascid": "4",
-					"sourceid": "1181"
+					"sourceid": "1185"
 				},
 				{
 					"pluginid": "10096",
@@ -944,16 +944,16 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "1665288247"
+							"evidence": "1665895265"
 						}
 					],
 					"count": "1",
 					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
-					"otherinfo": "<p>1665288247, which evaluates to: 2022-10-09 04:04:07</p>",
+					"otherinfo": "<p>1665895265, which evaluates to: 2022-10-16 04:41:05</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "1148"
+					"sourceid": "1147"
 				},
 				{
 					"pluginid": "10021",
@@ -1073,14 +1073,14 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "Gt7rtQmpo4BuwAI49Hl2MtJAflCcAEu4O/lCb33GKsmCECX6e5jcvoN7OaYdMxMym1SHGh1FJMMaLQ=="
+							"evidence": "ZWMQfeLN8/YObds49Hl2MtJAflCcACrDF8C0mFBmrPYoxz2Phl7bQoq8Vv5VF05QFLd62hUJXBKlwA=="
 						},
 						{
 							"uri": "https://www.justice.fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "5I2U8EElGJrlkT5Rkb0Huvue883NyWp9H8F7+oNDjRJWzkzf+Lqu7VlabPyJLiz/4Igd40/5cgx8XA=="
+							"evidence": "yjmJ3xnP/pyxk6049Hl2MtJAflCcAEhzDLntYAUoA2/FNHCM1hnmOb9dpe5F2HYR+7JMK486R8Se0w=="
 						},
 						{
 							"uri": "https://www.justice.fr/",
@@ -1136,7 +1136,7 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "U/wZ16t2XJzICXxRkb0Huvue883NyYArmpVR6sHwnR9QjTL+vOjCK00XVrBKgm7+KYNx/0gjpagN1g=="
+							"evidence": "055znzow4rIJ2itRkb0Huvue883NyRwTVcDCy+/+i7g+rbT0mNceUqEOwnS8kW3d1CCQKRtHrSH0Kg=="
 						},
 						{
 							"uri": "https://www.justice.fr/themes/divorce",
@@ -1155,11 +1155,11 @@
 					],
 					"count": "12",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
-					"otherinfo": "<p>\\x001a\uFFFD\uFFFD\t\uFFFD\uFFFD\uFFFDn\uFFFD\\x00028\uFFFDyv2\uFFFD@~P\uFFFD\\x0000K\uFFFD;\uFFFDBo}\uFFFD*\u0242\\x0010%\uFFFD{\uFFFD\u073E\uFFFD{9\uFFFD\\x001d3\\x00132\uFFFDT\uFFFD\\x001a\\x001dE$\uFFFD\\x001a-</p>",
+					"otherinfo": "<p>ec\\x0010}\uFFFD\uFFFD\uFFFD\uFFFD\\x000em\uFFFD8\uFFFDyv2\uFFFD@~P\uFFFD\\x0000*\uFFFD\\x0017\uFFFD\uFFFD\uFFFDPf\uFFFD\uFFFD(\uFFFD=\uFFFD\uFFFD^\uFFFDB\uFFFD\uFFFDV\uFFFDU\\x0017NP\\x0014\uFFFDz\uFFFD\\x0015\t\\\\x0012\uFFFD\uFFFD</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "1"
+					"sourceid": "93"
 				},
 				{
 					"pluginid": "10027",
@@ -1248,7 +1248,7 @@
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "1121"
+					"sourceid": "1122"
 				},
 				{
 					"pluginid": "10109",
@@ -1467,7 +1467,21 @@
 							"evidence": "HIT"
 						},
 						{
-							"uri": "https://www.justice.fr/mentions-l%C3%A9gales",
+							"uri": "https://www.justice.fr/acces-droit",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT"
+						},
+						{
+							"uri": "https://www.justice.fr/printpdf/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT"
+						},
+						{
+							"uri": "https://www.justice.fr/recherche/annuaires",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1488,20 +1502,6 @@
 							"evidence": "HIT"
 						},
 						{
-							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?rifi5a",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "HIT"
-						},
-						{
-							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/dist/style.min.css?rifi5a",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "HIT"
-						},
-						{
 							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/favicon.ico",
 							"method": "GET",
 							"param": "",
@@ -1516,14 +1516,14 @@
 							"evidence": "HIT"
 						},
 						{
-							"uri": "https://www.justice.fr/sites/default/files/css/css_TY7QtDWFxbJDXDyILpAKWh4hMb61aR2Pfy2M-RuBbas.css",
+							"uri": "https://www.justice.fr/themes/casier-judiciaire",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "HIT"
 						},
 						{
-							"uri": "https://www.justice.fr/sites/default/files/js/js_f-NZ0J4Z9k3531taCXdleps4Av7wTMpmXW0iicwrz68.js",
+							"uri": "https://www.justice.fr/themes/obligations-vie-familiale",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1570,13 +1570,6 @@
 							"evidence": "max-age=86400"
 						},
 						{
-							"uri": "https://www.justice.fr/accueil",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "max-age=604800"
-						},
-						{
 							"uri": "https://www.justice.fr/conditions-utilisation",
 							"method": "GET",
 							"param": "",
@@ -1612,7 +1605,7 @@
 							"evidence": "max-age=604800"
 						}
 					],
-					"count": "9",
+					"count": "8",
 					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p>",
 					"otherinfo": "",
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
@@ -1631,6 +1624,13 @@
 					"desc": "<p>The response contents are storable by caching components such as proxy servers, but will not be retrieved directly from the cache, without validating the request upstream, in response to similar requests from other users. </p>",
 					"instances":[ 
 						{
+							"uri": "https://www.justice.fr/printpdf",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=0"
+						},
+						{
 							"uri": "https://www.justice.fr/robots.txt",
 							"method": "GET",
 							"param": "",
@@ -1645,13 +1645,13 @@
 							"evidence": "must-revalidate"
 						}
 					],
-					"count": "2",
+					"count": "3",
 					"solution": "",
 					"otherinfo": "",
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "6"
+					"sourceid": "677"
 				}
 			]
 		}
