@@ -52,8 +52,8 @@
               "id"           : "TLS1_3",
               "ip"           : "www.justice.fr/185.24.184.180",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "not offered + downgraded to weaker protocol"
+              "severity"     : "CRITICAL",
+              "finding"      : "connection failed rather than downgrading to TLSv1.2"
           }
 ,         {
               "id"           : "ALPN",
@@ -125,6 +125,13 @@
               "finding"      : "offered"
           }
 ,         {
+              "id"           : "cipher_order-tls1",
+              "ip"           : "www.justice.fr/185.24.184.180",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
               "id"           : "cipherorder_TLSv1",
               "ip"           : "www.justice.fr/185.24.184.180",
               "port"         : "443",
@@ -132,11 +139,25 @@
               "finding"      : "ECDHE-RSA-AES128-SHA"
           }
 ,         {
+              "id"           : "cipher_order-tls1_1",
+              "ip"           : "www.justice.fr/185.24.184.180",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
               "id"           : "cipherorder_TLSv1_1",
               "ip"           : "www.justice.fr/185.24.184.180",
               "port"         : "443",
               "severity"     : "INFO",
               "finding"      : "ECDHE-RSA-AES128-SHA"
+          }
+,         {
+              "id"           : "cipher_order-tls1_2",
+              "ip"           : "www.justice.fr/185.24.184.180",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
           }
 ,         {
               "id"           : "cipherorder_TLSv1_2",
@@ -360,7 +381,7 @@
               "ip"           : "www.justice.fr/185.24.184.180",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "145 >= 60 days"
+              "finding"      : "138 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -563,7 +584,7 @@
               "ip"           : "www.justice.fr/185.24.184.180",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1665895578"
+              "finding"      : "1666499075"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -627,13 +648,6 @@
               "port"         : "443",
               "severity"     : "INFO",
               "finding"      : "1/2 at '/' marked as HttpOnly"
-          }
-,         {
-              "id"           : "cookie_bigip_f5",
-              "ip"           : "www.justice.fr/185.24.184.180",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "encrypted F5 cookie named MJ"
           }
 ,         {
               "id"           : "X-Frame-Options",
@@ -897,7 +911,7 @@
               "ip"           : "www.justice.fr/185.24.184.180",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "No connection"
           }
 ,         {
               "id"           : "clientsimulation-android_12",
@@ -1037,7 +1051,7 @@
               "ip"           : "www.justice.fr/185.24.184.180",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "No connection"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java1703",
@@ -1198,6 +1212,6 @@
               "ip"           : "www.justice.fr/185.24.184.180",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "225"
+              "finding"      : "226"
           }
 ]
