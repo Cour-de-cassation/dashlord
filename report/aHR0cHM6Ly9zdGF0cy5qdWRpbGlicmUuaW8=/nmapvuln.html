@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln stats.judilibre.io</pre>
-<p class="lead">Sun Oct 23 01:23:05 2022 – Sun Oct 23 01:23:45 2022<br>1 hosts scanned.
+<p class="lead">Sun Oct 30 01:21:54 2022 – Sun Oct 30 01:22:12 2022<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -115,13 +115,69 @@
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
 <td title="Service">http</td>
-<td title="Product">T-Home Telekom Media Receiver httpd</td>
+<td title="Product">GitHub.com</td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">GitHub.com</pre>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  GitHub.com
+  Varnish</pre>
+<h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  GetRequest: 
+    HTTP/1.1 404 Not Found
+    Connection: close
+    Content-Length: 9115
+    Server: GitHub.com
+    Content-Type: text/html; charset=utf-8
+    ETag: "6359d044-239b"
+    Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'
+    X-GitHub-Request-Id: 0801:5C9C:13DE6C5:1AB95FA:635DC6E6
+    Accept-Ranges: bytes
+    Date: Sun, 30 Oct 2022 01:22:05 GMT
+    Via: 1.1 varnish
+    Age: 2775
+    X-Served-By: cache-iad-kiad7000081-IAD
+    X-Cache: HIT
+    X-Cache-Hits: 1
+    X-Timer: S1667092926.507524,VS0,VE2
+    Vary: Accept-Encoding
+    X-Fastly-Request-ID: 7101b881689341fd8936e6d4f94354880b08399c
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;meta http-equiv="Content-type" content="text/html; charset=utf-8"&gt;
+    &lt;meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'"&gt;
+    &lt;title&gt;Site not found &amp;middot; GitHub Pages&lt;/title&gt;
+  HTTPOptions: 
+    HTTP/1.1 405 Method Not Allowed
+    Connection: close
+    Content-Length: 131
+    Server: Varnish
+    Retry-After: 0
+    Accept-Ranges: bytes
+    Date: Sun, 30 Oct 2022 01:22:05 GMT
+    Via: 1.1 varnish
+    X-Served-By: cache-iad-kiad7000059-IAD
+    X-Cache: MISS
+    X-Cache-Hits: 0
+    X-Timer: S1667092926.522298,VS0,VE3
+    X-Fastly-Request-ID: 559ac055379da58decd57331b4f8929f25fbce7c
+    &lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body bgcolor="white"&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+  RTSPRequest: 
+    HTTP/1.1 400 Bad Request
+    Connection: close
+    Content-Length: 11
+    content-type: text/plain; charset=utf-8
+    x-served-by: cache-iad-kiad7000165
+    Request</pre>
 </td></tr>
 <tr class="success">
 <td title="Port">443</td>
@@ -145,19 +201,19 @@
     Content-Length: 9115
     Server: GitHub.com
     Content-Type: text/html; charset=utf-8
-    ETag: "6317e2ab-239b"
+    ETag: "6359d044-239b"
     Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'
-    X-GitHub-Request-Id: 0808:552F:CE3DA2:12ABBA3:6354978A
+    X-GitHub-Request-Id: 0804:77DB:142D940:1B1526E:635DD1C3
     Accept-Ranges: bytes
-    Date: Sun, 23 Oct 2022 01:23:22 GMT
+    Date: Sun, 30 Oct 2022 01:22:11 GMT
     Via: 1.1 varnish
     Age: 0
-    X-Served-By: cache-dfw-kdfw8210025-DFW
+    X-Served-By: cache-iad-kiad7000092-IAD
     X-Cache: MISS
     X-Cache-Hits: 0
-    X-Timer: S1666488203.629821,VS0,VE40
+    X-Timer: S1667092932.557220,VS0,VE5
     Vary: Accept-Encoding
-    X-Fastly-Request-ID: 2287f339f43c47515873a7d9aa859fc19849d44d
+    X-Fastly-Request-ID: a813e037b4b971248bdcac11ea3770bc26c254f1
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
     &lt;head&gt;
@@ -170,19 +226,19 @@
     Content-Length: 9115
     Server: GitHub.com
     Content-Type: text/html; charset=utf-8
-    ETag: "6317e2ab-239b"
+    ETag: "6359d044-239b"
     Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'
-    X-GitHub-Request-Id: 0800:032C:E01C4B:13C9209:6354978A
+    X-GitHub-Request-Id: 0807:574D:14B9B77:1B970E4:635DC6E6
     Accept-Ranges: bytes
-    Date: Sun, 23 Oct 2022 01:23:22 GMT
+    Date: Sun, 30 Oct 2022 01:22:11 GMT
     Via: 1.1 varnish
-    Age: 0
-    X-Served-By: cache-dfw-kdfw8210078-DFW
-    X-Cache: MISS
-    X-Cache-Hits: 0
-    X-Timer: S1666488202.463992,VS0,VE38
+    Age: 2781
+    X-Served-By: cache-iad-kiad7000052-IAD
+    X-Cache: HIT
+    X-Cache-Hits: 1
+    X-Timer: S1667092932.530363,VS0,VE2
     Vary: Accept-Encoding
-    X-Fastly-Request-ID: e26c10ca4fd7e8de5c8229b4c6f0406732195a5f
+    X-Fastly-Request-ID: 303996bbf7875fc73d76c0a6799e737f034b4ba4
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
     &lt;head&gt;
@@ -196,13 +252,13 @@
     Server: Varnish
     Retry-After: 0
     Accept-Ranges: bytes
-    Date: Sun, 23 Oct 2022 01:23:22 GMT
+    Date: Sun, 30 Oct 2022 01:22:11 GMT
     Via: 1.1 varnish
-    X-Served-By: cache-dfw-kdfw8210065-DFW
+    X-Served-By: cache-iad-kiad7000020-IAD
     X-Cache: MISS
     X-Cache-Hits: 0
-    X-Timer: S1666488203.569713,VS0,VE1
-    X-Fastly-Request-ID: 693ab8d24c525a5de5cb0f3124e374aafc8e6448
+    X-Timer: S1667092932.549439,VS0,VE1
+    X-Fastly-Request-ID: 1fcc7707c4c8a30e994198f03fc832b1ddc55686
     &lt;html&gt;
     &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
     &lt;body bgcolor="white"&gt;
@@ -232,7 +288,7 @@
 <td>80</td>
 <td>tcp</td>
 <td>http</td>
-<td>T-Home Telekom Media Receiver httpd</td>
+<td>GitHub.com</td>
 <td></td>
 <td></td>
 <td></td>
