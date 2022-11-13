@@ -1,12 +1,55 @@
-# Nmap 7.92 scan initiated Sun Nov  6 03:28:48 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.justice.fr
+# Nmap 7.92 scan initiated Sun Nov 13 04:04:58 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.justice.fr
 Nmap scan report for www.justice.fr (185.24.184.180)
-Host is up (0.11s latency).
+Host is up (0.18s latency).
 Not shown: 998 filtered tcp ports (no-response)
 PORT    STATE SERVICE    VERSION
 80/tcp  open  http-proxy F5 BIG-IP load balancer http proxy
 |_http-server-header: BigIP
 443/tcp open  ssl/https
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Sun, 13 Nov 2022 04:05:24 GMT
+|     X-Content-Type-Options: nosniff
+|     Content-Language: fr
+|     X-Frame-Options: SAMEORIGIN
+|     Cache-Control: public, max-age=86400
+|     Expires: Sun, 19 Nov 1978 05:00:00 GMT
+|     Etag: "1668227504-1"
+|     Last-Modified: Sat, 12 Nov 2022 04:31:44 GMT
+|     Content-Type: text/html; charset=utf-8
+|     X-UA-Device: DESKTOP
+|     X-Cache: HIT
+|     Vary: Accept-Encoding,User-Agent
+|     Connection: close
+|     Set-Cookie: MJ=!UWyDVdGycE993Ok49Hl2MtJAflCcAJGRoGEBpxee3x07f3LtBMsnifeiQZfpU4BVPSsEwkNdlzB+TQ==; path=/; Httponly; Secure
+|     Strict-Transport-Security: max-age=16070400; includeSubDomains
+|     Set-Cookie: TS01902d34=01a6efdeadc454f6b60e041c7f5c6cae09c01ca4487e48838a2e36aaabf756ecf10c64cef99fda3ec7b1128c7e70a0d174fc203cc86e88613983af94b41c22d377b7153908; Path=/
+|     <!DOCTYPE html>
+|     <html lang="fr" dir="ltr">
+|     <head>
+|     <meta http-equiv="X-UA-Compatible" content="IE=9; IE=EDGE" />
+|_    <meta ch
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/13%Time=63706D04%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,4306,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sun,\x2013
+SF:\x20Nov\x202022\x2004:05:24\x20GMT\r\nX-Content-Type-Options:\x20nosnif
+SF:f\r\nContent-Language:\x20fr\r\nX-Frame-Options:\x20SAMEORIGIN\r\nCache
+SF:-Control:\x20public,\x20max-age=86400\r\nExpires:\x20Sun,\x2019\x20Nov\
+SF:x201978\x2005:00:00\x20GMT\r\nEtag:\x20\"1668227504-1\"\r\nLast-Modifie
+SF:d:\x20Sat,\x2012\x20Nov\x202022\x2004:31:44\x20GMT\r\nContent-Type:\x20
+SF:text/html;\x20charset=utf-8\r\nX-UA-Device:\x20DESKTOP\r\nX-Cache:\x20H
+SF:IT\r\nVary:\x20Accept-Encoding,User-Agent\r\nConnection:\x20close\r\nSe
+SF:t-Cookie:\x20MJ=!UWyDVdGycE993Ok49Hl2MtJAflCcAJGRoGEBpxee3x07f3LtBMsnif
+SF:eiQZfpU4BVPSsEwkNdlzB\+TQ==;\x20path=/;\x20Httponly;\x20Secure\r\nStric
+SF:t-Transport-Security:\x20max-age=16070400;\x20includeSubDomains\r\nSet-
+SF:Cookie:\x20TS01902d34=01a6efdeadc454f6b60e041c7f5c6cae09c01ca4487e48838
+SF:a2e36aaabf756ecf10c64cef99fda3ec7b1128c7e70a0d174fc203cc86e88613983af94
+SF:b41c22d377b7153908;\x20Path=/\r\n\r\n<!DOCTYPE\x20html>\n\n<html\x20lan
+SF:g=\"fr\"\x20dir=\"ltr\">\n\n<head>\n\x20\x20<meta\x20http-equiv=\"X-UA-
+SF:Compatible\"\x20content=\"IE=9;\x20IE=EDGE\"\x20/>\n\x20\x20<meta\x20ch
+SF:");
 Service Info: Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Nov  6 03:29:26 2022 -- 1 IP address (1 host up) scanned in 38.32 seconds
+# Nmap done at Sun Nov 13 04:05:39 2022 -- 1 IP address (1 host up) scanned in 40.84 seconds
