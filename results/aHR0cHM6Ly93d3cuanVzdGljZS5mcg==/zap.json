@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Sun, 27 Nov 2022 06:12:19",
+	"@generated": "Sun, 4 Dec 2022 03:24:57",
 	"site":[ 
 		{
 			"@name": "https://www.justice.fr",
@@ -48,6 +48,41 @@
 							"evidence": "<form action=\"/recherche/all/\" method=\"post\" id=\"portalis-search-form\" accept-charset=\"UTF-8\">"
 						},
 						{
+							"uri": "https://www.justice.fr/contact",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form action=\"/recherche/all/\" method=\"post\" id=\"portalis-search-form\" accept-charset=\"UTF-8\">"
+						},
+						{
+							"uri": "https://www.justice.fr/contact",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form action=\"/themes/casier-judiciaire\" method=\"get\" target=\"_blank\">"
+						},
+						{
+							"uri": "https://www.justice.fr/contact",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form action=\"https://www.formulaires.modernisation.gouv.fr/gf/cerfa_15414.do\" method=\"get\">"
+						},
+						{
+							"uri": "https://www.justice.fr/contact",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form action=\"https://www.formulaires.modernisation.gouv.fr/gf/getNotice.do%3FcerfaNotice=52283%26cerfaFormulaire=15414\" method=\"get\">"
+						},
+						{
+							"uri": "https://www.justice.fr/contact",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"user-info-from-cookie contact-form\" action=\"/contact\" method=\"post\" id=\"contact-site-form\" accept-charset=\"UTF-8\">"
+						},
+						{
 							"uri": "https://www.justice.fr/contact/formulaire",
 							"method": "GET",
 							"param": "",
@@ -55,42 +90,7 @@
 							"evidence": "<form action=\"/recherche/all/\" method=\"post\" id=\"portalis-search-form\" accept-charset=\"UTF-8\">"
 						},
 						{
-							"uri": "https://www.justice.fr/fiche/autorite-parentale",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<form action=\"/recherche/all/\" method=\"post\" id=\"portalis-search-form\" accept-charset=\"UTF-8\">"
-						},
-						{
-							"uri": "https://www.justice.fr/node-page/11213",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<form action=\"/recherche/all/\" method=\"post\" id=\"portalis-search-form\" accept-charset=\"UTF-8\">"
-						},
-						{
 							"uri": "https://www.justice.fr/recherche",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<form action=\"/recherche/all/\" method=\"post\" id=\"portalis-search-form\" accept-charset=\"UTF-8\">"
-						},
-						{
-							"uri": "https://www.justice.fr/themes/divorce",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<form action=\"/recherche/all/\" method=\"post\" id=\"portalis-search-form\" accept-charset=\"UTF-8\">"
-						},
-						{
-							"uri": "https://www.justice.fr/themes/pension-alimentaire",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<form action=\"/recherche/all/\" method=\"post\" id=\"portalis-search-form\" accept-charset=\"UTF-8\">"
-						},
-						{
-							"uri": "https://www.justice.fr/themes/succession",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -144,14 +144,14 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.justice.fr/contact/formulaire",
+							"uri": "https://www.justice.fr/contact",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.justice.fr/fiche/autorite-parentale",
+							"uri": "https://www.justice.fr/contact/formulaire",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -186,13 +186,6 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.justice.fr/themes/pension-alimentaire",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
 							"uri": "https://www.justice.fr/themes/succession",
 							"method": "GET",
 							"param": "",
@@ -200,7 +193,7 @@
 							"evidence": ""
 						}
 					],
-					"count": "12",
+					"count": "11",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header, to achieve optimal browser support: \"Content-Security-Policy\" for Chrome 25+, Firefox 23+ and Safari 7+, \"X-Content-Security-Policy\" for Firefox 4.0+ and Internet Explorer 10+, and \"X-WebKit-CSP\" for Chrome 14+ and Safari 6+.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
@@ -247,6 +240,13 @@
 							"evidence": "<script src=\"https://cdn.jsdelivr.net/g/html5shiv@3.7.3\"></script>"
 						},
 						{
+							"uri": "https://www.justice.fr/contact",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"https://cdn.jsdelivr.net/g/html5shiv@3.7.3\"></script>"
+						},
+						{
 							"uri": "https://www.justice.fr/contact/formulaire",
 							"method": "GET",
 							"param": "",
@@ -282,20 +282,6 @@
 							"evidence": "<script src=\"https://cdn.jsdelivr.net/g/html5shiv@3.7.3\"></script>"
 						},
 						{
-							"uri": "https://www.justice.fr/themes/obligations-vie-familiale",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<script src=\"https://cdn.jsdelivr.net/g/html5shiv@3.7.3\"></script>"
-						},
-						{
-							"uri": "https://www.justice.fr/themes/pension-alimentaire",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<script src=\"https://cdn.jsdelivr.net/g/html5shiv@3.7.3\"></script>"
-						},
-						{
 							"uri": "https://www.justice.fr/themes/succession",
 							"method": "GET",
 							"param": "",
@@ -303,7 +289,7 @@
 							"evidence": "<script src=\"https://cdn.jsdelivr.net/g/html5shiv@3.7.3\"></script>"
 						}
 					],
-					"count": "12",
+					"count": "11",
 					"solution": "<p>Provide a valid integrity attribute to the tag.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en/docs/Web/Security/Subresource_Integrity</p>",
@@ -364,20 +350,6 @@
 							"evidence": "Set-Cookie: TS011eb1c5"
 						},
 						{
-							"uri": "https://www.justice.fr/mon-espace-contact",
-							"method": "GET",
-							"param": "TS011eb1c5",
-							"attack": "",
-							"evidence": "Set-Cookie: TS011eb1c5"
-						},
-						{
-							"uri": "https://www.justice.fr/printpdf",
-							"method": "GET",
-							"param": "TS011eb1c5",
-							"attack": "",
-							"evidence": "Set-Cookie: TS011eb1c5"
-						},
-						{
 							"uri": "https://www.justice.fr/printpdf/",
 							"method": "GET",
 							"param": "TS011eb1c5",
@@ -413,7 +385,7 @@
 							"evidence": "Set-Cookie: TS011eb1c5"
 						}
 					],
-					"count": "13",
+					"count": "11",
 					"solution": "<p>Ensure that the HttpOnly flag is set for all cookies.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://owasp.org/www-community/HttpOnly</p>",
@@ -453,6 +425,13 @@
 							"evidence": "Set-Cookie: TS011eb1c5"
 						},
 						{
+							"uri": "https://www.justice.fr/accueil",
+							"method": "GET",
+							"param": "TS011eb1c5",
+							"attack": "",
+							"evidence": "Set-Cookie: TS011eb1c5"
+						},
+						{
 							"uri": "https://www.justice.fr/conditions-utilisation",
 							"method": "GET",
 							"param": "TS011eb1c5",
@@ -461,20 +440,6 @@
 						},
 						{
 							"uri": "https://www.justice.fr/contact/formulaire",
-							"method": "GET",
-							"param": "TS011eb1c5",
-							"attack": "",
-							"evidence": "Set-Cookie: TS011eb1c5"
-						},
-						{
-							"uri": "https://www.justice.fr/mon-espace-contact",
-							"method": "GET",
-							"param": "TS011eb1c5",
-							"attack": "",
-							"evidence": "Set-Cookie: TS011eb1c5"
-						},
-						{
-							"uri": "https://www.justice.fr/printpdf",
 							"method": "GET",
 							"param": "TS011eb1c5",
 							"attack": "",
@@ -516,7 +481,7 @@
 							"evidence": "Set-Cookie: TS011eb1c5"
 						}
 					],
-					"count": "12",
+					"count": "11",
 					"solution": "<p>Whenever a cookie contains sensitive information or is a session token, then it should always be passed using an encrypted channel. Ensure that the secure flag is set for cookies containing such sensitive information.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html</p>",
@@ -556,21 +521,7 @@
 							"evidence": "Set-Cookie: TS011eb1c5"
 						},
 						{
-							"uri": "https://www.justice.fr/conditions-utilisation",
-							"method": "GET",
-							"param": "TS011eb1c5",
-							"attack": "",
-							"evidence": "Set-Cookie: TS011eb1c5"
-						},
-						{
 							"uri": "https://www.justice.fr/contact/formulaire",
-							"method": "GET",
-							"param": "TS011eb1c5",
-							"attack": "",
-							"evidence": "Set-Cookie: TS011eb1c5"
-						},
-						{
-							"uri": "https://www.justice.fr/printpdf",
 							"method": "GET",
 							"param": "TS011eb1c5",
 							"attack": "",
@@ -619,7 +570,7 @@
 							"evidence": "Set-Cookie: TS011eb1c5"
 						}
 					],
-					"count": "12",
+					"count": "10",
 					"solution": "<p>Ensure that the SameSite attribute is set to either 'lax' or ideally 'strict' for all cookies.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site</p>",
@@ -666,6 +617,13 @@
 							"evidence": "<script src=\"https://cdn.jsdelivr.net/g/html5shiv@3.7.3\"></script>"
 						},
 						{
+							"uri": "https://www.justice.fr/contact",
+							"method": "GET",
+							"param": "https://cdn.jsdelivr.net/g/html5shiv@3.7.3",
+							"attack": "",
+							"evidence": "<script src=\"https://cdn.jsdelivr.net/g/html5shiv@3.7.3\"></script>"
+						},
+						{
 							"uri": "https://www.justice.fr/contact/formulaire",
 							"method": "GET",
 							"param": "https://cdn.jsdelivr.net/g/html5shiv@3.7.3",
@@ -695,13 +653,6 @@
 						},
 						{
 							"uri": "https://www.justice.fr/themes/divorce",
-							"method": "GET",
-							"param": "https://cdn.jsdelivr.net/g/html5shiv@3.7.3",
-							"attack": "",
-							"evidence": "<script src=\"https://cdn.jsdelivr.net/g/html5shiv@3.7.3\"></script>"
-						},
-						{
-							"uri": "https://www.justice.fr/themes/pension-alimentaire",
 							"method": "GET",
 							"param": "https://cdn.jsdelivr.net/g/html5shiv@3.7.3",
 							"attack": "",
@@ -762,14 +713,14 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.justice.fr/contact/formulaire",
+							"uri": "https://www.justice.fr/contact",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.justice.fr/fiche/autorite-parentale",
+							"uri": "https://www.justice.fr/contact/formulaire",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -804,13 +755,6 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.justice.fr/themes/pension-alimentaire",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
 							"uri": "https://www.justice.fr/themes/succession",
 							"method": "GET",
 							"param": "",
@@ -818,7 +762,7 @@
 							"evidence": ""
 						}
 					],
-					"count": "12",
+					"count": "11",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://developers.google.com/web/updates/2018/06/feature-policy</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
@@ -851,6 +795,34 @@
 							"evidence": "http://logi3.xiti.com/hit.xiti?s=562733&s2=23&p=Fiches:Travail:Relations salari\u00E9-employeur:Recours au conseil des prud\u2019hommes:Conseil de prud'hommes (CPH) : d\u00E9roulement d'une affaire&di=&ac=&an=&"
 						},
 						{
+							"uri": "https://www.justice.fr/fiche/elections",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://logi3.xiti.com/hit.xiti?s=562733&s2=23&p=Fiches:Vie quotidienne:\u00C9lections&di=&ac=&an=&"
+						},
+						{
+							"uri": "https://www.justice.fr/fiche/emancipation-mineur",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://logi3.xiti.com/hit.xiti?s=562733&s2=23&p=Fiches:Mineurs:\u00C9mancipation d'un mineur&di=&ac=&an=&"
+						},
+						{
+							"uri": "https://www.justice.fr/fiche/logement",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://logi3.xiti.com/hit.xiti?s=562733&s2=23&p=Fiches:Vie quotidienne:Logement&di=&ac=&an=&"
+						},
+						{
+							"uri": "https://www.justice.fr/fiche/mineur-victime",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://logi3.xiti.com/hit.xiti?s=562733&s2=23&p=Fiches:Mineurs:Mineur victime&di=&ac=&an=&"
+						},
+						{
 							"uri": "https://www.justice.fr/fiche/naissance-filiation",
 							"method": "GET",
 							"param": "",
@@ -872,13 +844,39 @@
 							"evidence": "http://logi3.xiti.com/hit.xiti?s=562733&s2=23&p=Fiches:Travail:Relations salari\u00E9-employeur:Recours au conseil des prud\u2019hommes:Saisir le conseil de prud'hommes (CPH)&di=&ac=&an=&"
 						}
 					],
-					"count": "5",
+					"count": "9",
 					"solution": "<p>A page that is available over SSL/TLS must be comprised completely of content which is transmitted over SSL/TLS.</p><p>The page must not contain any content that is transmitted over unencrypted HTTP.</p><p> This includes content from third party sites.</p>",
 					"otherinfo": "<p>tag=img src=http://logi3.xiti.com/hit.xiti?s=562733&s2=23&p=Fiches:Famille:Autorit\u00E9 parentale&di=&ac=&an=&</p><p></p>",
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html</p>",
 					"cweid": "311",
 					"wascid": "4",
-					"sourceid": "720"
+					"sourceid": "752"
+				},
+				{
+					"pluginid": "10096",
+					"alertRef": "10096",
+					"alert": "Timestamp Disclosure - Unix",
+					"name": "Timestamp Disclosure - Unix",
+					"riskcode": "1",
+					"confidence": "1",
+					"riskdesc": "Low (Low)",
+					"desc": "<p>A timestamp was disclosed by the application/web server - Unix</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.justice.fr/contact",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1670124224"
+						}
+					],
+					"count": "1",
+					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
+					"otherinfo": "<p>1670124224, which evaluates to: 2022-12-04 03:23:44</p>",
+					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "680"
 				},
 				{
 					"pluginid": "10021",
@@ -921,7 +919,14 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "ZHmRv5vsYUHqrho49Hl2MtJAflCcAPjEPI1TZUOjdB43qOMzwDlzeVqGWdI9NqAdVM4i2tEVBLaB"
+							"evidence": "TtPfnecWmUNM0n9Rkb0Huvue883NyTwUo/mI16U5Yocvg/XZXqa3jzNEanvB7asf+0NrtbEUEhHc"
+						},
+						{
+							"uri": "https://www.justice.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "q9je489zhse6nWFRkb0Huvue883NyT+N3Z0FESrtWRmNd5tzVKdeFeo4T4/o8YduDyD48DcTmXTU"
 						},
 						{
 							"uri": "https://www.justice.fr/",
@@ -945,18 +950,18 @@
 							"evidence": "/sites/default/files/css/css_TY7QtDWFxbJDXDyILpAKWh4hMb61aR2Pfy2M-RuBbas"
 						},
 						{
-							"uri": "https://www.justice.fr/contact/formulaire",
+							"uri": "https://www.justice.fr/contact",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "/sites/default/files/css/css_TY7QtDWFxbJDXDyILpAKWh4hMb61aR2Pfy2M-RuBbas"
 						},
 						{
-							"uri": "https://www.justice.fr/fiche/autorite-parentale",
+							"uri": "https://www.justice.fr/contact/formulaire",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "fr/particuliers/vosdroits/N135"
+							"evidence": "/sites/default/files/css/css_TY7QtDWFxbJDXDyILpAKWh4hMb61aR2Pfy2M-RuBbas"
 						},
 						{
 							"uri": "https://www.justice.fr/node-page/11213",
@@ -977,17 +982,10 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "djS0IHpccrfpu1w49Hl2MtJAflCcANEDMjb38L/jBmK/ez/ShcUJdTjiTlIM3dt0ZagXa6sc5V2V"
+							"evidence": "45lOriP9XwRpkt5Rkb0Huvue883NyXGSqilDVjep0gXYXB4nReVb2FZKQWkb5ru0GlMl5inBl85n"
 						},
 						{
 							"uri": "https://www.justice.fr/themes/divorce",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "/sites/default/files/css/css_TY7QtDWFxbJDXDyILpAKWh4hMb61aR2Pfy2M-RuBbas"
-						},
-						{
-							"uri": "https://www.justice.fr/themes/pension-alimentaire",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1003,7 +1001,7 @@
 					],
 					"count": "12",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
-					"otherinfo": "<p>dy\uFFFD\uFFFD\uFFFD\uFFFDaA\uFFFD\\x001a8\uFFFDyv2\uFFFD@~P\uFFFD\\x0000\uFFFD\uFFFD<\uFFFDSeC\uFFFDt\\x001e7\uFFFD\uFFFD3\uFFFD9syZ\uFFFDY\uFFFD=6\uFFFD\\x001dT\uFFFD\"\uFFFD\uFFFD\\x0015\\x0004\uFFFD\uFFFD</p>",
+					"otherinfo": "<p>N\uFFFD\u07DD\uFFFD\\x0016\uFFFDCL\uFFFDQ\uFFFD\uFFFD\\x0007\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD<\\x0014\uFFFD\uFFFD\uFFFD\u05E59b\uFFFD/\uFFFD\uFFFD\uFFFD^\uFFFD\uFFFD\uFFFD3Dj{\uFFFD\uFFFD\\x001f\uFFFDCk\uFFFD\uFFFD\\x0014\\x0012\\x0011\uFFFD</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
@@ -1048,6 +1046,13 @@
 							"evidence": "<a id=\"alerte-enl_banniere\" class=\"alerte-enl_hidden\"title = \"Cliquez ici pour plus d'informations\" ></a>"
 						},
 						{
+							"uri": "https://www.justice.fr/contact",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a id=\"alerte-enl_banniere\" class=\"alerte-enl_hidden\"title = \"Cliquez ici pour plus d'informations\" ></a>"
+						},
+						{
 							"uri": "https://www.justice.fr/contact/formulaire",
 							"method": "GET",
 							"param": "",
@@ -1077,13 +1082,6 @@
 						},
 						{
 							"uri": "https://www.justice.fr/themes/divorce",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<a id=\"alerte-enl_banniere\" class=\"alerte-enl_hidden\"title = \"Cliquez ici pour plus d'informations\" ></a>"
-						},
-						{
-							"uri": "https://www.justice.fr/themes/pension-alimentaire",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1137,6 +1135,13 @@
 							"evidence": "public, max-age=86400"
 						},
 						{
+							"uri": "https://www.justice.fr/contact",
+							"method": "GET",
+							"param": "Cache-Control",
+							"attack": "",
+							"evidence": "no-cache, must-revalidate"
+						},
+						{
 							"uri": "https://www.justice.fr/fiche/autorite-parentale",
 							"method": "GET",
 							"param": "Cache-Control",
@@ -1173,13 +1178,6 @@
 						},
 						{
 							"uri": "https://www.justice.fr/themes/divorce",
-							"method": "GET",
-							"param": "Cache-Control",
-							"attack": "",
-							"evidence": "public, max-age=86400"
-						},
-						{
-							"uri": "https://www.justice.fr/themes/pension-alimentaire",
 							"method": "GET",
 							"param": "Cache-Control",
 							"attack": "",
@@ -1226,7 +1224,35 @@
 							"evidence": "HIT"
 						},
 						{
-							"uri": "https://www.justice.fr/themes/casier-judiciaire",
+							"uri": "https://www.justice.fr/contact/formulaire",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT"
+						},
+						{
+							"uri": "https://www.justice.fr/fiche/autorite-parentale",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT"
+						},
+						{
+							"uri": "https://www.justice.fr/node-page/11213",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT"
+						},
+						{
+							"uri": "https://www.justice.fr/recherche",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT"
+						},
+						{
+							"uri": "https://www.justice.fr/robots.txt",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1240,14 +1266,28 @@
 							"evidence": "HIT"
 						},
 						{
-							"uri": "https://www.justice.fr/themes/violences-conjugales",
+							"uri": "https://www.justice.fr/themes/obligations-vie-familiale",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT"
+						},
+						{
+							"uri": "https://www.justice.fr/themes/pension-alimentaire",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT"
+						},
+						{
+							"uri": "https://www.justice.fr/themes/succession",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "HIT"
 						}
 					],
-					"count": "5",
+					"count": "11",
 					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
@@ -1287,6 +1327,13 @@
 							"evidence": "max-age=86400"
 						},
 						{
+							"uri": "https://www.justice.fr/accueil",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=604800"
+						},
+						{
 							"uri": "https://www.justice.fr/conditions-utilisation",
 							"method": "GET",
 							"param": "",
@@ -1299,13 +1346,6 @@
 							"param": "",
 							"attack": "",
 							"evidence": "max-age=86400"
-						},
-						{
-							"uri": "https://www.justice.fr/mon-espace-contact",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "max-age=604800"
 						},
 						{
 							"uri": "https://www.justice.fr/printpdf/",
@@ -1348,13 +1388,6 @@
 					"desc": "<p>The response contents are storable by caching components such as proxy servers, but will not be retrieved directly from the cache, without validating the request upstream, in response to similar requests from other users. </p>",
 					"instances":[ 
 						{
-							"uri": "https://www.justice.fr/printpdf",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "max-age=0"
-						},
-						{
 							"uri": "https://www.justice.fr/robots.txt",
 							"method": "GET",
 							"param": "",
@@ -1369,13 +1402,13 @@
 							"evidence": "must-revalidate"
 						}
 					],
-					"count": "3",
+					"count": "2",
 					"solution": "",
 					"otherinfo": "",
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "106"
+					"sourceid": "6"
 				}
 			]
 		}
