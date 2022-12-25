@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.justice.fr</pre>
-<p class="lead">Sun Dec 11 04:01:02 2022 – Sun Dec 11 04:04:05 2022<br>1 hosts scanned.
+<p class="lead">Sun Dec 25 04:21:12 2022 – Sun Dec 25 04:21:46 2022<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -125,59 +125,51 @@
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
 <td title="Service">https</td>
-<td title="Product"></td>
+<td title="Product">BigIP</td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">BigIP</pre>
+<h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   GetRequest: 
-    HTTP/1.1 200 OK
-    Date: Sun, 11 Dec 2022 04:01:28 GMT
-    X-Content-Type-Options: nosniff
-    Content-Language: fr
-    X-Frame-Options: SAMEORIGIN
-    Cache-Control: public, max-age=86400
-    Expires: Sun, 19 Nov 1978 05:00:00 GMT
-    Etag: "1670646913-1"
-    Last-Modified: Sat, 10 Dec 2022 04:35:13 GMT
-    Content-Type: text/html; charset=utf-8
-    X-UA-Device: DESKTOP
-    X-Cache: HIT
-    Vary: Accept-Encoding,User-Agent
+    HTTP/1.0 200 OK
+    Server: BigIP
     Connection: close
-    Set-Cookie: MJ=!bJfqCBR0ASRXQN849Hl2MtJAflCcAJT1EMjkOr+mtWA1QbQvOeq8zWAvCu81ElJ3u0YZ4l8GuzgXUA==; path=/; Httponly; Secure
-    Strict-Transport-Security: max-age=16070400; includeSubDomains
-    Set-Cookie: TS01902d34=01a6efdeadaacf42e53fbe06122490297188e8c8648a61a478c264d5e816d3a51ac3a68283fc3b5d5f0ab732e3337c52d79c75e512a2f4346c091d465e559c5f37921d7a4d; Path=/
-    &lt;!DOCTYPE html&gt;
-    &lt;html lang="fr" dir="ltr"&gt;
+    Content-Length: 15139
+    &lt;!doctype html&gt;
+    &lt;html lang="fr"&gt;
     &lt;head&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=9; IE=EDGE" /&gt;
-    &lt;meta ch
-  HTTPOptions: 
-    HTTP/1.1 200 OK
-    Date: Sun, 11 Dec 2022 04:01:33 GMT
-    X-Content-Type-Options: nosniff
-    Content-Language: fr
-    X-Frame-Options: SAMEORIGIN
-    Cache-Control: public, max-age=86400
-    Expires: Sun, 19 Nov 1978 05:00:00 GMT
-    Etag: "1670646913-1"
-    Last-Modified: Sat, 10 Dec 2022 04:35:13 GMT
-    Content-Type: text/html; charset=utf-8
-    X-UA-Device: DESKTOP
-    X-Cache: HIT
-    Vary: Accept-Encoding,User-Agent
-    Connection: close
-    Set-Cookie: MJ=!SnZuiA8MSXLVEiI49Hl2MtJAflCcAI0u9UoJLWx/ikjtDU+EyUXEbv/qPNch48AjdfiFUjW9fkS48A==; path=/; Httponly; Secure
-    Strict-Transport-Security: max-age=16070400; includeSubDomains
-    Set-Cookie: TS01902d34=01a6efdead4989a8aa97a61a770c4e445d1de755897cb8e668da7ed0f35f2bc66b723de6f45b007b34ef41e45d7b3d244ffc5dd61f9cde45aa4050d0a0aee1d25776d82fca; Path=/
-    &lt;!DOCTYPE html&gt;
-    &lt;html lang="fr" dir="ltr"&gt;
-    &lt;head&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=9; IE=EDGE" /&gt;
-    &lt;meta ch</pre>
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Site en cours de maintenance | Justice.fr&lt;/title&gt;
+    &lt;link rel="shortcut icon" href="https://www.justice.fr/sites/all/themes/portalis_theme/favicon.ico" type="image/vnd.microsoft.icon" /&gt;
+    &lt;style type="text/css"&gt;
+    body {
+    font-family:arial;
+    background-color:#fbfbfb; 
+    color: #54677d;
+    font-size:40px;
+    margin-bottom:45px;
+    font-weight: 700;
+    color: #007E96 ;
+    text-decoration: none;
+    a:hover{
+    color: #006072 ;
+    text-decoration: underline;
+    .contenu{
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 25px 0 25px 0;
+    margin-top: 50vh; 
+    transform: translateY(-60%);
+    .texte{
+    text-align: left;
+    margin-top: 40px;
+    color:</pre>
 </td></tr>
 </tbody>
 </table></div>
@@ -211,7 +203,7 @@
 <td>443</td>
 <td>tcp</td>
 <td>https</td>
-<td></td>
+<td>BigIP</td>
 <td></td>
 <td></td>
 <td></td>

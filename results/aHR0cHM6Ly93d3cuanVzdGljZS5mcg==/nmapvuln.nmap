@@ -1,93 +1,71 @@
-# Nmap 7.92 scan initiated Sun Dec 11 04:01:02 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.justice.fr
+# Nmap 7.92 scan initiated Sun Dec 25 04:21:12 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.justice.fr
 Nmap scan report for www.justice.fr (185.24.184.180)
-Host is up (0.17s latency).
+Host is up (0.13s latency).
 Not shown: 998 filtered tcp ports (no-response)
 PORT    STATE SERVICE    VERSION
 80/tcp  open  http-proxy F5 BIG-IP load balancer http proxy
 |_http-server-header: BigIP
-443/tcp open  ssl/https
+443/tcp open  ssl/https  BigIP
+|_http-server-header: BigIP
 | fingerprint-strings: 
 |   GetRequest: 
-|     HTTP/1.1 200 OK
-|     Date: Sun, 11 Dec 2022 04:01:28 GMT
-|     X-Content-Type-Options: nosniff
-|     Content-Language: fr
-|     X-Frame-Options: SAMEORIGIN
-|     Cache-Control: public, max-age=86400
-|     Expires: Sun, 19 Nov 1978 05:00:00 GMT
-|     Etag: "1670646913-1"
-|     Last-Modified: Sat, 10 Dec 2022 04:35:13 GMT
-|     Content-Type: text/html; charset=utf-8
-|     X-UA-Device: DESKTOP
-|     X-Cache: HIT
-|     Vary: Accept-Encoding,User-Agent
+|     HTTP/1.0 200 OK
+|     Server: BigIP
 |     Connection: close
-|     Set-Cookie: MJ=!bJfqCBR0ASRXQN849Hl2MtJAflCcAJT1EMjkOr+mtWA1QbQvOeq8zWAvCu81ElJ3u0YZ4l8GuzgXUA==; path=/; Httponly; Secure
-|     Strict-Transport-Security: max-age=16070400; includeSubDomains
-|     Set-Cookie: TS01902d34=01a6efdeadaacf42e53fbe06122490297188e8c8648a61a478c264d5e816d3a51ac3a68283fc3b5d5f0ab732e3337c52d79c75e512a2f4346c091d465e559c5f37921d7a4d; Path=/
-|     <!DOCTYPE html>
-|     <html lang="fr" dir="ltr">
+|     Content-Length: 15139
+|     <!doctype html>
+|     <html lang="fr">
 |     <head>
-|     <meta http-equiv="X-UA-Compatible" content="IE=9; IE=EDGE" />
-|     <meta ch
-|   HTTPOptions: 
-|     HTTP/1.1 200 OK
-|     Date: Sun, 11 Dec 2022 04:01:33 GMT
-|     X-Content-Type-Options: nosniff
-|     Content-Language: fr
-|     X-Frame-Options: SAMEORIGIN
-|     Cache-Control: public, max-age=86400
-|     Expires: Sun, 19 Nov 1978 05:00:00 GMT
-|     Etag: "1670646913-1"
-|     Last-Modified: Sat, 10 Dec 2022 04:35:13 GMT
-|     Content-Type: text/html; charset=utf-8
-|     X-UA-Device: DESKTOP
-|     X-Cache: HIT
-|     Vary: Accept-Encoding,User-Agent
-|     Connection: close
-|     Set-Cookie: MJ=!SnZuiA8MSXLVEiI49Hl2MtJAflCcAI0u9UoJLWx/ikjtDU+EyUXEbv/qPNch48AjdfiFUjW9fkS48A==; path=/; Httponly; Secure
-|     Strict-Transport-Security: max-age=16070400; includeSubDomains
-|     Set-Cookie: TS01902d34=01a6efdead4989a8aa97a61a770c4e445d1de755897cb8e668da7ed0f35f2bc66b723de6f45b007b34ef41e45d7b3d244ffc5dd61f9cde45aa4050d0a0aee1d25776d82fca; Path=/
-|     <!DOCTYPE html>
-|     <html lang="fr" dir="ltr">
-|     <head>
-|     <meta http-equiv="X-UA-Compatible" content="IE=9; IE=EDGE" />
-|_    <meta ch
+|     <meta charset="utf-8">
+|     <title>Site en cours de maintenance | Justice.fr</title>
+|     <link rel="shortcut icon" href="https://www.justice.fr/sites/all/themes/portalis_theme/favicon.ico" type="image/vnd.microsoft.icon" />
+|     <style type="text/css">
+|     body {
+|     font-family:arial;
+|     background-color:#fbfbfb; 
+|     color: #54677d;
+|     font-size:40px;
+|     margin-bottom:45px;
+|     font-weight: 700;
+|     color: #007E96 ;
+|     text-decoration: none;
+|     a:hover{
+|     color: #006072 ;
+|     text-decoration: underline;
+|     .contenu{
+|     max-width: 1000px;
+|     width: 100%;
+|     margin: auto;
+|     text-align: center;
+|     padding: 25px 0 25px 0;
+|     margin-top: 50vh; 
+|     transform: translateY(-60%);
+|     .texte{
+|     text-align: left;
+|     margin-top: 40px;
+|_    color:
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=12/11%Time=6395561D%P=x86_64-alpine-linu
-SF:x-musl%r(GetRequest,4306,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sun,\x2011
-SF:\x20Dec\x202022\x2004:01:28\x20GMT\r\nX-Content-Type-Options:\x20nosnif
-SF:f\r\nContent-Language:\x20fr\r\nX-Frame-Options:\x20SAMEORIGIN\r\nCache
-SF:-Control:\x20public,\x20max-age=86400\r\nExpires:\x20Sun,\x2019\x20Nov\
-SF:x201978\x2005:00:00\x20GMT\r\nEtag:\x20\"1670646913-1\"\r\nLast-Modifie
-SF:d:\x20Sat,\x2010\x20Dec\x202022\x2004:35:13\x20GMT\r\nContent-Type:\x20
-SF:text/html;\x20charset=utf-8\r\nX-UA-Device:\x20DESKTOP\r\nX-Cache:\x20H
-SF:IT\r\nVary:\x20Accept-Encoding,User-Agent\r\nConnection:\x20close\r\nSe
-SF:t-Cookie:\x20MJ=!bJfqCBR0ASRXQN849Hl2MtJAflCcAJT1EMjkOr\+mtWA1QbQvOeq8z
-SF:WAvCu81ElJ3u0YZ4l8GuzgXUA==;\x20path=/;\x20Httponly;\x20Secure\r\nStric
-SF:t-Transport-Security:\x20max-age=16070400;\x20includeSubDomains\r\nSet-
-SF:Cookie:\x20TS01902d34=01a6efdeadaacf42e53fbe06122490297188e8c8648a61a47
-SF:8c264d5e816d3a51ac3a68283fc3b5d5f0ab732e3337c52d79c75e512a2f4346c091d46
-SF:5e559c5f37921d7a4d;\x20Path=/\r\n\r\n<!DOCTYPE\x20html>\n\n<html\x20lan
-SF:g=\"fr\"\x20dir=\"ltr\">\n\n<head>\n\x20\x20<meta\x20http-equiv=\"X-UA-
-SF:Compatible\"\x20content=\"IE=9;\x20IE=EDGE\"\x20/>\n\x20\x20<meta\x20ch
-SF:")%r(HTTPOptions,4306,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sun,\x2011\x2
-SF:0Dec\x202022\x2004:01:33\x20GMT\r\nX-Content-Type-Options:\x20nosniff\r
-SF:\nContent-Language:\x20fr\r\nX-Frame-Options:\x20SAMEORIGIN\r\nCache-Co
-SF:ntrol:\x20public,\x20max-age=86400\r\nExpires:\x20Sun,\x2019\x20Nov\x20
-SF:1978\x2005:00:00\x20GMT\r\nEtag:\x20\"1670646913-1\"\r\nLast-Modified:\
-SF:x20Sat,\x2010\x20Dec\x202022\x2004:35:13\x20GMT\r\nContent-Type:\x20tex
-SF:t/html;\x20charset=utf-8\r\nX-UA-Device:\x20DESKTOP\r\nX-Cache:\x20HIT\
-SF:r\nVary:\x20Accept-Encoding,User-Agent\r\nConnection:\x20close\r\nSet-C
-SF:ookie:\x20MJ=!SnZuiA8MSXLVEiI49Hl2MtJAflCcAI0u9UoJLWx/ikjtDU\+EyUXEbv/q
-SF:PNch48AjdfiFUjW9fkS48A==;\x20path=/;\x20Httponly;\x20Secure\r\nStrict-T
-SF:ransport-Security:\x20max-age=16070400;\x20includeSubDomains\r\nSet-Coo
-SF:kie:\x20TS01902d34=01a6efdead4989a8aa97a61a770c4e445d1de755897cb8e668da
-SF:7ed0f35f2bc66b723de6f45b007b34ef41e45d7b3d244ffc5dd61f9cde45aa4050d0a0a
-SF:ee1d25776d82fca;\x20Path=/\r\n\r\n<!DOCTYPE\x20html>\n\n<html\x20lang=\
-SF:"fr\"\x20dir=\"ltr\">\n\n<head>\n\x20\x20<meta\x20http-equiv=\"X-UA-Com
-SF:patible\"\x20content=\"IE=9;\x20IE=EDGE\"\x20/>\n\x20\x20<meta\x20ch");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=12/25%Time=63A7CFCF%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,3B6F,"HTTP/1\.0\x20200\x20OK\r\nServer:\x20BigIP\r\
+SF:nConnection:\x20close\r\nContent-Length:\x2015139\r\n\r\n<!doctype\x20h
+SF:tml>\r\n<html\x20lang=\"fr\">\r\n<head>\r\n\x20\x20<meta\x20charset=\"u
+SF:tf-8\">\r\n\x20\x20<title>Site\x20en\x20cours\x20de\x20maintenance\x20\
+SF:|\x20Justice\.fr</title>\r\n\x20\x20<link\x20rel=\"shortcut\x20icon\"\x
+SF:20href=\"https://www\.justice\.fr/sites/all/themes/portalis_theme/favic
+SF:on\.ico\"\x20type=\"image/vnd\.microsoft\.icon\"\x20/>\r\n\x20\x20<styl
+SF:e\x20type=\"text/css\">\r\n\r\n\r\nbody\x20{\r\n\x20\x20font-family:ari
+SF:al;\r\n\x20\x20background-color:#fbfbfb;\x20\r\n\r\n}\r\n\r\nH1\x20{\r\
+SF:n\x20\x20color:\x20#54677d;\r\n\x20\x20font-size:40px;\r\n\x20\x20margi
+SF:n-bottom:45px;\r\n\x20\x20font-weight:\x20700;\r\n\r\n}\r\n\r\na\x20\r\
+SF:n{\r\n\x20\x20color:\x20#007E96\x20;\r\n\x20\x20text-decoration:\x20non
+SF:e;\r\n}\r\n\r\na:hover{\r\n\x20\x20color:\x20#006072\x20;\r\n\x20\x20te
+SF:xt-decoration:\x20underline;\r\n}\r\n\r\n\.contenu{\r\n\x20\x20max-widt
+SF:h:\x201000px;\r\n\x20\x20width:\x20100%;\r\n\x20\x20margin:\x20auto;\r\
+SF:n\x20\x20text-align:\x20center;\r\n\x20\x20padding:\x2025px\x200\x2025p
+SF:x\x200;\r\n\x20\x20margin-top:\x2050vh;\x20\r\n\x20\x20transform:\x20tr
+SF:anslateY\(-60%\);\r\n\r\n}\r\n\r\n\r\n\r\n\.texte{\r\n\x20\x20text-alig
+SF:n:\x20left;\r\n\x20\x20margin-top:\x2040px;\r\n\x20\x20color:");
 Service Info: Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Dec 11 04:04:05 2022 -- 1 IP address (1 host up) scanned in 182.39 seconds
+# Nmap done at Sun Dec 25 04:21:46 2022 -- 1 IP address (1 host up) scanned in 34.57 seconds
