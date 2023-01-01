@@ -367,7 +367,7 @@
               "ip"           : "www.justice.fr/185.24.184.180",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "75 >= 60 days"
+              "finding"      : "68 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -563,14 +563,35 @@
               "ip"           : "www.justice.fr/185.24.184.180",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "Got no HTTP time, maybe try different URL?"
+              "finding"      : "+1 (± 1.5) seconds from localtime"
           }
 ,         {
-              "id"           : "HSTS",
+              "id"           : "HTTP_headerTime",
               "ip"           : "www.justice.fr/185.24.184.180",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
+              "severity"     : "INFO",
+              "finding"      : "1672545526"
+          }
+,         {
+              "id"           : "HSTS_time",
+              "ip"           : "www.justice.fr/185.24.184.180",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "186 days (=16070400 seconds) > 15552000 seconds"
+          }
+,         {
+              "id"           : "HSTS_subdomains",
+              "ip"           : "www.justice.fr/185.24.184.180",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "includes subdomains"
+          }
+,         {
+              "id"           : "HSTS_preload",
+              "ip"           : "www.justice.fr/185.24.184.180",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "domain is NOT marked for preloading"
           }
 ,         {
               "id"           : "HPKP",
@@ -584,7 +605,7 @@
               "ip"           : "www.justice.fr/185.24.184.180",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "BigIP"
+              "finding"      : "No Server banner line in header, interesting!"
           }
 ,         {
               "id"           : "banner_application",
@@ -598,14 +619,42 @@
               "ip"           : "www.justice.fr/185.24.184.180",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "0 at '/'"
+              "finding"      : "2 at '/'"
           }
 ,         {
-              "id"           : "security_headers",
+              "id"           : "cookie_secure",
               "ip"           : "www.justice.fr/185.24.184.180",
               "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "--"
+              "severity"     : "INFO",
+              "finding"      : "1/2 at '/' marked as secure"
+          }
+,         {
+              "id"           : "cookie_httponly",
+              "ip"           : "www.justice.fr/185.24.184.180",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1/2 at '/' marked as HttpOnly"
+          }
+,         {
+              "id"           : "X-Frame-Options",
+              "ip"           : "www.justice.fr/185.24.184.180",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SAMEORIGIN"
+          }
+,         {
+              "id"           : "X-Content-Type-Options",
+              "ip"           : "www.justice.fr/185.24.184.180",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "nosniff"
+          }
+,         {
+              "id"           : "Cache-Control",
+              "ip"           : "www.justice.fr/185.24.184.180",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "public, max-age=86400"
           }
 ,         {
               "id"           : "banner_reverseproxy",
@@ -613,7 +662,7 @@
               "port"         : "443",
               "severity"     : "INFO",
               "cwe"          : "CWE-200",
-              "finding"      : "--"
+              "finding"      : "X-Cache: HIT"
           }
 ,         {
               "id"           : "heartbleed",
@@ -681,10 +730,10 @@
               "id"           : "BREACH",
               "ip"           : "www.justice.fr/185.24.184.180",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "cve"          : "CVE-2013-3587",
               "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable, no gzip/deflate/compress/br HTTP compression  - only supplied '/' tested"
+              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -1145,17 +1194,10 @@
               "finding"      : "Grade capped to B. TLS 1.0 offered"
           }
 ,         {
-              "id"           : "grade_cap_reason_4",
-              "ip"           : "www.justice.fr/185.24.184.180",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "Grade capped to A. HSTS is not offered"
-          }
-,         {
               "id"           : "scanTime",
               "ip"           : "www.justice.fr/185.24.184.180",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "211"
+              "finding"      : "220"
           }
 ]
