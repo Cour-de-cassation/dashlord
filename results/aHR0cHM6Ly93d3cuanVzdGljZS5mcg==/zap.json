@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Sun, 14 May 2023 05:27:57",
+	"@generated": "Sun, 21 May 2023 04:51:43",
 	"site":[ 
 		{
 			"@name": "https://www.justice.fr",
@@ -248,7 +248,7 @@
 					"reference": "",
 					"cweid": "319",
 					"wascid": "15",
-					"sourceid": "1201"
+					"sourceid": "1216"
 				},
 				{
 					"pluginid": "10003",
@@ -261,6 +261,14 @@
 					"desc": "<p>The identified library bootstrap, version 4.1.3 is vulnerable.</p>",
 					"instances":[ 
 						{
+							"uri": "https://www.justice.fr/sites/default/files/js/js_E5VcfGO3weUmOBVG47RXuS81FSnxEeXrxdZO4WBoaWg.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "* Bootstrap v4.1.3",
+							"otherinfo": "CVE-2019-8331\n"
+						},
+						{
 							"uri": "https://www.justice.fr/sites/default/files/js/js_veyeb8QD8i4adg2lYtpMMTOouqLi3mJRolilSXKq9Lw.js",
 							"method": "GET",
 							"param": "",
@@ -269,13 +277,13 @@
 							"otherinfo": "CVE-2019-8331\n"
 						}
 					],
-					"count": "1",
+					"count": "2",
 					"solution": "<p>Please upgrade to the latest version of bootstrap.</p>",
 					"otherinfo": "<p>CVE-2019-8331</p><p></p>",
 					"reference": "<p>https://github.com/twbs/bootstrap/issues/28236</p><p></p>",
 					"cweid": "829",
 					"wascid": "-1",
-					"sourceid": "1166"
+					"sourceid": "1191"
 				},
 				{
 					"pluginid": "10010",
@@ -631,7 +639,7 @@
 					"reference": "<p>https://angular.io/guide/security</p>",
 					"cweid": "749",
 					"wascid": "-1",
-					"sourceid": "1165"
+					"sourceid": "1167"
 				},
 				{
 					"pluginid": "10063",
@@ -837,7 +845,7 @@
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html</p>",
 					"cweid": "311",
 					"wascid": "4",
-					"sourceid": "714"
+					"sourceid": "715"
 				},
 				{
 					"pluginid": "10096",
@@ -854,17 +862,17 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "1684041988",
-							"otherinfo": "1684041988, which evaluates to: 2023-05-14 05:26:28"
+							"evidence": "1684644610",
+							"otherinfo": "1684644610, which evaluates to: 2023-05-21 04:50:10"
 						}
 					],
 					"count": "1",
 					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
-					"otherinfo": "<p>1684041988, which evaluates to: 2023-05-14 05:26:28</p>",
+					"otherinfo": "<p>1684644610, which evaluates to: 2023-05-21 04:50:10</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "1072"
+					"sourceid": "1074"
 				},
 				{
 					"pluginid": "10021",
@@ -996,16 +1004,24 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "EMxHMhhy5RVWEu5Rkb0Huvue883NyTBXcuu0s5fa/zhp88nf5eGFX62HdyWYOK1VpzPnqWcCRiKI",
-							"otherinfo": "\\x0010\uFFFDG2\\x0018r\uFFFD\\x0015V\\x0012\uFFFDQ\uFFFD\uFFFD\\x0007\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD0Wr\uBD33\uFFFD\uFFFD\uFFFD8i\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD_\uFFFD\uFFFDw%\uFFFD8\uFFFDU\uFFFD3\uFFFDg\\x0002F\"\uFFFD"
+							"evidence": "/znKDtnUes9263RRkb0Huvue883NyXJl7pgkwXidFLjuy13Cb7003yfSeh8btzzMpbZ83i0+GmWg",
+							"otherinfo": "\uFFFD9\uFFFD\\x000e\uFFFD\uFFFDz\uFFFDv\uFFFDtQ\uFFFD\uFFFD\\x0007\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDre\uFFFD$\uFFFDx\uFFFD\\x0014\uFFFD\uFFFD\uFFFD]\uFFFDo\uFFFD4\uFFFD'\uFFFDz\\x001f\\x001b\uFFFD<\u0325\uFFFD|\uFFFD->\\x001ae\uFFFD"
 						},
 						{
 							"uri": "https://www.justice.fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "Mu9aaArzDP44xdE49Hl2MtJAflCcAEdf7KlAilGbYjrVX2EfLafxN4EIwF3Z99eUwI6Ztu3Pp0etAA==",
-							"otherinfo": "2\uFFFDZh\n\uFFFD\\x000c\uFFFD8\uFFFD\uFFFD8\uFFFDyv2\uFFFD@~P\uFFFD\\x0000G_\uFFFD@\uFFFDQ\uFFFDb:\uFFFD_a\\x001f-\uFFFD\uFFFD7\uFFFD\\x0008\uFFFD]\uFFFD\uFFFD\u05D4\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u03E7G\uFFFD\\x0000"
+							"evidence": "hvEf2m30IFbSkktRkb0Huvue883NyXIqwWss18JXpcQs/tVB/igiSvqwranXDXgtIBC81dbR9klE",
+							"otherinfo": "\uFFFD\uFFFD\\x001f\uFFFDm\uFFFD V\u0492KQ\uFFFD\uFFFD\\x0007\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDr*\uFFFDk,\uFFFD\uFFFDW\uFFFD\uFFFD,\uFFFD\uFFFDA\uFFFD(\"J\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\rx- \\x0010\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDID"
+						},
+						{
+							"uri": "https://www.justice.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/sites/default/files/css/css_TY7QtDWFxbJDXDyILpAKWh4hMb61aR2Pfy2M-RuBbas",
+							"otherinfo": "\uFFFD\u022Dz\uFFFD\uFFFDy\uFFFD\uFFFD\uFFFD\uFFFD\u07CAW\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD,\uFFFD6;B\uFFFD\uFFFD\\x0017\\x0016\uFFFD\rp\uFFFD \uFFFD@)hx\uFFFD\uFFFD\uFFFD\u0564v=\uFFFD\uFFFD3\uFFFDn\\x0005\uFFFD\uFFFD"
 						},
 						{
 							"uri": "https://www.justice.fr/*?CSRT",
@@ -1032,14 +1048,6 @@
 							"otherinfo": "\uFFFD\u022Dz\uFFFD\uFFFDy\uFFFD\uFFFD\uFFFD\uFFFD\u07CAW\uFFFD\uFFFD\uFFFD,\uFFFD\uFFFD,\uFFFD6;B\uFFFD\uFFFD\\x0017\\x0016\uFFFD\rp\uFFFD \uFFFD@)hx\uFFFD\uFFFD\uFFFD\u0564v=\uFFFD\uFFFD3\uFFFDn\\x0005\uFFFD\uFFFD"
 						},
 						{
-							"uri": "https://www.justice.fr/fiche/autorite-parentale",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "fr/particuliers/vosdroits/N135",
-							"otherinfo": "~\uFFFD\uFFFDj\uFFFDbr\uFFFDbz\uFFFD?\uFFFD\uFFFD\\x001d\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDu\uFFFD"
-						},
-						{
 							"uri": "https://www.justice.fr/node-page/11213",
 							"method": "GET",
 							"param": "",
@@ -1060,16 +1068,16 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "oGL5T5KCU+yeLyFRkb0Huvue883NyXi1nMbal/ye+hBLEOI6eSs2PheMi4O0m/Wq7LCFCyG4g0W+vg==",
-							"otherinfo": "\uFFFDb\uFFFDO\uFFFD\uFFFDS\uFFFD/!Q\uFFFD\uFFFD\\x0007\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDx\uFFFD\uFFFD\uFFFD\u0697\uFFFD\uFFFD\uFFFD\\x0010K\\x0010\uFFFD:y+6>\\x0017\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uCC05\\x000b!\uFFFD\uFFFDE\uFFFD\uFFFD"
+							"evidence": "ZeT2KlmtsZ6oFhw49Hl2MtJAflCcAFp5yP/rp2A28JJyT9HuuQJC1zxrq59xDdxvJhvjWYliYBIrIA==",
+							"otherinfo": "e\uFFFD\uFFFD*Y\uFFFD\uFFFD\uFFFD\uFFFD\\x0016\\x001c8\uFFFDyv2\uFFFD@~P\uFFFD\\x0000Zy\uFFFD\uFFFD\uFFFD`6\uFFFDrO\uFFFD\uFFFD\\x0002B\uFFFD<k\uFFFD\uFFFDq\r\uFFFDo&\\x001b\uFFFDY\uFFFDb`\\x0012+ "
 						},
 						{
 							"uri": "https://www.justice.fr/sitemap.xml",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "4o4ZxO7IMJJ8qVU49Hl2MtJAflCcAOg8On64oAPRXwOXZMm8FE6eeL/rtY4ofTkhc+g4D/T5wrhXZg==",
-							"otherinfo": "\uFFFD\\x0019\uFFFD\uFFFD\uFFFD0\uFFFD|\uFFFDU8\uFFFDyv2\uFFFD@~P\uFFFD\\x0000\uFFFD<:~\uFFFD\uFFFD\\x0003\uFFFD_\\x0003\uFFFDd\u027C\\x0014N\uFFFDx\uFFFD\uBD4E(}9!s\uFFFD8\\x000f\uFFFD\uFFFD\u00B8Wf"
+							"evidence": "d5WorZ92sTWsSPVRkb0Huvue883NyfbCM1UT9UlUFBV2yV8KPElU17bbVc1By/ZmL+hSV9B6X0rH",
+							"otherinfo": "w\uFFFD\uFFFD\uFFFD\uFFFDv\uFFFD5\uFFFDH\uFFFDQ\uFFFD\uFFFD\\x0007\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD3U\\x0013\uFFFDIT\\x0014\\x0015v\uFFFD_\n<IT\u05F6\uFFFDU\uFFFDA\uFFFD\uFFFDf/\uFFFDRW\uFFFDz_J\uFFFD"
 						},
 						{
 							"uri": "https://www.justice.fr/themes/divorce",
@@ -1090,7 +1098,7 @@
 					],
 					"count": "12",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
-					"otherinfo": "<p>\\x0010\uFFFDG2\\x0018r\uFFFD\\x0015V\\x0012\uFFFDQ\uFFFD\uFFFD\\x0007\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD0Wr\uBD33\uFFFD\uFFFD\uFFFD8i\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD_\uFFFD\uFFFDw%\uFFFD8\uFFFDU\uFFFD3\uFFFDg\\x0002F\"\uFFFD</p>",
+					"otherinfo": "<p>\uFFFD9\uFFFD\\x000e\uFFFD\uFFFDz\uFFFDv\uFFFDtQ\uFFFD\uFFFD\\x0007\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDre\uFFFD$\uFFFDx\uFFFD\\x0014\uFFFD\uFFFD\uFFFD]\uFFFDo\uFFFD4\uFFFD'\uFFFDz\\x001f\\x001b\uFFFD<\u0325\uFFFD|\uFFFD->\\x001ae\uFFFD</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
@@ -1225,7 +1233,7 @@
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "1165"
+					"sourceid": "1167"
 				},
 				{
 					"pluginid": "10109",
@@ -1468,7 +1476,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.justice.fr/fiche/autorite-parentale",
+							"uri": "https://www.justice.fr/mentions-legales",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1476,7 +1484,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.justice.fr/fiches",
+							"uri": "https://www.justice.fr/recherche",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1484,7 +1492,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.justice.fr/node-page/11212",
+							"uri": "https://www.justice.fr/recherche/annuaires",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1492,7 +1500,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.justice.fr/node-page/11366",
+							"uri": "https://www.justice.fr/robots.txt",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1500,7 +1508,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.justice.fr/simulateurs/aide-juridictionnelle",
+							"uri": "https://www.justice.fr/simulateurs/pensions-alimentaire",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1516,6 +1524,14 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://www.justice.fr/sites/default/files/css/css_JtKJGdrRVqhTvgsbWo6XbrPvwBxc5SxUMKwyxYb2VL0.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://www.justice.fr/sites/default/files/css/css_TY7QtDWFxbJDXDyILpAKWh4hMb61aR2Pfy2M-RuBbas.css",
 							"method": "GET",
 							"param": "",
@@ -1524,15 +1540,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.justice.fr/themes/casier-judiciaire",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "HIT",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.justice.fr/themes/succession",
+							"uri": "https://www.justice.fr/themes/acces-droit-point-justice",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1599,6 +1607,14 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://www.justice.fr/node-page/11213",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=86400",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://www.justice.fr/printpdf/",
 							"method": "GET",
 							"param": "",
@@ -1631,7 +1647,7 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "9",
+					"count": "10",
 					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p>",
 					"otherinfo": "",
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
