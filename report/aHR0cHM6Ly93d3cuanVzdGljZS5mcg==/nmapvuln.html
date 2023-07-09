@@ -53,8 +53,8 @@
 <div class="jumbotron">
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln stats.judilibre.io</pre>
-<p class="lead">Sun Jul  9 01:13:11 2023 – Sun Jul  9 01:13:30 2023<br>1 hosts scanned.
+<pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.justice.fr</pre>
+<p class="lead">Sun Jul  9 05:27:23 2023 – Sun Jul  9 05:29:33 2023<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -76,8 +76,8 @@
 </tr></thead>
 <tbody><tr>
 <td><span class="label label-success">up</span></td>
-<td>185.199.109.153</td>
-<td>stats.judilibre.io</td>
+<td>185.24.184.180</td>
+<td>www.justice.fr</td>
 <td>2</td>
 <td>0</td>
 </tr></tbody>
@@ -91,13 +91,10 @@
             });
           </script><h2 id="onlinehosts" class="target">Online Hosts</h2>
 <div class="panel panel-default">
-<div class="panel-heading clickable" data-toggle="collapse" data-target="#185-199-109-153"><h3 class="panel-title">185.199.109.153 - stats.judilibre.io</h3></div>
-<div class="panel-body collapse in" id="185-199-109-153">
+<div class="panel-heading clickable" data-toggle="collapse" data-target="#185-24-184-180"><h3 class="panel-title">185.24.184.180 - www.justice.fr</h3></div>
+<div class="panel-body collapse in" id="185-24-184-180">
 <h4>Hostnames</h4>
-<ul>
-<li>stats.judilibre.io (user)</li>
-<li>cdn-185-199-109-153.github.com (PTR)</li>
-</ul>
+<ul><li>www.justice.fr (user)</li></ul>
 <h4>Ports</h4>
 <div class="table-responsive"><table class="table table-bordered">
 <thead><tr>
@@ -114,161 +111,22 @@
 <td title="Port">80</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">http</td>
-<td title="Product">GitHub.com</td>
+<td title="Service">tcpwrapped</td>
+<td title="Product"></td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
-<tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  GitHub.com
-  Varnish</pre>
-<h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  GetRequest: 
-    HTTP/1.1 404 Not Found
-    Connection: close
-    Content-Length: 9115
-    Server: GitHub.com
-    Content-Type: text/html; charset=utf-8
-    ETag: "648c837f-239b"
-    Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'
-    X-GitHub-Request-Id: ACCE:5DEB:767FEC:8BDB23:64AA0883
-    Accept-Ranges: bytes
-    Date: Sun, 09 Jul 2023 01:13:23 GMT
-    Via: 1.1 varnish
-    Age: 304
-    X-Served-By: cache-sjc1000129-SJC
-    X-Cache: HIT
-    X-Cache-Hits: 1
-    X-Timer: S1688865203.250960,VS0,VE1
-    Vary: Accept-Encoding
-    X-Fastly-Request-ID: 54e082729b4f9fe408f370e53227d8d96883c687
-    &lt;!DOCTYPE html&gt;
-    &lt;html&gt;
-    &lt;head&gt;
-    &lt;meta http-equiv="Content-type" content="text/html; charset=utf-8"&gt;
-    &lt;meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'"&gt;
-    &lt;title&gt;Site not found &amp;middot; GitHub Pages&lt;/title&gt;
-    &lt;style ty
-  HTTPOptions: 
-    HTTP/1.1 405 Method Not Allowed
-    Connection: close
-    Content-Length: 131
-    Server: Varnish
-    Retry-After: 0
-    Accept-Ranges: bytes
-    Date: Sun, 09 Jul 2023 01:13:23 GMT
-    Via: 1.1 varnish
-    X-Served-By: cache-sjc10081-SJC
-    X-Cache: MISS
-    X-Cache-Hits: 0
-    X-Timer: S1688865203.269046,VS0,VE1
-    X-Fastly-Request-ID: b27dc1311d74fbd4c039fce0193ea46b7f8f75e3
-    &lt;html&gt;
-    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
-    &lt;body bgcolor="white"&gt;
-    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;
-  RTSPRequest: 
-    HTTP/1.1 400 Bad Request
-    Connection: close
-    Content-Length: 11
-    content-type: text/plain; charset=utf-8
-    x-served-by: cache-sjc1000141
-    Request</pre>
-</td></tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
 <tr class="success">
 <td title="Port">443</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">https</td>
-<td title="Product">GitHub.com</td>
+<td title="Service">tcpwrapped</td>
+<td title="Product"></td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
-<tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  GitHub.com
-  Varnish</pre>
-<h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  FourOhFourRequest: 
-    HTTP/1.1 404 Not Found
-    Connection: close
-    Content-Length: 9115
-    Server: GitHub.com
-    Content-Type: text/html; charset=utf-8
-    ETag: "648c837f-239b"
-    Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'
-    X-GitHub-Request-Id: BDC0:2657:90DB5F:AAAD76:64AA09B9
-    Accept-Ranges: bytes
-    Date: Sun, 09 Jul 2023 01:13:29 GMT
-    Via: 1.1 varnish
-    Age: 0
-    X-Served-By: cache-sjc1000126-SJC
-    X-Cache: MISS
-    X-Cache-Hits: 0
-    X-Timer: S1688865209.447062,VS0,VE97
-    Vary: Accept-Encoding
-    X-Fastly-Request-ID: e35eea34a72334a5819755fca320765c456c94dc
-    &lt;!DOCTYPE html&gt;
-    &lt;html&gt;
-    &lt;head&gt;
-    &lt;meta http-equiv="Content-type" content="text/html; charset=utf-8"&gt;
-    &lt;meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'"&gt;
-    &lt;title&gt;Site not found &amp;middot; GitHub Pages&lt;/title&gt;
-    &lt;style ty
-  GetRequest: 
-    HTTP/1.1 404 Not Found
-    Connection: close
-    Content-Length: 9115
-    Server: GitHub.com
-    Content-Type: text/html; charset=utf-8
-    ETag: "648c837f-239b"
-    Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'
-    X-GitHub-Request-Id: BDC0:2657:90DB5B:AAAD6D:64AA09B9
-    Accept-Ranges: bytes
-    Date: Sun, 09 Jul 2023 01:13:29 GMT
-    Via: 1.1 varnish
-    Age: 0
-    X-Served-By: cache-sjc10051-SJC
-    X-Cache: MISS
-    X-Cache-Hits: 0
-    X-Timer: S1688865209.284702,VS0,VE103
-    Vary: Accept-Encoding
-    X-Fastly-Request-ID: 7e2063b7bbf89a0a4dfafde323016cac15469d16
-    &lt;!DOCTYPE html&gt;
-    &lt;html&gt;
-    &lt;head&gt;
-    &lt;meta http-equiv="Content-type" content="text/html; charset=utf-8"&gt;
-    &lt;meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'"&gt;
-    &lt;title&gt;Site not found &amp;middot; GitHub Pages&lt;/title&gt;
-    &lt;style typ
-  HTTPOptions: 
-    HTTP/1.1 405 Method Not Allowed
-    Connection: close
-    Content-Length: 131
-    Server: Varnish
-    Retry-After: 0
-    Accept-Ranges: bytes
-    Date: Sun, 09 Jul 2023 01:13:29 GMT
-    Via: 1.1 varnish
-    X-Served-By: cache-sjc1000135-SJC
-    X-Cache: MISS
-    X-Cache-Hits: 0
-    X-Timer: S1688865209.426241,VS0,VE0
-    X-Fastly-Request-ID: ea31d7f8be43c4d93c7f08f33a4602443d554c04
-    &lt;html&gt;
-    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
-    &lt;body bgcolor="white"&gt;
-    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;</pre>
-</td></tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
 </tbody>
 </table></div>
 </div>
@@ -287,21 +145,21 @@
 </tr></thead>
 <tbody>
 <tr>
-<td>185.199.109.153 - stats.judilibre.io</td>
+<td>185.24.184.180 - www.justice.fr</td>
 <td>80</td>
 <td>tcp</td>
-<td>http</td>
-<td>GitHub.com</td>
+<td>tcpwrapped</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>185.199.109.153 - stats.judilibre.io</td>
+<td>185.24.184.180 - www.justice.fr</td>
 <td>443</td>
 <td>tcp</td>
-<td>https</td>
-<td>GitHub.com</td>
+<td>tcpwrapped</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
