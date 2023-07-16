@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
-	"@version": "2.12.0",
-	"@generated": "Sun, 9 Jul 2023 05:24:01",
+	"@version": "2.13.0",
+	"@generated": "Sun, 16 Jul 2023 05:34:11",
 	"site":[ 
 		{
 			"@name": "https://www.justice.fr",
@@ -60,14 +60,6 @@
 							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"edit-search-terms\" \"form_build_id\" \"form_id\" ]."
 						},
 						{
-							"uri": "https://www.justice.fr/fiche/autorite-parentale",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<form action=\"/recherche/all/\" method=\"post\" id=\"portalis-search-form\" accept-charset=\"UTF-8\">",
-							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"edit-search-terms\" \"form_build_id\" \"form_id\" ]."
-						},
-						{
 							"uri": "https://www.justice.fr/node-page/11213",
 							"method": "GET",
 							"param": "",
@@ -85,6 +77,14 @@
 						},
 						{
 							"uri": "https://www.justice.fr/themes/divorce",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form action=\"/recherche/all/\" method=\"post\" id=\"portalis-search-form\" accept-charset=\"UTF-8\">",
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"edit-search-terms\" \"form_build_id\" \"form_id\" ]."
+						},
+						{
+							"uri": "https://www.justice.fr/themes/juges-famille",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -167,14 +167,6 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.justice.fr/fiche/autorite-parentale",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
 							"uri": "https://www.justice.fr/node-page/11213",
 							"method": "GET",
 							"param": "",
@@ -192,6 +184,14 @@
 						},
 						{
 							"uri": "https://www.justice.fr/themes/divorce",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.justice.fr/themes/juges-famille",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -248,7 +248,7 @@
 					"reference": "",
 					"cweid": "319",
 					"wascid": "15",
-					"sourceid": "1214"
+					"sourceid": "1223"
 				},
 				{
 					"pluginid": "10003",
@@ -676,14 +676,6 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.justice.fr/fiche/autorite-parentale",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
 							"uri": "https://www.justice.fr/node-page/11213",
 							"method": "GET",
 							"param": "",
@@ -701,6 +693,14 @@
 						},
 						{
 							"uri": "https://www.justice.fr/themes/divorce",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.justice.fr/themes/juges-famille",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -829,7 +829,7 @@
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html</p>",
 					"cweid": "311",
 					"wascid": "4",
-					"sourceid": "712"
+					"sourceid": "741"
 				},
 				{
 					"pluginid": "10096",
@@ -846,17 +846,17 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "1688880163",
-							"otherinfo": "1688880163, which evaluates to: 2023-07-09 05:22:43"
+							"evidence": "1689485560",
+							"otherinfo": "1689485560, which evaluates to: 2023-07-16 05:32:40"
 						}
 					],
 					"count": "1",
 					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
-					"otherinfo": "<p>1688880163, which evaluates to: 2023-07-09 05:22:43</p>",
+					"otherinfo": "<p>1689485560, which evaluates to: 2023-07-16 05:32:40</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "1074"
+					"sourceid": "1081"
 				},
 				{
 					"pluginid": "10021",
@@ -871,7 +871,7 @@
 						{
 							"uri": "https://www.justice.fr/robots.txt",
 							"method": "GET",
-							"param": "X-Content-Type-Options",
+							"param": "x-content-type-options",
 							"attack": "",
 							"evidence": "",
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
@@ -879,7 +879,7 @@
 						{
 							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/dist/script.min.js?rx0a7f",
 							"method": "GET",
-							"param": "X-Content-Type-Options",
+							"param": "x-content-type-options",
 							"attack": "",
 							"evidence": "",
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
@@ -887,7 +887,7 @@
 						{
 							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/dist/style.min.css?rx0a7f",
 							"method": "GET",
-							"param": "X-Content-Type-Options",
+							"param": "x-content-type-options",
 							"attack": "",
 							"evidence": "",
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
@@ -895,7 +895,7 @@
 						{
 							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/dsfr/dsfr.module.js",
 							"method": "GET",
-							"param": "X-Content-Type-Options",
+							"param": "x-content-type-options",
 							"attack": "",
 							"evidence": "",
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
@@ -903,7 +903,7 @@
 						{
 							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/dsfr/utility/icons/icons-system/icons-system.min.css",
 							"method": "GET",
-							"param": "X-Content-Type-Options",
+							"param": "x-content-type-options",
 							"attack": "",
 							"evidence": "",
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
@@ -911,7 +911,7 @@
 						{
 							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/favicon.ico",
 							"method": "GET",
-							"param": "X-Content-Type-Options",
+							"param": "x-content-type-options",
 							"attack": "",
 							"evidence": "",
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
@@ -919,7 +919,7 @@
 						{
 							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/favicon/apple-touch-icon.png",
 							"method": "GET",
-							"param": "X-Content-Type-Options",
+							"param": "x-content-type-options",
 							"attack": "",
 							"evidence": "",
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
@@ -927,7 +927,7 @@
 						{
 							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/favicon/favicon.ico",
 							"method": "GET",
-							"param": "X-Content-Type-Options",
+							"param": "x-content-type-options",
 							"attack": "",
 							"evidence": "",
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
@@ -935,7 +935,7 @@
 						{
 							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/favicon/favicon.svg",
 							"method": "GET",
-							"param": "X-Content-Type-Options",
+							"param": "x-content-type-options",
 							"attack": "",
 							"evidence": "",
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
@@ -943,7 +943,7 @@
 						{
 							"uri": "https://www.justice.fr/sites/all/themes/portalis_theme/favicon/manifest.webmanifest",
 							"method": "GET",
-							"param": "X-Content-Type-Options",
+							"param": "x-content-type-options",
 							"attack": "",
 							"evidence": "",
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
@@ -951,7 +951,7 @@
 						{
 							"uri": "https://www.justice.fr/sites/default/files/css/css_JtKJGdrRVqhTvgsbWo6XbrPvwBxc5SxUMKwyxYb2VL0.css",
 							"method": "GET",
-							"param": "X-Content-Type-Options",
+							"param": "x-content-type-options",
 							"attack": "",
 							"evidence": "",
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
@@ -959,7 +959,7 @@
 						{
 							"uri": "https://www.justice.fr/sites/default/files/css/css_TY7QtDWFxbJDXDyILpAKWh4hMb61aR2Pfy2M-RuBbas.css",
 							"method": "GET",
-							"param": "X-Content-Type-Options",
+							"param": "x-content-type-options",
 							"attack": "",
 							"evidence": "",
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
@@ -988,16 +988,16 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "ASL528MPx/rawOk49Hl2MtJAflCcAEegtDpafljcQC7U+wDkxnnadC876IM09yX0k+K9rcE9zLVx",
-							"otherinfo": "\\x0001\"\uFFFD\uFFFD\uFFFD\\x000f\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD8\uFFFDyv2\uFFFD@~P\uFFFD\\x0000G\uFFFD\uFFFD:Z~X\uFFFD@.\uFFFD\uFFFD\\x0000\uFFFD\uFFFDy\uFFFDt/;\uFFFD4\uFFFD%\uFFFD\uFFFD\u2F6D\uFFFD=\u0335q"
+							"evidence": "wA7i+janWJ2Z3R1Rkb0Huvue883NyYqI85n8ngDlvPmPC08TYt5Vr5lO9ArntZ8wIfnZ/PCMgGBPww==",
+							"otherinfo": "\uFFFD\\x000e\uFFFD\uFFFD6\uFFFDX\uFFFD\uFFFD\uFFFD\\x001dQ\uFFFD\uFFFD\\x0007\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u024A\uFFFD\uFFFD\uFFFD\uFFFD\\x0000\uFFFD\uFFFD\uFFFD\\x000bO\\x0013b\uFFFDU\uFFFD\uFFFDN\uFFFD\n\u7D5F0!\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD`O\uFFFD"
 						},
 						{
 							"uri": "https://www.justice.fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "oqBIxgHXCBHosgU49Hl2MtJAflCcALsAUSrdNu5yYLaryQwJGcE5RB7kvjo2nBo9vIo/hwpstxcv",
-							"otherinfo": "\uFFFD\uFFFDH\uFFFD\\x0001\uFFFD\\x0008\\x0011\uFFFD\\x00058\uFFFDyv2\uFFFD@~P\uFFFD\\x0000\uFFFD\\x0000Q*\uFFFD6\uFFFDr`\uFFFD\uFFFD\uFFFD\\x000c\t\\x0019\uFFFD9D\\x001e\uFFFD:6\uFFFD\\x001a=\uFFFD\uFFFD?\uFFFD\nl\uFFFD\\x0017/"
+							"evidence": "jZBp+FZ/AZb6RfQ49Hl2MtJAflCcACaMV73kFhMJ6xVBr18r9tE4haktXhDU423FxqjcfBpu05dKCw==",
+							"otherinfo": "\uFFFD\uFFFDi\uFFFDV\\x0001\uFFFD\uFFFDE\uFFFD8\uFFFDyv2\uFFFD@~P\uFFFD\\x0000&\uFFFDW\uFFFD\uFFFD\\x0016\\x0013\t\uFFFD\\x0015A\uFFFD_+\uFFFD\uFFFD8\uFFFD\uFFFD-^\\x0010\uFFFD\uFFFDm\uFFFD\u01A8\uFFFD|\\x001an\u04D7J\\x000b"
 						},
 						{
 							"uri": "https://www.justice.fr/",
@@ -1052,16 +1052,16 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "qC3m+wHLspx9rv1Rkb0Huvue883NyV7ztD+9YUzTdc3rzX6QZ4Q1GtR5HqhmjbAU6Mx8nCnYf5No",
-							"otherinfo": "\uFFFD-\uFFFD\uFFFD\\x0001\u02F2\uFFFD}\uFFFD\uFFFDQ\uFFFD\uFFFD\\x0007\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD^\uFFFD?\uFFFDaL\uFFFDu\uFFFD\uFFFD\uFFFD~\uFFFDg\uFFFD5\\x001a\uFFFDy\\x001e\uFFFDf\uFFFD\uFFFD\\x0014\uFFFD\uFFFD|\uFFFD)\uFFFD\uFFFDh"
+							"evidence": "ErAtsPvRwM14Tng49Hl2MtJAflCcALx0Y15kMq4vdv1W+8sTEGhmeBZ4tQi1WZ56v8laCRe4yP7ing==",
+							"otherinfo": "\\x0012\uFFFD-\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDxNx8\uFFFDyv2\uFFFD@~P\uFFFD\\x0000\uFFFDtc^d2\uFFFD/v\uFFFDV\uFFFD\uFFFD\\x0013\\x0010hfx\\x0016x\uFFFD\\x0008\uFFFDY\uFFFDz\uFFFD\uFFFDZ\t\\x0017\uFFFD\uFFFD\uFFFD\uFFFD"
 						},
 						{
 							"uri": "https://www.justice.fr/sitemap.xml",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "55DzczCfH4tw+oVRkb0Huvue883NycY5rRaNUDhX/qjtdMV4MVZ1FY0ugPWslvOMVgjhyegKUkwAsg==",
-							"otherinfo": "\uFFFD\uFFFDs0\uFFFD\\x001f\uFFFDp\uFFFD\uFFFDQ\uFFFD\uFFFD\\x0007\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD9\uFFFD\\x0016\uFFFDP8W\uFFFD\uFFFD\uFFFDt\uFFFDx1Vu\\x0015\uFFFD.\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDV\\x0008\uFFFD\uFFFD\uFFFD\nRL\\x0000\uFFFD"
+							"evidence": "y13mUmecGTb6VG449Hl2MtJAflCcAI0AmtqGIa8ZjWFvBKdDpkUGoSryBEe015p/XwjbO8vzioqVVA==",
+							"otherinfo": "\uFFFD]\uFFFDRg\uFFFD\\x00196\uFFFDTn8\uFFFDyv2\uFFFD@~P\uFFFD\\x0000\uFFFD\\x0000\uFFFD\u0686!\uFFFD\\x0019\uFFFDao\\x0004\uFFFDC\uFFFDE\\x0006\uFFFD*\uFFFD\\x0004G\uFFFD\u05DA_\\x0008\uFFFD;\uFFFD\uDAE8\uDE95T"
 						},
 						{
 							"uri": "https://www.justice.fr/themes/divorce",
@@ -1082,11 +1082,11 @@
 					],
 					"count": "12",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
-					"otherinfo": "<p>\\x0001\"\uFFFD\uFFFD\uFFFD\\x000f\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD8\uFFFDyv2\uFFFD@~P\uFFFD\\x0000G\uFFFD\uFFFD:Z~X\uFFFD@.\uFFFD\uFFFD\\x0000\uFFFD\uFFFDy\uFFFDt/;\uFFFD4\uFFFD%\uFFFD\uFFFD\u2F6D\uFFFD=\u0335q</p>",
+					"otherinfo": "<p>\uFFFD\\x000e\uFFFD\uFFFD6\uFFFDX\uFFFD\uFFFD\uFFFD\\x001dQ\uFFFD\uFFFD\\x0007\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u024A\uFFFD\uFFFD\uFFFD\uFFFD\\x0000\uFFFD\uFFFD\uFFFD\\x000bO\\x0013b\uFFFDU\uFFFD\uFFFDN\uFFFD</p><p>\u7D5F0!\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD`O\uFFFD</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "94"
+					"sourceid": "96"
 				},
 				{
 					"pluginid": "10027",
@@ -1270,14 +1270,6 @@
 							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
 						},
 						{
-							"uri": "https://www.justice.fr/fiche/autorite-parentale",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<a id=\"alerte-enl_banniere\" class=\"alerte-enl_hidden\"title = \"Cliquez ici pour plus d'informations\" ></a>",
-							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
-						},
-						{
 							"uri": "https://www.justice.fr/node-page/11213",
 							"method": "GET",
 							"param": "",
@@ -1295,6 +1287,14 @@
 						},
 						{
 							"uri": "https://www.justice.fr/themes/divorce",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a id=\"alerte-enl_banniere\" class=\"alerte-enl_hidden\"title = \"Cliquez ici pour plus d'informations\" ></a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.justice.fr/themes/juges-famille",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1339,7 +1339,7 @@
 						{
 							"uri": "https://www.justice.fr",
 							"method": "GET",
-							"param": "Cache-Control",
+							"param": "cache-control",
 							"attack": "",
 							"evidence": "public, max-age=86400",
 							"otherinfo": ""
@@ -1347,7 +1347,7 @@
 						{
 							"uri": "https://www.justice.fr/",
 							"method": "GET",
-							"param": "Cache-Control",
+							"param": "cache-control",
 							"attack": "",
 							"evidence": "public, max-age=86400",
 							"otherinfo": ""
@@ -1355,15 +1355,7 @@
 						{
 							"uri": "https://www.justice.fr/conditions-utilisation",
 							"method": "GET",
-							"param": "Cache-Control",
-							"attack": "",
-							"evidence": "public, max-age=86400",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.justice.fr/fiche/autorite-parentale",
-							"method": "GET",
-							"param": "Cache-Control",
+							"param": "cache-control",
 							"attack": "",
 							"evidence": "public, max-age=86400",
 							"otherinfo": ""
@@ -1371,7 +1363,7 @@
 						{
 							"uri": "https://www.justice.fr/node-page/11213",
 							"method": "GET",
-							"param": "Cache-Control",
+							"param": "cache-control",
 							"attack": "",
 							"evidence": "public, max-age=86400",
 							"otherinfo": ""
@@ -1379,7 +1371,7 @@
 						{
 							"uri": "https://www.justice.fr/recherche",
 							"method": "GET",
-							"param": "Cache-Control",
+							"param": "cache-control",
 							"attack": "",
 							"evidence": "public, max-age=86400",
 							"otherinfo": ""
@@ -1387,7 +1379,7 @@
 						{
 							"uri": "https://www.justice.fr/robots.txt",
 							"method": "GET",
-							"param": "Cache-Control",
+							"param": "cache-control",
 							"attack": "",
 							"evidence": "max-age=0",
 							"otherinfo": ""
@@ -1395,7 +1387,7 @@
 						{
 							"uri": "https://www.justice.fr/sitemap.xml",
 							"method": "GET",
-							"param": "Cache-Control",
+							"param": "cache-control",
 							"attack": "",
 							"evidence": "must-revalidate",
 							"otherinfo": ""
@@ -1403,7 +1395,15 @@
 						{
 							"uri": "https://www.justice.fr/themes/divorce",
 							"method": "GET",
-							"param": "Cache-Control",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "public, max-age=86400",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.justice.fr/themes/juges-famille",
+							"method": "GET",
+							"param": "cache-control",
 							"attack": "",
 							"evidence": "public, max-age=86400",
 							"otherinfo": ""
@@ -1411,7 +1411,7 @@
 						{
 							"uri": "https://www.justice.fr/themes/pension-alimentaire",
 							"method": "GET",
-							"param": "Cache-Control",
+							"param": "cache-control",
 							"attack": "",
 							"evidence": "public, max-age=86400",
 							"otherinfo": ""
@@ -1419,7 +1419,7 @@
 						{
 							"uri": "https://www.justice.fr/themes/succession",
 							"method": "GET",
-							"param": "Cache-Control",
+							"param": "cache-control",
 							"attack": "",
 							"evidence": "public, max-age=86400",
 							"otherinfo": ""
@@ -1468,7 +1468,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.justice.fr/node-page/11177",
+							"uri": "https://www.justice.fr/donnees-personnelles",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1476,7 +1476,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.justice.fr/recherche/annuaires",
+							"uri": "https://www.justice.fr/lexique/letter_a",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1484,7 +1484,15 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.justice.fr/robots.txt",
+							"uri": "https://www.justice.fr/mentions-legales",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.justice.fr/simulateurs/aide-juridictionnelle",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1500,22 +1508,6 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.justice.fr/sites/default/files/css/css_JtKJGdrRVqhTvgsbWo6XbrPvwBxc5SxUMKwyxYb2VL0.css",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "HIT",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.justice.fr/sites/default/files/css/css_TY7QtDWFxbJDXDyILpAKWh4hMb61aR2Pfy2M-RuBbas.css",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "HIT",
-							"otherinfo": ""
-						},
-						{
 							"uri": "https://www.justice.fr/themes/acces-droit-point-justice",
 							"method": "GET",
 							"param": "",
@@ -1524,7 +1516,15 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.justice.fr/themes/casier-judiciaire",
+							"uri": "https://www.justice.fr/themes/obligations-vie-familiale",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.justice.fr/themes/porter-plainte",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1539,6 +1539,121 @@
 					"cweid": "-1",
 					"wascid": "-1",
 					"sourceid": "1"
+				},
+				{
+					"pluginid": "10112",
+					"alertRef": "10112",
+					"alert": "Session Management Response Identified",
+					"name": "Session Management Response Identified",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The given response has been identified as containing a session management token. The 'Other Info' field contains a set of header tokens that can be used in the Header Based Session Management Method. If the request is in a context which has a Session Management Method set to \"Auto-Detect\" then this rule will change the session management to use the tokens identified.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.justice.fr/*?CSRT",
+							"method": "GET",
+							"param": "TS011eb1c5",
+							"attack": "",
+							"evidence": "01a6efdeadd0713fd2cfaf8b706e20789e3480f57a5bb854dace2d3c6078fe38f18840dea8fc0fc721524afe5f95f4f1b8f0d32859fde45f48fc8d879fa7998c842b11f4fd",
+							"otherinfo": "\ncookie:TS011eb1c5"
+						},
+						{
+							"uri": "https://www.justice.fr/conditions-utilisation",
+							"method": "GET",
+							"param": "TS011eb1c5",
+							"attack": "",
+							"evidence": "01a6efdeadd0713fd2cfaf8b706e20789e3480f57a5bb854dace2d3c6078fe38f18840dea8fc0fc721524afe5f95f4f1b8f0d32859fde45f48fc8d879fa7998c842b11f4fd",
+							"otherinfo": "\ncookie:TS011eb1c5"
+						},
+						{
+							"uri": "https://www.justice.fr/contact/formulaire",
+							"method": "GET",
+							"param": "TS011eb1c5",
+							"attack": "",
+							"evidence": "01a6efdead3af74b69219ae5a61f5623dd0490eba449638cecedad2e49644d70c73d94e72e6e58d7ecbf40c740df8871f658d5e7110615a33b87edb3c095739fb92c7f740b",
+							"otherinfo": "\ncookie:TS011eb1c5"
+						},
+						{
+							"uri": "https://www.justice.fr/printpdf/",
+							"method": "GET",
+							"param": "TS011eb1c5",
+							"attack": "",
+							"evidence": "01a6efdead3af74b69219ae5a61f5623dd0490eba449638cecedad2e49644d70c73d94e72e6e58d7ecbf40c740df8871f658d5e7110615a33b87edb3c095739fb92c7f740b",
+							"otherinfo": "\ncookie:TS011eb1c5"
+						},
+						{
+							"uri": "https://www.justice.fr/recherche/",
+							"method": "GET",
+							"param": "TS011eb1c5",
+							"attack": "",
+							"evidence": "01a6efdeadd0713fd2cfaf8b706e20789e3480f57a5bb854dace2d3c6078fe38f18840dea8fc0fc721524afe5f95f4f1b8f0d32859fde45f48fc8d879fa7998c842b11f4fd",
+							"otherinfo": "\ncookie:TS011eb1c5"
+						},
+						{
+							"uri": "https://www.justice.fr/robots.txt",
+							"method": "GET",
+							"param": "MJ",
+							"attack": "",
+							"evidence": "!ErAtsPvRwM14Tng49Hl2MtJAflCcALx0Y15kMq4vdv1W+8sTEGhmeBZ4tQi1WZ56v8laCRe4yP7ing==",
+							"otherinfo": "\ncookie:MJ\ncookie:TS011eb1c5"
+						},
+						{
+							"uri": "https://www.justice.fr/sitemap.xml",
+							"method": "GET",
+							"param": "MJ",
+							"attack": "",
+							"evidence": "!y13mUmecGTb6VG449Hl2MtJAflCcAI0AmtqGIa8ZjWFvBKdDpkUGoSryBEe015p/XwjbO8vzioqVVA==",
+							"otherinfo": "\ncookie:MJ\ncookie:TS011eb1c5"
+						},
+						{
+							"uri": "https://www.justice.fr/conditions-utilisation",
+							"method": "GET",
+							"param": "TS011eb1c5",
+							"attack": "",
+							"evidence": "01a6efdeadd0713fd2cfaf8b706e20789e3480f57a5bb854dace2d3c6078fe38f18840dea8fc0fc721524afe5f95f4f1b8f0d32859fde45f48fc8d879fa7998c842b11f4fd",
+							"otherinfo": "\ncookie:TS011eb1c5"
+						},
+						{
+							"uri": "https://www.justice.fr/contact/formulaire",
+							"method": "GET",
+							"param": "TS011eb1c5",
+							"attack": "",
+							"evidence": "01a6efdead3af74b69219ae5a61f5623dd0490eba449638cecedad2e49644d70c73d94e72e6e58d7ecbf40c740df8871f658d5e7110615a33b87edb3c095739fb92c7f740b",
+							"otherinfo": "\ncookie:TS011eb1c5"
+						},
+						{
+							"uri": "https://www.justice.fr/recherche",
+							"method": "GET",
+							"param": "TS011eb1c5",
+							"attack": "",
+							"evidence": "01a6efdeadd0713fd2cfaf8b706e20789e3480f57a5bb854dace2d3c6078fe38f18840dea8fc0fc721524afe5f95f4f1b8f0d32859fde45f48fc8d879fa7998c842b11f4fd",
+							"otherinfo": "\ncookie:TS011eb1c5"
+						},
+						{
+							"uri": "https://www.justice.fr/sitemap.xml",
+							"method": "GET",
+							"param": "MJ",
+							"attack": "",
+							"evidence": "!y13mUmecGTb6VG449Hl2MtJAflCcAI0AmtqGIa8ZjWFvBKdDpkUGoSryBEe015p/XwjbO8vzioqVVA==",
+							"otherinfo": "\ncookie:MJ"
+						},
+						{
+							"uri": "https://www.justice.fr/themes/succession",
+							"method": "GET",
+							"param": "TS011eb1c5",
+							"attack": "",
+							"evidence": "01a6efdeadd0713fd2cfaf8b706e20789e3480f57a5bb854dace2d3c6078fe38f18840dea8fc0fc721524afe5f95f4f1b8f0d32859fde45f48fc8d879fa7998c842b11f4fd",
+							"otherinfo": "\ncookie:TS011eb1c5"
+						}
+					],
+					"count": "12",
+					"solution": "<p>This is an informational alert rather than a vulnerability and so there is nothing to fix.</p>",
+					"otherinfo": "<p></p><p>cookie:TS011eb1c5</p>",
+					"reference": "<p>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id</p>",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "19"
 				},
 				{
 					"pluginid": "10049",
@@ -1591,14 +1706,6 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.justice.fr/node-page/11213",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "max-age=86400",
-							"otherinfo": ""
-						},
-						{
 							"uri": "https://www.justice.fr/printpdf/",
 							"method": "GET",
 							"param": "",
@@ -1620,6 +1727,14 @@
 							"param": "",
 							"attack": "",
 							"evidence": "max-age=604800",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.justice.fr/themes/succession",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=86400",
 							"otherinfo": ""
 						}
 					],
