@@ -53,8 +53,8 @@
 <div class="jumbotron">
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln search.judilibre.io</pre>
-<p class="lead">Sun Jul 30 00:56:33 2023 – Sun Jul 30 00:57:00 2023<br>1 hosts scanned.
+<pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.justice.fr</pre>
+<p class="lead">Sun Jul 30 06:24:55 2023 – Sun Jul 30 06:27:43 2023<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -76,8 +76,8 @@
 </tr></thead>
 <tbody><tr>
 <td><span class="label label-success">up</span></td>
-<td>51.159.85.176</td>
-<td>search.judilibre.io</td>
+<td>185.24.184.180</td>
+<td>www.justice.fr</td>
 <td>2</td>
 <td>0</td>
 </tr></tbody>
@@ -91,13 +91,10 @@
             });
           </script><h2 id="onlinehosts" class="target">Online Hosts</h2>
 <div class="panel panel-default">
-<div class="panel-heading clickable" data-toggle="collapse" data-target="#51-159-85-176"><h3 class="panel-title">51.159.85.176 - search.judilibre.io</h3></div>
-<div class="panel-body collapse in" id="51-159-85-176">
+<div class="panel-heading clickable" data-toggle="collapse" data-target="#185-24-184-180"><h3 class="panel-title">185.24.184.180 - www.justice.fr</h3></div>
+<div class="panel-body collapse in" id="185-24-184-180">
 <h4>Hostnames</h4>
-<ul>
-<li>search.judilibre.io (user)</li>
-<li>51-159-85-176.lb.fr-par.scw.cloud (PTR)</li>
-</ul>
+<ul><li>www.justice.fr (user)</li></ul>
 <h4>Ports</h4>
 <div class="table-responsive"><table class="table table-bordered">
 <thead><tr>
@@ -114,22 +111,83 @@
 <td title="Port">80</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">http</td>
-<td title="Product">nginx</td>
+<td title="Service">http-proxy</td>
+<td title="Product">F5 BIG-IP load balancer http proxy</td>
 <td title="Version"></td>
-<td title="Extra Info">reverse proxy</td>
+<td title="Extra Info"></td>
 </tr>
-<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:igor_sysoev:nginx">cpe:/a:igor_sysoev:nginx</a></td></tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">BigIP</pre>
+</td></tr>
+<tr class="active">
+<td>113</td>
+<td>tcp</td>
+<td>closed<br>reset</td>
+<td>ident</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
 <tr class="success">
 <td title="Port">443</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">http</td>
-<td title="Product">nginx</td>
+<td title="Service">https</td>
+<td title="Product"></td>
 <td title="Version"></td>
-<td title="Extra Info">reverse proxy</td>
+<td title="Extra Info"></td>
 </tr>
-<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:igor_sysoev:nginx">cpe:/a:igor_sysoev:nginx</a></td></tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  GetRequest: 
+    HTTP/1.1 200 OK
+    Date: Sun, 30 Jul 2023 06:25:23 GMT
+    X-Content-Type-Options: nosniff
+    Content-Language: fr
+    X-Frame-Options: SAMEORIGIN
+    Cache-Control: public, max-age=86400
+    Expires: Sun, 19 Nov 1978 05:00:00 GMT
+    Etag: "1690688662-1"
+    Last-Modified: Sun, 30 Jul 2023 03:44:22 GMT
+    Content-Type: text/html; charset=utf-8
+    X-UA-Device: DESKTOP
+    X-Cache: HIT
+    Vary: Accept-Encoding,User-Agent
+    Connection: close
+    Set-Cookie: MJ=!K55TBk7wgXo04wxRkb0Huvue883NyYhBE/X9Ly1wrjZcc1jHo+03ZjePrPwqH0Rm7Pb5jXSdho8k; path=/; Httponly; Secure
+    Strict-Transport-Security: max-age=16070400; includeSubDomains
+    Set-Cookie: TS01902d34=01a6efdead800f769542dc3fd192232d72e09874e31544aee81219fa998ac3c56e3a6eed066545657dc529f4abe567899c564bd73fc7eb45061fd9f8cb02eb3db0f99c96ce; Path=/
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="fr" dir="ltr" data-fr-scheme="light"&gt;
+    &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport"
+  HTTPOptions: 
+    HTTP/1.1 200 OK
+    Date: Sun, 30 Jul 2023 06:25:24 GMT
+    X-Content-Type-Options: nosniff
+    Content-Language: fr
+    X-Frame-Options: SAMEORIGIN
+    Cache-Control: public, max-age=86400
+    Expires: Sun, 19 Nov 1978 05:00:00 GMT
+    Etag: "1690688662-1"
+    Last-Modified: Sun, 30 Jul 2023 03:44:22 GMT
+    Content-Type: text/html; charset=utf-8
+    X-UA-Device: DESKTOP
+    X-Cache: HIT
+    Vary: Accept-Encoding,User-Agent
+    Connection: close
+    Set-Cookie: MJ=!3kOO+ObmsGs6wjM49Hl2MtJAflCcACqOuHIRs3ciu1Ayf5P66luvj93BaihEyAOFoDnRxNRTHi31; path=/; Httponly; Secure
+    Strict-Transport-Security: max-age=16070400; includeSubDomains
+    Set-Cookie: TS01902d34=01a6efdead3a1fb2d370566b15495a51a2c377408650d704997c683fb5c290d004071391d4451a934616adbf1e1ec6840983129a147d241f29adb100899491592e83448283; Path=/
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="fr" dir="ltr" data-fr-scheme="light"&gt;
+    &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport"</pre>
+</td></tr>
 </tbody>
 </table></div>
 </div>
@@ -148,24 +206,24 @@
 </tr></thead>
 <tbody>
 <tr>
-<td>51.159.85.176 - search.judilibre.io</td>
+<td>185.24.184.180 - www.justice.fr</td>
 <td>80</td>
 <td>tcp</td>
-<td>http</td>
-<td>nginx</td>
+<td>http-proxy</td>
+<td>F5 BIG-IP load balancer http proxy</td>
 <td></td>
-<td>cpe:/a:igor_sysoev:nginx</td>
-<td>reverse proxy</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td>51.159.85.176 - search.judilibre.io</td>
+<td>185.24.184.180 - www.justice.fr</td>
 <td>443</td>
 <td>tcp</td>
-<td>http</td>
-<td>nginx</td>
+<td>https</td>
 <td></td>
-<td>cpe:/a:igor_sysoev:nginx</td>
-<td>reverse proxy</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table></div>
