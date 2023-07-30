@@ -1,1 +1,95 @@
-# Nmap 7.92 scan initiated Sun Jul 23 04:48:33 2023 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.justice.fr
+# Nmap 7.92 scan initiated Sun Jul 30 06:24:55 2023 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.justice.fr
+Nmap scan report for www.justice.fr (185.24.184.180)
+Host is up (0.17s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE    VERSION
+80/tcp  open   http-proxy F5 BIG-IP load balancer http proxy
+|_http-server-header: BigIP
+113/tcp closed ident
+443/tcp open   ssl/https
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Sun, 30 Jul 2023 06:25:23 GMT
+|     X-Content-Type-Options: nosniff
+|     Content-Language: fr
+|     X-Frame-Options: SAMEORIGIN
+|     Cache-Control: public, max-age=86400
+|     Expires: Sun, 19 Nov 1978 05:00:00 GMT
+|     Etag: "1690688662-1"
+|     Last-Modified: Sun, 30 Jul 2023 03:44:22 GMT
+|     Content-Type: text/html; charset=utf-8
+|     X-UA-Device: DESKTOP
+|     X-Cache: HIT
+|     Vary: Accept-Encoding,User-Agent
+|     Connection: close
+|     Set-Cookie: MJ=!K55TBk7wgXo04wxRkb0Huvue883NyYhBE/X9Ly1wrjZcc1jHo+03ZjePrPwqH0Rm7Pb5jXSdho8k; path=/; Httponly; Secure
+|     Strict-Transport-Security: max-age=16070400; includeSubDomains
+|     Set-Cookie: TS01902d34=01a6efdead800f769542dc3fd192232d72e09874e31544aee81219fa998ac3c56e3a6eed066545657dc529f4abe567899c564bd73fc7eb45061fd9f8cb02eb3db0f99c96ce; Path=/
+|     <!DOCTYPE html>
+|     <html lang="fr" dir="ltr" data-fr-scheme="light">
+|     <head>
+|     <meta charset="utf-8">
+|     <meta name="viewport"
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Date: Sun, 30 Jul 2023 06:25:24 GMT
+|     X-Content-Type-Options: nosniff
+|     Content-Language: fr
+|     X-Frame-Options: SAMEORIGIN
+|     Cache-Control: public, max-age=86400
+|     Expires: Sun, 19 Nov 1978 05:00:00 GMT
+|     Etag: "1690688662-1"
+|     Last-Modified: Sun, 30 Jul 2023 03:44:22 GMT
+|     Content-Type: text/html; charset=utf-8
+|     X-UA-Device: DESKTOP
+|     X-Cache: HIT
+|     Vary: Accept-Encoding,User-Agent
+|     Connection: close
+|     Set-Cookie: MJ=!3kOO+ObmsGs6wjM49Hl2MtJAflCcACqOuHIRs3ciu1Ayf5P66luvj93BaihEyAOFoDnRxNRTHi31; path=/; Httponly; Secure
+|     Strict-Transport-Security: max-age=16070400; includeSubDomains
+|     Set-Cookie: TS01902d34=01a6efdead3a1fb2d370566b15495a51a2c377408650d704997c683fb5c290d004071391d4451a934616adbf1e1ec6840983129a147d241f29adb100899491592e83448283; Path=/
+|     <!DOCTYPE html>
+|     <html lang="fr" dir="ltr" data-fr-scheme="light">
+|     <head>
+|     <meta charset="utf-8">
+|_    <meta name="viewport"
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=7/30%Time=64C60253%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,121F,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sun,\x2030\
+SF:x20Jul\x202023\x2006:25:23\x20GMT\r\nX-Content-Type-Options:\x20nosniff
+SF:\r\nContent-Language:\x20fr\r\nX-Frame-Options:\x20SAMEORIGIN\r\nCache-
+SF:Control:\x20public,\x20max-age=86400\r\nExpires:\x20Sun,\x2019\x20Nov\x
+SF:201978\x2005:00:00\x20GMT\r\nEtag:\x20\"1690688662-1\"\r\nLast-Modified
+SF::\x20Sun,\x2030\x20Jul\x202023\x2003:44:22\x20GMT\r\nContent-Type:\x20t
+SF:ext/html;\x20charset=utf-8\r\nX-UA-Device:\x20DESKTOP\r\nX-Cache:\x20HI
+SF:T\r\nVary:\x20Accept-Encoding,User-Agent\r\nConnection:\x20close\r\nSet
+SF:-Cookie:\x20MJ=!K55TBk7wgXo04wxRkb0Huvue883NyYhBE/X9Ly1wrjZcc1jHo\+03Zj
+SF:ePrPwqH0Rm7Pb5jXSdho8k;\x20path=/;\x20Httponly;\x20Secure\r\nStrict-Tra
+SF:nsport-Security:\x20max-age=16070400;\x20includeSubDomains\r\nSet-Cooki
+SF:e:\x20TS01902d34=01a6efdead800f769542dc3fd192232d72e09874e31544aee81219
+SF:fa998ac3c56e3a6eed066545657dc529f4abe567899c564bd73fc7eb45061fd9f8cb02e
+SF:b3db0f99c96ce;\x20Path=/\r\n\r\n<!DOCTYPE\x20html>\n\n<html\x20lang=\"f
+SF:r\"\x20dir=\"ltr\"\x20\x20data-fr-scheme=\"light\">\n\n\x20\x20<head>\n
+SF:\x20\x20\x20\x20<meta\x20charset=\"utf-8\">\n\x20\x20\x20\x20<meta\x20n
+SF:ame=\"viewport\"")%r(HTTPOptions,121F,"HTTP/1\.1\x20200\x20OK\r\nDate:\
+SF:x20Sun,\x2030\x20Jul\x202023\x2006:25:24\x20GMT\r\nX-Content-Type-Optio
+SF:ns:\x20nosniff\r\nContent-Language:\x20fr\r\nX-Frame-Options:\x20SAMEOR
+SF:IGIN\r\nCache-Control:\x20public,\x20max-age=86400\r\nExpires:\x20Sun,\
+SF:x2019\x20Nov\x201978\x2005:00:00\x20GMT\r\nEtag:\x20\"1690688662-1\"\r\
+SF:nLast-Modified:\x20Sun,\x2030\x20Jul\x202023\x2003:44:22\x20GMT\r\nCont
+SF:ent-Type:\x20text/html;\x20charset=utf-8\r\nX-UA-Device:\x20DESKTOP\r\n
+SF:X-Cache:\x20HIT\r\nVary:\x20Accept-Encoding,User-Agent\r\nConnection:\x
+SF:20close\r\nSet-Cookie:\x20MJ=!3kOO\+ObmsGs6wjM49Hl2MtJAflCcACqOuHIRs3ci
+SF:u1Ayf5P66luvj93BaihEyAOFoDnRxNRTHi31;\x20path=/;\x20Httponly;\x20Secure
+SF:\r\nStrict-Transport-Security:\x20max-age=16070400;\x20includeSubDomain
+SF:s\r\nSet-Cookie:\x20TS01902d34=01a6efdead3a1fb2d370566b15495a51a2c37740
+SF:8650d704997c683fb5c290d004071391d4451a934616adbf1e1ec6840983129a147d241
+SF:f29adb100899491592e83448283;\x20Path=/\r\n\r\n<!DOCTYPE\x20html>\n\n<ht
+SF:ml\x20lang=\"fr\"\x20dir=\"ltr\"\x20\x20data-fr-scheme=\"light\">\n\n\x
+SF:20\x20<head>\n\x20\x20\x20\x20<meta\x20charset=\"utf-8\">\n\x20\x20\x20
+SF:\x20<meta\x20name=\"viewport\"");
+Service Info: Device: load balancer
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jul 30 06:27:43 2023 -- 1 IP address (1 host up) scanned in 167.55 seconds
