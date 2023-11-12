@@ -32,243 +32,9 @@
       "type": "dns",
       "host": "www.justice.fr.",
       "matched-at": "www.justice.fr",
-      "request": ";; opcode: QUERY, status: NOERROR, id: 40035\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;www.justice.fr.\tIN\t CAA\n",
-      "response": ";; opcode: QUERY, status: NOERROR, id: 40035\n;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512\n\n;; QUESTION SECTION:\n;www.justice.fr.\tIN\t CAA\n\n;; AUTHORITY SECTION:\njustice.fr.\t1800\tIN\tSOA\ta.ns.developpement-durable.gouv.fr. gestiondns.equipement.gouv.fr. 2023100308 14400 3600 3000000 3600\n",
-      "timestamp": "2023-11-05T02:30:20.395123931Z",
-      "matcher-status": true
-    },
-    {
-      "template": "http/misconfiguration/http-missing-security-headers.yaml",
-      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-      "template-id": "http-missing-security-headers",
-      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-      "info": {
-        "name": "HTTP Missing Security Headers",
-        "author": [
-          "socketz",
-          "geeknik",
-          "g4l1t0",
-          "convisoappsec",
-          "kurohost",
-          "dawid-czarnecki",
-          "forgedhallpass",
-          "jub0bs"
-        ],
-        "tags": [
-          "misconfig",
-          "headers",
-          "generic"
-        ],
-        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-        "severity": "info",
-        "metadata": {
-          "max-request": 1
-        }
-      },
-      "matcher-name": "x-frame-options",
-      "type": "http",
-      "host": "https://www.justice.fr",
-      "matched-at": "https://www.justice.fr",
-      "request": "GET / HTTP/1.1\r\nHost: www.justice.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nContent-Length: 247\r\nCache-Control: no-cache\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\n\r\n<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 10189359741859451616<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>",
-      "ip": "185.24.184.176",
-      "timestamp": "2023-11-05T02:31:14.736758486Z",
-      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.justice.fr'",
-      "matcher-status": true
-    },
-    {
-      "template": "http/misconfiguration/http-missing-security-headers.yaml",
-      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-      "template-id": "http-missing-security-headers",
-      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-      "info": {
-        "name": "HTTP Missing Security Headers",
-        "author": [
-          "socketz",
-          "geeknik",
-          "g4l1t0",
-          "convisoappsec",
-          "kurohost",
-          "dawid-czarnecki",
-          "forgedhallpass",
-          "jub0bs"
-        ],
-        "tags": [
-          "misconfig",
-          "headers",
-          "generic"
-        ],
-        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-        "severity": "info",
-        "metadata": {
-          "max-request": 1
-        }
-      },
-      "matcher-name": "x-content-type-options",
-      "type": "http",
-      "host": "https://www.justice.fr",
-      "matched-at": "https://www.justice.fr",
-      "request": "GET / HTTP/1.1\r\nHost: www.justice.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nContent-Length: 247\r\nCache-Control: no-cache\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\n\r\n<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 10189359741859451616<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>",
-      "ip": "185.24.184.176",
-      "timestamp": "2023-11-05T02:31:14.737838894Z",
-      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.justice.fr'",
-      "matcher-status": true
-    },
-    {
-      "template": "http/misconfiguration/http-missing-security-headers.yaml",
-      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-      "template-id": "http-missing-security-headers",
-      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-      "info": {
-        "name": "HTTP Missing Security Headers",
-        "author": [
-          "socketz",
-          "geeknik",
-          "g4l1t0",
-          "convisoappsec",
-          "kurohost",
-          "dawid-czarnecki",
-          "forgedhallpass",
-          "jub0bs"
-        ],
-        "tags": [
-          "misconfig",
-          "headers",
-          "generic"
-        ],
-        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-        "severity": "info",
-        "metadata": {
-          "max-request": 1
-        }
-      },
-      "matcher-name": "referrer-policy",
-      "type": "http",
-      "host": "https://www.justice.fr",
-      "matched-at": "https://www.justice.fr",
-      "request": "GET / HTTP/1.1\r\nHost: www.justice.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nContent-Length: 247\r\nCache-Control: no-cache\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\n\r\n<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 10189359741859451616<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>",
-      "ip": "185.24.184.176",
-      "timestamp": "2023-11-05T02:31:14.737874394Z",
-      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.justice.fr'",
-      "matcher-status": true
-    },
-    {
-      "template": "http/misconfiguration/http-missing-security-headers.yaml",
-      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-      "template-id": "http-missing-security-headers",
-      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-      "info": {
-        "name": "HTTP Missing Security Headers",
-        "author": [
-          "socketz",
-          "geeknik",
-          "g4l1t0",
-          "convisoappsec",
-          "kurohost",
-          "dawid-czarnecki",
-          "forgedhallpass",
-          "jub0bs"
-        ],
-        "tags": [
-          "misconfig",
-          "headers",
-          "generic"
-        ],
-        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-        "severity": "info",
-        "metadata": {
-          "max-request": 1
-        }
-      },
-      "matcher-name": "cross-origin-embedder-policy",
-      "type": "http",
-      "host": "https://www.justice.fr",
-      "matched-at": "https://www.justice.fr",
-      "request": "GET / HTTP/1.1\r\nHost: www.justice.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nContent-Length: 247\r\nCache-Control: no-cache\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\n\r\n<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 10189359741859451616<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>",
-      "ip": "185.24.184.176",
-      "timestamp": "2023-11-05T02:31:14.737887994Z",
-      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.justice.fr'",
-      "matcher-status": true
-    },
-    {
-      "template": "http/misconfiguration/http-missing-security-headers.yaml",
-      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-      "template-id": "http-missing-security-headers",
-      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-      "info": {
-        "name": "HTTP Missing Security Headers",
-        "author": [
-          "socketz",
-          "geeknik",
-          "g4l1t0",
-          "convisoappsec",
-          "kurohost",
-          "dawid-czarnecki",
-          "forgedhallpass",
-          "jub0bs"
-        ],
-        "tags": [
-          "misconfig",
-          "headers",
-          "generic"
-        ],
-        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-        "severity": "info",
-        "metadata": {
-          "max-request": 1
-        }
-      },
-      "matcher-name": "cross-origin-opener-policy",
-      "type": "http",
-      "host": "https://www.justice.fr",
-      "matched-at": "https://www.justice.fr",
-      "request": "GET / HTTP/1.1\r\nHost: www.justice.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nContent-Length: 247\r\nCache-Control: no-cache\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\n\r\n<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 10189359741859451616<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>",
-      "ip": "185.24.184.176",
-      "timestamp": "2023-11-05T02:31:14.737904294Z",
-      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.justice.fr'",
-      "matcher-status": true
-    },
-    {
-      "template": "http/misconfiguration/http-missing-security-headers.yaml",
-      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-      "template-id": "http-missing-security-headers",
-      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-      "info": {
-        "name": "HTTP Missing Security Headers",
-        "author": [
-          "socketz",
-          "geeknik",
-          "g4l1t0",
-          "convisoappsec",
-          "kurohost",
-          "dawid-czarnecki",
-          "forgedhallpass",
-          "jub0bs"
-        ],
-        "tags": [
-          "misconfig",
-          "headers",
-          "generic"
-        ],
-        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-        "severity": "info",
-        "metadata": {
-          "max-request": 1
-        }
-      },
-      "matcher-name": "cross-origin-resource-policy",
-      "type": "http",
-      "host": "https://www.justice.fr",
-      "matched-at": "https://www.justice.fr",
-      "request": "GET / HTTP/1.1\r\nHost: www.justice.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nContent-Length: 247\r\nCache-Control: no-cache\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\n\r\n<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 10189359741859451616<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>",
-      "ip": "185.24.184.176",
-      "timestamp": "2023-11-05T02:31:14.737924994Z",
-      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.justice.fr'",
+      "request": ";; opcode: QUERY, status: NOERROR, id: 21504\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;www.justice.fr.\tIN\t CAA\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 21504\n;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512\n\n;; QUESTION SECTION:\n;www.justice.fr.\tIN\t CAA\n\n;; AUTHORITY SECTION:\njustice.fr.\t1800\tIN\tSOA\ta.ns.developpement-durable.gouv.fr. gestiondns.equipement.gouv.fr. 2023111000 14400 3600 3000000 3600\n",
+      "timestamp": "2023-11-12T02:38:06.015681507Z",
       "matcher-status": true
     },
     {
@@ -304,48 +70,9 @@
       "host": "https://www.justice.fr",
       "matched-at": "https://www.justice.fr",
       "request": "GET / HTTP/1.1\r\nHost: www.justice.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nContent-Length: 247\r\nCache-Control: no-cache\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\n\r\n<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 10189359741859451616<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nContent-Length: 247\r\nCache-Control: no-cache\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\n\r\n<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 10189359741950195640<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>",
       "ip": "185.24.184.176",
-      "timestamp": "2023-11-05T02:31:14.737939194Z",
-      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.justice.fr'",
-      "matcher-status": true
-    },
-    {
-      "template": "http/misconfiguration/http-missing-security-headers.yaml",
-      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-      "template-id": "http-missing-security-headers",
-      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-      "info": {
-        "name": "HTTP Missing Security Headers",
-        "author": [
-          "socketz",
-          "geeknik",
-          "g4l1t0",
-          "convisoappsec",
-          "kurohost",
-          "dawid-czarnecki",
-          "forgedhallpass",
-          "jub0bs"
-        ],
-        "tags": [
-          "misconfig",
-          "headers",
-          "generic"
-        ],
-        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-        "severity": "info",
-        "metadata": {
-          "max-request": 1
-        }
-      },
-      "matcher-name": "content-security-policy",
-      "type": "http",
-      "host": "https://www.justice.fr",
-      "matched-at": "https://www.justice.fr",
-      "request": "GET / HTTP/1.1\r\nHost: www.justice.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nContent-Length: 247\r\nCache-Control: no-cache\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\n\r\n<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 10189359741859451616<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>",
-      "ip": "185.24.184.176",
-      "timestamp": "2023-11-05T02:31:14.737952894Z",
+      "timestamp": "2023-11-12T02:39:20.733462973Z",
       "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.justice.fr'",
       "matcher-status": true
     },
@@ -382,9 +109,87 @@
       "host": "https://www.justice.fr",
       "matched-at": "https://www.justice.fr",
       "request": "GET / HTTP/1.1\r\nHost: www.justice.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nContent-Length: 247\r\nCache-Control: no-cache\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\n\r\n<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 10189359741859451616<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nContent-Length: 247\r\nCache-Control: no-cache\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\n\r\n<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 10189359741950195640<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>",
       "ip": "185.24.184.176",
-      "timestamp": "2023-11-05T02:31:14.737967195Z",
+      "timestamp": "2023-11-12T02:39:20.733546873Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.justice.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "x-frame-options",
+      "type": "http",
+      "host": "https://www.justice.fr",
+      "matched-at": "https://www.justice.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.justice.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nContent-Length: 247\r\nCache-Control: no-cache\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\n\r\n<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 10189359741950195640<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>",
+      "ip": "185.24.184.176",
+      "timestamp": "2023-11-12T02:39:20.733559973Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.justice.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "x-content-type-options",
+      "type": "http",
+      "host": "https://www.justice.fr",
+      "matched-at": "https://www.justice.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.justice.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nContent-Length: 247\r\nCache-Control: no-cache\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\n\r\n<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 10189359741950195640<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>",
+      "ip": "185.24.184.176",
+      "timestamp": "2023-11-12T02:39:20.733570473Z",
       "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.justice.fr'",
       "matcher-status": true
     },
@@ -421,9 +226,9 @@
       "host": "https://www.justice.fr",
       "matched-at": "https://www.justice.fr",
       "request": "GET / HTTP/1.1\r\nHost: www.justice.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nContent-Length: 247\r\nCache-Control: no-cache\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\n\r\n<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 10189359741859451616<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nContent-Length: 247\r\nCache-Control: no-cache\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\n\r\n<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 10189359741950195640<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>",
       "ip": "185.24.184.176",
-      "timestamp": "2023-11-05T02:31:14.737980095Z",
+      "timestamp": "2023-11-12T02:39:20.733686373Z",
       "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.justice.fr'",
       "matcher-status": true
     },
@@ -460,9 +265,204 @@
       "host": "https://www.justice.fr",
       "matched-at": "https://www.justice.fr",
       "request": "GET / HTTP/1.1\r\nHost: www.justice.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nContent-Length: 247\r\nCache-Control: no-cache\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\n\r\n<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 10189359741859451616<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nContent-Length: 247\r\nCache-Control: no-cache\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\n\r\n<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 10189359741950195640<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>",
       "ip": "185.24.184.176",
-      "timestamp": "2023-11-05T02:31:14.737993695Z",
+      "timestamp": "2023-11-12T02:39:20.733696873Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.justice.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cross-origin-opener-policy",
+      "type": "http",
+      "host": "https://www.justice.fr",
+      "matched-at": "https://www.justice.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.justice.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nContent-Length: 247\r\nCache-Control: no-cache\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\n\r\n<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 10189359741950195640<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>",
+      "ip": "185.24.184.176",
+      "timestamp": "2023-11-12T02:39:20.733706172Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.justice.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "content-security-policy",
+      "type": "http",
+      "host": "https://www.justice.fr",
+      "matched-at": "https://www.justice.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.justice.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nContent-Length: 247\r\nCache-Control: no-cache\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\n\r\n<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 10189359741950195640<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>",
+      "ip": "185.24.184.176",
+      "timestamp": "2023-11-12T02:39:20.733716072Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.justice.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "referrer-policy",
+      "type": "http",
+      "host": "https://www.justice.fr",
+      "matched-at": "https://www.justice.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.justice.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nContent-Length: 247\r\nCache-Control: no-cache\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\n\r\n<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 10189359741950195640<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>",
+      "ip": "185.24.184.176",
+      "timestamp": "2023-11-12T02:39:20.733727672Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.justice.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cross-origin-embedder-policy",
+      "type": "http",
+      "host": "https://www.justice.fr",
+      "matched-at": "https://www.justice.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.justice.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nContent-Length: 247\r\nCache-Control: no-cache\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\n\r\n<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 10189359741950195640<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>",
+      "ip": "185.24.184.176",
+      "timestamp": "2023-11-12T02:39:20.733737272Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.justice.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cross-origin-resource-policy",
+      "type": "http",
+      "host": "https://www.justice.fr",
+      "matched-at": "https://www.justice.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.justice.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nContent-Length: 247\r\nCache-Control: no-cache\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\n\r\n<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 10189359741950195640<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>",
+      "ip": "185.24.184.176",
+      "timestamp": "2023-11-12T02:39:20.733746572Z",
       "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.justice.fr'",
       "matcher-status": true
     },
@@ -502,9 +502,9 @@
       "host": "https://www.justice.fr",
       "matched-at": "https://www.justice.fr/",
       "request": "POST / HTTP/1.1\r\nHost: www.justice.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nContent-Length: 27\r\nContent-Type: application/x-www-form-urlencoded\r\nAccept-Encoding: gzip\r\n\r\n_=<script>alert(1)</script>",
-      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nContent-Length: 247\r\nCache-Control: no-cache\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\n\r\n<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 10189359741859455720<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nContent-Length: 247\r\nCache-Control: no-cache\r\nContent-Type: text/html; charset=utf-8\r\nPragma: no-cache\r\n\r\n<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 10189359741951072178<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>",
       "ip": "185.24.184.176",
-      "timestamp": "2023-11-05T02:31:40.398238764Z",
+      "timestamp": "2023-11-12T02:39:59.221220701Z",
       "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: www.justice.fr' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.justice.fr/'",
       "matcher-status": true
     },
@@ -534,7 +534,7 @@
         "DHIMYOTIS"
       ],
       "ip": "185.24.184.176",
-      "timestamp": "2023-11-05T02:34:57.056803019Z",
+      "timestamp": "2023-11-12T02:43:53.792844594Z",
       "matcher-status": true
     },
     {
@@ -560,11 +560,11 @@
       "host": "www.justice.fr",
       "matched-at": "www.justice.fr:443",
       "extracted-results": [
-        "www.justice.fr",
-        "justice.fr"
+        "justice.fr",
+        "www.justice.fr"
       ],
       "ip": "185.24.184.176",
-      "timestamp": "2023-11-05T02:34:57.057111421Z",
+      "timestamp": "2023-11-12T02:43:53.796241276Z",
       "matcher-status": true
     },
     {
@@ -594,7 +594,7 @@
         "tls12"
       ],
       "ip": "185.24.184.176",
-      "timestamp": "2023-11-05T02:35:08.409898045Z",
+      "timestamp": "2023-11-12T02:43:54.024453944Z",
       "matcher-status": true
     },
     {
@@ -624,7 +624,7 @@
         "tls13"
       ],
       "ip": "185.24.184.176",
-      "timestamp": "2023-11-05T02:35:09.336631715Z",
+      "timestamp": "2023-11-12T02:43:55.448484456Z",
       "matcher-status": true
     }
   ]
