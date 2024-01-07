@@ -36,9 +36,9 @@
         "digicert.com",
         "letsencrypt.org"
       ],
-      "request": ";; opcode: QUERY, status: NOERROR, id: 58719\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;stats.judilibre.io.\tIN\t CAA\n",
-      "response": ";; opcode: QUERY, status: NOERROR, id: 58719\n;; flags: qr rd ra; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512\n\n;; QUESTION SECTION:\n;stats.judilibre.io.\tIN\t CAA\n\n;; ANSWER SECTION:\nstats.judilibre.io.\t300\tIN\tCNAME\tcour-de-cassation.github.io.\ncour-de-cassation.github.io.\t3600\tIN\tCAA\t0 issue \"digicert.com\"\ncour-de-cassation.github.io.\t3600\tIN\tCAA\t0 issue \"letsencrypt.org\"\ncour-de-cassation.github.io.\t3600\tIN\tCAA\t0 issuewild \"digicert.com\"\n",
-      "timestamp": "2023-12-31T00:59:59.582920341Z",
+      "request": ";; opcode: QUERY, status: NOERROR, id: 9619\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;stats.judilibre.io.\tIN\t CAA\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 9619\n;; flags: qr rd ra; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 1232\n\n;; QUESTION SECTION:\n;stats.judilibre.io.\tIN\t CAA\n\n;; ANSWER SECTION:\nstats.judilibre.io.\t300\tIN\tCNAME\tcour-de-cassation.github.io.\ncour-de-cassation.github.io.\t3600\tIN\tCAA\t0 issue \"digicert.com\"\ncour-de-cassation.github.io.\t3600\tIN\tCAA\t0 issue \"letsencrypt.org\"\ncour-de-cassation.github.io.\t3600\tIN\tCAA\t0 issuewild \"digicert.com\"\n",
+      "timestamp": "2024-01-07T01:01:10.647399354Z",
       "matcher-status": true
     },
     {
@@ -74,204 +74,9 @@
       "extracted-results": [
         "cour-de-cassation.github.io."
       ],
-      "request": ";; opcode: QUERY, status: NOERROR, id: 13710\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;stats.judilibre.io.\tIN\t CNAME\n",
-      "response": ";; opcode: QUERY, status: NOERROR, id: 13710\n;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512\n\n;; QUESTION SECTION:\n;stats.judilibre.io.\tIN\t CNAME\n\n;; ANSWER SECTION:\nstats.judilibre.io.\t300\tIN\tCNAME\tcour-de-cassation.github.io.\n",
-      "timestamp": "2023-12-31T01:00:00.559571075Z",
-      "matcher-status": true
-    },
-    {
-      "template": "http/misconfiguration/http-missing-security-headers.yaml",
-      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-      "template-id": "http-missing-security-headers",
-      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-      "info": {
-        "name": "HTTP Missing Security Headers",
-        "author": [
-          "socketz",
-          "geeknik",
-          "g4l1t0",
-          "convisoappsec",
-          "kurohost",
-          "dawid-czarnecki",
-          "forgedhallpass",
-          "jub0bs"
-        ],
-        "tags": [
-          "misconfig",
-          "headers",
-          "generic"
-        ],
-        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-        "severity": "info",
-        "metadata": {
-          "max-request": 1
-        }
-      },
-      "matcher-name": "permissions-policy",
-      "type": "http",
-      "host": "https://stats.judilibre.io",
-      "matched-at": "https://stats.judilibre.io",
-      "request": "GET / HTTP/1.1\r\nHost: stats.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nAccess-Control-Allow-Origin: *\r\nAge: 28\r\nCache-Control: max-age=600\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 31 Dec 2023 01:00:29 GMT\r\nEtag: W/\"62895f74-4aa\"\r\nExpires: Sun, 31 Dec 2023 00:58:38 GMT\r\nLast-Modified: Sat, 21 May 2022 21:53:56 GMT\r\nServer: GitHub.com\r\nStrict-Transport-Security: max-age=31556952\r\nVary: Accept-Encoding\r\nVia: 1.1 varnish\r\nX-Cache: HIT\r\nX-Cache-Hits: 1\r\nX-Fastly-Request-Id: a56a44d1fea331dab04dc04e3221159d36450d0a\r\nX-Github-Request-Id: DED2:5A0B:13F8C36:1B66C26:6590BA65\r\nX-Proxy-Cache: MISS\r\nX-Served-By: cache-iad-kiad7000052-IAD\r\nX-Timer: S1703984430.569318,VS0,VE2\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta http-equiv='Content-Security-Policy' content=\"default-src 'self' ; object-src 'none'; connect-src https://stats-api.judilibre.io/stats https://api.github.com/repos/Cour-de-cassation/judilibre-uptime/issues; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data:;font-src 'self' data:; require-trusted-types-for 'script'\">\n\t\t<meta charset=\"utf-8\" />\n\t\t<link rel=\"icon\" href=\"/cour-de-cassation.svg\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\n\t\t<meta http-equiv=\"content-security-policy\" content=\"\">\n\t<link rel=\"modulepreload\" href=\"/_app/start-3e2568cb.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/index-e5f1005d.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/singletons-d1fb5791.js\">\n\t</head>\n\t<body>\n\t\t<div id=\"svelte\">\n\t\t<script type=\"module\" data-sveltekit-hydrate=\"45h\">\n\t\timport { start } from \"/_app/start-3e2568cb.js\";\n\t\tstart({\n\t\t\ttarget: document.querySelector('[data-sveltekit-hydrate=\"45h\"]').parentNode,\n\t\t\tpaths: {\"base\":\"\",\"assets\":\"\"},\n\t\t\tsession: {},\n\t\t\troute: true,\n\t\t\tspa: true,\n\t\t\ttrailing_slash: \"never\",\n\t\t\thydrate: null\n\t\t});\n\t</script></div>\n\t</body>\n</html>\n",
-      "ip": "185.199.108.153",
-      "timestamp": "2023-12-31T01:00:29.573027704Z",
-      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
-      "matcher-status": true
-    },
-    {
-      "template": "http/misconfiguration/http-missing-security-headers.yaml",
-      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-      "template-id": "http-missing-security-headers",
-      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-      "info": {
-        "name": "HTTP Missing Security Headers",
-        "author": [
-          "socketz",
-          "geeknik",
-          "g4l1t0",
-          "convisoappsec",
-          "kurohost",
-          "dawid-czarnecki",
-          "forgedhallpass",
-          "jub0bs"
-        ],
-        "tags": [
-          "misconfig",
-          "headers",
-          "generic"
-        ],
-        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-        "severity": "info",
-        "metadata": {
-          "max-request": 1
-        }
-      },
-      "matcher-name": "x-frame-options",
-      "type": "http",
-      "host": "https://stats.judilibre.io",
-      "matched-at": "https://stats.judilibre.io",
-      "request": "GET / HTTP/1.1\r\nHost: stats.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nAccess-Control-Allow-Origin: *\r\nAge: 28\r\nCache-Control: max-age=600\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 31 Dec 2023 01:00:29 GMT\r\nEtag: W/\"62895f74-4aa\"\r\nExpires: Sun, 31 Dec 2023 00:58:38 GMT\r\nLast-Modified: Sat, 21 May 2022 21:53:56 GMT\r\nServer: GitHub.com\r\nStrict-Transport-Security: max-age=31556952\r\nVary: Accept-Encoding\r\nVia: 1.1 varnish\r\nX-Cache: HIT\r\nX-Cache-Hits: 1\r\nX-Fastly-Request-Id: a56a44d1fea331dab04dc04e3221159d36450d0a\r\nX-Github-Request-Id: DED2:5A0B:13F8C36:1B66C26:6590BA65\r\nX-Proxy-Cache: MISS\r\nX-Served-By: cache-iad-kiad7000052-IAD\r\nX-Timer: S1703984430.569318,VS0,VE2\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta http-equiv='Content-Security-Policy' content=\"default-src 'self' ; object-src 'none'; connect-src https://stats-api.judilibre.io/stats https://api.github.com/repos/Cour-de-cassation/judilibre-uptime/issues; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data:;font-src 'self' data:; require-trusted-types-for 'script'\">\n\t\t<meta charset=\"utf-8\" />\n\t\t<link rel=\"icon\" href=\"/cour-de-cassation.svg\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\n\t\t<meta http-equiv=\"content-security-policy\" content=\"\">\n\t<link rel=\"modulepreload\" href=\"/_app/start-3e2568cb.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/index-e5f1005d.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/singletons-d1fb5791.js\">\n\t</head>\n\t<body>\n\t\t<div id=\"svelte\">\n\t\t<script type=\"module\" data-sveltekit-hydrate=\"45h\">\n\t\timport { start } from \"/_app/start-3e2568cb.js\";\n\t\tstart({\n\t\t\ttarget: document.querySelector('[data-sveltekit-hydrate=\"45h\"]').parentNode,\n\t\t\tpaths: {\"base\":\"\",\"assets\":\"\"},\n\t\t\tsession: {},\n\t\t\troute: true,\n\t\t\tspa: true,\n\t\t\ttrailing_slash: \"never\",\n\t\t\thydrate: null\n\t\t});\n\t</script></div>\n\t</body>\n</html>\n",
-      "ip": "185.199.108.153",
-      "timestamp": "2023-12-31T01:00:29.573075864Z",
-      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
-      "matcher-status": true
-    },
-    {
-      "template": "http/misconfiguration/http-missing-security-headers.yaml",
-      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-      "template-id": "http-missing-security-headers",
-      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-      "info": {
-        "name": "HTTP Missing Security Headers",
-        "author": [
-          "socketz",
-          "geeknik",
-          "g4l1t0",
-          "convisoappsec",
-          "kurohost",
-          "dawid-czarnecki",
-          "forgedhallpass",
-          "jub0bs"
-        ],
-        "tags": [
-          "misconfig",
-          "headers",
-          "generic"
-        ],
-        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-        "severity": "info",
-        "metadata": {
-          "max-request": 1
-        }
-      },
-      "matcher-name": "referrer-policy",
-      "type": "http",
-      "host": "https://stats.judilibre.io",
-      "matched-at": "https://stats.judilibre.io",
-      "request": "GET / HTTP/1.1\r\nHost: stats.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nAccess-Control-Allow-Origin: *\r\nAge: 28\r\nCache-Control: max-age=600\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 31 Dec 2023 01:00:29 GMT\r\nEtag: W/\"62895f74-4aa\"\r\nExpires: Sun, 31 Dec 2023 00:58:38 GMT\r\nLast-Modified: Sat, 21 May 2022 21:53:56 GMT\r\nServer: GitHub.com\r\nStrict-Transport-Security: max-age=31556952\r\nVary: Accept-Encoding\r\nVia: 1.1 varnish\r\nX-Cache: HIT\r\nX-Cache-Hits: 1\r\nX-Fastly-Request-Id: a56a44d1fea331dab04dc04e3221159d36450d0a\r\nX-Github-Request-Id: DED2:5A0B:13F8C36:1B66C26:6590BA65\r\nX-Proxy-Cache: MISS\r\nX-Served-By: cache-iad-kiad7000052-IAD\r\nX-Timer: S1703984430.569318,VS0,VE2\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta http-equiv='Content-Security-Policy' content=\"default-src 'self' ; object-src 'none'; connect-src https://stats-api.judilibre.io/stats https://api.github.com/repos/Cour-de-cassation/judilibre-uptime/issues; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data:;font-src 'self' data:; require-trusted-types-for 'script'\">\n\t\t<meta charset=\"utf-8\" />\n\t\t<link rel=\"icon\" href=\"/cour-de-cassation.svg\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\n\t\t<meta http-equiv=\"content-security-policy\" content=\"\">\n\t<link rel=\"modulepreload\" href=\"/_app/start-3e2568cb.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/index-e5f1005d.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/singletons-d1fb5791.js\">\n\t</head>\n\t<body>\n\t\t<div id=\"svelte\">\n\t\t<script type=\"module\" data-sveltekit-hydrate=\"45h\">\n\t\timport { start } from \"/_app/start-3e2568cb.js\";\n\t\tstart({\n\t\t\ttarget: document.querySelector('[data-sveltekit-hydrate=\"45h\"]').parentNode,\n\t\t\tpaths: {\"base\":\"\",\"assets\":\"\"},\n\t\t\tsession: {},\n\t\t\troute: true,\n\t\t\tspa: true,\n\t\t\ttrailing_slash: \"never\",\n\t\t\thydrate: null\n\t\t});\n\t</script></div>\n\t</body>\n</html>\n",
-      "ip": "185.199.108.153",
-      "timestamp": "2023-12-31T01:00:29.573094719Z",
-      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
-      "matcher-status": true
-    },
-    {
-      "template": "http/misconfiguration/http-missing-security-headers.yaml",
-      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-      "template-id": "http-missing-security-headers",
-      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-      "info": {
-        "name": "HTTP Missing Security Headers",
-        "author": [
-          "socketz",
-          "geeknik",
-          "g4l1t0",
-          "convisoappsec",
-          "kurohost",
-          "dawid-czarnecki",
-          "forgedhallpass",
-          "jub0bs"
-        ],
-        "tags": [
-          "misconfig",
-          "headers",
-          "generic"
-        ],
-        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-        "severity": "info",
-        "metadata": {
-          "max-request": 1
-        }
-      },
-      "matcher-name": "cross-origin-embedder-policy",
-      "type": "http",
-      "host": "https://stats.judilibre.io",
-      "matched-at": "https://stats.judilibre.io",
-      "request": "GET / HTTP/1.1\r\nHost: stats.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nAccess-Control-Allow-Origin: *\r\nAge: 28\r\nCache-Control: max-age=600\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 31 Dec 2023 01:00:29 GMT\r\nEtag: W/\"62895f74-4aa\"\r\nExpires: Sun, 31 Dec 2023 00:58:38 GMT\r\nLast-Modified: Sat, 21 May 2022 21:53:56 GMT\r\nServer: GitHub.com\r\nStrict-Transport-Security: max-age=31556952\r\nVary: Accept-Encoding\r\nVia: 1.1 varnish\r\nX-Cache: HIT\r\nX-Cache-Hits: 1\r\nX-Fastly-Request-Id: a56a44d1fea331dab04dc04e3221159d36450d0a\r\nX-Github-Request-Id: DED2:5A0B:13F8C36:1B66C26:6590BA65\r\nX-Proxy-Cache: MISS\r\nX-Served-By: cache-iad-kiad7000052-IAD\r\nX-Timer: S1703984430.569318,VS0,VE2\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta http-equiv='Content-Security-Policy' content=\"default-src 'self' ; object-src 'none'; connect-src https://stats-api.judilibre.io/stats https://api.github.com/repos/Cour-de-cassation/judilibre-uptime/issues; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data:;font-src 'self' data:; require-trusted-types-for 'script'\">\n\t\t<meta charset=\"utf-8\" />\n\t\t<link rel=\"icon\" href=\"/cour-de-cassation.svg\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\n\t\t<meta http-equiv=\"content-security-policy\" content=\"\">\n\t<link rel=\"modulepreload\" href=\"/_app/start-3e2568cb.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/index-e5f1005d.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/singletons-d1fb5791.js\">\n\t</head>\n\t<body>\n\t\t<div id=\"svelte\">\n\t\t<script type=\"module\" data-sveltekit-hydrate=\"45h\">\n\t\timport { start } from \"/_app/start-3e2568cb.js\";\n\t\tstart({\n\t\t\ttarget: document.querySelector('[data-sveltekit-hydrate=\"45h\"]').parentNode,\n\t\t\tpaths: {\"base\":\"\",\"assets\":\"\"},\n\t\t\tsession: {},\n\t\t\troute: true,\n\t\t\tspa: true,\n\t\t\ttrailing_slash: \"never\",\n\t\t\thydrate: null\n\t\t});\n\t</script></div>\n\t</body>\n</html>\n",
-      "ip": "185.199.108.153",
-      "timestamp": "2023-12-31T01:00:29.573109617Z",
-      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
-      "matcher-status": true
-    },
-    {
-      "template": "http/misconfiguration/http-missing-security-headers.yaml",
-      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-      "template-id": "http-missing-security-headers",
-      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-      "info": {
-        "name": "HTTP Missing Security Headers",
-        "author": [
-          "socketz",
-          "geeknik",
-          "g4l1t0",
-          "convisoappsec",
-          "kurohost",
-          "dawid-czarnecki",
-          "forgedhallpass",
-          "jub0bs"
-        ],
-        "tags": [
-          "misconfig",
-          "headers",
-          "generic"
-        ],
-        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-        "severity": "info",
-        "metadata": {
-          "max-request": 1
-        }
-      },
-      "matcher-name": "cross-origin-opener-policy",
-      "type": "http",
-      "host": "https://stats.judilibre.io",
-      "matched-at": "https://stats.judilibre.io",
-      "request": "GET / HTTP/1.1\r\nHost: stats.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nAccess-Control-Allow-Origin: *\r\nAge: 28\r\nCache-Control: max-age=600\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 31 Dec 2023 01:00:29 GMT\r\nEtag: W/\"62895f74-4aa\"\r\nExpires: Sun, 31 Dec 2023 00:58:38 GMT\r\nLast-Modified: Sat, 21 May 2022 21:53:56 GMT\r\nServer: GitHub.com\r\nStrict-Transport-Security: max-age=31556952\r\nVary: Accept-Encoding\r\nVia: 1.1 varnish\r\nX-Cache: HIT\r\nX-Cache-Hits: 1\r\nX-Fastly-Request-Id: a56a44d1fea331dab04dc04e3221159d36450d0a\r\nX-Github-Request-Id: DED2:5A0B:13F8C36:1B66C26:6590BA65\r\nX-Proxy-Cache: MISS\r\nX-Served-By: cache-iad-kiad7000052-IAD\r\nX-Timer: S1703984430.569318,VS0,VE2\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta http-equiv='Content-Security-Policy' content=\"default-src 'self' ; object-src 'none'; connect-src https://stats-api.judilibre.io/stats https://api.github.com/repos/Cour-de-cassation/judilibre-uptime/issues; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data:;font-src 'self' data:; require-trusted-types-for 'script'\">\n\t\t<meta charset=\"utf-8\" />\n\t\t<link rel=\"icon\" href=\"/cour-de-cassation.svg\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\n\t\t<meta http-equiv=\"content-security-policy\" content=\"\">\n\t<link rel=\"modulepreload\" href=\"/_app/start-3e2568cb.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/index-e5f1005d.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/singletons-d1fb5791.js\">\n\t</head>\n\t<body>\n\t\t<div id=\"svelte\">\n\t\t<script type=\"module\" data-sveltekit-hydrate=\"45h\">\n\t\timport { start } from \"/_app/start-3e2568cb.js\";\n\t\tstart({\n\t\t\ttarget: document.querySelector('[data-sveltekit-hydrate=\"45h\"]').parentNode,\n\t\t\tpaths: {\"base\":\"\",\"assets\":\"\"},\n\t\t\tsession: {},\n\t\t\troute: true,\n\t\t\tspa: true,\n\t\t\ttrailing_slash: \"never\",\n\t\t\thydrate: null\n\t\t});\n\t</script></div>\n\t</body>\n</html>\n",
-      "ip": "185.199.108.153",
-      "timestamp": "2023-12-31T01:00:29.57312206Z",
-      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
+      "request": ";; opcode: QUERY, status: NOERROR, id: 3964\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;stats.judilibre.io.\tIN\t CNAME\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 3964\n;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512\n\n;; QUESTION SECTION:\n;stats.judilibre.io.\tIN\t CNAME\n\n;; ANSWER SECTION:\nstats.judilibre.io.\t300\tIN\tCNAME\tcour-de-cassation.github.io.\n",
+      "timestamp": "2024-01-07T01:01:11.090392082Z",
       "matcher-status": true
     },
     {
@@ -307,48 +112,9 @@
       "host": "https://stats.judilibre.io",
       "matched-at": "https://stats.judilibre.io",
       "request": "GET / HTTP/1.1\r\nHost: stats.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nAccess-Control-Allow-Origin: *\r\nAge: 28\r\nCache-Control: max-age=600\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 31 Dec 2023 01:00:29 GMT\r\nEtag: W/\"62895f74-4aa\"\r\nExpires: Sun, 31 Dec 2023 00:58:38 GMT\r\nLast-Modified: Sat, 21 May 2022 21:53:56 GMT\r\nServer: GitHub.com\r\nStrict-Transport-Security: max-age=31556952\r\nVary: Accept-Encoding\r\nVia: 1.1 varnish\r\nX-Cache: HIT\r\nX-Cache-Hits: 1\r\nX-Fastly-Request-Id: a56a44d1fea331dab04dc04e3221159d36450d0a\r\nX-Github-Request-Id: DED2:5A0B:13F8C36:1B66C26:6590BA65\r\nX-Proxy-Cache: MISS\r\nX-Served-By: cache-iad-kiad7000052-IAD\r\nX-Timer: S1703984430.569318,VS0,VE2\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta http-equiv='Content-Security-Policy' content=\"default-src 'self' ; object-src 'none'; connect-src https://stats-api.judilibre.io/stats https://api.github.com/repos/Cour-de-cassation/judilibre-uptime/issues; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data:;font-src 'self' data:; require-trusted-types-for 'script'\">\n\t\t<meta charset=\"utf-8\" />\n\t\t<link rel=\"icon\" href=\"/cour-de-cassation.svg\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\n\t\t<meta http-equiv=\"content-security-policy\" content=\"\">\n\t<link rel=\"modulepreload\" href=\"/_app/start-3e2568cb.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/index-e5f1005d.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/singletons-d1fb5791.js\">\n\t</head>\n\t<body>\n\t\t<div id=\"svelte\">\n\t\t<script type=\"module\" data-sveltekit-hydrate=\"45h\">\n\t\timport { start } from \"/_app/start-3e2568cb.js\";\n\t\tstart({\n\t\t\ttarget: document.querySelector('[data-sveltekit-hydrate=\"45h\"]').parentNode,\n\t\t\tpaths: {\"base\":\"\",\"assets\":\"\"},\n\t\t\tsession: {},\n\t\t\troute: true,\n\t\t\tspa: true,\n\t\t\ttrailing_slash: \"never\",\n\t\t\thydrate: null\n\t\t});\n\t</script></div>\n\t</body>\n</html>\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nAccess-Control-Allow-Origin: *\r\nAge: 7\r\nCache-Control: max-age=600\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 07 Jan 2024 01:01:40 GMT\r\nEtag: W/\"62895f74-4aa\"\r\nExpires: Sun, 07 Jan 2024 01:00:15 GMT\r\nLast-Modified: Sat, 21 May 2022 21:53:56 GMT\r\nServer: GitHub.com\r\nStrict-Transport-Security: max-age=31556952\r\nVary: Accept-Encoding\r\nVia: 1.1 varnish\r\nX-Cache: HIT\r\nX-Cache-Hits: 1\r\nX-Fastly-Request-Id: f8579a273b4ad9f552933b3571db7f9227866c37\r\nX-Github-Request-Id: 1BBC:97DB:3BCEE13:542ECF3:6599F545\r\nX-Proxy-Cache: MISS\r\nX-Served-By: cache-iad-kcgs7200032-IAD\r\nX-Timer: S1704589300.102512,VS0,VE2\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta http-equiv='Content-Security-Policy' content=\"default-src 'self' ; object-src 'none'; connect-src https://stats-api.judilibre.io/stats https://api.github.com/repos/Cour-de-cassation/judilibre-uptime/issues; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data:;font-src 'self' data:; require-trusted-types-for 'script'\">\n\t\t<meta charset=\"utf-8\" />\n\t\t<link rel=\"icon\" href=\"/cour-de-cassation.svg\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\n\t\t<meta http-equiv=\"content-security-policy\" content=\"\">\n\t<link rel=\"modulepreload\" href=\"/_app/start-3e2568cb.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/index-e5f1005d.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/singletons-d1fb5791.js\">\n\t</head>\n\t<body>\n\t\t<div id=\"svelte\">\n\t\t<script type=\"module\" data-sveltekit-hydrate=\"45h\">\n\t\timport { start } from \"/_app/start-3e2568cb.js\";\n\t\tstart({\n\t\t\ttarget: document.querySelector('[data-sveltekit-hydrate=\"45h\"]').parentNode,\n\t\t\tpaths: {\"base\":\"\",\"assets\":\"\"},\n\t\t\tsession: {},\n\t\t\troute: true,\n\t\t\tspa: true,\n\t\t\ttrailing_slash: \"never\",\n\t\t\thydrate: null\n\t\t});\n\t</script></div>\n\t</body>\n</html>\n",
       "ip": "185.199.108.153",
-      "timestamp": "2023-12-31T01:00:29.573133972Z",
-      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
-      "matcher-status": true
-    },
-    {
-      "template": "http/misconfiguration/http-missing-security-headers.yaml",
-      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-      "template-id": "http-missing-security-headers",
-      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-      "info": {
-        "name": "HTTP Missing Security Headers",
-        "author": [
-          "socketz",
-          "geeknik",
-          "g4l1t0",
-          "convisoappsec",
-          "kurohost",
-          "dawid-czarnecki",
-          "forgedhallpass",
-          "jub0bs"
-        ],
-        "tags": [
-          "misconfig",
-          "headers",
-          "generic"
-        ],
-        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-        "severity": "info",
-        "metadata": {
-          "max-request": 1
-        }
-      },
-      "matcher-name": "content-security-policy",
-      "type": "http",
-      "host": "https://stats.judilibre.io",
-      "matched-at": "https://stats.judilibre.io",
-      "request": "GET / HTTP/1.1\r\nHost: stats.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nAccess-Control-Allow-Origin: *\r\nAge: 28\r\nCache-Control: max-age=600\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 31 Dec 2023 01:00:29 GMT\r\nEtag: W/\"62895f74-4aa\"\r\nExpires: Sun, 31 Dec 2023 00:58:38 GMT\r\nLast-Modified: Sat, 21 May 2022 21:53:56 GMT\r\nServer: GitHub.com\r\nStrict-Transport-Security: max-age=31556952\r\nVary: Accept-Encoding\r\nVia: 1.1 varnish\r\nX-Cache: HIT\r\nX-Cache-Hits: 1\r\nX-Fastly-Request-Id: a56a44d1fea331dab04dc04e3221159d36450d0a\r\nX-Github-Request-Id: DED2:5A0B:13F8C36:1B66C26:6590BA65\r\nX-Proxy-Cache: MISS\r\nX-Served-By: cache-iad-kiad7000052-IAD\r\nX-Timer: S1703984430.569318,VS0,VE2\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta http-equiv='Content-Security-Policy' content=\"default-src 'self' ; object-src 'none'; connect-src https://stats-api.judilibre.io/stats https://api.github.com/repos/Cour-de-cassation/judilibre-uptime/issues; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data:;font-src 'self' data:; require-trusted-types-for 'script'\">\n\t\t<meta charset=\"utf-8\" />\n\t\t<link rel=\"icon\" href=\"/cour-de-cassation.svg\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\n\t\t<meta http-equiv=\"content-security-policy\" content=\"\">\n\t<link rel=\"modulepreload\" href=\"/_app/start-3e2568cb.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/index-e5f1005d.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/singletons-d1fb5791.js\">\n\t</head>\n\t<body>\n\t\t<div id=\"svelte\">\n\t\t<script type=\"module\" data-sveltekit-hydrate=\"45h\">\n\t\timport { start } from \"/_app/start-3e2568cb.js\";\n\t\tstart({\n\t\t\ttarget: document.querySelector('[data-sveltekit-hydrate=\"45h\"]').parentNode,\n\t\t\tpaths: {\"base\":\"\",\"assets\":\"\"},\n\t\t\tsession: {},\n\t\t\troute: true,\n\t\t\tspa: true,\n\t\t\ttrailing_slash: \"never\",\n\t\t\thydrate: null\n\t\t});\n\t</script></div>\n\t</body>\n</html>\n",
-      "ip": "185.199.108.153",
-      "timestamp": "2023-12-31T01:00:29.573149551Z",
+      "timestamp": "2024-01-07T01:01:40.105852831Z",
       "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
       "matcher-status": true
     },
@@ -385,9 +151,9 @@
       "host": "https://stats.judilibre.io",
       "matched-at": "https://stats.judilibre.io",
       "request": "GET / HTTP/1.1\r\nHost: stats.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nAccess-Control-Allow-Origin: *\r\nAge: 28\r\nCache-Control: max-age=600\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 31 Dec 2023 01:00:29 GMT\r\nEtag: W/\"62895f74-4aa\"\r\nExpires: Sun, 31 Dec 2023 00:58:38 GMT\r\nLast-Modified: Sat, 21 May 2022 21:53:56 GMT\r\nServer: GitHub.com\r\nStrict-Transport-Security: max-age=31556952\r\nVary: Accept-Encoding\r\nVia: 1.1 varnish\r\nX-Cache: HIT\r\nX-Cache-Hits: 1\r\nX-Fastly-Request-Id: a56a44d1fea331dab04dc04e3221159d36450d0a\r\nX-Github-Request-Id: DED2:5A0B:13F8C36:1B66C26:6590BA65\r\nX-Proxy-Cache: MISS\r\nX-Served-By: cache-iad-kiad7000052-IAD\r\nX-Timer: S1703984430.569318,VS0,VE2\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta http-equiv='Content-Security-Policy' content=\"default-src 'self' ; object-src 'none'; connect-src https://stats-api.judilibre.io/stats https://api.github.com/repos/Cour-de-cassation/judilibre-uptime/issues; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data:;font-src 'self' data:; require-trusted-types-for 'script'\">\n\t\t<meta charset=\"utf-8\" />\n\t\t<link rel=\"icon\" href=\"/cour-de-cassation.svg\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\n\t\t<meta http-equiv=\"content-security-policy\" content=\"\">\n\t<link rel=\"modulepreload\" href=\"/_app/start-3e2568cb.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/index-e5f1005d.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/singletons-d1fb5791.js\">\n\t</head>\n\t<body>\n\t\t<div id=\"svelte\">\n\t\t<script type=\"module\" data-sveltekit-hydrate=\"45h\">\n\t\timport { start } from \"/_app/start-3e2568cb.js\";\n\t\tstart({\n\t\t\ttarget: document.querySelector('[data-sveltekit-hydrate=\"45h\"]').parentNode,\n\t\t\tpaths: {\"base\":\"\",\"assets\":\"\"},\n\t\t\tsession: {},\n\t\t\troute: true,\n\t\t\tspa: true,\n\t\t\ttrailing_slash: \"never\",\n\t\t\thydrate: null\n\t\t});\n\t</script></div>\n\t</body>\n</html>\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nAccess-Control-Allow-Origin: *\r\nAge: 7\r\nCache-Control: max-age=600\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 07 Jan 2024 01:01:40 GMT\r\nEtag: W/\"62895f74-4aa\"\r\nExpires: Sun, 07 Jan 2024 01:00:15 GMT\r\nLast-Modified: Sat, 21 May 2022 21:53:56 GMT\r\nServer: GitHub.com\r\nStrict-Transport-Security: max-age=31556952\r\nVary: Accept-Encoding\r\nVia: 1.1 varnish\r\nX-Cache: HIT\r\nX-Cache-Hits: 1\r\nX-Fastly-Request-Id: f8579a273b4ad9f552933b3571db7f9227866c37\r\nX-Github-Request-Id: 1BBC:97DB:3BCEE13:542ECF3:6599F545\r\nX-Proxy-Cache: MISS\r\nX-Served-By: cache-iad-kcgs7200032-IAD\r\nX-Timer: S1704589300.102512,VS0,VE2\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta http-equiv='Content-Security-Policy' content=\"default-src 'self' ; object-src 'none'; connect-src https://stats-api.judilibre.io/stats https://api.github.com/repos/Cour-de-cassation/judilibre-uptime/issues; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data:;font-src 'self' data:; require-trusted-types-for 'script'\">\n\t\t<meta charset=\"utf-8\" />\n\t\t<link rel=\"icon\" href=\"/cour-de-cassation.svg\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\n\t\t<meta http-equiv=\"content-security-policy\" content=\"\">\n\t<link rel=\"modulepreload\" href=\"/_app/start-3e2568cb.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/index-e5f1005d.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/singletons-d1fb5791.js\">\n\t</head>\n\t<body>\n\t\t<div id=\"svelte\">\n\t\t<script type=\"module\" data-sveltekit-hydrate=\"45h\">\n\t\timport { start } from \"/_app/start-3e2568cb.js\";\n\t\tstart({\n\t\t\ttarget: document.querySelector('[data-sveltekit-hydrate=\"45h\"]').parentNode,\n\t\t\tpaths: {\"base\":\"\",\"assets\":\"\"},\n\t\t\tsession: {},\n\t\t\troute: true,\n\t\t\tspa: true,\n\t\t\ttrailing_slash: \"never\",\n\t\t\thydrate: null\n\t\t});\n\t</script></div>\n\t</body>\n</html>\n",
       "ip": "185.199.108.153",
-      "timestamp": "2023-12-31T01:00:29.573187081Z",
+      "timestamp": "2024-01-07T01:01:40.10590016Z",
       "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
       "matcher-status": true
     },
@@ -424,9 +190,48 @@
       "host": "https://stats.judilibre.io",
       "matched-at": "https://stats.judilibre.io",
       "request": "GET / HTTP/1.1\r\nHost: stats.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nAccess-Control-Allow-Origin: *\r\nAge: 28\r\nCache-Control: max-age=600\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 31 Dec 2023 01:00:29 GMT\r\nEtag: W/\"62895f74-4aa\"\r\nExpires: Sun, 31 Dec 2023 00:58:38 GMT\r\nLast-Modified: Sat, 21 May 2022 21:53:56 GMT\r\nServer: GitHub.com\r\nStrict-Transport-Security: max-age=31556952\r\nVary: Accept-Encoding\r\nVia: 1.1 varnish\r\nX-Cache: HIT\r\nX-Cache-Hits: 1\r\nX-Fastly-Request-Id: a56a44d1fea331dab04dc04e3221159d36450d0a\r\nX-Github-Request-Id: DED2:5A0B:13F8C36:1B66C26:6590BA65\r\nX-Proxy-Cache: MISS\r\nX-Served-By: cache-iad-kiad7000052-IAD\r\nX-Timer: S1703984430.569318,VS0,VE2\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta http-equiv='Content-Security-Policy' content=\"default-src 'self' ; object-src 'none'; connect-src https://stats-api.judilibre.io/stats https://api.github.com/repos/Cour-de-cassation/judilibre-uptime/issues; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data:;font-src 'self' data:; require-trusted-types-for 'script'\">\n\t\t<meta charset=\"utf-8\" />\n\t\t<link rel=\"icon\" href=\"/cour-de-cassation.svg\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\n\t\t<meta http-equiv=\"content-security-policy\" content=\"\">\n\t<link rel=\"modulepreload\" href=\"/_app/start-3e2568cb.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/index-e5f1005d.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/singletons-d1fb5791.js\">\n\t</head>\n\t<body>\n\t\t<div id=\"svelte\">\n\t\t<script type=\"module\" data-sveltekit-hydrate=\"45h\">\n\t\timport { start } from \"/_app/start-3e2568cb.js\";\n\t\tstart({\n\t\t\ttarget: document.querySelector('[data-sveltekit-hydrate=\"45h\"]').parentNode,\n\t\t\tpaths: {\"base\":\"\",\"assets\":\"\"},\n\t\t\tsession: {},\n\t\t\troute: true,\n\t\t\tspa: true,\n\t\t\ttrailing_slash: \"never\",\n\t\t\thydrate: null\n\t\t});\n\t</script></div>\n\t</body>\n</html>\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nAccess-Control-Allow-Origin: *\r\nAge: 7\r\nCache-Control: max-age=600\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 07 Jan 2024 01:01:40 GMT\r\nEtag: W/\"62895f74-4aa\"\r\nExpires: Sun, 07 Jan 2024 01:00:15 GMT\r\nLast-Modified: Sat, 21 May 2022 21:53:56 GMT\r\nServer: GitHub.com\r\nStrict-Transport-Security: max-age=31556952\r\nVary: Accept-Encoding\r\nVia: 1.1 varnish\r\nX-Cache: HIT\r\nX-Cache-Hits: 1\r\nX-Fastly-Request-Id: f8579a273b4ad9f552933b3571db7f9227866c37\r\nX-Github-Request-Id: 1BBC:97DB:3BCEE13:542ECF3:6599F545\r\nX-Proxy-Cache: MISS\r\nX-Served-By: cache-iad-kcgs7200032-IAD\r\nX-Timer: S1704589300.102512,VS0,VE2\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta http-equiv='Content-Security-Policy' content=\"default-src 'self' ; object-src 'none'; connect-src https://stats-api.judilibre.io/stats https://api.github.com/repos/Cour-de-cassation/judilibre-uptime/issues; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data:;font-src 'self' data:; require-trusted-types-for 'script'\">\n\t\t<meta charset=\"utf-8\" />\n\t\t<link rel=\"icon\" href=\"/cour-de-cassation.svg\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\n\t\t<meta http-equiv=\"content-security-policy\" content=\"\">\n\t<link rel=\"modulepreload\" href=\"/_app/start-3e2568cb.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/index-e5f1005d.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/singletons-d1fb5791.js\">\n\t</head>\n\t<body>\n\t\t<div id=\"svelte\">\n\t\t<script type=\"module\" data-sveltekit-hydrate=\"45h\">\n\t\timport { start } from \"/_app/start-3e2568cb.js\";\n\t\tstart({\n\t\t\ttarget: document.querySelector('[data-sveltekit-hydrate=\"45h\"]').parentNode,\n\t\t\tpaths: {\"base\":\"\",\"assets\":\"\"},\n\t\t\tsession: {},\n\t\t\troute: true,\n\t\t\tspa: true,\n\t\t\ttrailing_slash: \"never\",\n\t\t\thydrate: null\n\t\t});\n\t</script></div>\n\t</body>\n</html>\n",
       "ip": "185.199.108.153",
-      "timestamp": "2023-12-31T01:00:29.573202119Z",
+      "timestamp": "2024-01-07T01:01:40.105918936Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "referrer-policy",
+      "type": "http",
+      "host": "https://stats.judilibre.io",
+      "matched-at": "https://stats.judilibre.io",
+      "request": "GET / HTTP/1.1\r\nHost: stats.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nAccess-Control-Allow-Origin: *\r\nAge: 7\r\nCache-Control: max-age=600\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 07 Jan 2024 01:01:40 GMT\r\nEtag: W/\"62895f74-4aa\"\r\nExpires: Sun, 07 Jan 2024 01:00:15 GMT\r\nLast-Modified: Sat, 21 May 2022 21:53:56 GMT\r\nServer: GitHub.com\r\nStrict-Transport-Security: max-age=31556952\r\nVary: Accept-Encoding\r\nVia: 1.1 varnish\r\nX-Cache: HIT\r\nX-Cache-Hits: 1\r\nX-Fastly-Request-Id: f8579a273b4ad9f552933b3571db7f9227866c37\r\nX-Github-Request-Id: 1BBC:97DB:3BCEE13:542ECF3:6599F545\r\nX-Proxy-Cache: MISS\r\nX-Served-By: cache-iad-kcgs7200032-IAD\r\nX-Timer: S1704589300.102512,VS0,VE2\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta http-equiv='Content-Security-Policy' content=\"default-src 'self' ; object-src 'none'; connect-src https://stats-api.judilibre.io/stats https://api.github.com/repos/Cour-de-cassation/judilibre-uptime/issues; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data:;font-src 'self' data:; require-trusted-types-for 'script'\">\n\t\t<meta charset=\"utf-8\" />\n\t\t<link rel=\"icon\" href=\"/cour-de-cassation.svg\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\n\t\t<meta http-equiv=\"content-security-policy\" content=\"\">\n\t<link rel=\"modulepreload\" href=\"/_app/start-3e2568cb.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/index-e5f1005d.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/singletons-d1fb5791.js\">\n\t</head>\n\t<body>\n\t\t<div id=\"svelte\">\n\t\t<script type=\"module\" data-sveltekit-hydrate=\"45h\">\n\t\timport { start } from \"/_app/start-3e2568cb.js\";\n\t\tstart({\n\t\t\ttarget: document.querySelector('[data-sveltekit-hydrate=\"45h\"]').parentNode,\n\t\t\tpaths: {\"base\":\"\",\"assets\":\"\"},\n\t\t\tsession: {},\n\t\t\troute: true,\n\t\t\tspa: true,\n\t\t\ttrailing_slash: \"never\",\n\t\t\thydrate: null\n\t\t});\n\t</script></div>\n\t</body>\n</html>\n",
+      "ip": "185.199.108.153",
+      "timestamp": "2024-01-07T01:01:40.105935577Z",
       "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
       "matcher-status": true
     },
@@ -463,9 +268,204 @@
       "host": "https://stats.judilibre.io",
       "matched-at": "https://stats.judilibre.io",
       "request": "GET / HTTP/1.1\r\nHost: stats.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nAccess-Control-Allow-Origin: *\r\nAge: 28\r\nCache-Control: max-age=600\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 31 Dec 2023 01:00:29 GMT\r\nEtag: W/\"62895f74-4aa\"\r\nExpires: Sun, 31 Dec 2023 00:58:38 GMT\r\nLast-Modified: Sat, 21 May 2022 21:53:56 GMT\r\nServer: GitHub.com\r\nStrict-Transport-Security: max-age=31556952\r\nVary: Accept-Encoding\r\nVia: 1.1 varnish\r\nX-Cache: HIT\r\nX-Cache-Hits: 1\r\nX-Fastly-Request-Id: a56a44d1fea331dab04dc04e3221159d36450d0a\r\nX-Github-Request-Id: DED2:5A0B:13F8C36:1B66C26:6590BA65\r\nX-Proxy-Cache: MISS\r\nX-Served-By: cache-iad-kiad7000052-IAD\r\nX-Timer: S1703984430.569318,VS0,VE2\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta http-equiv='Content-Security-Policy' content=\"default-src 'self' ; object-src 'none'; connect-src https://stats-api.judilibre.io/stats https://api.github.com/repos/Cour-de-cassation/judilibre-uptime/issues; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data:;font-src 'self' data:; require-trusted-types-for 'script'\">\n\t\t<meta charset=\"utf-8\" />\n\t\t<link rel=\"icon\" href=\"/cour-de-cassation.svg\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\n\t\t<meta http-equiv=\"content-security-policy\" content=\"\">\n\t<link rel=\"modulepreload\" href=\"/_app/start-3e2568cb.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/index-e5f1005d.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/singletons-d1fb5791.js\">\n\t</head>\n\t<body>\n\t\t<div id=\"svelte\">\n\t\t<script type=\"module\" data-sveltekit-hydrate=\"45h\">\n\t\timport { start } from \"/_app/start-3e2568cb.js\";\n\t\tstart({\n\t\t\ttarget: document.querySelector('[data-sveltekit-hydrate=\"45h\"]').parentNode,\n\t\t\tpaths: {\"base\":\"\",\"assets\":\"\"},\n\t\t\tsession: {},\n\t\t\troute: true,\n\t\t\tspa: true,\n\t\t\ttrailing_slash: \"never\",\n\t\t\thydrate: null\n\t\t});\n\t</script></div>\n\t</body>\n</html>\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nAccess-Control-Allow-Origin: *\r\nAge: 7\r\nCache-Control: max-age=600\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 07 Jan 2024 01:01:40 GMT\r\nEtag: W/\"62895f74-4aa\"\r\nExpires: Sun, 07 Jan 2024 01:00:15 GMT\r\nLast-Modified: Sat, 21 May 2022 21:53:56 GMT\r\nServer: GitHub.com\r\nStrict-Transport-Security: max-age=31556952\r\nVary: Accept-Encoding\r\nVia: 1.1 varnish\r\nX-Cache: HIT\r\nX-Cache-Hits: 1\r\nX-Fastly-Request-Id: f8579a273b4ad9f552933b3571db7f9227866c37\r\nX-Github-Request-Id: 1BBC:97DB:3BCEE13:542ECF3:6599F545\r\nX-Proxy-Cache: MISS\r\nX-Served-By: cache-iad-kcgs7200032-IAD\r\nX-Timer: S1704589300.102512,VS0,VE2\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta http-equiv='Content-Security-Policy' content=\"default-src 'self' ; object-src 'none'; connect-src https://stats-api.judilibre.io/stats https://api.github.com/repos/Cour-de-cassation/judilibre-uptime/issues; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data:;font-src 'self' data:; require-trusted-types-for 'script'\">\n\t\t<meta charset=\"utf-8\" />\n\t\t<link rel=\"icon\" href=\"/cour-de-cassation.svg\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\n\t\t<meta http-equiv=\"content-security-policy\" content=\"\">\n\t<link rel=\"modulepreload\" href=\"/_app/start-3e2568cb.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/index-e5f1005d.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/singletons-d1fb5791.js\">\n\t</head>\n\t<body>\n\t\t<div id=\"svelte\">\n\t\t<script type=\"module\" data-sveltekit-hydrate=\"45h\">\n\t\timport { start } from \"/_app/start-3e2568cb.js\";\n\t\tstart({\n\t\t\ttarget: document.querySelector('[data-sveltekit-hydrate=\"45h\"]').parentNode,\n\t\t\tpaths: {\"base\":\"\",\"assets\":\"\"},\n\t\t\tsession: {},\n\t\t\troute: true,\n\t\t\tspa: true,\n\t\t\ttrailing_slash: \"never\",\n\t\t\thydrate: null\n\t\t});\n\t</script></div>\n\t</body>\n</html>\n",
       "ip": "185.199.108.153",
-      "timestamp": "2023-12-31T01:00:29.573214913Z",
+      "timestamp": "2024-01-07T01:01:40.10594809Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cross-origin-opener-policy",
+      "type": "http",
+      "host": "https://stats.judilibre.io",
+      "matched-at": "https://stats.judilibre.io",
+      "request": "GET / HTTP/1.1\r\nHost: stats.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nAccess-Control-Allow-Origin: *\r\nAge: 7\r\nCache-Control: max-age=600\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 07 Jan 2024 01:01:40 GMT\r\nEtag: W/\"62895f74-4aa\"\r\nExpires: Sun, 07 Jan 2024 01:00:15 GMT\r\nLast-Modified: Sat, 21 May 2022 21:53:56 GMT\r\nServer: GitHub.com\r\nStrict-Transport-Security: max-age=31556952\r\nVary: Accept-Encoding\r\nVia: 1.1 varnish\r\nX-Cache: HIT\r\nX-Cache-Hits: 1\r\nX-Fastly-Request-Id: f8579a273b4ad9f552933b3571db7f9227866c37\r\nX-Github-Request-Id: 1BBC:97DB:3BCEE13:542ECF3:6599F545\r\nX-Proxy-Cache: MISS\r\nX-Served-By: cache-iad-kcgs7200032-IAD\r\nX-Timer: S1704589300.102512,VS0,VE2\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta http-equiv='Content-Security-Policy' content=\"default-src 'self' ; object-src 'none'; connect-src https://stats-api.judilibre.io/stats https://api.github.com/repos/Cour-de-cassation/judilibre-uptime/issues; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data:;font-src 'self' data:; require-trusted-types-for 'script'\">\n\t\t<meta charset=\"utf-8\" />\n\t\t<link rel=\"icon\" href=\"/cour-de-cassation.svg\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\n\t\t<meta http-equiv=\"content-security-policy\" content=\"\">\n\t<link rel=\"modulepreload\" href=\"/_app/start-3e2568cb.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/index-e5f1005d.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/singletons-d1fb5791.js\">\n\t</head>\n\t<body>\n\t\t<div id=\"svelte\">\n\t\t<script type=\"module\" data-sveltekit-hydrate=\"45h\">\n\t\timport { start } from \"/_app/start-3e2568cb.js\";\n\t\tstart({\n\t\t\ttarget: document.querySelector('[data-sveltekit-hydrate=\"45h\"]').parentNode,\n\t\t\tpaths: {\"base\":\"\",\"assets\":\"\"},\n\t\t\tsession: {},\n\t\t\troute: true,\n\t\t\tspa: true,\n\t\t\ttrailing_slash: \"never\",\n\t\t\thydrate: null\n\t\t});\n\t</script></div>\n\t</body>\n</html>\n",
+      "ip": "185.199.108.153",
+      "timestamp": "2024-01-07T01:01:40.105960974Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "content-security-policy",
+      "type": "http",
+      "host": "https://stats.judilibre.io",
+      "matched-at": "https://stats.judilibre.io",
+      "request": "GET / HTTP/1.1\r\nHost: stats.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nAccess-Control-Allow-Origin: *\r\nAge: 7\r\nCache-Control: max-age=600\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 07 Jan 2024 01:01:40 GMT\r\nEtag: W/\"62895f74-4aa\"\r\nExpires: Sun, 07 Jan 2024 01:00:15 GMT\r\nLast-Modified: Sat, 21 May 2022 21:53:56 GMT\r\nServer: GitHub.com\r\nStrict-Transport-Security: max-age=31556952\r\nVary: Accept-Encoding\r\nVia: 1.1 varnish\r\nX-Cache: HIT\r\nX-Cache-Hits: 1\r\nX-Fastly-Request-Id: f8579a273b4ad9f552933b3571db7f9227866c37\r\nX-Github-Request-Id: 1BBC:97DB:3BCEE13:542ECF3:6599F545\r\nX-Proxy-Cache: MISS\r\nX-Served-By: cache-iad-kcgs7200032-IAD\r\nX-Timer: S1704589300.102512,VS0,VE2\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta http-equiv='Content-Security-Policy' content=\"default-src 'self' ; object-src 'none'; connect-src https://stats-api.judilibre.io/stats https://api.github.com/repos/Cour-de-cassation/judilibre-uptime/issues; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data:;font-src 'self' data:; require-trusted-types-for 'script'\">\n\t\t<meta charset=\"utf-8\" />\n\t\t<link rel=\"icon\" href=\"/cour-de-cassation.svg\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\n\t\t<meta http-equiv=\"content-security-policy\" content=\"\">\n\t<link rel=\"modulepreload\" href=\"/_app/start-3e2568cb.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/index-e5f1005d.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/singletons-d1fb5791.js\">\n\t</head>\n\t<body>\n\t\t<div id=\"svelte\">\n\t\t<script type=\"module\" data-sveltekit-hydrate=\"45h\">\n\t\timport { start } from \"/_app/start-3e2568cb.js\";\n\t\tstart({\n\t\t\ttarget: document.querySelector('[data-sveltekit-hydrate=\"45h\"]').parentNode,\n\t\t\tpaths: {\"base\":\"\",\"assets\":\"\"},\n\t\t\tsession: {},\n\t\t\troute: true,\n\t\t\tspa: true,\n\t\t\ttrailing_slash: \"never\",\n\t\t\thydrate: null\n\t\t});\n\t</script></div>\n\t</body>\n</html>\n",
+      "ip": "185.199.108.153",
+      "timestamp": "2024-01-07T01:01:40.105975953Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "permissions-policy",
+      "type": "http",
+      "host": "https://stats.judilibre.io",
+      "matched-at": "https://stats.judilibre.io",
+      "request": "GET / HTTP/1.1\r\nHost: stats.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nAccess-Control-Allow-Origin: *\r\nAge: 7\r\nCache-Control: max-age=600\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 07 Jan 2024 01:01:40 GMT\r\nEtag: W/\"62895f74-4aa\"\r\nExpires: Sun, 07 Jan 2024 01:00:15 GMT\r\nLast-Modified: Sat, 21 May 2022 21:53:56 GMT\r\nServer: GitHub.com\r\nStrict-Transport-Security: max-age=31556952\r\nVary: Accept-Encoding\r\nVia: 1.1 varnish\r\nX-Cache: HIT\r\nX-Cache-Hits: 1\r\nX-Fastly-Request-Id: f8579a273b4ad9f552933b3571db7f9227866c37\r\nX-Github-Request-Id: 1BBC:97DB:3BCEE13:542ECF3:6599F545\r\nX-Proxy-Cache: MISS\r\nX-Served-By: cache-iad-kcgs7200032-IAD\r\nX-Timer: S1704589300.102512,VS0,VE2\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta http-equiv='Content-Security-Policy' content=\"default-src 'self' ; object-src 'none'; connect-src https://stats-api.judilibre.io/stats https://api.github.com/repos/Cour-de-cassation/judilibre-uptime/issues; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data:;font-src 'self' data:; require-trusted-types-for 'script'\">\n\t\t<meta charset=\"utf-8\" />\n\t\t<link rel=\"icon\" href=\"/cour-de-cassation.svg\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\n\t\t<meta http-equiv=\"content-security-policy\" content=\"\">\n\t<link rel=\"modulepreload\" href=\"/_app/start-3e2568cb.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/index-e5f1005d.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/singletons-d1fb5791.js\">\n\t</head>\n\t<body>\n\t\t<div id=\"svelte\">\n\t\t<script type=\"module\" data-sveltekit-hydrate=\"45h\">\n\t\timport { start } from \"/_app/start-3e2568cb.js\";\n\t\tstart({\n\t\t\ttarget: document.querySelector('[data-sveltekit-hydrate=\"45h\"]').parentNode,\n\t\t\tpaths: {\"base\":\"\",\"assets\":\"\"},\n\t\t\tsession: {},\n\t\t\troute: true,\n\t\t\tspa: true,\n\t\t\ttrailing_slash: \"never\",\n\t\t\thydrate: null\n\t\t});\n\t</script></div>\n\t</body>\n</html>\n",
+      "ip": "185.199.108.153",
+      "timestamp": "2024-01-07T01:01:40.105996992Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "x-frame-options",
+      "type": "http",
+      "host": "https://stats.judilibre.io",
+      "matched-at": "https://stats.judilibre.io",
+      "request": "GET / HTTP/1.1\r\nHost: stats.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nAccess-Control-Allow-Origin: *\r\nAge: 7\r\nCache-Control: max-age=600\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 07 Jan 2024 01:01:40 GMT\r\nEtag: W/\"62895f74-4aa\"\r\nExpires: Sun, 07 Jan 2024 01:00:15 GMT\r\nLast-Modified: Sat, 21 May 2022 21:53:56 GMT\r\nServer: GitHub.com\r\nStrict-Transport-Security: max-age=31556952\r\nVary: Accept-Encoding\r\nVia: 1.1 varnish\r\nX-Cache: HIT\r\nX-Cache-Hits: 1\r\nX-Fastly-Request-Id: f8579a273b4ad9f552933b3571db7f9227866c37\r\nX-Github-Request-Id: 1BBC:97DB:3BCEE13:542ECF3:6599F545\r\nX-Proxy-Cache: MISS\r\nX-Served-By: cache-iad-kcgs7200032-IAD\r\nX-Timer: S1704589300.102512,VS0,VE2\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta http-equiv='Content-Security-Policy' content=\"default-src 'self' ; object-src 'none'; connect-src https://stats-api.judilibre.io/stats https://api.github.com/repos/Cour-de-cassation/judilibre-uptime/issues; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data:;font-src 'self' data:; require-trusted-types-for 'script'\">\n\t\t<meta charset=\"utf-8\" />\n\t\t<link rel=\"icon\" href=\"/cour-de-cassation.svg\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\n\t\t<meta http-equiv=\"content-security-policy\" content=\"\">\n\t<link rel=\"modulepreload\" href=\"/_app/start-3e2568cb.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/index-e5f1005d.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/singletons-d1fb5791.js\">\n\t</head>\n\t<body>\n\t\t<div id=\"svelte\">\n\t\t<script type=\"module\" data-sveltekit-hydrate=\"45h\">\n\t\timport { start } from \"/_app/start-3e2568cb.js\";\n\t\tstart({\n\t\t\ttarget: document.querySelector('[data-sveltekit-hydrate=\"45h\"]').parentNode,\n\t\t\tpaths: {\"base\":\"\",\"assets\":\"\"},\n\t\t\tsession: {},\n\t\t\troute: true,\n\t\t\tspa: true,\n\t\t\ttrailing_slash: \"never\",\n\t\t\thydrate: null\n\t\t});\n\t</script></div>\n\t</body>\n</html>\n",
+      "ip": "185.199.108.153",
+      "timestamp": "2024-01-07T01:01:40.106015497Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cross-origin-embedder-policy",
+      "type": "http",
+      "host": "https://stats.judilibre.io",
+      "matched-at": "https://stats.judilibre.io",
+      "request": "GET / HTTP/1.1\r\nHost: stats.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nAccept-Ranges: bytes\r\nAccess-Control-Allow-Origin: *\r\nAge: 7\r\nCache-Control: max-age=600\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 07 Jan 2024 01:01:40 GMT\r\nEtag: W/\"62895f74-4aa\"\r\nExpires: Sun, 07 Jan 2024 01:00:15 GMT\r\nLast-Modified: Sat, 21 May 2022 21:53:56 GMT\r\nServer: GitHub.com\r\nStrict-Transport-Security: max-age=31556952\r\nVary: Accept-Encoding\r\nVia: 1.1 varnish\r\nX-Cache: HIT\r\nX-Cache-Hits: 1\r\nX-Fastly-Request-Id: f8579a273b4ad9f552933b3571db7f9227866c37\r\nX-Github-Request-Id: 1BBC:97DB:3BCEE13:542ECF3:6599F545\r\nX-Proxy-Cache: MISS\r\nX-Served-By: cache-iad-kcgs7200032-IAD\r\nX-Timer: S1704589300.102512,VS0,VE2\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta http-equiv='Content-Security-Policy' content=\"default-src 'self' ; object-src 'none'; connect-src https://stats-api.judilibre.io/stats https://api.github.com/repos/Cour-de-cassation/judilibre-uptime/issues; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data:;font-src 'self' data:; require-trusted-types-for 'script'\">\n\t\t<meta charset=\"utf-8\" />\n\t\t<link rel=\"icon\" href=\"/cour-de-cassation.svg\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\n\t\t<meta http-equiv=\"content-security-policy\" content=\"\">\n\t<link rel=\"modulepreload\" href=\"/_app/start-3e2568cb.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/index-e5f1005d.js\">\n\t<link rel=\"modulepreload\" href=\"/_app/chunks/singletons-d1fb5791.js\">\n\t</head>\n\t<body>\n\t\t<div id=\"svelte\">\n\t\t<script type=\"module\" data-sveltekit-hydrate=\"45h\">\n\t\timport { start } from \"/_app/start-3e2568cb.js\";\n\t\tstart({\n\t\t\ttarget: document.querySelector('[data-sveltekit-hydrate=\"45h\"]').parentNode,\n\t\t\tpaths: {\"base\":\"\",\"assets\":\"\"},\n\t\t\tsession: {},\n\t\t\troute: true,\n\t\t\tspa: true,\n\t\t\ttrailing_slash: \"never\",\n\t\t\thydrate: null\n\t\t});\n\t</script></div>\n\t</body>\n</html>\n",
+      "ip": "185.199.108.153",
+      "timestamp": "2024-01-07T01:01:40.106037949Z",
       "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
       "matcher-status": true
     },
@@ -493,9 +493,9 @@
       "host": "https://stats.judilibre.io",
       "matched-at": "https://stats.judilibre.io/robots.txt",
       "request": "GET /robots.txt HTTP/1.1\r\nHost: stats.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nContent-Length: 67\r\nAccept-Ranges: bytes\r\nAccess-Control-Allow-Origin: *\r\nAge: 0\r\nCache-Control: max-age=600\r\nContent-Type: text/plain; charset=utf-8\r\nDate: Sun, 31 Dec 2023 01:00:35 GMT\r\nEtag: \"62895f74-43\"\r\nExpires: Sun, 31 Dec 2023 01:10:35 GMT\r\nLast-Modified: Sat, 21 May 2022 21:53:56 GMT\r\nServer: GitHub.com\r\nStrict-Transport-Security: max-age=31556952\r\nVary: Accept-Encoding\r\nVia: 1.1 varnish\r\nX-Cache: MISS\r\nX-Cache-Hits: 0\r\nX-Fastly-Request-Id: d288c77a07b077ae54d73889defbb9ed9cd606cb\r\nX-Github-Request-Id: ED30:15B8:1381449:1AEBCF7:6590BD33\r\nX-Origin-Cache: HIT\r\nX-Proxy-Cache: MISS\r\nX-Served-By: cache-iad-kiad7000033-IAD\r\nX-Timer: S1703984436.565783,VS0,VE7\r\n\r\n# https://www.robotstxt.org/robotstxt.html\nUser-agent: *\nDisallow:\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nContent-Length: 67\r\nAccept-Ranges: bytes\r\nAccess-Control-Allow-Origin: *\r\nAge: 0\r\nCache-Control: max-age=600\r\nContent-Type: text/plain; charset=utf-8\r\nDate: Sun, 07 Jan 2024 01:01:46 GMT\r\nEtag: \"62895f74-43\"\r\nExpires: Sun, 07 Jan 2024 01:11:46 GMT\r\nLast-Modified: Sat, 21 May 2022 21:53:56 GMT\r\nServer: GitHub.com\r\nStrict-Transport-Security: max-age=31556952\r\nVary: Accept-Encoding\r\nVia: 1.1 varnish\r\nX-Cache: MISS\r\nX-Cache-Hits: 0\r\nX-Fastly-Request-Id: 7bd60f31bd380a175f52f2329e5d47cdb566293a\r\nX-Github-Request-Id: 9248:17AE:661AC1:8F6BF0:6599F7FA\r\nX-Origin-Cache: HIT\r\nX-Proxy-Cache: MISS\r\nX-Served-By: cache-iad-kiad7000086-IAD\r\nX-Timer: S1704589306.105940,VS0,VE7\r\n\r\n# https://www.robotstxt.org/robotstxt.html\nUser-agent: *\nDisallow:\n",
       "ip": "185.199.108.153",
-      "timestamp": "2023-12-31T01:00:35.580521008Z",
+      "timestamp": "2024-01-07T01:01:46.113947868Z",
       "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io/robots.txt'",
       "matcher-status": true
     },
@@ -535,9 +535,9 @@
       "host": "https://stats.judilibre.io",
       "matched-at": "https://stats.judilibre.io/",
       "request": "POST / HTTP/1.1\r\nHost: stats.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nContent-Length: 27\r\nContent-Type: application/x-www-form-urlencoded\r\nAccept-Encoding: gzip\r\n\r\n_=<script>alert(1)</script>",
-      "response": "HTTP/1.1 405 Method Not Allowed\r\nConnection: close\r\nContent-Length: 131\r\nAccept-Ranges: bytes\r\nDate: Sun, 31 Dec 2023 01:00:43 GMT\r\nRetry-After: 0\r\nServer: Varnish\r\nVia: 1.1 varnish\r\nX-Cache: MISS\r\nX-Cache-Hits: 0\r\nX-Fastly-Request-Id: 7cee2f6639ee67fa160128941afdf9ded23da990\r\nX-Served-By: cache-iad-kcgs7200057-IAD\r\nX-Timer: S1703984444.556336,VS0,VE1\r\n\r\n<html>\n<head><title>405 Not Allowed</title></head>\n<body bgcolor=\"white\">\n<center><h1>405 Not Allowed</h1></center>\n</body>\n</html>",
+      "response": "HTTP/1.1 405 Method Not Allowed\r\nConnection: close\r\nContent-Length: 131\r\nAccept-Ranges: bytes\r\nDate: Sun, 07 Jan 2024 01:01:54 GMT\r\nRetry-After: 0\r\nServer: Varnish\r\nVia: 1.1 varnish\r\nX-Cache: MISS\r\nX-Cache-Hits: 0\r\nX-Fastly-Request-Id: 2903c261519fa37682daae57a6d876c774c90f84\r\nX-Served-By: cache-iad-kiad7000093-IAD\r\nX-Timer: S1704589314.089731,VS0,VE1\r\n\r\n<html>\n<head><title>405 Not Allowed</title></head>\n<body bgcolor=\"white\">\n<center><h1>405 Not Allowed</h1></center>\n</body>\n</html>",
       "ip": "185.199.108.153",
-      "timestamp": "2023-12-31T01:00:43.562080083Z",
+      "timestamp": "2024-01-07T01:01:54.09509053Z",
       "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: stats.judilibre.io' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io/'",
       "matcher-status": true
     },
@@ -568,7 +568,7 @@
         "Let's Encrypt"
       ],
       "ip": "185.199.108.153",
-      "timestamp": "2023-12-31T01:06:08.65949643Z",
+      "timestamp": "2024-01-07T01:07:19.193343944Z",
       "matcher-status": true
     },
     {
@@ -598,7 +598,7 @@
         "stats.judilibre.io"
       ],
       "ip": "185.199.108.153",
-      "timestamp": "2023-12-31T01:06:08.659604502Z",
+      "timestamp": "2024-01-07T01:07:19.193462407Z",
       "matcher-status": true
     },
     {
@@ -629,7 +629,7 @@
         "tls12"
       ],
       "ip": "185.199.108.153",
-      "timestamp": "2023-12-31T01:06:08.671619027Z",
+      "timestamp": "2024-01-07T01:07:19.252972903Z",
       "matcher-status": true
     },
     {
@@ -660,7 +660,7 @@
         "tls13"
       ],
       "ip": "185.199.108.153",
-      "timestamp": "2023-12-31T01:06:08.685704328Z",
+      "timestamp": "2024-01-07T01:07:19.268661724Z",
       "matcher-status": true
     }
   ]
