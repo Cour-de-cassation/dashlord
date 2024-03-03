@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln stats.judilibre.io</pre>
-<p class="lead">Sun Feb 25 00:51:34 2024 – Sun Feb 25 00:51:51 2024<br>1 hosts scanned.
+<p class="lead">Sun Mar  3 00:56:38 2024 – Sun Mar  3 00:56:56 2024<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -76,7 +76,7 @@
 </tr></thead>
 <tbody><tr>
 <td><span class="label label-success">up</span></td>
-<td>185.199.111.153</td>
+<td>185.199.109.153</td>
 <td>stats.judilibre.io</td>
 <td>2</td>
 <td>0</td>
@@ -91,12 +91,12 @@
             });
           </script><h2 id="onlinehosts" class="target">Online Hosts</h2>
 <div class="panel panel-default">
-<div class="panel-heading clickable" data-toggle="collapse" data-target="#185-199-111-153"><h3 class="panel-title">185.199.111.153 - stats.judilibre.io</h3></div>
-<div class="panel-body collapse in" id="185-199-111-153">
+<div class="panel-heading clickable" data-toggle="collapse" data-target="#185-199-109-153"><h3 class="panel-title">185.199.109.153 - stats.judilibre.io</h3></div>
+<div class="panel-body collapse in" id="185-199-109-153">
 <h4>Hostnames</h4>
 <ul>
 <li>stats.judilibre.io (user)</li>
-<li>cdn-185-199-111-153.github.com (PTR)</li>
+<li>cdn-185-199-109-153.github.com (PTR)</li>
 </ul>
 <h4>Ports</h4>
 <div class="table-responsive"><table class="table table-bordered">
@@ -132,25 +132,26 @@
     Content-Length: 9115
     Server: GitHub.com
     Content-Type: text/html; charset=utf-8
-    ETag: "65c56fc7-239b"
+    ETag: "65e15929-239b"
     Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'
-    X-GitHub-Request-Id: 1BCA:93C6:D3C8D3:1053153:65DA8163
+    X-GitHub-Request-Id: B8FA:1184:72F191:957EA7:65E3C90B
     Accept-Ranges: bytes
-    Date: Sun, 25 Feb 2024 00:51:45 GMT
+    Date: Sun, 03 Mar 2024 00:56:49 GMT
     Via: 1.1 varnish
-    Age: 3517
-    X-Served-By: cache-chi-kigq8000027-CHI
+    Age: 454
+    X-Served-By: cache-iad-kcgs7200135-IAD
     X-Cache: HIT
     X-Cache-Hits: 1
-    X-Timer: S1708822305.065551,VS0,VE1
+    X-Timer: S1709427410.854617,VS0,VE2
     Vary: Accept-Encoding
-    X-Fastly-Request-ID: 8b748d9d9104b4eb2ad0e48b6b97cdc80546bb00
+    X-Fastly-Request-ID: 9718ed0abe542c557865e7edc75c3cff318f72b1
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
     &lt;head&gt;
     &lt;meta http-equiv="Content-type" content="text/html; charset=utf-8"&gt;
     &lt;meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'"&gt;
     &lt;title&gt;Site not found &amp;middot; GitHub Pages&lt;/title&gt;
+    &lt;sty
   HTTPOptions: 
     HTTP/1.1 405 Method Not Allowed
     Connection: close
@@ -158,13 +159,13 @@
     Server: Varnish
     Retry-After: 0
     Accept-Ranges: bytes
-    Date: Sun, 25 Feb 2024 00:51:45 GMT
+    Date: Sun, 03 Mar 2024 00:56:49 GMT
     Via: 1.1 varnish
-    X-Served-By: cache-chi-kigq8000142-CHI
+    X-Served-By: cache-iad-kcgs7200083-IAD
     X-Cache: MISS
     X-Cache-Hits: 0
-    X-Timer: S1708822305.078631,VS0,VE0
-    X-Fastly-Request-ID: 3865f71904d2c55388e686c3347bf52e516e9eb1
+    X-Timer: S1709427410.872615,VS0,VE0
+    X-Fastly-Request-ID: e0aa2c2ea911f55c315d4d80bfd4f51b695032f6
     &lt;html&gt;
     &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
     &lt;body bgcolor="white"&gt;
@@ -176,7 +177,7 @@
     Connection: close
     Content-Length: 11
     content-type: text/plain; charset=utf-8
-    x-served-by: cache-chi-kigq8000122
+    x-served-by: cache-iad-kcgs7200042
     Request</pre>
 </td></tr>
 <tr class="success">
@@ -189,7 +190,11 @@
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  GitHub.com
+  Varnish</pre>
+<h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   FourOhFourRequest: 
     HTTP/1.1 404 Not Found
@@ -197,44 +202,45 @@
     Content-Length: 9115
     Server: GitHub.com
     Content-Type: text/html; charset=utf-8
-    ETag: "65c56fc7-239b"
+    x-origin-cache: HIT
+    ETag: "65e15929-239b"
     Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'
-    X-GitHub-Request-Id: 9B72:73634:F31AA9:151BF5C:65DA876E
+    X-GitHub-Request-Id: 7EEE:1DB9:E384BD:11A80D1:65E3CAD6
     Accept-Ranges: bytes
-    Date: Sun, 25 Feb 2024 00:51:51 GMT
+    Date: Sun, 03 Mar 2024 00:56:55 GMT
     Via: 1.1 varnish
-    Age: 1975
-    X-Served-By: cache-chi-kigq8000089-CHI
-    X-Cache: HIT
-    X-Cache-Hits: 1
-    X-Timer: S1708822311.109183,VS0,VE1
+    Age: 0
+    X-Served-By: cache-iad-kcgs7200071-IAD
+    X-Cache: MISS
+    X-Cache-Hits: 0
+    X-Timer: S1709427416.959583,VS0,VE3
     Vary: Accept-Encoding
-    X-Fastly-Request-ID: 25ad7265da359cdabc151032f37ac72987d373f7
+    X-Fastly-Request-ID: 356902668a629beb5a9e20411fb0130b918edd8f
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
     &lt;head&gt;
     &lt;meta http-equiv="Content-type" content="text/html; charset=utf-8"&gt;
     &lt;meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'"&gt;
-    &lt;title&gt;Site not found &amp;middot; GitHub Pages&lt;/title&gt;
+    &lt;title&gt;Site not found &amp;middot; GitHub P
   GetRequest: 
     HTTP/1.1 404 Not Found
     Connection: close
     Content-Length: 9115
     Server: GitHub.com
     Content-Type: text/html; charset=utf-8
-    ETag: "65c56fc7-239b"
+    ETag: "65e15929-239b"
     Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'
-    X-GitHub-Request-Id: E0E0:2116:21970E2:2E7E919:65DA876F
+    X-GitHub-Request-Id: ACBC:4E53:D9830C:10F95A0:65E3C118
     Accept-Ranges: bytes
-    Date: Sun, 25 Feb 2024 00:51:51 GMT
+    Date: Sun, 03 Mar 2024 00:56:55 GMT
     Via: 1.1 varnish
-    Age: 1975
-    X-Served-By: cache-chi-kigq8000138-CHI
+    Age: 2494
+    X-Served-By: cache-iad-kcgs7200058-IAD
     X-Cache: HIT
     X-Cache-Hits: 1
-    X-Timer: S1708822311.080530,VS0,VE2
+    X-Timer: S1709427416.880671,VS0,VE1
     Vary: Accept-Encoding
-    X-Fastly-Request-ID: ec7be710ce43609b061f9b29d4a39fa5720d1144
+    X-Fastly-Request-ID: 364234475431e05f2b2f5a44c3fe887f36995cba
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
     &lt;head&gt;
@@ -248,23 +254,19 @@
     Server: Varnish
     Retry-After: 0
     Accept-Ranges: bytes
-    Date: Sun, 25 Feb 2024 00:51:51 GMT
+    Date: Sun, 03 Mar 2024 00:56:55 GMT
     Via: 1.1 varnish
-    X-Served-By: cache-chi-kigq8000103-CHI
+    X-Served-By: cache-iad-kcgs7200020-IAD
     X-Cache: MISS
     X-Cache-Hits: 0
-    X-Timer: S1708822311.098981,VS0,VE0
-    X-Fastly-Request-ID: 30228158d9fb926212521e67828f0c2369cb88e4
+    X-Timer: S1709427416.923861,VS0,VE1
+    X-Fastly-Request-ID: 7cff25bd3942cf8b6da5c49d978f970602fb33f2
     &lt;html&gt;
     &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
     &lt;body bgcolor="white"&gt;
     &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
     &lt;/body&gt;
     &lt;/html&gt;</pre>
-<h5>http-server-header</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  GitHub.com
-  Varnish</pre>
 </td></tr>
 </tbody>
 </table></div>
@@ -284,7 +286,7 @@
 </tr></thead>
 <tbody>
 <tr>
-<td>185.199.111.153 - stats.judilibre.io</td>
+<td>185.199.109.153 - stats.judilibre.io</td>
 <td>80</td>
 <td>tcp</td>
 <td>http</td>
@@ -294,7 +296,7 @@
 <td></td>
 </tr>
 <tr>
-<td>185.199.111.153 - stats.judilibre.io</td>
+<td>185.199.109.153 - stats.judilibre.io</td>
 <td>443</td>
 <td>tcp</td>
 <td>https</td>
