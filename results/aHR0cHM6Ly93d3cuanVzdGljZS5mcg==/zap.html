@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 3 Mar 2024 01:45:40
+		Generated on Sun, 10 Mar 2024 02:00:15
 	</h3>
 
 	<h3>
@@ -200,12 +200,12 @@ td {
 			<tr>
 				<td><a href="#10202">Absence of Anti-CSRF Tokens</a></td>
 				<td align="center" class="risk-2">Medium</td>
-				<td align="center">12</td>
+				<td align="center">13</td>
 			</tr>
 			<tr>
 				<td><a href="#10038">Content Security Policy (CSP) Header Not Set</a></td>
 				<td align="center" class="risk-2">Medium</td>
-				<td align="center">12</td>
+				<td align="center">11</td>
 			</tr>
 			<tr>
 				<td><a href="#10042">HTTPS to HTTP Insecure Transition in Form Post</a></td>
@@ -220,17 +220,17 @@ td {
 			<tr>
 				<td><a href="#10010">Cookie No HttpOnly Flag</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">1</td>
+				<td align="center">2</td>
 			</tr>
 			<tr>
 				<td><a href="#10011">Cookie Without Secure Flag</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">2</td>
+				<td align="center">4</td>
 			</tr>
 			<tr>
 				<td><a href="#10054">Cookie without SameSite Attribute</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">2</td>
+				<td align="center">4</td>
 			</tr>
 			<tr>
 				<td><a href="#10110">Dangerous JS Functions</a></td>
@@ -255,7 +255,7 @@ td {
 			<tr>
 				<td><a href="#10096">Timestamp Disclosure - Unix</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">12</td>
+				<td align="center">13</td>
 			</tr>
 			<tr>
 				<td><a href="#10021">X-Content-Type-Options Header Missing</a></td>
@@ -275,52 +275,52 @@ td {
 			<tr>
 				<td><a href="#10109">Modern Web Application</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">12</td>
+				<td align="center">11</td>
 			</tr>
 			<tr>
 				<td><a href="#10015">Re-examine Cache-control Directives</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">12</td>
+				<td align="center">11</td>
 			</tr>
 			<tr>
 				<td><a href="#10050">Retrieved from Cache</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">12</td>
+				<td align="center">11</td>
 			</tr>
 			<tr>
 				<td><a href="#90005">Sec-Fetch-Dest Header is Missing</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">4</td>
+				<td align="center">3</td>
 			</tr>
 			<tr>
 				<td><a href="#90005">Sec-Fetch-Mode Header is Missing</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">4</td>
+				<td align="center">3</td>
 			</tr>
 			<tr>
 				<td><a href="#90005">Sec-Fetch-Site Header is Missing</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">4</td>
+				<td align="center">3</td>
 			</tr>
 			<tr>
 				<td><a href="#90005">Sec-Fetch-User Header is Missing</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">4</td>
+				<td align="center">3</td>
 			</tr>
 			<tr>
 				<td><a href="#10112">Session Management Response Identified</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">9</td>
+				<td align="center">12</td>
 			</tr>
 			<tr>
 				<td><a href="#10049">Storable and Cacheable Content</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">8</td>
+				<td align="center">10</td>
 			</tr>
 			<tr>
 				<td><a href="#10049">Storable but Non-Cacheable Content</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">3</td>
+				<td align="center">2</td>
 			</tr>
 			<tr>
 				<td><a href="#10031">User Controllable HTML Element Attribute (Potential XSS)</a></td>
@@ -369,6 +369,37 @@ td {
 				<TR vAlign="top">
 					<TD colspan="2"></TD>
 				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr">https://www.justice.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form action=&quot;/recherche/all/&quot; method=&quot;post&quot; id=&quot;portalis-search-form&quot; accept-charset=&quot;UTF-8&quot;&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: &quot;edit-search-terms&quot; &quot;form_build_id&quot; &quot;form_id&quot; ].</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -744,7 +775,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">12</td>
+					<td width="80%">13</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -839,6 +870,37 @@ td {
 				<TR vAlign="top">
 					<TD colspan="2"></TD>
 				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr">https://www.justice.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -1091,69 +1153,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/themes/juges-famille">https://www.justice.fr/themes/juges-famille</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.justice.fr/themes/obligations-vie-familiale">https://www.justice.fr/themes/obligations-vie-familiale</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/themes/pension-alimentaire">https://www.justice.fr/themes/pension-alimentaire</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1214,7 +1214,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">12</td>
+					<td width="80%">11</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -1880,9 +1880,40 @@ The context was:
 						<td width="80%"></td>
 					</tr>
 				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr/robots.txt">https://www.justice.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">TS011eb1c5</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Set-Cookie: TS011eb1c5</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">1</td>
+					<td width="80%">2</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -1995,9 +2026,71 @@ The context was:
 						<td width="80%"></td>
 					</tr>
 				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr/robots.txt">https://www.justice.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">BIGipServer34MTuypDk3zboBHeznTQiA</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Set-Cookie: BIGipServer34MTuypDk3zboBHeznTQiA</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr/robots.txt">https://www.justice.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">TS011eb1c5</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Set-Cookie: TS011eb1c5</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">2</td>
+					<td width="80%">4</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -2110,9 +2203,71 @@ The context was:
 						<td width="80%"></td>
 					</tr>
 				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr/robots.txt">https://www.justice.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">BIGipServer34MTuypDk3zboBHeznTQiA</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Set-Cookie: BIGipServer34MTuypDk3zboBHeznTQiA</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr/robots.txt">https://www.justice.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">TS011eb1c5</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Set-Cookie: TS011eb1c5</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">2</td>
+					<td width="80%">4</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -2374,37 +2529,6 @@ The context was:
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/">https://www.justice.fr/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.justice.fr/*?CSRT">https://www.justice.fr/*?CSRT</a></td>
 					</tr>
 					<tr>
@@ -2623,6 +2747,37 @@ The context was:
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.justice.fr/themes/divorce">https://www.justice.fr/themes/divorce</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr/themes/obligations-vie-familiale">https://www.justice.fr/themes/obligations-vie-familiale</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3069,7 +3224,7 @@ The context was:
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/fiche/saisir-conseil-prud-hommes-cph">https://www.justice.fr/fiche/saisir-conseil-prud-hommes-cph</a></td>
+						<td width="80%"><a href="https://www.justice.fr/fiche/regler-succession-heritier-mineurou-majeur-protege">https://www.justice.fr/fiche/regler-succession-heritier-mineurou-majeur-protege</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3101,7 +3256,7 @@ The context was:
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/fiche/succession-indivision-entre-heritiers">https://www.justice.fr/fiche/succession-indivision-entre-heritiers</a></td>
+						<td width="80%"><a href="https://www.justice.fr/fiche/saisir-conseil-prud-hommes-cph">https://www.justice.fr/fiche/saisir-conseil-prud-hommes-cph</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3188,6 +3343,37 @@ The context was:
 				<TR vAlign="top">
 					<TD colspan="2"></TD>
 				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr">https://www.justice.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -3502,37 +3688,6 @@ The context was:
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/themes/obligations-vie-familiale">https://www.justice.fr/themes/obligations-vie-familiale</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.justice.fr/themes/succession">https://www.justice.fr/themes/succession</a></td>
 					</tr>
 					<tr>
@@ -3680,12 +3835,12 @@ The context was:
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">1709223897</td>
+						<td width="80%">1709654258</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">1709223897, which evaluates to: 2024-02-29 16:24:57</td>
+						<td width="80%">1709654258, which evaluates to: 2024-03-05 15:57:38</td>
 					</tr>
 				
 					<tr>
@@ -3742,12 +3897,12 @@ The context was:
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">1709223897</td>
+						<td width="80%">1709654258</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">1709223897, which evaluates to: 2024-02-29 16:24:57</td>
+						<td width="80%">1709654258, which evaluates to: 2024-03-05 15:57:38</td>
 					</tr>
 				
 					<tr>
@@ -3804,49 +3959,18 @@ The context was:
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">1709223897</td>
+						<td width="80%">1709654258</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">1709223897, which evaluates to: 2024-02-29 16:24:57</td>
+						<td width="80%">1709654258, which evaluates to: 2024-03-05 15:57:38</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/fiche/autorite-parentale">https://www.justice.fr/fiche/autorite-parentale</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">1709011816</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">1709011816, which evaluates to: 2024-02-27 05:30:16</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/fiche/autorite-parentale">https://www.justice.fr/fiche/autorite-parentale</a></td>
+						<td width="80%"><a href="https://www.justice.fr/node-page/11213">https://www.justice.fr/node-page/11213</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3866,12 +3990,12 @@ The context was:
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">1709223897</td>
+						<td width="80%">1709654258</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">1709223897, which evaluates to: 2024-02-29 16:24:57</td>
+						<td width="80%">1709654258, which evaluates to: 2024-03-05 15:57:38</td>
 					</tr>
 				
 					<tr>
@@ -3897,12 +4021,12 @@ The context was:
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">1709223897</td>
+						<td width="80%">1709654258</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">1709223897, which evaluates to: 2024-02-29 16:24:57</td>
+						<td width="80%">1709654258, which evaluates to: 2024-03-05 15:57:38</td>
 					</tr>
 				
 					<tr>
@@ -3928,12 +4052,74 @@ The context was:
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">1709223897</td>
+						<td width="80%">1709654258</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">1709223897, which evaluates to: 2024-02-29 16:24:57</td>
+						<td width="80%">1709654258, which evaluates to: 2024-03-05 15:57:38</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr/themes/divorce">https://www.justice.fr/themes/divorce</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">1530533544</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">1530533544, which evaluates to: 2018-07-02 12:12:24</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr/themes/divorce">https://www.justice.fr/themes/divorce</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">X-Drupal-Cache-Timestamp</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">1709654258</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">1709654258, which evaluates to: 2024-03-05 15:57:38</td>
 					</tr>
 				
 					<tr>
@@ -3990,17 +4176,17 @@ The context was:
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">1709223897</td>
+						<td width="80%">1709654258</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">1709223897, which evaluates to: 2024-02-29 16:24:57</td>
+						<td width="80%">1709654258, which evaluates to: 2024-03-05 15:57:38</td>
 					</tr>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">12</td>
+					<td width="80%">13</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -4246,38 +4432,6 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/sites/all/themes/portalis_theme/favicon/favicon.ico">https://www.justice.fr/sites/all/themes/portalis_theme/favicon/favicon.ico</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">x-content-type-options</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
-At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.justice.fr/sites/all/themes/portalis_theme/favicon/favicon.svg">https://www.justice.fr/sites/all/themes/portalis_theme/favicon/favicon.svg</a></td>
 					</tr>
 					<tr>
@@ -4435,6 +4589,38 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</td>
 					</tr>
 				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr/sites/default/files/css/css_HnMPqFfNrezW7W7Q5llEC03Bkk8u_-LEKSbtxueA8Qg.css">https://www.justice.fr/sites/default/files/css/css_HnMPqFfNrezW7W7Q5llEC03Bkk8u_-LEKSbtxueA8Qg.css</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">x-content-type-options</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</td>
+					</tr>
+				
 				<tr>
 					<td width="20%">Instances</td>
 					<td width="80%">12</td>
@@ -4517,74 +4703,12 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">URViAkoVB/cTGK2HzQdcVYlvgnu2kBYUNHvBs+p9moPf6IPWnWzsnLykEXZoaZAbFb+GdHIIdRplfA==</td>
+						<td width="80%">cHUr4LFvgoAtRACHzQdcVYlvgnu2kOHCAfMCY9ABQfLJqHKvxWO56lAHNEvQl3cdD4buWl4/blCa2g==</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">QbJ����\U�o�{��4{���}����֝l으�vhi���true|</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr">https://www.justice.fr</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">l1V5r97i9iv9u8WHzQdcVYlvgnu2kOfUkIYDhS7yT3k45gSQYDz0Dwm9g6RgEHFzuzC/2YbuVvhreg==</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">�Uy����+��Ň�\U�o�{���Ԑ��.�Oy8��`&lt;�	���`qs�0�ن�V�kz</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/">https://www.justice.fr/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">/sites/default/files/css/css_EgOblm_LGNWv1NMgJXLoPhQaKQTJupp2qY7lh3-an5Y</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">�ȭz��y����ߊW���,��,�HnY�,cV�SL��ˠ�Ph�&amp;�iڦ;��j~X</td>
+						<td width="80%">pu+�o��-D ��\U�o�{�����c�A�ɨr��c��P4KЗw��Z^?nP��</td>
 					</tr>
 				
 					<tr>
@@ -4807,7 +4931,69 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr/robots.txt">https://www.justice.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">9aB0D8AqdXlx222HzQdcVYlvgnu2kASKRVbJEiM6HVesv90hJOi1v2pWWeVuBJTjbfp8Lx+Hoh905A==</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">��t�*uyq�m��\U�o�{���EV�#:W���!$赿jVY�n��m�|/��t�</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.justice.fr/themes/divorce">https://www.justice.fr/themes/divorce</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">/sites/default/files/css/css_EgOblm_LGNWv1NMgJXLoPhQaKQTJupp2qY7lh3-an5Y</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">�ȭz��y����ߊW���,��,�HnY�,cV�SL��ˠ�Ph�&amp;�iڦ;��j~X</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr/themes/obligations-vie-familiale">https://www.justice.fr/themes/obligations-vie-familiale</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5232,7 +5418,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/sites/default/files/js/js_OscNB-IL7QIfcvkYjZnQ1flIjG0DXkUt_fuKInF2QHs.js">https://www.justice.fr/sites/default/files/js/js_OscNB-IL7QIfcvkYjZnQ1flIjG0DXkUt_fuKInF2QHs.js</a></td>
+						<td width="80%"><a href="https://www.justice.fr/sites/default/files/js/js_veyeb8QD8i4adg2lYtpMMTOouqLi3mJRolilSXKq9Lw.js">https://www.justice.fr/sites/default/files/js/js_veyeb8QD8i4adg2lYtpMMTOouqLi3mJRolilSXKq9Lw.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5263,7 +5449,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/sites/default/files/js/js_OscNB-IL7QIfcvkYjZnQ1flIjG0DXkUt_fuKInF2QHs.js">https://www.justice.fr/sites/default/files/js/js_OscNB-IL7QIfcvkYjZnQ1flIjG0DXkUt_fuKInF2QHs.js</a></td>
+						<td width="80%"><a href="https://www.justice.fr/sites/default/files/js/js_veyeb8QD8i4adg2lYtpMMTOouqLi3mJRolilSXKq9Lw.js">https://www.justice.fr/sites/default/files/js/js_veyeb8QD8i4adg2lYtpMMTOouqLi3mJRolilSXKq9Lw.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5294,7 +5480,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/sites/default/files/js/js_OscNB-IL7QIfcvkYjZnQ1flIjG0DXkUt_fuKInF2QHs.js">https://www.justice.fr/sites/default/files/js/js_OscNB-IL7QIfcvkYjZnQ1flIjG0DXkUt_fuKInF2QHs.js</a></td>
+						<td width="80%"><a href="https://www.justice.fr/sites/default/files/js/js_veyeb8QD8i4adg2lYtpMMTOouqLi3mJRolilSXKq9Lw.js">https://www.justice.fr/sites/default/files/js/js_veyeb8QD8i4adg2lYtpMMTOouqLi3mJRolilSXKq9Lw.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5319,13 +5505,13 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">The following pattern was used: \bSELECT\b and was detected 2 times, the first in the element starting with: &quot;    Drupal.jsAC.prototype.select = function (node) {&quot;, see evidence field for the suspicious comment/snippet.</td>
+						<td width="80%">The following pattern was used: \bSELECT\b and was detected 2 times, the first in the element starting with: &quot;i=this.menu.$node||t(&quot;&lt;div&gt;&quot;),n.on(&quot;blur.tt&quot;,function(t){var r,s,o;r=document.activeElement,s=i.is(r),o=i.has(r).length&gt;0,e.isMs&quot;, see evidence field for the suspicious comment/snippet.</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/sites/default/files/js/js_OscNB-IL7QIfcvkYjZnQ1flIjG0DXkUt_fuKInF2QHs.js">https://www.justice.fr/sites/default/files/js/js_OscNB-IL7QIfcvkYjZnQ1flIjG0DXkUt_fuKInF2QHs.js</a></td>
+						<td width="80%"><a href="https://www.justice.fr/sites/default/files/js/js_veyeb8QD8i4adg2lYtpMMTOouqLi3mJRolilSXKq9Lw.js">https://www.justice.fr/sites/default/files/js/js_veyeb8QD8i4adg2lYtpMMTOouqLi3mJRolilSXKq9Lw.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5402,6 +5588,37 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 				<TR vAlign="top">
 					<TD colspan="2"></TD>
 				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr">https://www.justice.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;a id=&quot;alerte-enl_banniere&quot; class=&quot;alerte-enl_hidden&quot;title = &quot;Cliquez ici pour plus d&#39;informations&quot; &gt;&lt;/a&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -5654,69 +5871,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/themes/juges-famille">https://www.justice.fr/themes/juges-famille</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;a id=&quot;alerte-enl_banniere&quot; class=&quot;alerte-enl_hidden&quot;title = &quot;Cliquez ici pour plus d&#39;informations&quot; &gt;&lt;/a&gt;</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.justice.fr/themes/obligations-vie-familiale">https://www.justice.fr/themes/obligations-vie-familiale</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;a id=&quot;alerte-enl_banniere&quot; class=&quot;alerte-enl_hidden&quot;title = &quot;Cliquez ici pour plus d&#39;informations&quot; &gt;&lt;/a&gt;</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/themes/pension-alimentaire">https://www.justice.fr/themes/pension-alimentaire</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5777,7 +5932,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">12</td>
+					<td width="80%">11</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -5823,6 +5978,37 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 				<TR vAlign="top">
 					<TD colspan="2"></TD>
 				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr">https://www.justice.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">cache-control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">public, max-age=86400</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -6075,69 +6261,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/themes/juges-famille">https://www.justice.fr/themes/juges-famille</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">cache-control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">public, max-age=86400</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.justice.fr/themes/obligations-vie-familiale">https://www.justice.fr/themes/obligations-vie-familiale</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">cache-control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">public, max-age=86400</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/themes/pension-alimentaire">https://www.justice.fr/themes/pension-alimentaire</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6198,7 +6322,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">12</td>
+					<td width="80%">11</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -6258,7 +6382,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/fiche/autorite-parentale">https://www.justice.fr/fiche/autorite-parentale</a></td>
+						<td width="80%"><a href="https://www.justice.fr">https://www.justice.fr</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6289,7 +6413,38 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/fiche/naissance-filiation">https://www.justice.fr/fiche/naissance-filiation</a></td>
+						<td width="80%"><a href="https://www.justice.fr/conditions-utilisation">https://www.justice.fr/conditions-utilisation</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">HIT</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr/fiche/autorite-parentale">https://www.justice.fr/fiche/autorite-parentale</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6383,37 +6538,6 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.justice.fr/recherche">https://www.justice.fr/recherche</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">HIT</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/robots.txt">https://www.justice.fr/robots.txt</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6568,37 +6692,6 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/themes/pension-alimentaire">https://www.justice.fr/themes/pension-alimentaire</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">HIT</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.justice.fr/themes/succession">https://www.justice.fr/themes/succession</a></td>
 					</tr>
 					<tr>
@@ -6629,7 +6722,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">12</td>
+					<td width="80%">11</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -6700,37 +6793,6 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr">https://www.justice.fr</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Sec-Fetch-Dest</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.justice.fr/recherche/">https://www.justice.fr/recherche/</a></td>
 					</tr>
 					<tr>
@@ -6823,7 +6885,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">4</td>
+					<td width="80%">3</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -6877,37 +6939,6 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr">https://www.justice.fr</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Sec-Fetch-Mode</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.justice.fr/recherche/">https://www.justice.fr/recherche/</a></td>
 					</tr>
 					<tr>
@@ -7000,7 +7031,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">4</td>
+					<td width="80%">3</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -7054,37 +7085,6 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr">https://www.justice.fr</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Sec-Fetch-Site</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.justice.fr/recherche/">https://www.justice.fr/recherche/</a></td>
 					</tr>
 					<tr>
@@ -7177,7 +7177,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">4</td>
+					<td width="80%">3</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -7231,37 +7231,6 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr">https://www.justice.fr</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Sec-Fetch-User</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.justice.fr/recherche/">https://www.justice.fr/recherche/</a></td>
 					</tr>
 					<tr>
@@ -7354,7 +7323,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">4</td>
+					<td width="80%">3</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -7408,6 +7377,71 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr/robots.txt">https://www.justice.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">BIGipServer34MTuypDk3zboBHeznTQiA</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">!9aB0D8AqdXlx222HzQdcVYlvgnu2kASKRVbJEiM6HVesv90hJOi1v2pWWeVuBJTjbfp8Lx+Hoh905A==</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">
+cookie:BIGipServer34MTuypDk3zboBHeznTQiA
+cookie:TS011eb1c5</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr/">https://www.justice.fr/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">BIGipServer34MTuypDk3zboBHeznTQiA</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">!9aB0D8AqdXlx222HzQdcVYlvgnu2kASKRVbJEiM6HVesv90hJOi1v2pWWeVuBJTjbfp8Lx+Hoh905A==</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">
+cookie:BIGipServer34MTuypDk3zboBHeznTQiA</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.justice.fr/*?CSRT">https://www.justice.fr/*?CSRT</a></td>
 					</tr>
 					<tr>
@@ -7428,7 +7462,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">!l1V5r97i9iv9u8WHzQdcVYlvgnu2kOfUkIYDhS7yT3k45gSQYDz0Dwm9g6RgEHFzuzC/2YbuVvhreg==</td>
+						<td width="80%">!9aB0D8AqdXlx222HzQdcVYlvgnu2kASKRVbJEiM6HVesv90hJOi1v2pWWeVuBJTjbfp8Lx+Hoh905A==</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -7460,13 +7494,45 @@ cookie:BIGipServer34MTuypDk3zboBHeznTQiA</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">01a6efdead3bee24f1909e8a49be945fbc68117ffb9b4cc12c287b81004f840026542bcb209c4ed5491c1527e7282841a756e7cbca0068e3098a0f8be979ef7b47f4d3c87d</td>
+						<td width="80%">01a6efdeadc67f937b9b456b3aefcc8c73163325172d04197805f1835836feed5433e6cbcec60b7379530785862feaf23b1fec654058b3c0f616f9a2838b7a710ff0bb4b0d</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
 						<td width="80%">
 cookie:TS011eb1c5</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr/contact">https://www.justice.fr/contact</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">BIGipServer34MTuypDk3zboBHeznTQiA</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">!9aB0D8AqdXlx222HzQdcVYlvgnu2kASKRVbJEiM6HVesv90hJOi1v2pWWeVuBJTjbfp8Lx+Hoh905A==</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">
+cookie:BIGipServer34MTuypDk3zboBHeznTQiA</td>
 					</tr>
 				
 					<tr>
@@ -7492,7 +7558,7 @@ cookie:TS011eb1c5</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">01a6efdead3bee24f1909e8a49be945fbc68117ffb9b4cc12c287b81004f840026542bcb209c4ed5491c1527e7282841a756e7cbca0068e3098a0f8be979ef7b47f4d3c87d</td>
+						<td width="80%">01a6efdeadc67f937b9b456b3aefcc8c73163325172d04197805f1835836feed5433e6cbcec60b7379530785862feaf23b1fec654058b3c0f616f9a2838b7a710ff0bb4b0d</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -7504,7 +7570,7 @@ cookie:TS011eb1c5</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/fiche/saisir-conseil-prud-hommes-cph">https://www.justice.fr/fiche/saisir-conseil-prud-hommes-cph</a></td>
+						<td width="80%"><a href="https://www.justice.fr/printpdf">https://www.justice.fr/printpdf</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -7524,7 +7590,7 @@ cookie:TS011eb1c5</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">!l1V5r97i9iv9u8WHzQdcVYlvgnu2kOfUkIYDhS7yT3k45gSQYDz0Dwm9g6RgEHFzuzC/2YbuVvhreg==</td>
+						<td width="80%">!9aB0D8AqdXlx222HzQdcVYlvgnu2kASKRVbJEiM6HVesv90hJOi1v2pWWeVuBJTjbfp8Lx+Hoh905A==</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -7536,7 +7602,7 @@ cookie:BIGipServer34MTuypDk3zboBHeznTQiA</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/fiche/saisir-conseil-prud-hommes-cph">https://www.justice.fr/fiche/saisir-conseil-prud-hommes-cph</a></td>
+						<td width="80%"><a href="https://www.justice.fr/printpdf">https://www.justice.fr/printpdf</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -7556,7 +7622,7 @@ cookie:BIGipServer34MTuypDk3zboBHeznTQiA</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">01a6efdead3bee24f1909e8a49be945fbc68117ffb9b4cc12c287b81004f840026542bcb209c4ed5491c1527e7282841a756e7cbca0068e3098a0f8be979ef7b47f4d3c87d</td>
+						<td width="80%">01a6efdeadc67f937b9b456b3aefcc8c73163325172d04197805f1835836feed5433e6cbcec60b7379530785862feaf23b1fec654058b3c0f616f9a2838b7a710ff0bb4b0d</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -7568,7 +7634,7 @@ cookie:TS011eb1c5</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/lexique/letter_a">https://www.justice.fr/lexique/letter_a</a></td>
+						<td width="80%"><a href="https://www.justice.fr/recherche/annuaires">https://www.justice.fr/recherche/annuaires</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -7588,7 +7654,7 @@ cookie:TS011eb1c5</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">!l1V5r97i9iv9u8WHzQdcVYlvgnu2kOfUkIYDhS7yT3k45gSQYDz0Dwm9g6RgEHFzuzC/2YbuVvhreg==</td>
+						<td width="80%">!9aB0D8AqdXlx222HzQdcVYlvgnu2kASKRVbJEiM6HVesv90hJOi1v2pWWeVuBJTjbfp8Lx+Hoh905A==</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -7600,39 +7666,7 @@ cookie:BIGipServer34MTuypDk3zboBHeznTQiA</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/recherche">https://www.justice.fr/recherche</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">BIGipServer34MTuypDk3zboBHeznTQiA</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">!l1V5r97i9iv9u8WHzQdcVYlvgnu2kOfUkIYDhS7yT3k45gSQYDz0Dwm9g6RgEHFzuzC/2YbuVvhreg==</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">
-cookie:BIGipServer34MTuypDk3zboBHeznTQiA</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/recherche">https://www.justice.fr/recherche</a></td>
+						<td width="80%"><a href="https://www.justice.fr/recherche/annuaires">https://www.justice.fr/recherche/annuaires</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -7652,13 +7686,45 @@ cookie:BIGipServer34MTuypDk3zboBHeznTQiA</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">01a6efdead3bee24f1909e8a49be945fbc68117ffb9b4cc12c287b81004f840026542bcb209c4ed5491c1527e7282841a756e7cbca0068e3098a0f8be979ef7b47f4d3c87d</td>
+						<td width="80%">01a6efdeadc67f937b9b456b3aefcc8c73163325172d04197805f1835836feed5433e6cbcec60b7379530785862feaf23b1fec654058b3c0f616f9a2838b7a710ff0bb4b0d</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
 						<td width="80%">
 cookie:TS011eb1c5</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr/simulateurs/aide-juridictionnelle">https://www.justice.fr/simulateurs/aide-juridictionnelle</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">BIGipServer34MTuypDk3zboBHeznTQiA</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">!9aB0D8AqdXlx222HzQdcVYlvgnu2kASKRVbJEiM6HVesv90hJOi1v2pWWeVuBJTjbfp8Lx+Hoh905A==</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">
+cookie:BIGipServer34MTuypDk3zboBHeznTQiA</td>
 					</tr>
 				
 					<tr>
@@ -7684,7 +7750,7 @@ cookie:TS011eb1c5</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">01a6efdead3bee24f1909e8a49be945fbc68117ffb9b4cc12c287b81004f840026542bcb209c4ed5491c1527e7282841a756e7cbca0068e3098a0f8be979ef7b47f4d3c87d</td>
+						<td width="80%">01a6efdeadc67f937b9b456b3aefcc8c73163325172d04197805f1835836feed5433e6cbcec60b7379530785862feaf23b1fec654058b3c0f616f9a2838b7a710ff0bb4b0d</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -7695,7 +7761,7 @@ cookie:TS011eb1c5</td>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">9</td>
+					<td width="80%">12</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -7744,37 +7810,6 @@ cookie:TS011eb1c5</td>
 				<TR vAlign="top">
 					<TD colspan="2"></TD>
 				</TR>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr">https://www.justice.fr</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">max-age=86400</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -7842,6 +7877,68 @@ cookie:TS011eb1c5</td>
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.justice.fr/contact/formulaire">https://www.justice.fr/contact/formulaire</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=86400</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr/fiche/autorite-parentale">https://www.justice.fr/fiche/autorite-parentale</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=86400</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr/node-page/11213">https://www.justice.fr/node-page/11213</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -7965,6 +8062,37 @@ cookie:TS011eb1c5</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.justice.fr/themes/divorce">https://www.justice.fr/themes/divorce</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=86400</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.justice.fr/themes/succession">https://www.justice.fr/themes/succession</a></td>
 					</tr>
 					<tr>
@@ -7995,7 +8123,7 @@ cookie:TS011eb1c5</td>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">8</td>
+					<td width="80%">10</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -8067,37 +8195,6 @@ cookie:TS011eb1c5</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.justice.fr/contact">https://www.justice.fr/contact</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">no-cache</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.justice.fr/robots.txt">https://www.justice.fr/robots.txt</a></td>
 					</tr>
 					<tr>
@@ -8159,7 +8256,7 @@ cookie:TS011eb1c5</td>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">3</td>
+					<td width="80%">2</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -8336,10 +8433,10 @@ appears to include user input in:
 a(n) [input] tag [value] attribute 
 
 The user input found was:
-captcha_sid=3532264
+captcha_sid=4012802
 
 The user-controlled value was:
-3532264</td>
+4012802</td>
 					</tr>
 				
 					<tr>
