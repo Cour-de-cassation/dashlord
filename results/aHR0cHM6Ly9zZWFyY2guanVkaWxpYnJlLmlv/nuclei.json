@@ -32,204 +32,9 @@
       "type": "dns",
       "host": "search.judilibre.io.",
       "matched-at": "search.judilibre.io",
-      "request": ";; opcode: QUERY, status: NOERROR, id: 62463\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;search.judilibre.io.\tIN\t CAA\n",
-      "response": ";; opcode: QUERY, status: NOERROR, id: 62463\n;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 1232\n\n;; QUESTION SECTION:\n;search.judilibre.io.\tIN\t CAA\n\n;; AUTHORITY SECTION:\njudilibre.io.\t3600\tIN\tSOA\tns0.dom.scw.cloud. hostmaster.judilibre.io. 2024052301 10800 3600 604800 3600\n",
-      "timestamp": "2024-05-26T00:54:55.357516862Z",
-      "matcher-status": true
-    },
-    {
-      "template": "http/misconfiguration/http-missing-security-headers.yaml",
-      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-      "template-id": "http-missing-security-headers",
-      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-      "info": {
-        "name": "HTTP Missing Security Headers",
-        "author": [
-          "socketz",
-          "geeknik",
-          "g4l1t0",
-          "convisoappsec",
-          "kurohost",
-          "dawid-czarnecki",
-          "forgedhallpass",
-          "jub0bs"
-        ],
-        "tags": [
-          "misconfig",
-          "headers",
-          "generic"
-        ],
-        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-        "severity": "info",
-        "metadata": {
-          "max-request": 1
-        }
-      },
-      "matcher-name": "cross-origin-opener-policy",
-      "type": "http",
-      "host": "https://search.judilibre.io",
-      "matched-at": "https://search.judilibre.io",
-      "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 26 May 2024 00:55:41 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: false\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
-      "ip": "51.159.85.176",
-      "timestamp": "2024-05-26T00:55:41.134319801Z",
-      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
-      "matcher-status": true
-    },
-    {
-      "template": "http/misconfiguration/http-missing-security-headers.yaml",
-      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-      "template-id": "http-missing-security-headers",
-      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-      "info": {
-        "name": "HTTP Missing Security Headers",
-        "author": [
-          "socketz",
-          "geeknik",
-          "g4l1t0",
-          "convisoappsec",
-          "kurohost",
-          "dawid-czarnecki",
-          "forgedhallpass",
-          "jub0bs"
-        ],
-        "tags": [
-          "misconfig",
-          "headers",
-          "generic"
-        ],
-        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-        "severity": "info",
-        "metadata": {
-          "max-request": 1
-        }
-      },
-      "matcher-name": "cross-origin-resource-policy",
-      "type": "http",
-      "host": "https://search.judilibre.io",
-      "matched-at": "https://search.judilibre.io",
-      "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 26 May 2024 00:55:41 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: false\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
-      "ip": "51.159.85.176",
-      "timestamp": "2024-05-26T00:55:41.134367019Z",
-      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
-      "matcher-status": true
-    },
-    {
-      "template": "http/misconfiguration/http-missing-security-headers.yaml",
-      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-      "template-id": "http-missing-security-headers",
-      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-      "info": {
-        "name": "HTTP Missing Security Headers",
-        "author": [
-          "socketz",
-          "geeknik",
-          "g4l1t0",
-          "convisoappsec",
-          "kurohost",
-          "dawid-czarnecki",
-          "forgedhallpass",
-          "jub0bs"
-        ],
-        "tags": [
-          "misconfig",
-          "headers",
-          "generic"
-        ],
-        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-        "severity": "info",
-        "metadata": {
-          "max-request": 1
-        }
-      },
-      "matcher-name": "permissions-policy",
-      "type": "http",
-      "host": "https://search.judilibre.io",
-      "matched-at": "https://search.judilibre.io",
-      "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 26 May 2024 00:55:41 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: false\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
-      "ip": "51.159.85.176",
-      "timestamp": "2024-05-26T00:55:41.134384461Z",
-      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
-      "matcher-status": true
-    },
-    {
-      "template": "http/misconfiguration/http-missing-security-headers.yaml",
-      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-      "template-id": "http-missing-security-headers",
-      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-      "info": {
-        "name": "HTTP Missing Security Headers",
-        "author": [
-          "socketz",
-          "geeknik",
-          "g4l1t0",
-          "convisoappsec",
-          "kurohost",
-          "dawid-czarnecki",
-          "forgedhallpass",
-          "jub0bs"
-        ],
-        "tags": [
-          "misconfig",
-          "headers",
-          "generic"
-        ],
-        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-        "severity": "info",
-        "metadata": {
-          "max-request": 1
-        }
-      },
-      "matcher-name": "x-permitted-cross-domain-policies",
-      "type": "http",
-      "host": "https://search.judilibre.io",
-      "matched-at": "https://search.judilibre.io",
-      "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 26 May 2024 00:55:41 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: false\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
-      "ip": "51.159.85.176",
-      "timestamp": "2024-05-26T00:55:41.134397896Z",
-      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
-      "matcher-status": true
-    },
-    {
-      "template": "http/misconfiguration/http-missing-security-headers.yaml",
-      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-      "template-id": "http-missing-security-headers",
-      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-      "info": {
-        "name": "HTTP Missing Security Headers",
-        "author": [
-          "socketz",
-          "geeknik",
-          "g4l1t0",
-          "convisoappsec",
-          "kurohost",
-          "dawid-czarnecki",
-          "forgedhallpass",
-          "jub0bs"
-        ],
-        "tags": [
-          "misconfig",
-          "headers",
-          "generic"
-        ],
-        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-        "severity": "info",
-        "metadata": {
-          "max-request": 1
-        }
-      },
-      "matcher-name": "referrer-policy",
-      "type": "http",
-      "host": "https://search.judilibre.io",
-      "matched-at": "https://search.judilibre.io",
-      "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 26 May 2024 00:55:41 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: false\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
-      "ip": "51.159.85.176",
-      "timestamp": "2024-05-26T00:55:41.13441604Z",
-      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+      "request": ";; opcode: QUERY, status: NOERROR, id: 30527\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;search.judilibre.io.\tIN\t CAA\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 30527\n;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 1232\n\n;; QUESTION SECTION:\n;search.judilibre.io.\tIN\t CAA\n\n;; AUTHORITY SECTION:\njudilibre.io.\t3600\tIN\tSOA\tns0.dom.scw.cloud. hostmaster.judilibre.io. 2024053001 10800 3600 604800 3600\n",
+      "timestamp": "2024-06-02T00:54:50.795241372Z",
       "matcher-status": true
     },
     {
@@ -265,9 +70,9 @@
       "host": "https://search.judilibre.io",
       "matched-at": "https://search.judilibre.io",
       "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 26 May 2024 00:55:41 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: false\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
+      "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 02 Jun 2024 00:55:46 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: false\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
       "ip": "51.159.85.176",
-      "timestamp": "2024-05-26T00:55:41.134429134Z",
+      "timestamp": "2024-06-02T00:55:46.129686451Z",
       "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
       "matcher-status": true
     },
@@ -304,9 +109,204 @@
       "host": "https://search.judilibre.io",
       "matched-at": "https://search.judilibre.io",
       "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-      "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 26 May 2024 00:55:41 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: false\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
+      "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 02 Jun 2024 00:55:46 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: false\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
       "ip": "51.159.85.176",
-      "timestamp": "2024-05-26T00:55:41.13444285Z",
+      "timestamp": "2024-06-02T00:55:46.129741675Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cross-origin-opener-policy",
+      "type": "http",
+      "host": "https://search.judilibre.io",
+      "matched-at": "https://search.judilibre.io",
+      "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 02 Jun 2024 00:55:46 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: false\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
+      "ip": "51.159.85.176",
+      "timestamp": "2024-06-02T00:55:46.130081489Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cross-origin-resource-policy",
+      "type": "http",
+      "host": "https://search.judilibre.io",
+      "matched-at": "https://search.judilibre.io",
+      "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 02 Jun 2024 00:55:46 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: false\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
+      "ip": "51.159.85.176",
+      "timestamp": "2024-06-02T00:55:46.130146179Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "permissions-policy",
+      "type": "http",
+      "host": "https://search.judilibre.io",
+      "matched-at": "https://search.judilibre.io",
+      "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 02 Jun 2024 00:55:46 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: false\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
+      "ip": "51.159.85.176",
+      "timestamp": "2024-06-02T00:55:46.130163522Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "x-permitted-cross-domain-policies",
+      "type": "http",
+      "host": "https://search.judilibre.io",
+      "matched-at": "https://search.judilibre.io",
+      "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 02 Jun 2024 00:55:46 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: false\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
+      "ip": "51.159.85.176",
+      "timestamp": "2024-06-02T00:55:46.130176476Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "referrer-policy",
+      "type": "http",
+      "host": "https://search.judilibre.io",
+      "matched-at": "https://search.judilibre.io",
+      "request": "GET / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 139\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 02 Jun 2024 00:55:46 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: false\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /</pre>\n</body>\n</html>\n",
+      "ip": "51.159.85.176",
+      "timestamp": "2024-06-02T00:55:46.13018897Z",
       "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
       "matcher-status": true
     },
@@ -346,9 +346,9 @@
       "host": "https://search.judilibre.io",
       "matched-at": "https://search.judilibre.io/",
       "request": "POST / HTTP/1.1\r\nHost: search.judilibre.io\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nContent-Length: 27\r\nContent-Type: application/x-www-form-urlencoded\r\nAccept-Encoding: gzip\r\n\r\n_=<script>alert(1)</script>",
-      "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 140\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 26 May 2024 00:56:04 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: false\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot POST /</pre>\n</body>\n</html>\n",
+      "response": "HTTP/1.1 404 Not Found\r\nConnection: close\r\nContent-Length: 140\r\nAccess-Control-Allow-Origin: *\r\nContent-Security-Policy: default-src 'none'\r\nContent-Type: text/html; charset=utf-8\r\nDate: Sun, 02 Jun 2024 00:56:15 GMT\r\nStrict-Transport-Security: max-age=15724800; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: deny\r\nX-Powered-By: false\r\n\r\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot POST /</pre>\n</body>\n</html>\n",
       "ip": "51.159.85.176",
-      "timestamp": "2024-05-26T00:56:04.901285748Z",
+      "timestamp": "2024-06-02T00:56:15.1300611Z",
       "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: search.judilibre.io' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io/'",
       "matcher-status": true
     },
@@ -379,7 +379,7 @@
         "Let's Encrypt"
       ],
       "ip": "51.159.85.176",
-      "timestamp": "2024-05-26T00:56:27.973257341Z",
+      "timestamp": "2024-06-02T00:56:42.783847809Z",
       "matcher-status": true
     },
     {
@@ -409,7 +409,7 @@
         "search.judilibre.io"
       ],
       "ip": "51.159.85.176",
-      "timestamp": "2024-05-26T00:56:27.973366994Z",
+      "timestamp": "2024-06-02T00:56:42.783994654Z",
       "matcher-status": true
     },
     {
@@ -440,7 +440,7 @@
         "tls12"
       ],
       "ip": "51.159.85.176",
-      "timestamp": "2024-05-26T00:56:29.663181741Z",
+      "timestamp": "2024-06-02T00:56:44.662559123Z",
       "matcher-status": true
     },
     {
@@ -471,7 +471,7 @@
         "tls13"
       ],
       "ip": "51.159.85.176",
-      "timestamp": "2024-05-26T00:56:29.855017708Z",
+      "timestamp": "2024-06-02T00:56:44.937879563Z",
       "matcher-status": true
     }
   ]
