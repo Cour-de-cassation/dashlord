@@ -8,7 +8,7 @@
     "http": {
       "url": "https://search.judilibre.io",
       "algorithm_version": 3,
-      "end_time": "Sun, 30 Jun 2024 00:54:36 GMT",
+      "end_time": "Sun, 07 Jul 2024 00:57:11 GMT",
       "grade": "B",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -18,18 +18,18 @@
         "Access-Control-Allow-Methods": "GET, POST, PUT, OPTIONS",
         "Access-Control-Allow-Origin": "www.courdecassation.fr",
         "Access-Control-Expose-Headers": "Content-Length,Content-Range",
-        "Age": "442",
+        "Age": "743",
         "Allow": "GET, POST, PUT, HEAD",
         "Cache-Control": "max-age=900, public",
         "Connection": "keep-alive",
         "Content-Encoding": "gzip",
-        "Content-Length": "74144",
+        "Content-Length": "76964",
         "Content-Type": "text/html; charset=UTF-8",
         "Content-language": "fr",
-        "Date": "Sun, 30 Jun 2024 00:54:31 GMT",
-        "ETag": "\"1719699394-gzip\"",
+        "Date": "Sun, 07 Jul 2024 00:57:06 GMT",
+        "ETag": "\"1720304041-gzip\"",
         "Expires": "Sun, 19 Nov 1978 05:00:00 GMT",
-        "Last-Modified": "Sat, 29 Jun 2024 22:16:34 GMT",
+        "Last-Modified": "Sat, 06 Jul 2024 22:14:01 GMT",
         "Permissions-Policy": "interest-cohort=()",
         "Referrer-Policy": "strict-origin-when-cross-origin",
         "Server": "nginx",
@@ -37,18 +37,18 @@
         "Upgrade-Insecure-Requests": "1",
         "Vary": "Accept-Encoding",
         "X-Cache": "HIT",
-        "X-Cache-Hits": "96",
+        "X-Cache-Hits": "132",
         "X-Content-Type-Options": "nosniff",
         "X-Drupal-Cache": "HIT",
         "X-Drupal-Dynamic-Cache": "MISS",
         "X-Frame-Options": "SAMEORIGIN",
         "X-UA-Compatible": "IE=edge",
-        "X-Varnish": "794229194 798400223",
+        "X-Varnish": "820497333 820599388",
         "X-XSS-Protection": "1;mode=block"
       },
-      "scan_id": 52857706,
+      "scan_id": 53122132,
       "score": 75,
-      "start_time": "Sun, 30 Jun 2024 00:54:28 GMT",
+      "start_time": "Sun, 07 Jul 2024 00:57:02 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 1,
@@ -435,7 +435,7 @@
         "ip": "search.judilibre.io/51.159.85.176",
         "port": "443",
         "severity": "INFO",
-        "finding": "supported"
+        "finding": "not supported"
       },
       {
         "id": "TLS_timestamp",
@@ -575,7 +575,7 @@
         "ip": "search.judilibre.io/51.159.85.176",
         "port": "443",
         "severity": "OK",
-        "finding": "88 >= 30 days"
+        "finding": "81 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -729,14 +729,14 @@
         "ip": "search.judilibre.io/51.159.85.176",
         "port": "443",
         "severity": "INFO",
-        "finding": "0 seconds from localtime"
+        "finding": "-1 seconds from localtime"
       },
       {
         "id": "HTTP_headerTime",
         "ip": "search.judilibre.io/51.159.85.176",
         "port": "443",
         "severity": "INFO",
-        "finding": "1719708924"
+        "finding": "1720313914"
       },
       {
         "id": "HSTS_time",
@@ -1320,7 +1320,7 @@
         "ip": "search.judilibre.io/51.159.85.176",
         "port": "443",
         "severity": "INFO",
-        "finding": "52"
+        "finding": "96"
       }
     ],
     "thirdparties": {
@@ -1331,7 +1331,7 @@
         "content-length": "139",
         "content-security-policy": "default-src 'none'",
         "content-type": "text/html; charset=utf-8",
-        "date": "Sun, 30 Jun 2024 00:54:50 GMT",
+        "date": "Sun, 07 Jul 2024 00:57:25 GMT",
         "strict-transport-security": "max-age=15724800; includeSubDomains",
         "x-content-type-options": "nosniff",
         "x-frame-options": "deny",
@@ -1385,7 +1385,7 @@
               }
             },
             "location": {
-              "accuracy_radius": 1000,
+              "accuracy_radius": 500,
               "latitude": 48.8323,
               "longitude": 2.4075,
               "time_zone": "Europe/Paris"
@@ -1438,492 +1438,9 @@
         }
       ]
     },
-    "wappalyzer": {
-      "urls": {
-        "https://search.judilibre.io/": {
-          "status": 404
-        }
-      },
-      "technologies": [
-        {
-          "slug": "hsts",
-          "name": "HSTS",
-          "description": "HTTP Strict Transport Security (HSTS) informs browsers that the site should only be accessed using HTTPS.",
-          "confidence": 100,
-          "version": null,
-          "icon": "default.svg",
-          "website": "https://www.rfc-editor.org/rfc/rfc6797#section-6.1",
-          "cpe": null,
-          "categories": [
-            {
-              "id": 16,
-              "slug": "security",
-              "name": "Security"
-            }
-          ],
-          "rootPath": true
-        }
-      ]
-    },
+    "wappalyzer": null,
     "zap": null,
-    "nuclei": [
-      {
-        "template": "dns/caa-fingerprint.yaml",
-        "template-url": "https://templates.nuclei.sh/public/caa-fingerprint",
-        "template-id": "caa-fingerprint",
-        "template-path": "/home/runner/nuclei-templates/dns/caa-fingerprint.yaml",
-        "info": {
-          "name": "CAA Record",
-          "author": [
-            "pdteam"
-          ],
-          "tags": [
-            "dns",
-            "caa"
-          ],
-          "description": "A CAA record was discovered. A CAA record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain.",
-          "reference": [
-            "https://support.dnsimple.com/articles/caa-record/#whats-a-caa-record"
-          ],
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          },
-          "classification": {
-            "cve-id": null,
-            "cwe-id": [
-              "cwe-200"
-            ]
-          }
-        },
-        "type": "dns",
-        "host": "search.judilibre.io.",
-        "matched-at": "search.judilibre.io",
-        "timestamp": "2024-06-30T00:56:33.394218692Z",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "cross-origin-opener-policy",
-        "type": "http",
-        "host": "https://search.judilibre.io",
-        "matched-at": "https://search.judilibre.io",
-        "ip": "51.159.85.176",
-        "timestamp": "2024-06-30T00:57:22.992565258Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "cross-origin-resource-policy",
-        "type": "http",
-        "host": "https://search.judilibre.io",
-        "matched-at": "https://search.judilibre.io",
-        "ip": "51.159.85.176",
-        "timestamp": "2024-06-30T00:57:22.992603931Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "permissions-policy",
-        "type": "http",
-        "host": "https://search.judilibre.io",
-        "matched-at": "https://search.judilibre.io",
-        "ip": "51.159.85.176",
-        "timestamp": "2024-06-30T00:57:22.992616394Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "x-permitted-cross-domain-policies",
-        "type": "http",
-        "host": "https://search.judilibre.io",
-        "matched-at": "https://search.judilibre.io",
-        "ip": "51.159.85.176",
-        "timestamp": "2024-06-30T00:57:22.992631873Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "referrer-policy",
-        "type": "http",
-        "host": "https://search.judilibre.io",
-        "matched-at": "https://search.judilibre.io",
-        "ip": "51.159.85.176",
-        "timestamp": "2024-06-30T00:57:22.992647722Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "clear-site-data",
-        "type": "http",
-        "host": "https://search.judilibre.io",
-        "matched-at": "https://search.judilibre.io",
-        "ip": "51.159.85.176",
-        "timestamp": "2024-06-30T00:57:22.992661909Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "cross-origin-embedder-policy",
-        "type": "http",
-        "host": "https://search.judilibre.io",
-        "matched-at": "https://search.judilibre.io",
-        "ip": "51.159.85.176",
-        "timestamp": "2024-06-30T00:57:22.992674593Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/technologies/waf-detect.yaml",
-        "template-url": "https://templates.nuclei.sh/public/waf-detect",
-        "template-id": "waf-detect",
-        "template-path": "/home/runner/nuclei-templates/http/technologies/waf-detect.yaml",
-        "info": {
-          "name": "WAF Detection",
-          "author": [
-            "dwisiswant0",
-            "lu4nx"
-          ],
-          "tags": [
-            "waf",
-            "tech",
-            "misc"
-          ],
-          "description": "A web application firewall was detected.",
-          "reference": [
-            "https://github.com/ekultek/whatwaf"
-          ],
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          },
-          "classification": {
-            "cve-id": null,
-            "cwe-id": [
-              "cwe-200"
-            ]
-          }
-        },
-        "matcher-name": "securesphere",
-        "type": "http",
-        "host": "https://search.judilibre.io",
-        "matched-at": "https://search.judilibre.io/",
-        "ip": "51.159.85.176",
-        "timestamp": "2024-06-30T00:57:47.6618607Z",
-        "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: search.judilibre.io' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://search.judilibre.io/'",
-        "matcher-status": true
-      },
-      {
-        "template": "ssl/detect-ssl-issuer.yaml",
-        "template-url": "https://templates.nuclei.sh/public/ssl-issuer",
-        "template-id": "ssl-issuer",
-        "template-path": "/home/runner/nuclei-templates/ssl/detect-ssl-issuer.yaml",
-        "info": {
-          "name": "Detect SSL Certificate Issuer",
-          "author": [
-            "lingtren"
-          ],
-          "tags": [
-            "ssl",
-            "tls"
-          ],
-          "description": "Extract the issuer's organization from the target's certificate. Issuers are entities which sign and distribute certificates.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "type": "ssl",
-        "host": "search.judilibre.io",
-        "matched-at": "search.judilibre.io:443",
-        "extracted-results": [
-          "Let's Encrypt"
-        ],
-        "ip": "51.159.85.176",
-        "timestamp": "2024-06-30T00:58:11.191621399Z",
-        "matcher-status": true
-      },
-      {
-        "template": "ssl/ssl-dns-names.yaml",
-        "template-url": "https://templates.nuclei.sh/public/ssl-dns-names",
-        "template-id": "ssl-dns-names",
-        "template-path": "/home/runner/nuclei-templates/ssl/ssl-dns-names.yaml",
-        "info": {
-          "name": "SSL DNS Names",
-          "author": [
-            "pdteam"
-          ],
-          "tags": [
-            "ssl",
-            "tls"
-          ],
-          "description": "Extract the Subject Alternative Name (SAN) from the target's certificate. SAN facilitates the usage of additional hostnames with the same certificate.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "type": "ssl",
-        "host": "search.judilibre.io",
-        "matched-at": "search.judilibre.io:443",
-        "extracted-results": [
-          "search.judilibre.io"
-        ],
-        "ip": "51.159.85.176",
-        "timestamp": "2024-06-30T00:58:11.191722468Z",
-        "matcher-status": true
-      },
-      {
-        "template": "ssl/tls-version.yaml",
-        "template-url": "https://templates.nuclei.sh/public/tls-version",
-        "template-id": "tls-version",
-        "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
-        "info": {
-          "name": "TLS Version - Detect",
-          "author": [
-            "pdteam",
-            "pussycat0x"
-          ],
-          "tags": [
-            "ssl",
-            "tls"
-          ],
-          "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 4
-          }
-        },
-        "type": "ssl",
-        "host": "search.judilibre.io",
-        "matched-at": "search.judilibre.io:443",
-        "extracted-results": [
-          "tls12"
-        ],
-        "ip": "51.159.85.176",
-        "timestamp": "2024-06-30T00:58:12.950796251Z",
-        "matcher-status": true
-      },
-      {
-        "template": "ssl/tls-version.yaml",
-        "template-url": "https://templates.nuclei.sh/public/tls-version",
-        "template-id": "tls-version",
-        "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
-        "info": {
-          "name": "TLS Version - Detect",
-          "author": [
-            "pdteam",
-            "pussycat0x"
-          ],
-          "tags": [
-            "ssl",
-            "tls"
-          ],
-          "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 4
-          }
-        },
-        "type": "ssl",
-        "host": "search.judilibre.io",
-        "matched-at": "search.judilibre.io:443",
-        "extracted-results": [
-          "tls13"
-        ],
-        "ip": "51.159.85.176",
-        "timestamp": "2024-06-30T00:58:13.165309828Z",
-        "matcher-status": true
-      }
-    ],
+    "nuclei": [],
     "lhr": [],
     "screenshot": true,
     "stats": null,
@@ -1959,7 +1476,7 @@
     "http": {
       "url": "https://stats.judilibre.io",
       "algorithm_version": 3,
-      "end_time": "Sun, 30 Jun 2024 00:55:22 GMT",
+      "end_time": "Sun, 07 Jul 2024 00:56:54 GMT",
       "grade": "C",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -1972,7 +1489,7 @@
         "Content-Encoding": "gzip",
         "Content-Length": "627",
         "Content-Type": "text/html; charset=utf-8",
-        "Date": "Sun, 30 Jun 2024 00:55:22 GMT",
+        "Date": "Sun, 07 Jul 2024 00:56:54 GMT",
         "ETag": "W/\"62895f74-4aa\"",
         "Last-Modified": "Sat, 21 May 2022 21:53:56 GMT",
         "Server": "GitHub.com",
@@ -1981,16 +1498,16 @@
         "Via": "1.1 varnish",
         "X-Cache": "HIT",
         "X-Cache-Hits": "1",
-        "X-Fastly-Request-ID": "5d7d7e7e3152568efe22c9c3f413ed7dad08b7ab",
-        "X-GitHub-Request-Id": "B2BE:38F806:29B570C:2B21AA7:6680ACFA",
-        "X-Served-By": "cache-bfi-krnt7300038-BFI",
-        "X-Timer": "S1719708923.585210,VS0,VE1",
-        "expires": "Sun, 30 Jun 2024 01:05:22 GMT",
+        "X-Fastly-Request-ID": "66d0d655c5f0eafb19e60cc2bf05ff59a60169ad",
+        "X-GitHub-Request-Id": "1A16:3E97:9C94C8:A37F78:6689E7D5",
+        "X-Served-By": "cache-bfi-krnt7300036-BFI",
+        "X-Timer": "S1720313814.290344,VS0,VE1",
+        "expires": "Sun, 07 Jul 2024 01:06:54 GMT",
         "x-proxy-cache": "MISS"
       },
-      "scan_id": 52857713,
+      "scan_id": 53122130,
       "score": 50,
-      "start_time": "Sun, 30 Jun 2024 00:55:22 GMT",
+      "start_time": "Sun, 07 Jul 2024 00:56:54 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 3,
@@ -2516,7 +2033,7 @@
         "ip": "stats.judilibre.io/185.199.111.153",
         "port": "443",
         "severity": "OK",
-        "finding": "88 >= 30 days"
+        "finding": "81 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -2677,21 +2194,21 @@
         "ip": "stats.judilibre.io/185.199.111.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "+134 seconds from localtime"
+        "finding": "+200 seconds from localtime"
       },
       {
         "id": "HTTP_headerTime",
         "ip": "stats.judilibre.io/185.199.111.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "1719708961"
+        "finding": "1720313856"
       },
       {
         "id": "HTTP_headerAge",
         "ip": "stats.judilibre.io/185.199.111.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "134 seconds"
+        "finding": "200 seconds"
       },
       {
         "id": "HSTS_time",
@@ -2754,7 +2271,7 @@
         "ip": "stats.judilibre.io/185.199.111.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "cache-iad-kcgs7200059-IAD"
+        "finding": "cache-chi-kigq8000040-CHI"
       },
       {
         "id": "Cache-Control",
@@ -3265,77 +2782,77 @@
       },
       {
         "id": "service",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "HTTP"
       },
       {
         "id": "pre_128cipher",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "No 128 cipher limit bug"
       },
       {
         "id": "SSLv2",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "finding": "not offered"
       },
       {
         "id": "SSLv3",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "finding": "not offered"
       },
       {
         "id": "TLS1",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "not offered"
       },
       {
         "id": "TLS1_1",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "not offered"
       },
       {
         "id": "TLS1_2",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "finding": "offered"
       },
       {
         "id": "TLS1_3",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "finding": "offered with final"
       },
       {
         "id": "ALPN_HTTP2",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "finding": "h2"
       },
       {
         "id": "ALPN",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "http/1.1"
       },
       {
         "id": "cipherlist_NULL",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "cwe": "CWE-327",
@@ -3343,7 +2860,7 @@
       },
       {
         "id": "cipherlist_aNULL",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "cwe": "CWE-327",
@@ -3351,7 +2868,7 @@
       },
       {
         "id": "cipherlist_EXPORT",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "cwe": "CWE-327",
@@ -3359,7 +2876,7 @@
       },
       {
         "id": "cipherlist_LOW",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "cwe": "CWE-327",
@@ -3367,7 +2884,7 @@
       },
       {
         "id": "cipherlist_3DES_IDEA",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "cwe": "CWE-310",
@@ -3375,7 +2892,7 @@
       },
       {
         "id": "cipherlist_OBSOLETED",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "LOW",
         "cwe": "CWE-310",
@@ -3383,483 +2900,483 @@
       },
       {
         "id": "cipherlist_STRONG_NOFS",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "finding": "offered"
       },
       {
         "id": "cipherlist_STRONG_FS",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "finding": "offered"
       },
       {
         "id": "cipher_order-tls1_2",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "finding": "server"
       },
       {
         "id": "cipherorder_TLSv1_2",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "ECDHE-RSA-AES128-GCM-SHA256"
       },
       {
         "id": "cipher_order",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "finding": "server"
       },
       {
         "id": "FS",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "finding": "offered"
       },
       {
         "id": "FS_ciphers",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA"
       },
       {
         "id": "FS_ECDHE_curves",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "finding": "prime256v1 secp384r1"
       },
       {
         "id": "TLS_extensions",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "'server name/#0' 'renegotiation info/#65281' 'EC point formats/#11' 'session ticket/#35' 'status request/#5' 'supported versions/#43' 'key share/#51' 'extended master secret/#23' 'application layer protocol negotiation/#16'"
       },
       {
         "id": "TLS_session_ticket",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "valid for 7200 seconds only (<daily)"
       },
       {
         "id": "SSL_sessionID_support",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "yes"
       },
       {
         "id": "sessionresumption_ticket",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "supported"
       },
       {
         "id": "sessionresumption_ID",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "not supported"
+        "finding": "supported"
       },
       {
         "id": "TLS_timestamp",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "random"
       },
       {
         "id": "certificate_compression",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "none"
       },
       {
         "id": "clientAuth",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "none"
       },
       {
         "id": "cert_numbers",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "1"
       },
       {
         "id": "cert_signatureAlgorithm",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "finding": "SHA256 with RSA"
       },
       {
         "id": "cert_keySize",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "RSA 2048 bits (exponent is 65537)"
       },
       {
         "id": "cert_keyUsage",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "Digital Signature, Key Encipherment"
       },
       {
         "id": "cert_extKeyUsage",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLS Web Server Authentication, TLS Web Client Authentication"
       },
       {
         "id": "cert_serialNumber",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "048CE390B226F3C0A6D5F8A0BFB7C7EC625D"
       },
       {
         "id": "cert_serialNumberLen",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "18"
       },
       {
         "id": "cert_fingerprintSHA1",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "9A96F1AB2F6BDD14119FFF91D4449D8AEA3096DB"
       },
       {
         "id": "cert_fingerprintSHA256",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "0CB0EFF6CFB65BC73FBEDEAB5D70A77998671D12F1ABF9CB136B8B0F0758B9A8"
       },
       {
         "id": "cert",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "-----BEGIN CERTIFICATE-----\nMIIE9DCCA9ygAwIBAgISBIzjkLIm88Cm1figv7fH7GJdMA0GCSqGSIb3DQEBCwUAMDMxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQwwCgYDVQQDEwNSMTAwHhcNMjQwNjI4MjMzNzU2WhcNMjQwOTI2MjMzNzU1WjAdMRswGQYDVQQDExJzdGF0cy5qdWRpbGlicmUuaW8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCYmFjr7Mu2d4HocA6HIjHv0mNjZwGckE4QFpSc9Rm2BTBWtoJBYtQxC3nA1OHBNhMfXHAWIdAcUxOMPAyMXRVH+MeUKUGPwuOyKbYbd42oc+rYY5E30iZQYaEEvfp2IgaloD3cB0uPtwYktheSLsmu3BYsLMNslCMtn53UQNqYJj1nhze2TKSj7lIx44cs7TjucKW1mH3Dh5b7LkVsomwk/2NCtuR81F9rlnMkegyliWiG8XEDeVMOiBxuWqXwgAxmDaSiILW5CRwANY88iaeKjE5X/R4oGTpj0FYD6fUyDTdAP5qQcTPX17R+QUi0BaqO92U2h4dmyv9tg0PvSKyNAgMBAAGjggIWMIICEjAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYEFFjJsqpo5qVIzNgr6EKyv3++RWZoMB8GA1UdIwQYMBaAFLu8w0el5LypxsOkcgwQjaI14cjoMFcGCCsGAQUFBwEBBEswSTAiBggrBgEFBQcwAYYWaHR0cDovL3IxMC5vLmxlbmNyLm9yZzAjBggrBgEFBQcwAoYXaHR0cDovL3IxMC5pLmxlbmNyLm9yZy8wHQYDVR0RBBYwFIISc3RhdHMuanVkaWxpYnJlLmlvMBMGA1UdIAQMMAowCAYGZ4EMAQIBMIIBBAYKKwYBBAHWeQIEAgSB9QSB8gDwAHYAPxdLT9ciR1iUHWUchL4NEu2QN38fhWrrwb8ohez4ZG4AAAGQYW1ipQAABAMARzBFAiEA98FmkG6MoEP5goC+VjTpQa1Ve3Vmezf9OJjpQZFV1HICIAr+itHwN/CMv1uWG8ltJe2sDMV8L+AGXqLBWlEcXrsmAHYAdv+IPwq2+5VRwmHM9Ye6NLSkzbsp3GhCCp/mZ0xaOnQAAAGQYW1qqgAABAMARzBFAiEA5e04o9PsTus58Cu23aIlaOMLE3SnK6ZCe9M1ezvtt8QCIH3+fFRXIzuGVJc5pVN0ZQzSSy8JMfxsiq+u+T2U4F1PMA0GCSqGSIb3DQEBCwUAA4IBAQAxAjBPm6ajyFSi+oa7KCdK70Lo3me1yphZ7FOXDXV1jWOUCKNHSan0zp9wpjRyI1AtQ/63i4UoVO+tmqf8dLox6W/ZW7wvrf+ExJBZU1EKTUa9Vp8oJqbBGPwh80q15p+FIgQ9kfdPbV31n4Kck4GbIIY7d7H7SI3gEpQ4WITVRujPlc7buSsR95K3Jzlgwtc+Re4q01+HcCcm7oKBo2g9a++mAE4KCPvPXPl8DjeAKTJRBPTbZ8Rpnvqzuez2fsNCTxQVLKhKUD7LdYzjcGFn/g2COfGTsoXMVENP/Tv9OSEMGXWuStiNbycE3ZwYb7gayp2De588lVVlFgLej6eI\n-----END CERTIFICATE-----"
       },
       {
         "id": "cert_commonName",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "finding": "stats.judilibre.io"
       },
       {
         "id": "cert_commonName_wo_SNI",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "*.github.io"
       },
       {
         "id": "cert_subjectAltName",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "stats.judilibre.io"
       },
       {
         "id": "cert_trust",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "finding": "Ok via SAN and CN (SNI mandatory)"
       },
       {
         "id": "cert_chain_of_trust",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "finding": "passed."
       },
       {
         "id": "cert_certificatePolicies_EV",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "no"
       },
       {
         "id": "cert_expirationStatus",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
-        "finding": "88 >= 30 days"
+        "finding": "81 >= 30 days"
       },
       {
         "id": "cert_notBefore",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "2024-06-28 23:37"
       },
       {
         "id": "cert_notAfter",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "finding": "2024-09-26 23:37"
       },
       {
         "id": "cert_extlifeSpan",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "finding": "certificate has no extended life time according to browser forum"
       },
       {
         "id": "cert_eTLS",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "not present"
       },
       {
         "id": "cert_crlDistributionPoints",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "--"
       },
       {
         "id": "cert_ocspURL",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "http://r10.o.lencr.org"
       },
       {
         "id": "OCSP_stapling",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "finding": "offered"
       },
       {
         "id": "cert_ocspRevoked",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "finding": "not revoked"
       },
       {
         "id": "cert_mustStapleExtension",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "--"
       },
       {
         "id": "DNS_CAArecord",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "LOW",
         "finding": "--"
       },
       {
         "id": "certificate_transparency",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "finding": "yes (certificate extension)"
       },
       {
         "id": "certs_countServer",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "2"
       },
       {
         "id": "certs_list_ordering_problem",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "no"
       },
       {
         "id": "cert_caIssuers",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "R10 (Let's Encrypt from US)"
       },
       {
         "id": "intermediate_cert <#1>",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "-----BEGIN CERTIFICATE-----\nMIIFBTCCAu2gAwIBAgIQS6hSk/eaL6JzBkuoBI110DANBgkqhkiG9w0BAQsFADBPMQswCQYDVQQGEwJVUzEpMCcGA1UEChMgSW50ZXJuZXQgU2VjdXJpdHkgUmVzZWFyY2ggR3JvdXAxFTATBgNVBAMTDElTUkcgUm9vdCBYMTAeFw0yNDAzMTMwMDAwMDBaFw0yNzAzMTIyMzU5NTlaMDMxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQwwCgYDVQQDEwNSMTAwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDPV+XmxFQS7bRH/sknWHZGUCiMHT6I3wWd1bUYKb3dtVq/+vbOo76vACFLYlpaPAEvxVgD9on/jhFD68G14BQHlo9vH9fnuoE5CXVlt8KvGFs3Jijno/QHK20a/6tYvJWuQP/py1fEtVt/eA0YYbwX51TGu0mRzW4Y0YCF7qZlNrx06rxQTOr8IfM4FpOUurDTazgGzRYSespSdcitdrLCnF2YRVxvYXvGLe48E1KGAdlX5jgc3421H5KRmudKHMxFqHJV8LDmowfs/acbZp4/SItxhHFYyTr6717yW0QrPHTnj7JHwQdqzZq3DZb3EoEmUVQK7GH29/Xi8orIlQ2NAgMBAAGjgfgwgfUwDgYDVR0PAQH/BAQDAgGGMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATASBgNVHRMBAf8ECDAGAQH/AgEAMB0GA1UdDgQWBBS7vMNHpeS8qcbDpHIMEI2iNeHI6DAfBgNVHSMEGDAWgBR5tFnme7bl5AFzgAiIyBpY9umbbjAyBggrBgEFBQcBAQQmMCQwIgYIKwYBBQUHMAKGFmh0dHA6Ly94MS5pLmxlbmNyLm9yZy8wEwYDVR0gBAwwCjAIBgZngQwBAgEwJwYDVR0fBCAwHjAcoBqgGIYWaHR0cDovL3gxLmMubGVuY3Iub3JnLzANBgkqhkiG9w0BAQsFAAOCAgEAkrHnQTfreZ2B5s3iJeE6IOmQRJWjgVzPw139vaBw1bGWKCIL0vIozwzn1OZDjCQiHcFCktEJr59L9MhwTyAWsVrdAfYf+B9haxQnsHKNY67u4s5Lzzfdu6PUzeetUK29v+PsPmI2cJkxp+iN3epi4hKu9ZzUPSwMqtCceb7qPVxEbpYxY1p91n5PJKBLBX9eb9LU6l8zSxPWV7bK3lG4XaMJgnT9x3ies7msFtpKK5bDtotij/l0GaKeA97pb5uwD9KgWvaFXMIEt8jVTjLEvwRdvCn294GPDF08U8lAkIv7tghluaQh1QnlE4SEN4LOECj8dsIGJXpGUk3aU3KkJz9icKy+aUgA+2cP21uh6NcDIS3XyfaZQjmDQ993ChII8SXWupQZVBiIpcWO4RqZk3lr7Bz5MUCwzDIA359e57SSq5CCkY0N4B6Vulk7LktfwrdGNVI5BsC9qqxSwSKgRJeZ9wygIaehbHFHFhcBaMDKpiZlBHyzrsnnlFXCb5s8HKn5LsUgGvB24L7sGNZP2CX7dhHov+YhD+jozLW2p9W4959Bz2EiRmqDtmiXLnzqTpXbI+suyCsohKRg6Un0RC47+cpiVwHiXZAW+cn8eiNIjqbVgXLxKPpdzvvtTnOPlC7SQZSYmdunr3Bf9b77AiC/ZidstK36dRILKz7OA54=\n-----END CERTIFICATE-----"
       },
       {
         "id": "intermediate_cert_fingerprintSHA256 <#1>",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "9D7C3F1AA6AD2B2EC0D5CF1E246F8D9AE6CBC9FD0755AD37BB974B1F2FB603F3"
       },
       {
         "id": "intermediate_cert_notBefore <#1>",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "2024-03-13 00:00"
       },
       {
         "id": "intermediate_cert_notAfter <#1>",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "finding": "2027-03-12 23:59"
       },
       {
         "id": "intermediate_cert_expiration <#1>",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "finding": "ok > 40 days"
       },
       {
         "id": "intermediate_cert_chain <#1>",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "R10 <-- ISRG Root X1"
       },
       {
         "id": "intermediate_cert_badOCSP",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "finding": "intermediate certificate(s) is/are ok"
       },
       {
         "id": "HTTP_status_code",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "200 OK ('/')"
       },
       {
         "id": "HTTP_clock_skew",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "+189 seconds from localtime"
+        "finding": "+255 seconds from localtime"
       },
       {
         "id": "HTTP_headerTime",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "1719709017"
+        "finding": "1720313911"
       },
       {
         "id": "HTTP_headerAge",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "189 seconds"
+        "finding": "255 seconds"
       },
       {
         "id": "HSTS_time",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "finding": "365 days (=31556952 seconds) > 15552000 seconds"
       },
       {
         "id": "HSTS_subdomains",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "only for this domain"
       },
       {
         "id": "HSTS_preload",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "domain is NOT marked for preloading"
       },
       {
         "id": "HPKP",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "No support for HTTP Public Key Pinning"
       },
       {
         "id": "banner_server",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "GitHub.com"
       },
       {
         "id": "banner_application",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "No application banner found"
       },
       {
         "id": "cookie_count",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "0 at '/'"
       },
       {
         "id": "Access-Control-Allow-Origin",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "*"
       },
       {
         "id": "X-Served-By",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "cache-iad-kcgs7200042-IAD"
+        "finding": "cache-chi-kigq8000064-CHI"
       },
       {
         "id": "Cache-Control",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "max-age=600"
       },
       {
         "id": "banner_reverseproxy",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "cwe": "CWE-200",
@@ -3867,7 +3384,7 @@
       },
       {
         "id": "heartbleed",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2014-0160",
@@ -3876,7 +3393,7 @@
       },
       {
         "id": "CCS",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2014-0224",
@@ -3885,7 +3402,7 @@
       },
       {
         "id": "ticketbleed",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2016-9244",
@@ -3894,7 +3411,7 @@
       },
       {
         "id": "ROBOT",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2017-17382 CVE-2017-17427 CVE-2017-17428 CVE-2017-13098 CVE-2017-1000385 CVE-2017-13099 CVE-2016-6883 CVE-2012-5081 CVE-2017-6168",
@@ -3903,7 +3420,7 @@
       },
       {
         "id": "secure_renego",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "cwe": "CWE-310",
@@ -3911,7 +3428,7 @@
       },
       {
         "id": "secure_client_renego",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2011-1473",
@@ -3920,7 +3437,7 @@
       },
       {
         "id": "CRIME_TLS",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2012-4929",
@@ -3929,7 +3446,7 @@
       },
       {
         "id": "BREACH",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "MEDIUM",
         "cve": "CVE-2013-3587",
@@ -3938,7 +3455,7 @@
       },
       {
         "id": "POODLE_SSL",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2014-3566",
@@ -3947,14 +3464,14 @@
       },
       {
         "id": "fallback_SCSV",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "finding": "no protocol below TLS 1.2 offered"
       },
       {
         "id": "SWEET32",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2016-2183 CVE-2016-6329",
@@ -3963,7 +3480,7 @@
       },
       {
         "id": "FREAK",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2015-0204",
@@ -3972,7 +3489,7 @@
       },
       {
         "id": "DROWN",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2016-0800 CVE-2016-0703",
@@ -3981,7 +3498,7 @@
       },
       {
         "id": "DROWN_hint",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "cve": "CVE-2016-0800 CVE-2016-0703",
@@ -3990,7 +3507,7 @@
       },
       {
         "id": "LOGJAM",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2015-4000",
@@ -3999,7 +3516,7 @@
       },
       {
         "id": "LOGJAM-common_primes",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2015-4000",
@@ -4008,7 +3525,7 @@
       },
       {
         "id": "BEAST",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2011-3389",
@@ -4017,7 +3534,7 @@
       },
       {
         "id": "LUCKY13",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "LOW",
         "cve": "CVE-2013-0169",
@@ -4026,7 +3543,7 @@
       },
       {
         "id": "winshock",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2014-6321",
@@ -4035,7 +3552,7 @@
       },
       {
         "id": "RC4",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2013-2566 CVE-2015-2808",
@@ -4044,315 +3561,315 @@
       },
       {
         "id": "clientsimulation-android_60",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
       },
       {
         "id": "clientsimulation-android_70",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
       },
       {
         "id": "clientsimulation-android_81",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
       },
       {
         "id": "clientsimulation-android_90",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-android_X",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-android_11",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-android_12",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-chrome_79_win10",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-chrome_101_win10",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-firefox_66_win81",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-firefox_100_win10",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-ie_6_xp",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "No connection"
       },
       {
         "id": "clientsimulation-ie_8_win7",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "No connection"
       },
       {
         "id": "clientsimulation-ie_8_xp",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "No connection"
       },
       {
         "id": "clientsimulation-ie_11_win7",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-SHA256"
       },
       {
         "id": "clientsimulation-ie_11_win81",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-SHA256"
       },
       {
         "id": "clientsimulation-ie_11_winphone81",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-SHA256"
       },
       {
         "id": "clientsimulation-ie_11_win10",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
       },
       {
         "id": "clientsimulation-edge_15_win10",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
       },
       {
         "id": "clientsimulation-edge_101_win10_21h2",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-safari_121_ios_122",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
       },
       {
         "id": "clientsimulation-safari_130_osx_10146",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
       },
       {
         "id": "clientsimulation-safari_154_osx_1231",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-java_7u25",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "No connection"
       },
       {
         "id": "clientsimulation-java_8u161",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
       },
       {
         "id": "clientsimulation-java1102",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-java1703",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-go_1178",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-libressl_283",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305"
       },
       {
         "id": "clientsimulation-openssl_102e",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
       },
       {
         "id": "clientsimulation-openssl_110l",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305"
       },
       {
         "id": "clientsimulation-openssl_111d",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-openssl_303",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-apple_mail_16_0",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
       },
       {
         "id": "clientsimulation-thunderbird_91_9",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "rating_spec",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "SSL Labs's 'SSL Server Rating Guide' (version 2009q from 2020-01-30)"
       },
       {
         "id": "rating_doc",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide"
       },
       {
         "id": "protocol_support_score",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "100"
       },
       {
         "id": "protocol_support_score_weighted",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "30"
       },
       {
         "id": "key_exchange_score",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "90"
       },
       {
         "id": "key_exchange_score_weighted",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "27"
       },
       {
         "id": "cipher_strength_score",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "60"
       },
       {
         "id": "cipher_strength_score_weighted",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "24"
       },
       {
         "id": "final_score",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "INFO",
         "finding": "81"
       },
       {
         "id": "overall_grade",
-        "ip": "stats.judilibre.io/185.199.110.153",
+        "ip": "stats.judilibre.io/185.199.108.153",
         "port": "443",
         "severity": "OK",
         "finding": "A+"
@@ -4704,7 +4221,7 @@
         "ip": "stats.judilibre.io/185.199.109.153",
         "port": "443",
         "severity": "OK",
-        "finding": "88 >= 30 days"
+        "finding": "81 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -4865,21 +4382,21 @@
         "ip": "stats.judilibre.io/185.199.109.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "+245 seconds from localtime"
+        "finding": "+310 seconds from localtime"
       },
       {
         "id": "HTTP_headerTime",
         "ip": "stats.judilibre.io/185.199.109.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "1719709072"
+        "finding": "1720313966"
       },
       {
         "id": "HTTP_headerAge",
         "ip": "stats.judilibre.io/185.199.109.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "245 seconds"
+        "finding": "310 seconds"
       },
       {
         "id": "HSTS_time",
@@ -4942,7 +4459,7 @@
         "ip": "stats.judilibre.io/185.199.109.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "cache-iad-kcgs7200052-IAD"
+        "finding": "cache-chi-kigq8000127-CHI"
       },
       {
         "id": "Cache-Control",
@@ -5453,77 +4970,77 @@
       },
       {
         "id": "service",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "HTTP"
       },
       {
         "id": "pre_128cipher",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "No 128 cipher limit bug"
       },
       {
         "id": "SSLv2",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "finding": "not offered"
       },
       {
         "id": "SSLv3",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "finding": "not offered"
       },
       {
         "id": "TLS1",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "not offered"
       },
       {
         "id": "TLS1_1",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "not offered"
       },
       {
         "id": "TLS1_2",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "finding": "offered"
       },
       {
         "id": "TLS1_3",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "finding": "offered with final"
       },
       {
         "id": "ALPN_HTTP2",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "finding": "h2"
       },
       {
         "id": "ALPN",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "http/1.1"
       },
       {
         "id": "cipherlist_NULL",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "cwe": "CWE-327",
@@ -5531,7 +5048,7 @@
       },
       {
         "id": "cipherlist_aNULL",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "cwe": "CWE-327",
@@ -5539,7 +5056,7 @@
       },
       {
         "id": "cipherlist_EXPORT",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "cwe": "CWE-327",
@@ -5547,7 +5064,7 @@
       },
       {
         "id": "cipherlist_LOW",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "cwe": "CWE-327",
@@ -5555,7 +5072,7 @@
       },
       {
         "id": "cipherlist_3DES_IDEA",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "cwe": "CWE-310",
@@ -5563,7 +5080,7 @@
       },
       {
         "id": "cipherlist_OBSOLETED",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "LOW",
         "cwe": "CWE-310",
@@ -5571,483 +5088,483 @@
       },
       {
         "id": "cipherlist_STRONG_NOFS",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "finding": "offered"
       },
       {
         "id": "cipherlist_STRONG_FS",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "finding": "offered"
       },
       {
         "id": "cipher_order-tls1_2",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "finding": "server"
       },
       {
         "id": "cipherorder_TLSv1_2",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "ECDHE-RSA-AES128-GCM-SHA256"
       },
       {
         "id": "cipher_order",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "finding": "server"
       },
       {
         "id": "FS",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "finding": "offered"
       },
       {
         "id": "FS_ciphers",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA"
       },
       {
         "id": "FS_ECDHE_curves",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "finding": "prime256v1 secp384r1"
       },
       {
         "id": "TLS_extensions",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "'server name/#0' 'renegotiation info/#65281' 'EC point formats/#11' 'session ticket/#35' 'status request/#5' 'supported versions/#43' 'key share/#51' 'extended master secret/#23' 'application layer protocol negotiation/#16'"
       },
       {
         "id": "TLS_session_ticket",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "valid for 7200 seconds only (<daily)"
       },
       {
         "id": "SSL_sessionID_support",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "yes"
       },
       {
         "id": "sessionresumption_ticket",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "supported"
       },
       {
         "id": "sessionresumption_ID",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "supported"
       },
       {
         "id": "TLS_timestamp",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "random"
       },
       {
         "id": "certificate_compression",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "none"
       },
       {
         "id": "clientAuth",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "none"
       },
       {
         "id": "cert_numbers",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "1"
       },
       {
         "id": "cert_signatureAlgorithm",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "finding": "SHA256 with RSA"
       },
       {
         "id": "cert_keySize",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "RSA 2048 bits (exponent is 65537)"
       },
       {
         "id": "cert_keyUsage",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "Digital Signature, Key Encipherment"
       },
       {
         "id": "cert_extKeyUsage",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLS Web Server Authentication, TLS Web Client Authentication"
       },
       {
         "id": "cert_serialNumber",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "048CE390B226F3C0A6D5F8A0BFB7C7EC625D"
       },
       {
         "id": "cert_serialNumberLen",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "18"
       },
       {
         "id": "cert_fingerprintSHA1",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "9A96F1AB2F6BDD14119FFF91D4449D8AEA3096DB"
       },
       {
         "id": "cert_fingerprintSHA256",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "0CB0EFF6CFB65BC73FBEDEAB5D70A77998671D12F1ABF9CB136B8B0F0758B9A8"
       },
       {
         "id": "cert",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "-----BEGIN CERTIFICATE-----\nMIIE9DCCA9ygAwIBAgISBIzjkLIm88Cm1figv7fH7GJdMA0GCSqGSIb3DQEBCwUAMDMxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQwwCgYDVQQDEwNSMTAwHhcNMjQwNjI4MjMzNzU2WhcNMjQwOTI2MjMzNzU1WjAdMRswGQYDVQQDExJzdGF0cy5qdWRpbGlicmUuaW8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCYmFjr7Mu2d4HocA6HIjHv0mNjZwGckE4QFpSc9Rm2BTBWtoJBYtQxC3nA1OHBNhMfXHAWIdAcUxOMPAyMXRVH+MeUKUGPwuOyKbYbd42oc+rYY5E30iZQYaEEvfp2IgaloD3cB0uPtwYktheSLsmu3BYsLMNslCMtn53UQNqYJj1nhze2TKSj7lIx44cs7TjucKW1mH3Dh5b7LkVsomwk/2NCtuR81F9rlnMkegyliWiG8XEDeVMOiBxuWqXwgAxmDaSiILW5CRwANY88iaeKjE5X/R4oGTpj0FYD6fUyDTdAP5qQcTPX17R+QUi0BaqO92U2h4dmyv9tg0PvSKyNAgMBAAGjggIWMIICEjAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYEFFjJsqpo5qVIzNgr6EKyv3++RWZoMB8GA1UdIwQYMBaAFLu8w0el5LypxsOkcgwQjaI14cjoMFcGCCsGAQUFBwEBBEswSTAiBggrBgEFBQcwAYYWaHR0cDovL3IxMC5vLmxlbmNyLm9yZzAjBggrBgEFBQcwAoYXaHR0cDovL3IxMC5pLmxlbmNyLm9yZy8wHQYDVR0RBBYwFIISc3RhdHMuanVkaWxpYnJlLmlvMBMGA1UdIAQMMAowCAYGZ4EMAQIBMIIBBAYKKwYBBAHWeQIEAgSB9QSB8gDwAHYAPxdLT9ciR1iUHWUchL4NEu2QN38fhWrrwb8ohez4ZG4AAAGQYW1ipQAABAMARzBFAiEA98FmkG6MoEP5goC+VjTpQa1Ve3Vmezf9OJjpQZFV1HICIAr+itHwN/CMv1uWG8ltJe2sDMV8L+AGXqLBWlEcXrsmAHYAdv+IPwq2+5VRwmHM9Ye6NLSkzbsp3GhCCp/mZ0xaOnQAAAGQYW1qqgAABAMARzBFAiEA5e04o9PsTus58Cu23aIlaOMLE3SnK6ZCe9M1ezvtt8QCIH3+fFRXIzuGVJc5pVN0ZQzSSy8JMfxsiq+u+T2U4F1PMA0GCSqGSIb3DQEBCwUAA4IBAQAxAjBPm6ajyFSi+oa7KCdK70Lo3me1yphZ7FOXDXV1jWOUCKNHSan0zp9wpjRyI1AtQ/63i4UoVO+tmqf8dLox6W/ZW7wvrf+ExJBZU1EKTUa9Vp8oJqbBGPwh80q15p+FIgQ9kfdPbV31n4Kck4GbIIY7d7H7SI3gEpQ4WITVRujPlc7buSsR95K3Jzlgwtc+Re4q01+HcCcm7oKBo2g9a++mAE4KCPvPXPl8DjeAKTJRBPTbZ8Rpnvqzuez2fsNCTxQVLKhKUD7LdYzjcGFn/g2COfGTsoXMVENP/Tv9OSEMGXWuStiNbycE3ZwYb7gayp2De588lVVlFgLej6eI\n-----END CERTIFICATE-----"
       },
       {
         "id": "cert_commonName",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "finding": "stats.judilibre.io"
       },
       {
         "id": "cert_commonName_wo_SNI",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "*.github.io"
       },
       {
         "id": "cert_subjectAltName",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "stats.judilibre.io"
       },
       {
         "id": "cert_trust",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "finding": "Ok via SAN and CN (SNI mandatory)"
       },
       {
         "id": "cert_chain_of_trust",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "finding": "passed."
       },
       {
         "id": "cert_certificatePolicies_EV",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "no"
       },
       {
         "id": "cert_expirationStatus",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
-        "finding": "88 >= 30 days"
+        "finding": "81 >= 30 days"
       },
       {
         "id": "cert_notBefore",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "2024-06-28 23:37"
       },
       {
         "id": "cert_notAfter",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "finding": "2024-09-26 23:37"
       },
       {
         "id": "cert_extlifeSpan",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "finding": "certificate has no extended life time according to browser forum"
       },
       {
         "id": "cert_eTLS",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "not present"
       },
       {
         "id": "cert_crlDistributionPoints",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "--"
       },
       {
         "id": "cert_ocspURL",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "http://r10.o.lencr.org"
       },
       {
         "id": "OCSP_stapling",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "finding": "offered"
       },
       {
         "id": "cert_ocspRevoked",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "finding": "not revoked"
       },
       {
         "id": "cert_mustStapleExtension",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "--"
       },
       {
         "id": "DNS_CAArecord",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "LOW",
         "finding": "--"
       },
       {
         "id": "certificate_transparency",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "finding": "yes (certificate extension)"
       },
       {
         "id": "certs_countServer",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "2"
       },
       {
         "id": "certs_list_ordering_problem",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "no"
       },
       {
         "id": "cert_caIssuers",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "R10 (Let's Encrypt from US)"
       },
       {
         "id": "intermediate_cert <#1>",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "-----BEGIN CERTIFICATE-----\nMIIFBTCCAu2gAwIBAgIQS6hSk/eaL6JzBkuoBI110DANBgkqhkiG9w0BAQsFADBPMQswCQYDVQQGEwJVUzEpMCcGA1UEChMgSW50ZXJuZXQgU2VjdXJpdHkgUmVzZWFyY2ggR3JvdXAxFTATBgNVBAMTDElTUkcgUm9vdCBYMTAeFw0yNDAzMTMwMDAwMDBaFw0yNzAzMTIyMzU5NTlaMDMxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQwwCgYDVQQDEwNSMTAwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDPV+XmxFQS7bRH/sknWHZGUCiMHT6I3wWd1bUYKb3dtVq/+vbOo76vACFLYlpaPAEvxVgD9on/jhFD68G14BQHlo9vH9fnuoE5CXVlt8KvGFs3Jijno/QHK20a/6tYvJWuQP/py1fEtVt/eA0YYbwX51TGu0mRzW4Y0YCF7qZlNrx06rxQTOr8IfM4FpOUurDTazgGzRYSespSdcitdrLCnF2YRVxvYXvGLe48E1KGAdlX5jgc3421H5KRmudKHMxFqHJV8LDmowfs/acbZp4/SItxhHFYyTr6717yW0QrPHTnj7JHwQdqzZq3DZb3EoEmUVQK7GH29/Xi8orIlQ2NAgMBAAGjgfgwgfUwDgYDVR0PAQH/BAQDAgGGMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATASBgNVHRMBAf8ECDAGAQH/AgEAMB0GA1UdDgQWBBS7vMNHpeS8qcbDpHIMEI2iNeHI6DAfBgNVHSMEGDAWgBR5tFnme7bl5AFzgAiIyBpY9umbbjAyBggrBgEFBQcBAQQmMCQwIgYIKwYBBQUHMAKGFmh0dHA6Ly94MS5pLmxlbmNyLm9yZy8wEwYDVR0gBAwwCjAIBgZngQwBAgEwJwYDVR0fBCAwHjAcoBqgGIYWaHR0cDovL3gxLmMubGVuY3Iub3JnLzANBgkqhkiG9w0BAQsFAAOCAgEAkrHnQTfreZ2B5s3iJeE6IOmQRJWjgVzPw139vaBw1bGWKCIL0vIozwzn1OZDjCQiHcFCktEJr59L9MhwTyAWsVrdAfYf+B9haxQnsHKNY67u4s5Lzzfdu6PUzeetUK29v+PsPmI2cJkxp+iN3epi4hKu9ZzUPSwMqtCceb7qPVxEbpYxY1p91n5PJKBLBX9eb9LU6l8zSxPWV7bK3lG4XaMJgnT9x3ies7msFtpKK5bDtotij/l0GaKeA97pb5uwD9KgWvaFXMIEt8jVTjLEvwRdvCn294GPDF08U8lAkIv7tghluaQh1QnlE4SEN4LOECj8dsIGJXpGUk3aU3KkJz9icKy+aUgA+2cP21uh6NcDIS3XyfaZQjmDQ993ChII8SXWupQZVBiIpcWO4RqZk3lr7Bz5MUCwzDIA359e57SSq5CCkY0N4B6Vulk7LktfwrdGNVI5BsC9qqxSwSKgRJeZ9wygIaehbHFHFhcBaMDKpiZlBHyzrsnnlFXCb5s8HKn5LsUgGvB24L7sGNZP2CX7dhHov+YhD+jozLW2p9W4959Bz2EiRmqDtmiXLnzqTpXbI+suyCsohKRg6Un0RC47+cpiVwHiXZAW+cn8eiNIjqbVgXLxKPpdzvvtTnOPlC7SQZSYmdunr3Bf9b77AiC/ZidstK36dRILKz7OA54=\n-----END CERTIFICATE-----"
       },
       {
         "id": "intermediate_cert_fingerprintSHA256 <#1>",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "9D7C3F1AA6AD2B2EC0D5CF1E246F8D9AE6CBC9FD0755AD37BB974B1F2FB603F3"
       },
       {
         "id": "intermediate_cert_notBefore <#1>",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "2024-03-13 00:00"
       },
       {
         "id": "intermediate_cert_notAfter <#1>",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "finding": "2027-03-12 23:59"
       },
       {
         "id": "intermediate_cert_expiration <#1>",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "finding": "ok > 40 days"
       },
       {
         "id": "intermediate_cert_chain <#1>",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "R10 <-- ISRG Root X1"
       },
       {
         "id": "intermediate_cert_badOCSP",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "finding": "intermediate certificate(s) is/are ok"
       },
       {
         "id": "HTTP_status_code",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "200 OK ('/')"
       },
       {
         "id": "HTTP_clock_skew",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "+300 seconds from localtime"
+        "finding": "+370 seconds from localtime"
       },
       {
         "id": "HTTP_headerTime",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "1719709128"
+        "finding": "1720314027"
       },
       {
         "id": "HTTP_headerAge",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "300 seconds"
+        "finding": "370 seconds"
       },
       {
         "id": "HSTS_time",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "finding": "365 days (=31556952 seconds) > 15552000 seconds"
       },
       {
         "id": "HSTS_subdomains",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "only for this domain"
       },
       {
         "id": "HSTS_preload",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "domain is NOT marked for preloading"
       },
       {
         "id": "HPKP",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "No support for HTTP Public Key Pinning"
       },
       {
         "id": "banner_server",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "GitHub.com"
       },
       {
         "id": "banner_application",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "No application banner found"
       },
       {
         "id": "cookie_count",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "0 at '/'"
       },
       {
         "id": "Access-Control-Allow-Origin",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "*"
       },
       {
         "id": "X-Served-By",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "cache-iad-kiad7000091-IAD"
+        "finding": "cache-chi-kigq8000120-CHI"
       },
       {
         "id": "Cache-Control",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "max-age=600"
       },
       {
         "id": "banner_reverseproxy",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "cwe": "CWE-200",
@@ -6055,7 +5572,7 @@
       },
       {
         "id": "heartbleed",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2014-0160",
@@ -6064,7 +5581,7 @@
       },
       {
         "id": "CCS",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2014-0224",
@@ -6073,7 +5590,7 @@
       },
       {
         "id": "ticketbleed",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2016-9244",
@@ -6082,7 +5599,7 @@
       },
       {
         "id": "ROBOT",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2017-17382 CVE-2017-17427 CVE-2017-17428 CVE-2017-13098 CVE-2017-1000385 CVE-2017-13099 CVE-2016-6883 CVE-2012-5081 CVE-2017-6168",
@@ -6091,7 +5608,7 @@
       },
       {
         "id": "secure_renego",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "cwe": "CWE-310",
@@ -6099,7 +5616,7 @@
       },
       {
         "id": "secure_client_renego",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2011-1473",
@@ -6108,7 +5625,7 @@
       },
       {
         "id": "CRIME_TLS",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2012-4929",
@@ -6117,7 +5634,7 @@
       },
       {
         "id": "BREACH",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "MEDIUM",
         "cve": "CVE-2013-3587",
@@ -6126,7 +5643,7 @@
       },
       {
         "id": "POODLE_SSL",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2014-3566",
@@ -6135,14 +5652,14 @@
       },
       {
         "id": "fallback_SCSV",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "finding": "no protocol below TLS 1.2 offered"
       },
       {
         "id": "SWEET32",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2016-2183 CVE-2016-6329",
@@ -6151,7 +5668,7 @@
       },
       {
         "id": "FREAK",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2015-0204",
@@ -6160,7 +5677,7 @@
       },
       {
         "id": "DROWN",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2016-0800 CVE-2016-0703",
@@ -6169,7 +5686,7 @@
       },
       {
         "id": "DROWN_hint",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "cve": "CVE-2016-0800 CVE-2016-0703",
@@ -6178,7 +5695,7 @@
       },
       {
         "id": "LOGJAM",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2015-4000",
@@ -6187,7 +5704,7 @@
       },
       {
         "id": "LOGJAM-common_primes",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2015-4000",
@@ -6196,7 +5713,7 @@
       },
       {
         "id": "BEAST",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2011-3389",
@@ -6205,7 +5722,7 @@
       },
       {
         "id": "LUCKY13",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "LOW",
         "cve": "CVE-2013-0169",
@@ -6214,7 +5731,7 @@
       },
       {
         "id": "winshock",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2014-6321",
@@ -6223,7 +5740,7 @@
       },
       {
         "id": "RC4",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2013-2566 CVE-2015-2808",
@@ -6232,325 +5749,325 @@
       },
       {
         "id": "clientsimulation-android_60",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
       },
       {
         "id": "clientsimulation-android_70",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
       },
       {
         "id": "clientsimulation-android_81",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
       },
       {
         "id": "clientsimulation-android_90",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-android_X",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-android_11",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-android_12",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-chrome_79_win10",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-chrome_101_win10",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-firefox_66_win81",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-firefox_100_win10",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-ie_6_xp",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "No connection"
       },
       {
         "id": "clientsimulation-ie_8_win7",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "No connection"
       },
       {
         "id": "clientsimulation-ie_8_xp",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "No connection"
       },
       {
         "id": "clientsimulation-ie_11_win7",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-SHA256"
       },
       {
         "id": "clientsimulation-ie_11_win81",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-SHA256"
       },
       {
         "id": "clientsimulation-ie_11_winphone81",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-SHA256"
       },
       {
         "id": "clientsimulation-ie_11_win10",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
       },
       {
         "id": "clientsimulation-edge_15_win10",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
       },
       {
         "id": "clientsimulation-edge_101_win10_21h2",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-safari_121_ios_122",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
       },
       {
         "id": "clientsimulation-safari_130_osx_10146",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
       },
       {
         "id": "clientsimulation-safari_154_osx_1231",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-java_7u25",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "No connection"
       },
       {
         "id": "clientsimulation-java_8u161",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
       },
       {
         "id": "clientsimulation-java1102",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-java1703",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-go_1178",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-libressl_283",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305"
       },
       {
         "id": "clientsimulation-openssl_102e",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
       },
       {
         "id": "clientsimulation-openssl_110l",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305"
       },
       {
         "id": "clientsimulation-openssl_111d",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-openssl_303",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-apple_mail_16_0",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
       },
       {
         "id": "clientsimulation-thunderbird_91_9",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "rating_spec",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "SSL Labs's 'SSL Server Rating Guide' (version 2009q from 2020-01-30)"
       },
       {
         "id": "rating_doc",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide"
       },
       {
         "id": "protocol_support_score",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "100"
       },
       {
         "id": "protocol_support_score_weighted",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "30"
       },
       {
         "id": "key_exchange_score",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "90"
       },
       {
         "id": "key_exchange_score_weighted",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "27"
       },
       {
         "id": "cipher_strength_score",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "60"
       },
       {
         "id": "cipher_strength_score_weighted",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "24"
       },
       {
         "id": "final_score",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
         "finding": "81"
       },
       {
         "id": "overall_grade",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "OK",
         "finding": "A+"
       },
       {
         "id": "scanTime",
-        "ip": "stats.judilibre.io/185.199.108.153",
+        "ip": "stats.judilibre.io/185.199.110.153",
         "port": "443",
         "severity": "INFO",
-        "finding": "225"
+        "finding": "228"
       }
     ],
     "thirdparties": {
@@ -6628,14 +6145,14 @@
       "headers": {
         "accept-ranges": "bytes",
         "access-control-allow-origin": "*",
-        "age": "20",
+        "age": "22",
         "cache-control": "max-age=600",
         "content-encoding": "gzip",
         "content-length": "627",
         "content-type": "text/html; charset=utf-8",
-        "date": "Sun, 30 Jun 2024 00:55:37 GMT",
+        "date": "Sun, 07 Jul 2024 00:57:11 GMT",
         "etag": "W/\"62895f74-4aa\"",
-        "expires": "Sun, 30 Jun 2024 01:04:39 GMT",
+        "expires": "Sun, 07 Jul 2024 01:04:22 GMT",
         "last-modified": "Sat, 21 May 2022 21:53:56 GMT",
         "server": "GitHub.com",
         "strict-transport-security": "max-age=31556952",
@@ -6643,30 +6160,17 @@
         "via": "1.1 varnish",
         "x-cache": "HIT",
         "x-cache-hits": "1",
-        "x-fastly-request-id": "7016ad606f01207e58d473c63dd82cfdebefb34f",
-        "x-github-request-id": "22D6:3DA1A1:1AF7CA2:1FCE3CA:6680ACCE",
+        "x-fastly-request-id": "0aa336ea88817dd3670497967dd0a33273e96add",
+        "x-github-request-id": "B69B:D724A:104080D:1395FA2:6689E73E",
         "x-proxy-cache": "MISS",
-        "x-served-by": "cache-iad-kcgs7200143-IAD",
-        "x-timer": "S1719708937.190543,VS0,VE2"
+        "x-served-by": "cache-chi-kigq8000163-CHI",
+        "x-timer": "S1720313831.331238,VS0,VE2"
       },
       "endpoints": [
         {
           "hostname": "stats.judilibre.io",
-          "ip": "185.199.109.153",
+          "ip": "185.199.108.153",
           "geoip": {
-            "city": {
-              "geoname_id": 5391959,
-              "names": {
-                "de": "San Francisco",
-                "en": "San Francisco",
-                "es": "San Francisco",
-                "fr": "San Francisco",
-                "ja": "サンフランシスコ",
-                "pt-BR": "São Francisco",
-                "ru": "Сан-Франциско",
-                "zh-CN": "旧金山"
-              }
-            },
             "continent": {
               "code": "NA",
               "geoname_id": 6255149,
@@ -6696,14 +6200,10 @@
               }
             },
             "location": {
-              "accuracy_radius": 20,
-              "latitude": 37.7642,
-              "longitude": -122.3993,
-              "metro_code": 807,
+              "accuracy_radius": 1000,
+              "latitude": 34.0544,
+              "longitude": -118.244,
               "time_zone": "America/Los_Angeles"
-            },
-            "postal": {
-              "code": "94107"
             },
             "registered_country": {
               "geoname_id": 6252001,
@@ -6837,7 +6337,7 @@
         },
         {
           "hostname": "api.github.com",
-          "ip": "140.82.112.5",
+          "ip": "140.82.112.6",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -6891,159 +6391,45 @@
         }
       ]
     },
-    "wappalyzer": {
-      "urls": {
-        "https://stats.judilibre.io/": {
-          "status": 200
-        }
-      },
-      "technologies": [
-        {
-          "slug": "node-js",
-          "name": "Node.js",
-          "description": "Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside a web browser.",
-          "confidence": 100,
-          "version": null,
-          "icon": "Node.js.svg",
-          "website": "https://nodejs.org",
-          "cpe": "cpe:2.3:a:nodejs:node.js:*:*:*:*:*:*:*:*",
-          "categories": [
-            {
-              "id": 27,
-              "slug": "programming-languages",
-              "name": "Programming languages"
-            }
-          ]
-        },
-        {
-          "slug": "sveltekit",
-          "name": "SvelteKit",
-          "description": "SvelteKit is the official Svelte framework for building web applications with a flexible filesystem-based routing.",
-          "confidence": 100,
-          "version": null,
-          "icon": "Svelte.svg",
-          "website": "https://kit.svelte.dev",
-          "cpe": null,
-          "categories": [
-            {
-              "id": 66,
-              "slug": "ui-frameworks",
-              "name": "UI frameworks"
-            }
-          ],
-          "rootPath": true
-        },
-        {
-          "slug": "varnish",
-          "name": "Varnish",
-          "description": "Varnish is a reverse caching proxy.",
-          "confidence": 100,
-          "version": null,
-          "icon": "Varnish.svg",
-          "website": "https://www.varnish-cache.org",
-          "cpe": "cpe:2.3:a:varnish-software:varnish_cache:*:*:*:*:*:*:*:*",
-          "categories": [
-            {
-              "id": 23,
-              "slug": "caching",
-              "name": "Caching"
-            }
-          ],
-          "rootPath": true
-        },
-        {
-          "slug": "svelte",
-          "name": "Svelte",
-          "description": "Svelte is a free and open-source front end compiler created by Rich Harris and maintained by the Svelte core team members.",
-          "confidence": 100,
-          "version": null,
-          "icon": "Svelte.svg",
-          "website": "https://svelte.dev",
-          "cpe": null,
-          "categories": [
-            {
-              "id": 12,
-              "slug": "javascript-frameworks",
-              "name": "JavaScript frameworks"
-            }
-          ],
-          "rootPath": true
-        },
-        {
-          "slug": "github-pages",
-          "name": "GitHub Pages",
-          "description": "GitHub Pages is a static site hosting service.",
-          "confidence": 100,
-          "version": null,
-          "icon": "GitHub.svg",
-          "website": "https://pages.github.com/",
-          "cpe": null,
-          "categories": [
-            {
-              "id": 62,
-              "slug": "paas",
-              "name": "PaaS"
-            }
-          ],
-          "rootPath": true
-        },
-        {
-          "slug": "hsts",
-          "name": "HSTS",
-          "description": "HTTP Strict Transport Security (HSTS) informs browsers that the site should only be accessed using HTTPS.",
-          "confidence": 100,
-          "version": null,
-          "icon": "default.svg",
-          "website": "https://www.rfc-editor.org/rfc/rfc6797#section-6.1",
-          "cpe": null,
-          "categories": [
-            {
-              "id": 16,
-              "slug": "security",
-              "name": "Security"
-            }
-          ],
-          "rootPath": true
-        },
-        {
-          "slug": "fastly",
-          "name": "Fastly",
-          "description": "Fastly is a cloud computing services provider. Fastly's cloud platform provides a content delivery network, Internet security services, load balancing, and video & streaming services.",
-          "confidence": 100,
-          "version": null,
-          "icon": "Fastly.svg",
-          "website": "https://www.fastly.com",
-          "cpe": null,
-          "categories": [
-            {
-              "id": 31,
-              "slug": "cdn",
-              "name": "CDN"
-            }
-          ],
-          "rootPath": true
-        },
-        {
-          "slug": "vite",
-          "name": "Vite",
-          "description": "Vite is a rapid development tool for modern web projects.",
-          "confidence": 100,
-          "version": null,
-          "icon": "vite.svg",
-          "website": "https://vitejs.dev",
-          "cpe": null,
-          "categories": [
-            {
-              "id": 19,
-              "slug": "miscellaneous",
-              "name": "Miscellaneous"
-            }
-          ]
-        }
-      ]
-    },
+    "wappalyzer": null,
     "zap": null,
     "nuclei": [
+      {
+        "template": "dns/dns-saas-service-detection.yaml",
+        "template-url": "https://templates.nuclei.sh/public/dns-saas-service-detection",
+        "template-id": "dns-saas-service-detection",
+        "template-path": "/home/runner/nuclei-templates/dns/dns-saas-service-detection.yaml",
+        "info": {
+          "name": "DNS SaaS Service Detection",
+          "author": [
+            "noah @thesubtlety",
+            "pdteam"
+          ],
+          "tags": [
+            "dns",
+            "service"
+          ],
+          "description": "A CNAME DNS record was discovered",
+          "reference": [
+            "https://ns1.com/resources/cname",
+            "https://www.theregister.com/2021/02/24/dns_cname_tracking/",
+            "https://www.ionos.com/digitalguide/hosting/technical-matters/cname-record/"
+          ],
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          }
+        },
+        "matcher-name": "github",
+        "type": "dns",
+        "host": "stats.judilibre.io.",
+        "matched-at": "stats.judilibre.io",
+        "extracted-results": [
+          "cour-de-cassation.github.io."
+        ],
+        "timestamp": "2024-07-07T01:01:45.641828543Z",
+        "matcher-status": true
+      },
       {
         "template": "dns/caa-fingerprint.yaml",
         "template-url": "https://templates.nuclei.sh/public/caa-fingerprint",
@@ -7078,83 +6464,10 @@
         "matched-at": "stats.judilibre.io",
         "extracted-results": [
           "digicert.com",
-          "sectigo.com",
-          "letsencrypt.org"
+          "letsencrypt.org",
+          "sectigo.com"
         ],
-        "timestamp": "2024-06-30T01:00:05.971093936Z",
-        "matcher-status": true
-      },
-      {
-        "template": "dns/dns-saas-service-detection.yaml",
-        "template-url": "https://templates.nuclei.sh/public/dns-saas-service-detection",
-        "template-id": "dns-saas-service-detection",
-        "template-path": "/home/runner/nuclei-templates/dns/dns-saas-service-detection.yaml",
-        "info": {
-          "name": "DNS SaaS Service Detection",
-          "author": [
-            "noah @thesubtlety",
-            "pdteam"
-          ],
-          "tags": [
-            "dns",
-            "service"
-          ],
-          "description": "A CNAME DNS record was discovered",
-          "reference": [
-            "https://ns1.com/resources/cname",
-            "https://www.theregister.com/2021/02/24/dns_cname_tracking/",
-            "https://www.ionos.com/digitalguide/hosting/technical-matters/cname-record/"
-          ],
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "github",
-        "type": "dns",
-        "host": "stats.judilibre.io.",
-        "matched-at": "stats.judilibre.io",
-        "extracted-results": [
-          "cour-de-cassation.github.io."
-        ],
-        "timestamp": "2024-06-30T01:00:06.983715714Z",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "x-permitted-cross-domain-policies",
-        "type": "http",
-        "host": "https://stats.judilibre.io",
-        "matched-at": "https://stats.judilibre.io",
-        "ip": "185.199.108.153",
-        "timestamp": "2024-06-30T01:00:38.950600424Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
+        "timestamp": "2024-07-07T01:01:46.251994143Z",
         "matcher-status": true
       },
       {
@@ -7190,229 +6503,7 @@
         "host": "https://stats.judilibre.io",
         "matched-at": "https://stats.judilibre.io",
         "ip": "185.199.108.153",
-        "timestamp": "2024-06-30T01:00:38.950665976Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "cross-origin-embedder-policy",
-        "type": "http",
-        "host": "https://stats.judilibre.io",
-        "matched-at": "https://stats.judilibre.io",
-        "ip": "185.199.108.153",
-        "timestamp": "2024-06-30T01:00:38.950683208Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "cross-origin-resource-policy",
-        "type": "http",
-        "host": "https://stats.judilibre.io",
-        "matched-at": "https://stats.judilibre.io",
-        "ip": "185.199.108.153",
-        "timestamp": "2024-06-30T01:00:38.950704678Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "content-security-policy",
-        "type": "http",
-        "host": "https://stats.judilibre.io",
-        "matched-at": "https://stats.judilibre.io",
-        "ip": "185.199.108.153",
-        "timestamp": "2024-06-30T01:00:38.950722371Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "permissions-policy",
-        "type": "http",
-        "host": "https://stats.judilibre.io",
-        "matched-at": "https://stats.judilibre.io",
-        "ip": "185.199.108.153",
-        "timestamp": "2024-06-30T01:00:38.95073776Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "x-frame-options",
-        "type": "http",
-        "host": "https://stats.judilibre.io",
-        "matched-at": "https://stats.judilibre.io",
-        "ip": "185.199.108.153",
-        "timestamp": "2024-06-30T01:00:38.950751866Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
-        "template-id": "http-missing-security-headers",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass",
-            "jub0bs"
-          ],
-          "tags": [
-            "misconfig",
-            "headers",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "matcher-name": "x-content-type-options",
-        "type": "http",
-        "host": "https://stats.judilibre.io",
-        "matched-at": "https://stats.judilibre.io",
-        "ip": "185.199.108.153",
-        "timestamp": "2024-06-30T01:00:38.950774528Z",
+        "timestamp": "2024-07-07T01:02:18.621209943Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
         "matcher-status": true
       },
@@ -7449,7 +6540,155 @@
         "host": "https://stats.judilibre.io",
         "matched-at": "https://stats.judilibre.io",
         "ip": "185.199.108.153",
-        "timestamp": "2024-06-30T01:00:38.950788013Z",
+        "timestamp": "2024-07-07T01:02:18.621251731Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+        "template-id": "http-missing-security-headers",
+        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass",
+            "jub0bs"
+          ],
+          "tags": [
+            "misconfig",
+            "headers",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          }
+        },
+        "matcher-name": "cross-origin-resource-policy",
+        "type": "http",
+        "host": "https://stats.judilibre.io",
+        "matched-at": "https://stats.judilibre.io",
+        "ip": "185.199.108.153",
+        "timestamp": "2024-07-07T01:02:18.621263784Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+        "template-id": "http-missing-security-headers",
+        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass",
+            "jub0bs"
+          ],
+          "tags": [
+            "misconfig",
+            "headers",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          }
+        },
+        "matcher-name": "permissions-policy",
+        "type": "http",
+        "host": "https://stats.judilibre.io",
+        "matched-at": "https://stats.judilibre.io",
+        "ip": "185.199.108.153",
+        "timestamp": "2024-07-07T01:02:18.621281867Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+        "template-id": "http-missing-security-headers",
+        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass",
+            "jub0bs"
+          ],
+          "tags": [
+            "misconfig",
+            "headers",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          }
+        },
+        "matcher-name": "x-content-type-options",
+        "type": "http",
+        "host": "https://stats.judilibre.io",
+        "matched-at": "https://stats.judilibre.io",
+        "ip": "185.199.108.153",
+        "timestamp": "2024-07-07T01:02:18.621296485Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+        "template-id": "http-missing-security-headers",
+        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass",
+            "jub0bs"
+          ],
+          "tags": [
+            "misconfig",
+            "headers",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          }
+        },
+        "matcher-name": "x-permitted-cross-domain-policies",
+        "type": "http",
+        "host": "https://stats.judilibre.io",
+        "matched-at": "https://stats.judilibre.io",
+        "ip": "185.199.108.153",
+        "timestamp": "2024-07-07T01:02:18.621310591Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
         "matcher-status": true
       },
@@ -7486,7 +6725,118 @@
         "host": "https://stats.judilibre.io",
         "matched-at": "https://stats.judilibre.io",
         "ip": "185.199.108.153",
-        "timestamp": "2024-06-30T01:00:38.950803963Z",
+        "timestamp": "2024-07-07T01:02:18.621325419Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+        "template-id": "http-missing-security-headers",
+        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass",
+            "jub0bs"
+          ],
+          "tags": [
+            "misconfig",
+            "headers",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          }
+        },
+        "matcher-name": "content-security-policy",
+        "type": "http",
+        "host": "https://stats.judilibre.io",
+        "matched-at": "https://stats.judilibre.io",
+        "ip": "185.199.108.153",
+        "timestamp": "2024-07-07T01:02:18.621341278Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+        "template-id": "http-missing-security-headers",
+        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass",
+            "jub0bs"
+          ],
+          "tags": [
+            "misconfig",
+            "headers",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          }
+        },
+        "matcher-name": "x-frame-options",
+        "type": "http",
+        "host": "https://stats.judilibre.io",
+        "matched-at": "https://stats.judilibre.io",
+        "ip": "185.199.108.153",
+        "timestamp": "2024-07-07T01:02:18.621354463Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+        "template-id": "http-missing-security-headers",
+        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass",
+            "jub0bs"
+          ],
+          "tags": [
+            "misconfig",
+            "headers",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          }
+        },
+        "matcher-name": "cross-origin-embedder-policy",
+        "type": "http",
+        "host": "https://stats.judilibre.io",
+        "matched-at": "https://stats.judilibre.io",
+        "ip": "185.199.108.153",
+        "timestamp": "2024-07-07T01:02:18.621367397Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io'",
         "matcher-status": true
       },
@@ -7515,7 +6865,7 @@
         "host": "https://stats.judilibre.io",
         "matched-at": "https://stats.judilibre.io/robots.txt",
         "ip": "185.199.108.153",
-        "timestamp": "2024-06-30T01:00:45.116468443Z",
+        "timestamp": "2024-07-07T01:02:24.841330454Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io/robots.txt'",
         "matcher-status": true
       },
@@ -7555,68 +6905,8 @@
         "host": "https://stats.judilibre.io",
         "matched-at": "https://stats.judilibre.io/",
         "ip": "185.199.108.153",
-        "timestamp": "2024-06-30T01:00:54.889258986Z",
+        "timestamp": "2024-07-07T01:02:34.547319485Z",
         "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: stats.judilibre.io' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://stats.judilibre.io/'",
-        "matcher-status": true
-      },
-      {
-        "template": "ssl/detect-ssl-issuer.yaml",
-        "template-url": "https://templates.nuclei.sh/public/ssl-issuer",
-        "template-id": "ssl-issuer",
-        "template-path": "/home/runner/nuclei-templates/ssl/detect-ssl-issuer.yaml",
-        "info": {
-          "name": "Detect SSL Certificate Issuer",
-          "author": [
-            "lingtren"
-          ],
-          "tags": [
-            "ssl",
-            "tls"
-          ],
-          "description": "Extract the issuer's organization from the target's certificate. Issuers are entities which sign and distribute certificates.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "type": "ssl",
-        "host": "stats.judilibre.io",
-        "matched-at": "stats.judilibre.io:443",
-        "extracted-results": [
-          "Let's Encrypt"
-        ],
-        "ip": "185.199.108.153",
-        "timestamp": "2024-06-30T01:06:19.052864129Z",
-        "matcher-status": true
-      },
-      {
-        "template": "ssl/ssl-dns-names.yaml",
-        "template-url": "https://templates.nuclei.sh/public/ssl-dns-names",
-        "template-id": "ssl-dns-names",
-        "template-path": "/home/runner/nuclei-templates/ssl/ssl-dns-names.yaml",
-        "info": {
-          "name": "SSL DNS Names",
-          "author": [
-            "pdteam"
-          ],
-          "tags": [
-            "ssl",
-            "tls"
-          ],
-          "description": "Extract the Subject Alternative Name (SAN) from the target's certificate. SAN facilitates the usage of additional hostnames with the same certificate.\n",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "type": "ssl",
-        "host": "stats.judilibre.io",
-        "matched-at": "stats.judilibre.io:443",
-        "extracted-results": [
-          "stats.judilibre.io"
-        ],
-        "ip": "185.199.108.153",
-        "timestamp": "2024-06-30T01:06:19.052999351Z",
         "matcher-status": true
       },
       {
@@ -7647,7 +6937,7 @@
           "tls12"
         ],
         "ip": "185.199.108.153",
-        "timestamp": "2024-06-30T01:06:19.092348731Z",
+        "timestamp": "2024-07-07T01:07:48.719162063Z",
         "matcher-status": true
       },
       {
@@ -7678,7 +6968,67 @@
           "tls13"
         ],
         "ip": "185.199.108.153",
-        "timestamp": "2024-06-30T01:06:19.104527902Z",
+        "timestamp": "2024-07-07T01:07:48.737084918Z",
+        "matcher-status": true
+      },
+      {
+        "template": "ssl/detect-ssl-issuer.yaml",
+        "template-url": "https://templates.nuclei.sh/public/ssl-issuer",
+        "template-id": "ssl-issuer",
+        "template-path": "/home/runner/nuclei-templates/ssl/detect-ssl-issuer.yaml",
+        "info": {
+          "name": "Detect SSL Certificate Issuer",
+          "author": [
+            "lingtren"
+          ],
+          "tags": [
+            "ssl",
+            "tls"
+          ],
+          "description": "Extract the issuer's organization from the target's certificate. Issuers are entities which sign and distribute certificates.\n",
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          }
+        },
+        "type": "ssl",
+        "host": "stats.judilibre.io",
+        "matched-at": "stats.judilibre.io:443",
+        "extracted-results": [
+          "Let's Encrypt"
+        ],
+        "ip": "185.199.108.153",
+        "timestamp": "2024-07-07T01:07:48.770754347Z",
+        "matcher-status": true
+      },
+      {
+        "template": "ssl/ssl-dns-names.yaml",
+        "template-url": "https://templates.nuclei.sh/public/ssl-dns-names",
+        "template-id": "ssl-dns-names",
+        "template-path": "/home/runner/nuclei-templates/ssl/ssl-dns-names.yaml",
+        "info": {
+          "name": "SSL DNS Names",
+          "author": [
+            "pdteam"
+          ],
+          "tags": [
+            "ssl",
+            "tls"
+          ],
+          "description": "Extract the Subject Alternative Name (SAN) from the target's certificate. SAN facilitates the usage of additional hostnames with the same certificate.\n",
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          }
+        },
+        "type": "ssl",
+        "host": "stats.judilibre.io",
+        "matched-at": "stats.judilibre.io:443",
+        "extracted-results": [
+          "stats.judilibre.io"
+        ],
+        "ip": "185.199.108.153",
+        "timestamp": "2024-07-07T01:07:48.770886474Z",
         "matcher-status": true
       }
     ],
@@ -7686,13 +7036,13 @@
       {
         "requestedUrl": "https://stats.judilibre.io/",
         "finalUrl": "https://stats.judilibre.io/",
-        "fetchTime": "2024-06-30T00:55:15.386Z",
+        "fetchTime": "2024-07-07T00:56:47.658Z",
         "runWarnings": [],
         "categories": {
           "performance": {
             "title": "Performance",
             "id": "performance",
-            "score": 0.93
+            "score": 0.95
           },
           "accessibility": {
             "title": "Accessibility",
@@ -7728,49 +7078,49 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 3147,
+            "numericValue": 3010,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 1964,
-                  "firstMeaningfulPaint": 2046,
-                  "largestContentfulPaint": 2421,
-                  "firstCPUIdle": 3001,
-                  "interactive": 3147,
-                  "speedIndex": 2026,
-                  "estimatedInputLatency": 29,
-                  "totalBlockingTime": 227,
-                  "maxPotentialFID": 223,
-                  "cumulativeLayoutShift": 0.23596277152167425,
+                  "firstContentfulPaint": 1318,
+                  "firstMeaningfulPaint": 1358,
+                  "largestContentfulPaint": 1951,
+                  "firstCPUIdle": 2680,
+                  "interactive": 3010,
+                  "speedIndex": 2440,
+                  "estimatedInputLatency": 36,
+                  "totalBlockingTime": 221,
+                  "maxPotentialFID": 199,
+                  "cumulativeLayoutShift": 0.23438614400227867,
                   "cumulativeLayoutShiftAllFrames": 0,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 329203005,
+                  "observedTimeOriginTs": 368202958,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 329203005,
-                  "observedFirstPaint": 290,
-                  "observedFirstPaintTs": 329492958,
-                  "observedFirstContentfulPaint": 290,
-                  "observedFirstContentfulPaintTs": 329492958,
-                  "observedFirstMeaningfulPaint": 290,
-                  "observedFirstMeaningfulPaintTs": 329492958,
-                  "observedLargestContentfulPaint": 290,
-                  "observedLargestContentfulPaintTs": 329492958,
-                  "observedTraceEnd": 1728,
-                  "observedTraceEndTs": 330930624,
-                  "observedLoad": 293,
-                  "observedLoadTs": 329495694,
-                  "observedDomContentLoaded": 54,
-                  "observedDomContentLoadedTs": 329257490,
-                  "observedCumulativeLayoutShift": 0.23596277152167425,
+                  "observedNavigationStartTs": 368202958,
+                  "observedFirstPaint": 505,
+                  "observedFirstPaintTs": 368708259,
+                  "observedFirstContentfulPaint": 505,
+                  "observedFirstContentfulPaintTs": 368708259,
+                  "observedFirstMeaningfulPaint": 505,
+                  "observedFirstMeaningfulPaintTs": 368708259,
+                  "observedLargestContentfulPaint": 505,
+                  "observedLargestContentfulPaintTs": 368708259,
+                  "observedTraceEnd": 2119,
+                  "observedTraceEndTs": 370321537,
+                  "observedLoad": 431,
+                  "observedLoadTs": 368634141,
+                  "observedDomContentLoaded": 391,
+                  "observedDomContentLoadedTs": 368594303,
+                  "observedCumulativeLayoutShift": 0.23438614400227867,
                   "observedCumulativeLayoutShiftAllFrames": 0,
-                  "observedFirstVisualChange": 300,
-                  "observedFirstVisualChangeTs": 329503005,
-                  "observedLastVisualChange": 883,
-                  "observedLastVisualChangeTs": 330086005,
-                  "observedSpeedIndex": 351,
-                  "observedSpeedIndexTs": 329553984
+                  "observedFirstVisualChange": 515,
+                  "observedFirstVisualChangeTs": 368717958,
+                  "observedLastVisualChange": 1182,
+                  "observedLastVisualChangeTs": 369384958,
+                  "observedSpeedIndex": 649,
+                  "observedSpeedIndexTs": 368851912
                 },
                 {
                   "lcpInvalidated": false
@@ -7792,19 +7142,19 @@
                   "numScripts": 6,
                   "numStylesheets": 2,
                   "numFonts": 2,
-                  "numTasks": 513,
-                  "numTasksOver10ms": 13,
-                  "numTasksOver25ms": 5,
-                  "numTasksOver50ms": 4,
+                  "numTasks": 572,
+                  "numTasksOver10ms": 15,
+                  "numTasksOver25ms": 4,
+                  "numTasksOver50ms": 1,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 1.0299999999999994,
-                  "throughput": 74991593.51080552,
-                  "maxRtt": 84.883,
-                  "maxServerLatency": 178.08299999999997,
-                  "totalByteWeight": 302592,
-                  "totalTaskTime": 578.8299999999991,
-                  "mainDocumentTransferSize": 1022
+                  "rtt": 2.4560000000000004,
+                  "throughput": 74387717.35131004,
+                  "maxRtt": 105.14099999999999,
+                  "maxServerLatency": 280.031,
+                  "totalByteWeight": 302010,
+                  "totalTaskTime": 500.9659999999997,
+                  "mainDocumentTransferSize": 1023
                 }
               ]
             }
@@ -7835,7 +7185,7 @@
       "cookiesCount": 0,
       "trackersGrade": "F",
       "trackersCount": 17,
-      "lighthouse_performance": 0.93,
+      "lighthouse_performance": 0.95,
       "lighthouse_performanceGrade": "A",
       "lighthouse_accessibility": 1,
       "lighthouse_accessibilityGrade": "A",
@@ -7953,6 +7303,25 @@
           "port": null,
           "hostname": "www.justice.fr",
           "hash": null,
+          "search": "?audio_file=/securimage-wav%3Fsid%3D12168760%26ts%3D1720314055",
+          "query": "audio_file=/securimage-wav%3Fsid%3D12168760%26ts%3D1720314055",
+          "pathname": "/sites/all/libraries/securimage/securimage_play.swf",
+          "path": "/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D12168760%26ts%3D1720314055",
+          "href": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D12168760%26ts%3D1720314055"
+        },
+        "link": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D12168760%26ts%3D1720314055",
+        "line": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D12168760%26ts%3D1720314055",
+        "broken": true
+      },
+      {
+        "url": {
+          "protocol": "https:",
+          "slashes": true,
+          "auth": null,
+          "host": "www.justice.fr",
+          "port": null,
+          "hostname": "www.justice.fr",
+          "hash": null,
           "search": null,
           "query": null,
           "pathname": "/themes/URL",
@@ -7980,6 +7349,25 @@
         },
         "link": "https://www.justice.fr/sites/default/files/DSJ_Conciliateur_Triptyque_A4_200122.pdf",
         "line": "https://www.justice.fr/sites/default/files/DSJ_Conciliateur_Triptyque_A4_200122.pdf",
+        "broken": true
+      },
+      {
+        "url": {
+          "protocol": "https:",
+          "slashes": true,
+          "auth": null,
+          "host": "www.justice.fr",
+          "port": null,
+          "hostname": "www.justice.fr",
+          "hash": null,
+          "search": "?audio_file=/securimage-wav%3Fsid%3D12169334%26ts%3D1720314763",
+          "query": "audio_file=/securimage-wav%3Fsid%3D12169334%26ts%3D1720314763",
+          "pathname": "/sites/all/libraries/securimage/securimage_play.swf",
+          "path": "/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D12169334%26ts%3D1720314763",
+          "href": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D12169334%26ts%3D1720314763"
+        },
+        "link": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D12169334%26ts%3D1720314763",
+        "line": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D12169334%26ts%3D1720314763",
         "broken": true
       },
       {
@@ -8029,6 +7417,25 @@
           "port": null,
           "hostname": "www.justice.fr",
           "hash": null,
+          "search": "?audio_file=/securimage-wav%3Fsid%3D12168550%26ts%3D1720313803",
+          "query": "audio_file=/securimage-wav%3Fsid%3D12168550%26ts%3D1720313803",
+          "pathname": "/sites/all/libraries/securimage/securimage_play.swf",
+          "path": "/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D12168550%26ts%3D1720313803",
+          "href": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D12168550%26ts%3D1720313803"
+        },
+        "link": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D12168550%26ts%3D1720313803",
+        "line": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D12168550%26ts%3D1720313803",
+        "broken": true
+      },
+      {
+        "url": {
+          "protocol": "https:",
+          "slashes": true,
+          "auth": null,
+          "host": "www.justice.fr",
+          "port": null,
+          "hostname": "www.justice.fr",
+          "hash": null,
           "search": null,
           "query": null,
           "pathname": "/fiche/modifier-etat-civil-suite-changement-nom-decret",
@@ -8056,25 +7463,6 @@
         },
         "link": "https://www.justice.fr/fiche/action-groupe-violation-donnees-caractere-personnel",
         "line": "https://www.justice.fr/fiche/action-groupe-violation-donnees-caractere-personnel",
-        "broken": true
-      },
-      {
-        "url": {
-          "protocol": "https:",
-          "slashes": true,
-          "auth": null,
-          "host": "www.justice.fr",
-          "port": null,
-          "hostname": "www.justice.fr",
-          "hash": null,
-          "search": "?audio_file=/securimage-wav%3Fsid%3D11683056%26ts%3D1719708969",
-          "query": "audio_file=/securimage-wav%3Fsid%3D11683056%26ts%3D1719708969",
-          "pathname": "/sites/all/libraries/securimage/securimage_play.swf",
-          "path": "/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D11683056%26ts%3D1719708969",
-          "href": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D11683056%26ts%3D1719708969"
-        },
-        "link": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D11683056%26ts%3D1719708969",
-        "line": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D11683056%26ts%3D1719708969",
         "broken": true
       },
       {
@@ -8162,14 +7550,14 @@
           "port": null,
           "hostname": "www.justice.fr",
           "hash": null,
-          "search": "?audio_file=/securimage-wav%3Fsid%3D11683277%26ts%3D1719709234",
-          "query": "audio_file=/securimage-wav%3Fsid%3D11683277%26ts%3D1719709234",
+          "search": "?audio_file=/securimage-wav%3Fsid%3D12168753%26ts%3D1720314052",
+          "query": "audio_file=/securimage-wav%3Fsid%3D12168753%26ts%3D1720314052",
           "pathname": "/sites/all/libraries/securimage/securimage_play.swf",
-          "path": "/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D11683277%26ts%3D1719709234",
-          "href": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D11683277%26ts%3D1719709234"
+          "path": "/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D12168753%26ts%3D1720314052",
+          "href": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D12168753%26ts%3D1720314052"
         },
-        "link": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D11683277%26ts%3D1719709234",
-        "line": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D11683277%26ts%3D1719709234",
+        "link": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D12168753%26ts%3D1720314052",
+        "line": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D12168753%26ts%3D1720314052",
         "broken": true
       },
       {
@@ -8314,14 +7702,14 @@
           "port": null,
           "hostname": "www.justice.fr",
           "hash": null,
-          "search": "?audio_file=/securimage-wav%3Fsid%3D11683275%26ts%3D1719709233",
-          "query": "audio_file=/securimage-wav%3Fsid%3D11683275%26ts%3D1719709233",
+          "search": "?audio_file=/securimage-wav%3Fsid%3D12168770%26ts%3D1720314066",
+          "query": "audio_file=/securimage-wav%3Fsid%3D12168770%26ts%3D1720314066",
           "pathname": "/sites/all/libraries/securimage/securimage_play.swf",
-          "path": "/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D11683275%26ts%3D1719709233",
-          "href": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D11683275%26ts%3D1719709233"
+          "path": "/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D12168770%26ts%3D1720314066",
+          "href": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D12168770%26ts%3D1720314066"
         },
-        "link": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D11683275%26ts%3D1719709233",
-        "line": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D11683275%26ts%3D1719709233",
+        "link": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D12168770%26ts%3D1720314066",
+        "line": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D12168770%26ts%3D1720314066",
         "broken": true
       },
       {
@@ -8411,12 +7799,12 @@
           "hash": null,
           "search": null,
           "query": null,
-          "pathname": "/sites/all/modules/custom/features/portalis_annuaire/css/images/layers-2x.png",
-          "path": "/sites/all/modules/custom/features/portalis_annuaire/css/images/layers-2x.png",
-          "href": "https://www.justice.fr/sites/all/modules/custom/features/portalis_annuaire/css/images/layers-2x.png"
+          "pathname": "/fiche/divorce-on-conserver-nom-ex-epouxse",
+          "path": "/fiche/divorce-on-conserver-nom-ex-epouxse",
+          "href": "https://www.justice.fr/fiche/divorce-on-conserver-nom-ex-epouxse"
         },
-        "link": "https://www.justice.fr/sites/all/modules/custom/features/portalis_annuaire/css/images/layers-2x.png",
-        "line": "https://www.justice.fr/sites/all/modules/custom/features/portalis_annuaire/css/images/layers-2x.png",
+        "link": "https://www.justice.fr/fiche/divorce-on-conserver-nom-ex-epouxse",
+        "line": "https://www.justice.fr/fiche/divorce-on-conserver-nom-ex-epouxse",
         "broken": true
       },
       {
@@ -8428,14 +7816,14 @@
           "port": null,
           "hostname": "www.justice.fr",
           "hash": null,
-          "search": "?audio_file=/securimage-wav%3Fsid%3D11684135%26ts%3D1719710286",
-          "query": "audio_file=/securimage-wav%3Fsid%3D11684135%26ts%3D1719710286",
-          "pathname": "/sites/all/libraries/securimage/securimage_play.swf",
-          "path": "/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D11684135%26ts%3D1719710286",
-          "href": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D11684135%26ts%3D1719710286"
+          "search": null,
+          "query": null,
+          "pathname": "/sites/all/modules/custom/features/portalis_annuaire/css/images/layers-2x.png",
+          "path": "/sites/all/modules/custom/features/portalis_annuaire/css/images/layers-2x.png",
+          "href": "https://www.justice.fr/sites/all/modules/custom/features/portalis_annuaire/css/images/layers-2x.png"
         },
-        "link": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D11684135%26ts%3D1719710286",
-        "line": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D11684135%26ts%3D1719710286",
+        "link": "https://www.justice.fr/sites/all/modules/custom/features/portalis_annuaire/css/images/layers-2x.png",
+        "line": "https://www.justice.fr/sites/all/modules/custom/features/portalis_annuaire/css/images/layers-2x.png",
         "broken": true
       },
       {
@@ -8523,6 +7911,25 @@
           "port": null,
           "hostname": "www.justice.fr",
           "hash": null,
+          "search": "?audio_file=/securimage-wav%3Fsid%3D12168756%26ts%3D1720314054",
+          "query": "audio_file=/securimage-wav%3Fsid%3D12168756%26ts%3D1720314054",
+          "pathname": "/sites/all/libraries/securimage/securimage_play.swf",
+          "path": "/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D12168756%26ts%3D1720314054",
+          "href": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D12168756%26ts%3D1720314054"
+        },
+        "link": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D12168756%26ts%3D1720314054",
+        "line": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D12168756%26ts%3D1720314054",
+        "broken": true
+      },
+      {
+        "url": {
+          "protocol": "https:",
+          "slashes": true,
+          "auth": null,
+          "host": "www.justice.fr",
+          "port": null,
+          "hostname": "www.justice.fr",
+          "hash": null,
           "search": null,
           "query": null,
           "pathname": "/fiche/installations-classees-protection-environnement-icpe",
@@ -8550,25 +7957,6 @@
         },
         "link": "https://www.justice.fr/fiche/devient-bail-commercial-cas-depot-bilan",
         "line": "https://www.justice.fr/fiche/devient-bail-commercial-cas-depot-bilan",
-        "broken": true
-      },
-      {
-        "url": {
-          "protocol": "https:",
-          "slashes": true,
-          "auth": null,
-          "host": "www.justice.fr",
-          "port": null,
-          "hostname": "www.justice.fr",
-          "hash": null,
-          "search": "?audio_file=/securimage-wav%3Fsid%3D11683287%26ts%3D1719709245",
-          "query": "audio_file=/securimage-wav%3Fsid%3D11683287%26ts%3D1719709245",
-          "pathname": "/sites/all/libraries/securimage/securimage_play.swf",
-          "path": "/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D11683287%26ts%3D1719709245",
-          "href": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D11683287%26ts%3D1719709245"
-        },
-        "link": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D11683287%26ts%3D1719709245",
-        "line": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D11683287%26ts%3D1719709245",
         "broken": true
       },
       {
@@ -8618,25 +8006,6 @@
           "port": null,
           "hostname": "www.justice.fr",
           "hash": null,
-          "search": "?audio_file=/securimage-wav%3Fsid%3D11683271%26ts%3D1719709232",
-          "query": "audio_file=/securimage-wav%3Fsid%3D11683271%26ts%3D1719709232",
-          "pathname": "/sites/all/libraries/securimage/securimage_play.swf",
-          "path": "/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D11683271%26ts%3D1719709232",
-          "href": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D11683271%26ts%3D1719709232"
-        },
-        "link": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D11683271%26ts%3D1719709232",
-        "line": "https://www.justice.fr/sites/all/libraries/securimage/securimage_play.swf?audio_file=/securimage-wav%3Fsid%3D11683271%26ts%3D1719709232",
-        "broken": true
-      },
-      {
-        "url": {
-          "protocol": "https:",
-          "slashes": true,
-          "auth": null,
-          "host": "www.justice.fr",
-          "port": null,
-          "hostname": "www.justice.fr",
-          "hash": null,
           "search": null,
           "query": null,
           "pathname": "/c",
@@ -8652,7 +8021,7 @@
     "http": {
       "url": "https://www.justice.fr",
       "algorithm_version": 3,
-      "end_time": "Sun, 30 Jun 2024 01:56:08 GMT",
+      "end_time": "Sun, 07 Jul 2024 01:40:34 GMT",
       "grade": "D",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -8662,14 +8031,14 @@
         "Connection": "Keep-Alive",
         "Content-Encoding": "gzip",
         "Content-Language": "fr",
-        "Content-Length": "59274",
+        "Content-Length": "59269",
         "Content-Type": "text/html; charset=utf-8",
-        "Date": "Sat, 29 Jun 2024 03:33:24 GMT",
-        "Etag": "\"1719632004-1\"",
+        "Date": "Sat, 06 Jul 2024 03:29:54 GMT",
+        "Etag": "\"1720236594-1\"",
         "Expires": "Sun, 19 Nov 1978 05:00:00 GMT",
         "Keep-Alive": "timeout=5, max=100",
-        "Last-Modified": "Sat, 29 Jun 2024 03:33:24 GMT",
-        "Set-Cookie": "BIGipServer34MTuypDk3zboBHeznTQiA=!ZK3diOas+73xKtPtQ5tupRAIz1SSLIV6gitcNTn7sZvqbQ38d7IO/hxepT5X3qgRcTveM2hUKGAY3A==; path=/; Httponly, TS011eb1c5=01a6efdeadb944e1b1041e911c0d3edac7ee84e1cb3536f4d268683de0473c36880e1045f503797c4d65ff60e1e023187853bd89be535c22ab4b835e6a248931cfb478157f; Path=/; Domain=.www.justice.fr; ",
+        "Last-Modified": "Sat, 06 Jul 2024 03:29:54 GMT",
+        "Set-Cookie": "BIGipServer34MTuypDk3zboBHeznTQiA=!Y+I2/chCRs4+WLXpwZk4/joK50I2R6bQRent+lTKqwU4vjkirbyEmjm1KEjMaX0UrDoZzocVe2jVHg==; path=/; Httponly, TS011eb1c5=01a6efdead61502834c01ef7f2e06afcf042dd86e9569c684afdaa3e5dd7f9b6954272694987778129f9a3d83e007498a8986be4f5f792af6a526917b7bb89971615d33af3; Path=/; Domain=.www.justice.fr; ",
         "Vary": "Accept-Encoding",
         "X-Cache": "HIT",
         "X-Content-Type-Options": "nosniff",
@@ -8677,9 +8046,9 @@
         "X-Frame-Options": "SAMEORIGIN",
         "X-UA-Device": "DESKTOP"
       },
-      "scan_id": 52859556,
+      "scan_id": 53123148,
       "score": 35,
-      "start_time": "Sun, 30 Jun 2024 01:56:03 GMT",
+      "start_time": "Sun, 07 Jul 2024 01:40:29 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 3,
@@ -9225,7 +8594,7 @@
         "ip": "www.justice.fr/185.24.184.176",
         "port": "443",
         "severity": "OK",
-        "finding": "249 >= 60 days"
+        "finding": "242 >= 60 days"
       },
       {
         "id": "cert_notBefore",
@@ -9421,14 +8790,14 @@
         "ip": "www.justice.fr/185.24.184.176",
         "port": "443",
         "severity": "INFO",
-        "finding": "-80598 seconds from localtime"
+        "finding": "-79757 seconds from localtime"
       },
       {
         "id": "HTTP_headerTime",
         "ip": "www.justice.fr/185.24.184.176",
         "port": "443",
         "severity": "INFO",
-        "finding": "1719632031"
+        "finding": "1720236744"
       },
       {
         "id": "HSTS",
@@ -10019,20 +9388,20 @@
         "ip": "www.justice.fr/185.24.184.176",
         "port": "443",
         "severity": "INFO",
-        "finding": "71"
+        "finding": "81"
       }
     ],
     "thirdparties": {
       "trackers": [
         {
           "type": "unknown",
-          "url": "https://jmvi.justice.fr/hsH971.js?2"
+          "url": "https://jmvi.justice.fr/pkP31.js?2"
         }
       ],
       "cookies": [
         {
           "name": "TS011eb1c5",
-          "value": "01a6efdead4f5b23a908f657a6a28eff5f08d23119122185d07704e85be10d833e37b095a86a5efb9a03277169dab302340e1ef6eb67c2191849876ff44ad7dfb35321a322",
+          "value": "01a6efdead1875f558566cf3f5c860df48452ea41a7ab725377199bd9c135693d202e8b080a6ffd552fb99a7b6f43953871809846d5cf02eb732583a80c976c3a2c63a5197",
           "domain": ".www.justice.fr",
           "path": "/",
           "expires": -1,
@@ -10046,7 +9415,7 @@
         },
         {
           "name": "BIGipServer34MTuypDk3zboBHeznTQiA",
-          "value": "!vKXmYVSJfaWr5LXtQ5tupRAIz1SSLItDVdQfL8CFe5UXlV8sJ+U5JnUc1tPCbXERaFBqzYBJSwEmew==",
+          "value": "!FcY7sgHxJpqgRRbpwZk4/joK50I2R/Z/dHwgcadyWJs5YtdIX17IXbuMuT+HmfbE8QhjqLeguBixSQ==",
           "domain": "www.justice.fr",
           "path": "/",
           "expires": -1,
@@ -10065,14 +9434,14 @@
         "connection": "Keep-Alive",
         "content-encoding": "gzip",
         "content-language": "fr",
-        "content-length": "59274",
+        "content-length": "59277",
         "content-type": "text/html; charset=utf-8",
-        "date": "Sat, 29 Jun 2024 03:33:24 GMT",
-        "etag": "\"1719632004-1\"",
+        "date": "Sat, 06 Jul 2024 03:32:24 GMT",
+        "etag": "\"1720236744-1\"",
         "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
         "keep-alive": "timeout=5, max=100",
-        "last-modified": "Sat, 29 Jun 2024 03:33:24 GMT",
-        "set-cookie": "BIGipServer34MTuypDk3zboBHeznTQiA=!vKXmYVSJfaWr5LXtQ5tupRAIz1SSLItDVdQfL8CFe5UXlV8sJ+U5JnUc1tPCbXERaFBqzYBJSwEmew==; path=/; Httponly\nTS011eb1c5=01a6efdead4f5b23a908f657a6a28eff5f08d23119122185d07704e85be10d833e37b095a86a5efb9a03277169dab302340e1ef6eb67c2191849876ff44ad7dfb35321a322; Path=/; Domain=.www.justice.fr;",
+        "last-modified": "Sat, 06 Jul 2024 03:32:24 GMT",
+        "set-cookie": "BIGipServer34MTuypDk3zboBHeznTQiA=!FcY7sgHxJpqgRRbpwZk4/joK50I2R/Z/dHwgcadyWJs5YtdIX17IXbuMuT+HmfbE8QhjqLeguBixSQ==; path=/; Httponly\nTS011eb1c5=01a6efdead1875f558566cf3f5c860df48452ea41a7ab725377199bd9c135693d202e8b080a6ffd552fb99a7b6f43953871809846d5cf02eb732583a80c976c3a2c63a5197; Path=/; Domain=.www.justice.fr;",
         "vary": "Accept-Encoding",
         "x-cache": "HIT",
         "x-content-type-options": "nosniff",
@@ -10085,19 +9454,6 @@
           "hostname": "www.justice.fr",
           "ip": "185.24.184.176",
           "geoip": {
-            "city": {
-              "geoname_id": 2988507,
-              "names": {
-                "de": "Paris",
-                "en": "Paris",
-                "es": "París",
-                "fr": "Paris",
-                "ja": "パリ",
-                "pt-BR": "Paris",
-                "ru": "Париж",
-                "zh-CN": "巴黎"
-              }
-            },
             "continent": {
               "code": "EU",
               "geoname_id": 6255148,
@@ -10129,12 +9485,9 @@
             },
             "location": {
               "accuracy_radius": 500,
-              "latitude": 48.8323,
-              "longitude": 2.4075,
+              "latitude": 48.8582,
+              "longitude": 2.3387,
               "time_zone": "Europe/Paris"
-            },
-            "postal": {
-              "code": "75012"
             },
             "registered_country": {
               "geoname_id": 3017382,
@@ -10150,33 +9503,7 @@
                 "ru": "Франция",
                 "zh-CN": "法国"
               }
-            },
-            "subdivisions": [
-              {
-                "geoname_id": 3012874,
-                "iso_code": "IDF",
-                "names": {
-                  "de": "Île-de-France",
-                  "en": "Île-de-France",
-                  "es": "Isla de Francia",
-                  "fr": "Île-de-France",
-                  "ja": "イル・ド・フランス",
-                  "pt-BR": "Ilha de França",
-                  "ru": "Иль-де-Франс",
-                  "zh-CN": "法兰西岛"
-                }
-              },
-              {
-                "geoname_id": 2968815,
-                "iso_code": "75",
-                "names": {
-                  "de": "Paris",
-                  "en": "Paris",
-                  "es": "Paris",
-                  "fr": "Paris"
-                }
-              }
-            ]
+            }
           }
         },
         {
@@ -10213,7 +9540,7 @@
               }
             },
             "location": {
-              "accuracy_radius": 1000,
+              "accuracy_radius": 500,
               "latitude": 48.8582,
               "longitude": 2.3387,
               "time_zone": "Europe/Paris"
@@ -10237,171 +9564,20 @@
         }
       ]
     },
-    "wappalyzer": {
-      "urls": {
-        "https://www.justice.fr/": {
-          "status": 200
-        }
-      },
-      "technologies": [
-        {
-          "slug": "drupal",
-          "name": "Drupal",
-          "description": "Drupal is a free and open-source web content management framework.",
-          "confidence": 100,
-          "version": null,
-          "icon": "Drupal.svg",
-          "website": "https://www.drupal.org/",
-          "cpe": "cpe:2.3:a:drupal:drupal:*:*:*:*:*:*:*:*",
-          "categories": [
-            {
-              "id": 1,
-              "slug": "cms",
-              "name": "CMS"
-            }
-          ],
-          "rootPath": true
-        },
-        {
-          "slug": "php",
-          "name": "PHP",
-          "description": "PHP is a general-purpose scripting language used for web development.",
-          "confidence": 100,
-          "version": null,
-          "icon": "PHP.svg",
-          "website": "https://php.net",
-          "cpe": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
-          "categories": [
-            {
-              "id": 27,
-              "slug": "programming-languages",
-              "name": "Programming languages"
-            }
-          ]
-        },
-        {
-          "slug": "d3",
-          "name": "D3",
-          "description": "D3.js is a JavaScript library for producing dynamic, interactive data visualisations in web browsers.",
-          "confidence": 100,
-          "version": "3.5.5",
-          "icon": "D3.png",
-          "website": "https://d3js.org",
-          "cpe": "cpe:2.3:a:d3.js_project:d3.js:*:*:*:*:*:*:*:*",
-          "categories": [
-            {
-              "id": 25,
-              "slug": "javascript-graphics",
-              "name": "JavaScript graphics"
-            }
-          ],
-          "rootPath": true
-        },
-        {
-          "slug": "bootstrap",
-          "name": "Bootstrap",
-          "description": "Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS and JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.",
-          "confidence": 100,
-          "version": "4.1.3",
-          "icon": "Bootstrap.svg",
-          "website": "https://getbootstrap.com",
-          "cpe": "cpe:2.3:a:getbootstrap:bootstrap:*:*:*:*:*:*:*:*",
-          "categories": [
-            {
-              "id": 66,
-              "slug": "ui-frameworks",
-              "name": "UI frameworks"
-            }
-          ],
-          "rootPath": true
-        },
-        {
-          "slug": "jquery",
-          "name": "jQuery",
-          "description": "jQuery is a JavaScript library which is a free, open-source software designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax.",
-          "confidence": 100,
-          "version": "1.9.1",
-          "icon": "jQuery.svg",
-          "website": "https://jquery.com",
-          "cpe": "cpe:2.3:a:jquery:jquery:*:*:*:*:*:*:*:*",
-          "categories": [
-            {
-              "id": 59,
-              "slug": "javascript-libraries",
-              "name": "JavaScript libraries"
-            }
-          ],
-          "rootPath": true
-        },
-        {
-          "slug": "at-internet-analyzer",
-          "name": "AT Internet Analyzer",
-          "description": null,
-          "confidence": 100,
-          "version": null,
-          "icon": "AT Internet.png",
-          "website": "https://atinternet.com/en",
-          "cpe": null,
-          "categories": [
-            {
-              "id": 10,
-              "slug": "analytics",
-              "name": "Analytics"
-            }
-          ],
-          "rootPath": true
-        },
-        {
-          "slug": "popper",
-          "name": "Popper",
-          "description": "Popper is a positioning engine, its purpose is to calculate the position of an element to make it possible to position it near a given reference element.",
-          "confidence": 100,
-          "version": null,
-          "icon": "Popper.svg",
-          "website": "https://popper.js.org",
-          "cpe": null,
-          "categories": [
-            {
-              "id": 19,
-              "slug": "miscellaneous",
-              "name": "Miscellaneous"
-            }
-          ],
-          "rootPath": true
-        },
-        {
-          "slug": "pwa",
-          "name": "PWA",
-          "description": "Progressive Web Apps (PWAs) are web apps built and enhanced with modern APIs to deliver enhanced capabilities, reliability, and installability while reaching anyone, anywhere, on any device, all with a single codebase.",
-          "confidence": 100,
-          "version": null,
-          "icon": "PWA.svg",
-          "website": "https://web.dev/progressive-web-apps/",
-          "cpe": null,
-          "categories": [
-            {
-              "id": 19,
-              "slug": "miscellaneous",
-              "name": "Miscellaneous"
-            }
-          ],
-          "rootPath": true
-        }
-      ]
-    },
+    "wappalyzer": null,
     "zap": null,
     "nuclei": [],
     "lhr": [
       {
         "requestedUrl": "https://www.justice.fr/",
         "finalUrl": "https://www.justice.fr/",
-        "fetchTime": "2024-06-30T01:55:52.352Z",
+        "fetchTime": "2024-07-07T01:40:12.281Z",
         "runWarnings": [],
         "categories": {
           "performance": {
             "title": "Performance",
             "id": "performance",
-            "score": 0.39
+            "score": 0.32
           },
           "accessibility": {
             "title": "Accessibility",
@@ -10437,49 +9613,49 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 8561,
+            "numericValue": 11744,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 7501,
-                  "firstMeaningfulPaint": 7665,
-                  "largestContentfulPaint": 11429,
-                  "firstCPUIdle": 7665,
-                  "interactive": 8561,
-                  "speedIndex": 7835,
-                  "estimatedInputLatency": 13,
-                  "totalBlockingTime": 11,
-                  "maxPotentialFID": 68,
+                  "firstContentfulPaint": 7438,
+                  "firstMeaningfulPaint": 7756,
+                  "largestContentfulPaint": 14768,
+                  "firstCPUIdle": 7756,
+                  "interactive": 11744,
+                  "speedIndex": 14901,
+                  "estimatedInputLatency": 26,
+                  "totalBlockingTime": 216,
+                  "maxPotentialFID": 155,
                   "cumulativeLayoutShift": 0.14802273220486112,
-                  "cumulativeLayoutShiftAllFrames": 0,
+                  "cumulativeLayoutShiftAllFrames": 0.13125,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 3966980918,
+                  "observedTimeOriginTs": 2910535529,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 3966980918,
-                  "observedFirstPaint": 1542,
-                  "observedFirstPaintTs": 3968522865,
-                  "observedFirstContentfulPaint": 1542,
-                  "observedFirstContentfulPaintTs": 3968522865,
-                  "observedFirstMeaningfulPaint": 1542,
-                  "observedFirstMeaningfulPaintTs": 3968522865,
-                  "observedLargestContentfulPaint": 1847,
-                  "observedLargestContentfulPaintTs": 3968827578,
-                  "observedTraceEnd": 3110,
-                  "observedTraceEndTs": 3970090557,
-                  "observedLoad": 1950,
-                  "observedLoadTs": 3968930498,
-                  "observedDomContentLoaded": 1605,
-                  "observedDomContentLoadedTs": 3968586132,
+                  "observedNavigationStartTs": 2910535529,
+                  "observedFirstPaint": 1660,
+                  "observedFirstPaintTs": 2912195375,
+                  "observedFirstContentfulPaint": 1660,
+                  "observedFirstContentfulPaintTs": 2912195375,
+                  "observedFirstMeaningfulPaint": 1660,
+                  "observedFirstMeaningfulPaintTs": 2912195375,
+                  "observedLargestContentfulPaint": 7129,
+                  "observedLargestContentfulPaintTs": 2917665001,
+                  "observedTraceEnd": 7967,
+                  "observedTraceEndTs": 2918502645,
+                  "observedLoad": 6910,
+                  "observedLoadTs": 2917445655,
+                  "observedDomContentLoaded": 1769,
+                  "observedDomContentLoadedTs": 2912304591,
                   "observedCumulativeLayoutShift": 0.14802273220486112,
-                  "observedCumulativeLayoutShiftAllFrames": 0,
-                  "observedFirstVisualChange": 1543,
-                  "observedFirstVisualChangeTs": 3968523918,
-                  "observedLastVisualChange": 2210,
-                  "observedLastVisualChangeTs": 3969190918,
-                  "observedSpeedIndex": 2099,
-                  "observedSpeedIndexTs": 3969079564
+                  "observedCumulativeLayoutShiftAllFrames": 0.13125,
+                  "observedFirstVisualChange": 1647,
+                  "observedFirstVisualChangeTs": 2912182529,
+                  "observedLastVisualChange": 7131,
+                  "observedLastVisualChangeTs": 2917666529,
+                  "observedSpeedIndex": 6245,
+                  "observedSpeedIndexTs": 2916780324
                 },
                 {
                   "lcpInvalidated": false
@@ -10501,19 +9677,19 @@
                   "numScripts": 8,
                   "numStylesheets": 6,
                   "numFonts": 5,
-                  "numTasks": 1012,
-                  "numTasksOver10ms": 10,
-                  "numTasksOver25ms": 4,
-                  "numTasksOver50ms": 0,
-                  "numTasksOver100ms": 0,
+                  "numTasks": 1565,
+                  "numTasksOver10ms": 12,
+                  "numTasksOver25ms": 8,
+                  "numTasksOver50ms": 4,
+                  "numTasksOver100ms": 1,
                   "numTasksOver500ms": 0,
-                  "rtt": 87.228,
-                  "throughput": 12819099.194137862,
-                  "maxRtt": 100.66,
-                  "maxServerLatency": 5.2409999999999854,
-                  "totalByteWeight": 1993152,
-                  "totalTaskTime": 521.3469999999978,
-                  "mainDocumentTransferSize": 60165
+                  "rtt": 88.85799999999927,
+                  "throughput": 15988745.331009703,
+                  "maxRtt": 103.471,
+                  "maxServerLatency": 5.9979999999999905,
+                  "totalByteWeight": 1993147,
+                  "totalTaskTime": 1490.2290000000032,
+                  "mainDocumentTransferSize": 60160
                 }
               ]
             }
@@ -10532,7 +9708,7 @@
     "sonarcloud": null,
     "dsfr": null,
     "summary": {
-      "404": 42,
+      "404": 43,
       "httpGrade": "D",
       "nmapGrade": "B",
       "nmapOpenPortsCount": 3,
@@ -10544,8 +9720,8 @@
       "cookiesCount": 2,
       "trackersGrade": "B",
       "trackersCount": 1,
-      "lighthouse_performance": 0.39,
-      "lighthouse_performanceGrade": "D",
+      "lighthouse_performance": 0.32,
+      "lighthouse_performanceGrade": "E",
       "lighthouse_accessibility": 0.95,
       "lighthouse_accessibilityGrade": "A",
       "lighthouse_best-practices": 0.87,
