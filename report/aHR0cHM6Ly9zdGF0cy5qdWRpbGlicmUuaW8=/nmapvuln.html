@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln stats.judilibre.io</pre>
-<p class="lead">Sun Sep  1 01:10:05 2024 – Sun Sep  1 01:10:23 2024<br>1 hosts scanned.
+<p class="lead">Sun Sep  8 01:06:07 2024 – Sun Sep  8 01:06:25 2024<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -76,7 +76,7 @@
 </tr></thead>
 <tbody><tr>
 <td><span class="label label-success">up</span></td>
-<td>185.199.108.153</td>
+<td>185.199.110.153</td>
 <td>stats.judilibre.io</td>
 <td>2</td>
 <td>0</td>
@@ -91,12 +91,12 @@
             });
           </script><h2 id="onlinehosts" class="target">Online Hosts</h2>
 <div class="panel panel-default">
-<div class="panel-heading clickable" data-toggle="collapse" data-target="#185-199-108-153"><h3 class="panel-title">185.199.108.153 - stats.judilibre.io</h3></div>
-<div class="panel-body collapse in" id="185-199-108-153">
+<div class="panel-heading clickable" data-toggle="collapse" data-target="#185-199-110-153"><h3 class="panel-title">185.199.110.153 - stats.judilibre.io</h3></div>
+<div class="panel-body collapse in" id="185-199-110-153">
 <h4>Hostnames</h4>
 <ul>
 <li>stats.judilibre.io (user)</li>
-<li>cdn-185-199-108-153.github.com (PTR)</li>
+<li>cdn-185-199-110-153.github.com (PTR)</li>
 </ul>
 <h4>Ports</h4>
 <div class="table-responsive"><table class="table table-bordered">
@@ -120,7 +120,11 @@
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  GitHub.com
+  Varnish</pre>
+<h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   GetRequest: 
     HTTP/1.1 404 Not Found
@@ -128,19 +132,19 @@
     Content-Length: 9115
     Server: GitHub.com
     Content-Type: text/html; charset=utf-8
-    ETag: "66ce275a-239b"
+    ETag: "66d8749d-239b"
     Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'
-    X-GitHub-Request-Id: F40A:1EF3C7:1D1EDA5:20C4CE7:66D3BAA8
+    X-GitHub-Request-Id: BAEA:3C9C73:A1B275:A6E007:66DCF889
     Accept-Ranges: bytes
-    Age: 1104
-    Date: Sun, 01 Sep 2024 01:10:17 GMT
+    Age: 0
+    Date: Sun, 08 Sep 2024 01:06:18 GMT
     Via: 1.1 varnish
-    X-Served-By: cache-iad-kcgs7200060-IAD
-    X-Cache: HIT
+    X-Served-By: cache-pao-kpao1770058-PAO
+    X-Cache: MISS
     X-Cache-Hits: 0
-    X-Timer: S1725153017.275122,VS0,VE1
+    X-Timer: S1725757578.072334,VS0,VE83
     Vary: Accept-Encoding
-    X-Fastly-Request-ID: c050784a2edeef9c130e8ae6d02b5dba1992ca1d
+    X-Fastly-Request-ID: 0571e4294d16e69d274e1304a01b8bb224d21852
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
     &lt;head&gt;
@@ -154,13 +158,13 @@
     Server: Varnish
     Retry-After: 0
     Accept-Ranges: bytes
-    Date: Sun, 01 Sep 2024 01:10:17 GMT
+    Date: Sun, 08 Sep 2024 01:06:18 GMT
     Via: 1.1 varnish
-    X-Served-By: cache-iad-kcgs7200176-IAD
+    X-Served-By: cache-sjc1000120-SJC
     X-Cache: MISS
     X-Cache-Hits: 0
-    X-Timer: S1725153017.291266,VS0,VE0
-    X-Fastly-Request-ID: 0c9944cf02bfba9e1458e22b6bb53a6c66341946
+    X-Timer: S1725757578.166995,VS0,VE1
+    X-Fastly-Request-ID: c0e05da9dd4bbab82818bc3cd100951dbca934ce
     &lt;html&gt;
     &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
     &lt;body bgcolor="white"&gt;
@@ -172,12 +176,8 @@
     Connection: close
     Content-Length: 11
     content-type: text/plain; charset=utf-8
-    x-served-by: cache-iad-kiad7000110
+    x-served-by: cache-pao-kpao1770065
     Request</pre>
-<h5>http-server-header</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  GitHub.com
-  Varnish</pre>
 </td></tr>
 <tr class="success">
 <td title="Port">443</td>
@@ -201,19 +201,19 @@
     Content-Length: 9115
     Server: GitHub.com
     Content-Type: text/html; charset=utf-8
-    ETag: "66ce275a-239b"
+    ETag: "66d8749d-239b"
     Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'
-    X-GitHub-Request-Id: E1B8:3340BB:1DB3404:214B454:66D3B30D
+    X-GitHub-Request-Id: DA6B:3AF3D8:226EB77:236B816:66DCF88E
     Accept-Ranges: bytes
-    Age: 3056
-    Date: Sun, 01 Sep 2024 01:10:23 GMT
+    Age: 0
+    Date: Sun, 08 Sep 2024 01:06:24 GMT
     Via: 1.1 varnish
-    X-Served-By: cache-iad-kcgs7200037-IAD
-    X-Cache: HIT
+    X-Served-By: cache-pao-kpao1770032-PAO
+    X-Cache: MISS
     X-Cache-Hits: 0
-    X-Timer: S1725153023.341209,VS0,VE1
+    X-Timer: S1725757584.191131,VS0,VE87
     Vary: Accept-Encoding
-    X-Fastly-Request-ID: fd61a9adb6bb3c5dc8ef400133ad56ff189f29f8
+    X-Fastly-Request-ID: 3fc5d8202fa425f964807b7c49f3f33175becafb
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
     &lt;head&gt;
@@ -226,25 +226,26 @@
     Content-Length: 9115
     Server: GitHub.com
     Content-Type: text/html; charset=utf-8
-    ETag: "66ce275a-239b"
+    ETag: "66d8749d-239b"
     Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'
-    X-GitHub-Request-Id: C7EE:F2623:1C9F56C:204D415:66D3BEFE
+    X-GitHub-Request-Id: F42F:33BD9E:424E426:4427717:66DCF88F
     Accept-Ranges: bytes
     Age: 0
-    Date: Sun, 01 Sep 2024 01:10:23 GMT
+    Date: Sun, 08 Sep 2024 01:06:24 GMT
     Via: 1.1 varnish
-    X-Served-By: cache-iad-kiad7000120-IAD
+    X-Served-By: cache-sjc1000107-SJC
     X-Cache: MISS
     X-Cache-Hits: 0
-    X-Timer: S1725153023.303005,VS0,VE7
+    X-Timer: S1725757584.084983,VS0,VE82
     Vary: Accept-Encoding
-    X-Fastly-Request-ID: b3c349aefd94b9e815799263641151879fae4eaf
+    X-Fastly-Request-ID: f117aa3a2dacbff3ae443f60ab2c73cee1035b76
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
     &lt;head&gt;
     &lt;meta http-equiv="Content-type" content="text/html; charset=utf-8"&gt;
     &lt;meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'"&gt;
     &lt;title&gt;Site not found &amp;middot; GitHub Pages&lt;/title&gt;
+    &lt;styl
   HTTPOptions: 
     HTTP/1.1 405 Method Not Allowed
     Connection: close
@@ -252,13 +253,13 @@
     Server: Varnish
     Retry-After: 0
     Accept-Ranges: bytes
-    Date: Sun, 01 Sep 2024 01:10:23 GMT
+    Date: Sun, 08 Sep 2024 01:06:24 GMT
     Via: 1.1 varnish
-    X-Served-By: cache-iad-kcgs7200077-IAD
+    X-Served-By: cache-pao-kpao1770049-PAO
     X-Cache: MISS
     X-Cache-Hits: 0
-    X-Timer: S1725153023.329548,VS0,VE0
-    X-Fastly-Request-ID: 8fd03957eb517f7b39173395f3ef9a3ae8663b75
+    X-Timer: S1725757584.183142,VS0,VE0
+    X-Fastly-Request-ID: a5d12e8b18574bd5f4a7fb9d71b040771503f7bd
     &lt;html&gt;
     &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
     &lt;body bgcolor="white"&gt;
@@ -284,7 +285,7 @@
 </tr></thead>
 <tbody>
 <tr>
-<td>185.199.108.153 - stats.judilibre.io</td>
+<td>185.199.110.153 - stats.judilibre.io</td>
 <td>80</td>
 <td>tcp</td>
 <td>http</td>
@@ -294,7 +295,7 @@
 <td></td>
 </tr>
 <tr>
-<td>185.199.108.153 - stats.judilibre.io</td>
+<td>185.199.110.153 - stats.judilibre.io</td>
 <td>443</td>
 <td>tcp</td>
 <td>https</td>
