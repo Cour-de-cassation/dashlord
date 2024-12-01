@@ -1,12 +1,20 @@
-# Nmap 7.92 scan initiated Sun Nov 24 02:20:27 2024 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.justice.fr
+# Nmap 7.92 scan initiated Sun Dec  1 02:24:32 2024 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.justice.fr
 Nmap scan report for www.justice.fr (185.24.184.176)
-Host is up (0.16s latency).
-Not shown: 894 filtered tcp ports (no-response), 104 closed tcp ports (reset)
-PORT    STATE SERVICE    VERSION
-80/tcp  open  http-proxy F5 BIG-IP load balancer http proxy
+Host is up (0.11s latency).
+Not shown: 990 filtered tcp ports (no-response)
+PORT      STATE  SERVICE         VERSION
+80/tcp    open   http-proxy      F5 BIG-IP load balancer http proxy
 |_http-server-header: BigIP
-443/tcp open  ssl/https?
+113/tcp   closed ident
+443/tcp   open   ssl/https?
+1287/tcp  closed routematch
+2034/tcp  closed scoremgr
+2323/tcp  closed 3d-nfsd
+2366/tcp  closed qip-login
+2492/tcp  closed groove
+5009/tcp  closed airport-admin
+32778/tcp closed sometimes-rpc19
 Service Info: Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Nov 24 02:31:44 2024 -- 1 IP address (1 host up) scanned in 677.23 seconds
+# Nmap done at Sun Dec  1 02:36:05 2024 -- 1 IP address (1 host up) scanned in 693.47 seconds
